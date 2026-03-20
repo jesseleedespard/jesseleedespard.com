@@ -1,11 +1,9 @@
+# jesseleedespard.com
 
-  # Create Color Styles Library
+Jesse Lee Despard's personal website and portfolio.
 
-  This is a code bundle for Create Color Styles Library. The original project is available at https://www.figma.com/design/peBmYgBPOUOWApQdSbeeeE/Create-Color-Styles-Library.
+## Running locally
 
-  ## Running the code
+Run `npm install` to install dependencies.
 
-  Run `npm i` to install the dependencies.
-
-  Run `npm run dev` to start the development server.
-  
+Run `npm run dev` to start the development server.
