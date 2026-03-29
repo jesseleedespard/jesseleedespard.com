@@ -10,6 +10,7 @@ import CaseStudyHealthtech from './pages/CaseStudyHealthtech';
 import CaseStudyProptech from './pages/CaseStudyProptech';
 import CaseStudyWorkBeforeTools from './pages/CaseStudyWorkBeforeTools';
 import LeadershipResearchFunction from './pages/LeadershipResearchFunction';
+import LeadershipWebStrategy from './pages/LeadershipWebStrategy';
 import DesignSystem from './pages/DesignSystem';
 
 export const router = createBrowserRouter([
@@ -27,6 +28,7 @@ export const router = createBrowserRouter([
       { path: 'case-studies/proptech', Component: CaseStudyProptech },
       { path: 'case-studies/work-before-the-tools', Component: CaseStudyWorkBeforeTools },
       { path: 'leadership/research-function', Component: LeadershipResearchFunction },
+      { path: 'leadership/web-strategy', Component: LeadershipWebStrategy },
       { path: 'design-system', Component: DesignSystem },
     ],
   },

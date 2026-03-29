@@ -524,23 +524,6 @@ export default function Work() {
       {activeTab === 'leadership' && (
         <section className="work-section-padding" style={{ backgroundColor: '#FAF7F2' }}>
           <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
-            {/* Left-side note */}
-            <div
-              style={{
-                fontFamily: 'DM Sans, sans-serif',
-                fontSize: '13px',
-                color: '#888888',
-                fontStyle: 'italic',
-                marginBottom: '32px',
-                padding: '12px 20px',
-                backgroundColor: '#FFFFFF',
-                border: '1px solid #EEEEEE',
-                borderRadius: '6px',
-              }}
-            >
-              This panel shows when Leadership tab is clicked
-            </div>
-
             {/* 2 Cards Side by Side */}
             <div className="work-card-grid">
               {/* Card 1 */}
@@ -568,7 +551,7 @@ export default function Work() {
                       marginBottom: '16px',
                     }}
                   >
-                    LEADERSHIP · EDTECH
+                    LEADERSHIP · Real Estate Tech
                   </div>
 
                   {/* Title */}
@@ -639,7 +622,7 @@ export default function Work() {
                       marginBottom: '16px',
                     }}
                   >
-                    LEADERSHIP · HEALTHTECH
+                    LEADERSHIP · EDTECH
                   </div>
 
                   {/* Title */}
@@ -669,16 +652,19 @@ export default function Work() {
                   </p>
 
                   {/* Link */}
-                  <div
+                  <Link
+                    to="/leadership/web-strategy"
                     style={{
                       fontFamily: 'DM Sans, sans-serif',
                       fontWeight: 700,
                       fontSize: '14px',
-                      color: '#CCCCCC',
+                      color: '#C4622D',
+                      textDecoration: 'none',
+                      whiteSpace: 'nowrap',
                     }}
                   >
-                    Case Study →
-                  </div>
+                    Read Case Study →
+                  </Link>
                 </div>
               </div>
             </div>

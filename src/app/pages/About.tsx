@@ -112,7 +112,7 @@ export default function About() {
 
           {/* Subheading */}
           <p className="about-hero-subtitle">
-            With 10+ years leading UX research teams, I specialize in building frameworks that scale, hiring high-performing researchers, and addressing ethical challenges in AI and algorithmic systems.
+            I build the UX practices, teams, and frameworks companies need to make better decisions — especially when AI is involved. I specialize in building frameworks that scale and are sustainable, all while addressing ethical challenges in AI. Now my UX practice focuses on the question that matters most: how do we make sure AI systems actually work for the people they're supposed to serve?
           </p>
         </div>
       </section>
@@ -158,7 +158,7 @@ export default function About() {
                 marginBottom: '24px',
               }}
             >
-              "I don't just study users — I build the systems, teams, and cultures that make user research matter."
+              "Most companies want research. Few build the conditions for it to matter."
             </p>
             <p
               style={{
@@ -201,17 +201,33 @@ export default function About() {
               lineHeight: '1.7',
             }}
           >
+            <p style={{ marginBottom: '24px' }}>I came to UX by mistake.</p>
             <p style={{ marginBottom: '24px' }}>
-              I started my career as a cognitive psychologist, fascinated by how people make decisions under uncertainty. After years in academia, I realized the real-world impact I wanted required moving closer to where products were built.
+              I wasn't sure what I wanted to major in college. I changed my major several times, but nothing grabbed my attention until I started a Psychology 101 course.
             </p>
             <p style={{ marginBottom: '24px' }}>
-              Over the past decade, I've led research teams at EdTech, HealthTech, and PropTech companies — each with their own unique challenges around user privacy, algorithmic bias, and ethical decision-making. I've seen firsthand how the right research practice can transform a company's culture and product outcomes.
+              What caught my interest was how people interacted with each other. I eventually found a niche field of Human Factors — an applied science that focuses on fitting the task, tool, or environment to the user, rather than forcing the user to adapt to the system.
             </p>
             <p style={{ marginBottom: '24px' }}>
-              Today, I focus on building research operations from the ground up: establishing frameworks, hiring researchers who bring diverse perspectives, and creating systems that help product teams make better decisions at scale. I'm particularly passionate about addressing bias in AI systems and ensuring research practices protect vulnerable users.
+              I thought about systems, and realized that much of the time it is on the human to adapt to it instead of the system adapting to the user. It seemed imbalanced to me.
+            </p>
+            <p style={{ marginBottom: '24px' }}>
+              From there, I earned my Master's in Human-Computer Interaction. I thought I would get my doctorate and make a career in academia, but it wasn't in the cards for me. So out into the workforce I went — and it turned out that's where the real problems were anyway.
+            </p>
+            <p style={{ marginBottom: '24px' }}>
+              In the workforce, I started as a UX researcher and spent the next several years building research practices for companies that hadn't had one before — writing the playbooks, hiring the teams, earning the trust of stakeholders who weren't sure they needed a researcher until they saw what one could do.
+            </p>
+            <p style={{ marginBottom: '24px' }}>
+              I learned that what products delivered was almost always a research and design optimization gap — not a product gap.
+            </p>
+            <p style={{ marginBottom: '24px' }}>
+              That insight followed me through HealthTech, EdTech, and PropTech, and across every industry the pattern held: the products that failed, failed because someone skipped the part where you actually talk to the people, and got their real thoughts on their actual problems. Not the problem the business thinks they need to solve.
+            </p>
+            <p style={{ marginBottom: '24px' }}>
+              Then AI changed everything. Not because the research questions got harder — because the stakes got higher.
             </p>
             <p>
-              I host a podcast called "Research & Bias" where I talk with fellow researchers and ethicists about the challenges we face. I also write regularly about research leadership, AI ethics, and building inclusive research practices.
+              An algorithm that does not consider nuances across demographic groups isn't just an algorithm problem. It's an equity problem. A model trained on biased data doesn't just make worse predictions — it amplifies those predictions at a scale no one has ever had to reckon with before.
             </p>
           </div>
         </div>
@@ -259,7 +275,7 @@ export default function About() {
                   marginBottom: '12px',
                 }}
               >
-                Research is a team sport
+                Ethics first — not as a checkbox:
               </h3>
               <p
                 style={{
@@ -269,7 +285,7 @@ export default function About() {
                   lineHeight: '1.6',
                 }}
               >
-                I believe the best insights come from collaboration. I work closely with designers, product managers, and engineers to ensure research is integrated throughout the product development process.
+                I've turned down work that conflicted with my values, and I'd do it again. The organizations I work best with are the ones who mean it when they say they care about doing right by their users.
               </p>
             </div>
 
@@ -295,7 +311,7 @@ export default function About() {
                   marginBottom: '12px',
                 }}
               >
-                Ethics first, always
+                UX that earns its seat at the table:
               </h3>
               <p
                 style={{
@@ -305,7 +321,7 @@ export default function About() {
                   lineHeight: '1.6',
                 }}
               >
-                Research has power. I prioritize participant privacy, informed consent, and addressing bias — especially when working with vulnerable populations or AI-driven systems.
+                I don't just hand over a report. I build the relationships, speak the language of the business, and make sure the findings actually change something. That's always been the job.
               </p>
             </div>
 
@@ -331,7 +347,7 @@ export default function About() {
                   marginBottom: '12px',
                 }}
               >
-                Scale through systems
+                Sustainable, not heroic:
               </h3>
               <p
                 style={{
@@ -341,7 +357,7 @@ export default function About() {
                   lineHeight: '1.6',
                 }}
               >
-                Great research practices don't happen by accident. I build frameworks, processes, and tools that help research teams scale without sacrificing quality or rigor.
+                Good UX design and research practices don't depend on one person working unsustainable hours. I build systems and team structures that keep working after I'm gone.
               </p>
             </div>
           </div>
