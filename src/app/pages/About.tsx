@@ -1,5 +1,6 @@
 import { Navigation } from '../components/Navigation';
 import { Footer } from '../components/Footer';
+import { Link } from 'react-router';
 
 export default function About() {
   return (
@@ -719,7 +720,8 @@ export default function About() {
               Let's talk about how I can help your team make better decisions.
             </p>
           </div>
-          <button
+          <Link
+            to="/hiring"
             style={{
               fontFamily: 'DM Sans, sans-serif',
               fontWeight: 700,
@@ -731,10 +733,12 @@ export default function About() {
               border: 'none',
               cursor: 'pointer',
               whiteSpace: 'nowrap',
+              textDecoration: 'none',
+              display: 'inline-block',
             }}
           >
             Get in Touch →
-          </button>
+          </Link>
         </div>
       </section>
 

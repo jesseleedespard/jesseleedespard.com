@@ -721,7 +721,8 @@ export default function Work() {
               Let's talk about how I can help your team build better products through ethical research practices.
             </p>
           </div>
-          <button
+          <Link
+            to="/hiring"
             style={{
               fontFamily: 'DM Sans, sans-serif',
               fontWeight: 700,
@@ -733,10 +734,12 @@ export default function Work() {
               border: 'none',
               cursor: 'pointer',
               whiteSpace: 'nowrap',
+              textDecoration: 'none',
+              display: 'inline-block',
             }}
           >
             Get in Touch →
-          </button>
+          </Link>
         </div>
       </section>
 

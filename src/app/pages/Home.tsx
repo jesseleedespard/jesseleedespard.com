@@ -172,7 +172,8 @@ export default function Home() {
           </p>
 
           {/* CTA Button */}
-          <button
+          <Link
+            to="/hiring"
             className="primary-cta-gold"
             style={{
               fontFamily: 'DM Sans, sans-serif',
@@ -184,10 +185,12 @@ export default function Home() {
               borderRadius: '8px',
               border: 'none',
               cursor: 'pointer',
+              textDecoration: 'none',
+              display: 'inline-block',
             }}
           >
             Hiring? →
-          </button>
+          </Link>
         </div>
       </section>
 
@@ -559,7 +562,8 @@ export default function Home() {
               I build research practices that scale — from establishing frameworks to growing high-performing teams.
             </p>
           </div>
-          <button
+          <Link
+            to="/work"
             className="primary-cta-dark"
             style={{
               fontFamily: 'DM Sans, sans-serif',
@@ -572,10 +576,12 @@ export default function Home() {
               border: 'none',
               cursor: 'pointer',
               whiteSpace: 'nowrap',
+              textDecoration: 'none',
+              display: 'inline-block',
             }}
           >
             View My Work →
-          </button>
+          </Link>
         </div>
       </section>
 

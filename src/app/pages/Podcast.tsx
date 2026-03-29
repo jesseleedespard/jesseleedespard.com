@@ -1,6 +1,7 @@
 import { Navigation } from '../components/Navigation';
 import { Footer } from '../components/Footer';
 import { ComingSoonBadge } from '../components/ComingSoonBadge';
+import { Link } from 'react-router';
 
 export default function Podcast() {
   return (
@@ -850,7 +851,8 @@ export default function Podcast() {
               I'm looking for researchers, product leaders, and ethicists with stories to share.
             </p>
           </div>
-          <button
+          <Link
+            to="/hiring"
             style={{
               fontFamily: 'DM Sans, sans-serif',
               fontWeight: 700,
@@ -862,10 +864,12 @@ export default function Podcast() {
               border: 'none',
               cursor: 'pointer',
               whiteSpace: 'nowrap',
+              textDecoration: 'none',
+              display: 'inline-block',
             }}
           >
             Get in Touch →
-          </button>
+          </Link>
         </div>
       </section>
 
