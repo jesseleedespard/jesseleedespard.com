@@ -8,6 +8,7 @@ import Podcast from './pages/Podcast';
 import Work from './pages/Work';
 import CaseStudyHealthtech from './pages/CaseStudyHealthtech';
 import CaseStudyProptech from './pages/CaseStudyProptech';
+import CaseStudyWorkBeforeTools from './pages/CaseStudyWorkBeforeTools';
 import DesignSystem from './pages/DesignSystem';
 
 export const router = createBrowserRouter([
@@ -23,6 +24,7 @@ export const router = createBrowserRouter([
       { path: 'podcast', Component: Podcast },
       { path: 'case-studies/healthtech-onboarding', Component: CaseStudyHealthtech },
       { path: 'case-studies/proptech', Component: CaseStudyProptech },
+      { path: 'case-studies/work-before-the-tools', Component: CaseStudyWorkBeforeTools },
       { path: 'design-system', Component: DesignSystem },
     ],
   },
