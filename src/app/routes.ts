@@ -6,7 +6,7 @@ import Hiring from './pages/Hiring';
 import Writing from './pages/Writing';
 import Podcast from './pages/Podcast';
 import Work from './pages/Work';
-import CaseStudy from './pages/CaseStudy';
+import CaseStudyHealthtech from './pages/CaseStudyHealthtech';
 import DesignSystem from './pages/DesignSystem';
 
 export const router = createBrowserRouter([
@@ -20,7 +20,7 @@ export const router = createBrowserRouter([
       { path: 'hiring', Component: Hiring },
       { path: 'writing', Component: Writing },
       { path: 'podcast', Component: Podcast },
-      { path: 'case-studies/healthtech-onboarding', Component: CaseStudy },
+      { path: 'case-studies/healthtech-onboarding', Component: CaseStudyHealthtech },
       { path: 'design-system', Component: DesignSystem },
     ],
   },
