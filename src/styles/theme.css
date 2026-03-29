@@ -2,6 +2,31 @@
 
 :root {
   --font-size: 16px;
+  /* Brand (Jesse Lee Despard site) */
+  --charcoal: #1e1e1e;
+  --cream: #faf7f2;
+  --teal: #2c6e7f;
+  --teal-dark: #1f5364;
+  --terra: #c4622d;
+  --gold: #d4a843;
+  --gray: #888888;
+  --light-gray: #eeeeee;
+  --dark-gray: #444444;
+  --white: #ffffff;
+  /**
+   * Brand links — contrast targets from AccessibilityAuditReport.tsx (Figma Make).
+   * - Light surfaces (white / cream): Teal Dark for links & focus ring (~6.8:1 AA). Gold on cream is advisory-only (~3.9:1); do not use as default link color on light backgrounds.
+   * - Dark surfaces (charcoal): White or Gold pass AA; default link uses white; hover may use gold for brand alignment.
+   */
+  --brand-link: var(--teal-dark);
+  --brand-link-hover: var(--charcoal);
+  --brand-link-active: var(--charcoal);
+  --brand-link-visited: var(--teal-dark);
+  --brand-link-on-dark: var(--white);
+  --brand-link-on-dark-hover: var(--gold);
+  --brand-link-on-dark-active: var(--gold);
+  --brand-link-focus-ring: var(--teal-dark);
+  --brand-link-focus-ring-on-dark: var(--white);
   --background: #ffffff;
   --foreground: oklch(0.145 0 0);
   --card: #ffffff;
@@ -177,5 +202,61 @@
     font-size: var(--text-base);
     font-weight: var(--font-weight-normal);
     line-height: 1.5;
+  }
+}
+
+@layer components {
+  /**
+   * Inline / prose links on white or cream. Not a substitute for nav styling (#444444 per AccessibilityReport Navigation — use components for that).
+   */
+  .brand-link {
+    color: var(--brand-link);
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.2em;
+  }
+
+  .brand-link:hover {
+    color: var(--brand-link-hover);
+  }
+
+  .brand-link:active {
+    color: var(--brand-link-active);
+  }
+
+  .brand-link:visited {
+    color: var(--brand-link-visited);
+  }
+
+  .brand-link:focus-visible {
+    outline: 3px solid var(--brand-link-focus-ring);
+    outline-offset: 2px;
+  }
+
+  /** Links on charcoal or other dark panels (e.g. hero, dark cards). */
+  .brand-link--on-dark {
+    color: var(--brand-link-on-dark);
+  }
+
+  .brand-link--on-dark:hover {
+    color: var(--brand-link-on-dark-hover);
+  }
+
+  .brand-link--on-dark:active {
+    color: var(--brand-link-on-dark-active);
+  }
+
+  .brand-link--on-dark:focus-visible {
+    outline: 3px solid var(--brand-link-focus-ring-on-dark);
+    outline-offset: 2px;
+  }
+
+  /**
+   * Card-style CTAs per audit: 14px bold Teal Dark on white (WorkCard / WritingPostCard link row).
+   */
+  .brand-link--cta {
+    font-family: 'DM Sans', system-ui, sans-serif;
+    font-size: 14px;
+    font-weight: 700;
   }
 }

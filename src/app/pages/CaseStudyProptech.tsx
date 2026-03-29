@@ -12,15 +12,6 @@ export default function CaseStudyProptech() {
       <style>{`
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 .proptech-case-study-page {
-  --charcoal:   #1E1E1E;
-  --cream:      #FAF7F2;
-  --teal:       #2C6E7F;
-  --terra:      #C4622D;
-  --gold:       #D4A843;
-  --gray:       #888888;
-  --light-gray: #EEEEEE;
-  --dark-gray:  #444444;
-  --white:      #FFFFFF;
   --display: 'DM Sans', system-ui, sans-serif;
   --body:    'Lora', Georgia, serif;
   --wide: 1100px;
@@ -52,7 +43,7 @@ html { scroll-behavior: smooth; }
 .divider { height: 1px; background: var(--light-gray); margin: 48px 0 0; }
 
 /* NDA NOTE */
-.nda-note { background: #FFFBF0; border-left: 3px solid var(--gold); border-radius: 0 6px 6px 0; padding: 13px 18px; margin-top: 18px; font-family: var(--display); font-size: 13.5px; color: var(--dark-gray); font-style: italic; }
+.nda-note { background: var(--cream); border-left: 3px solid var(--gold); border-radius: 0 6px 6px 0; padding: 13px 18px; margin-top: 18px; font-family: var(--display); font-size: 13.5px; color: var(--dark-gray); font-style: italic; }
 
 /* GRID */
 .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 20px; }

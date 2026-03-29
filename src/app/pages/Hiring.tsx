@@ -3,10 +3,10 @@ import { Footer } from '../components/Footer';
 
 export default function Hiring() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen" style={{ backgroundColor: 'var(--white)' }}>
       <style>{`
         .hiring-hero-section {
-          background-color: #1E1E1E;
+          background-color: var(--charcoal);
           padding: 100px 48px;
         }
         
@@ -14,7 +14,7 @@ export default function Hiring() {
           font-family: 'DM Sans', sans-serif;
           font-weight: 700;
           font-size: 52px;
-          color: #FFFFFF;
+          color: var(--white);
           line-height: 1.15;
           margin-bottom: 24px;
           max-width: 900px;
@@ -24,7 +24,7 @@ export default function Hiring() {
           font-family: 'Lora', serif;
           font-weight: 400;
           font-size: 18px;
-          color: rgba(255, 255, 255, 0.65);
+          color: color-mix(in srgb, var(--white) 65%, transparent);
           margin-bottom: 24px;
           max-width: 700px;
           line-height: 1.6;
@@ -40,6 +40,44 @@ export default function Hiring() {
           padding: 80px 48px;
         }
         
+        .hiring-pull-quote-inner {
+          max-width: 900px;
+          margin: 0 auto;
+        }
+
+        .hiring-bottom-grid {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 32px;
+          max-width: 1200px;
+          margin: 0 auto;
+        }
+
+        .hiring-who-grid {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 24px;
+        }
+
+        .hiring-contact-email {
+          font-family: 'DM Sans', sans-serif;
+          font-weight: 700;
+          font-size: 20px;
+          color: var(--white);
+          text-decoration: none;
+          cursor: pointer;
+          transition: color 0.2s ease;
+        }
+
+        .hiring-contact-email:hover {
+          color: var(--gold);
+        }
+
+        .hiring-contact-email:focus-visible {
+          outline: 2px solid var(--cream);
+          outline-offset: 2px;
+        }
+
         @media (max-width: 768px) {
           .hiring-hero-section {
             padding: 56px 24px;
@@ -61,6 +99,14 @@ export default function Hiring() {
           .hiring-section-padding {
             padding: 48px 24px;
           }
+
+          .hiring-bottom-grid {
+            grid-template-columns: 1fr;
+          }
+
+          .hiring-who-grid {
+            grid-template-columns: 1fr;
+          }
         }
       `}</style>
       {/* Hero Section */}
@@ -72,135 +118,54 @@ export default function Hiring() {
               fontFamily: 'DM Sans, sans-serif',
               fontWeight: 700,
               fontSize: '11px',
-              color: '#D4A843',
+              color: 'var(--gold)',
               marginBottom: '20px',
               letterSpacing: '1.5px',
             }}
           >
-            WORK WITH JESSE
+            Hiring?
           </div>
 
           {/* Headline */}
-          <h1 className="hiring-hero-title">
-            Let's build a research practice that drives real product impact.
-          </h1>
+          <h1 className="hiring-hero-title">Let's figure out if we're a good fit for each other.</h1>
 
           {/* Subheading */}
           <p className="hiring-hero-subtitle">
-            Whether you're starting from scratch or scaling an existing team, I can help you build the frameworks, processes, and culture needed for great research.
-          </p>
-
-          {/* Italic Positioning Statement */}
-          <p
-            style={{
-              fontFamily: 'Lora, serif',
-              fontWeight: 400,
-              fontStyle: 'italic',
-              fontSize: '17px',
-              color: 'rgba(255, 255, 255, 0.5)',
-              maxWidth: '700px',
-              lineHeight: '1.6',
-            }}
-          >
-            Currently open to Director and VP-level research leadership roles, advisory positions, and strategic consulting engagements.
+            I take on a small number of engagements at a time so I can do the work properly. If what you're dealing with sounds like something I can help with, let's talk.
           </p>
         </div>
       </section>
 
-      {/* Who I Work With */}
-      <section className="hiring-section-padding" style={{ backgroundColor: '#FAF7F2' }}>
-        <div style={{ maxWidth: '900px', margin: '0 auto' }}>
-          {/* Eyebrow */}
+      {/* Pull quote */}
+      <section className="hiring-section-padding" style={{ backgroundColor: 'var(--cream)' }}>
+        <div className="hiring-pull-quote-inner">
           <div
             style={{
-              fontFamily: 'DM Sans, sans-serif',
-              fontWeight: 700,
-              fontSize: '11px',
-              color: '#1F5364',
-              letterSpacing: '1.5px',
-              textTransform: 'uppercase',
-              marginBottom: '24px',
+              backgroundColor: 'var(--white)',
+              border: '1px solid var(--light-gray)',
+              borderLeft: '4px solid var(--teal-dark)',
+              padding: '40px',
+              borderRadius: '8px',
             }}
           >
-            WHO I WORK WITH
-          </div>
-
-          {/* Bullet Items */}
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
-            <div style={{ display: 'flex', gap: '16px' }}>
-              <div
-                style={{
-                  fontFamily: 'DM Sans, sans-serif',
-                  fontWeight: 700,
-                  fontSize: '17px',
-                  color: '#D4A843',
-                }}
-              >
-                •
-              </div>
-              <p
-                style={{
-                  fontFamily: 'Lora, serif',
-                  fontSize: '17px',
-                  color: '#444444',
-                  lineHeight: '1.6',
-                }}
-              >
-                <strong style={{ fontWeight: 700 }}>Product leaders</strong> who need to build or scale research operations from the ground up
-              </p>
-            </div>
-
-            <div style={{ display: 'flex', gap: '16px' }}>
-              <div
-                style={{
-                  fontFamily: 'DM Sans, sans-serif',
-                  fontWeight: 700,
-                  fontSize: '17px',
-                  color: '#D4A843',
-                }}
-              >
-                •
-              </div>
-              <p
-                style={{
-                  fontFamily: 'Lora, serif',
-                  fontSize: '17px',
-                  color: '#444444',
-                  lineHeight: '1.6',
-                }}
-              >
-                <strong style={{ fontWeight: 700 }}>Early-stage companies</strong> establishing ethical research practices, especially in AI, EdTech, or HealthTech
-              </p>
-            </div>
-
-            <div style={{ display: 'flex', gap: '16px' }}>
-              <div
-                style={{
-                  fontFamily: 'DM Sans, sans-serif',
-                  fontWeight: 700,
-                  fontSize: '17px',
-                  color: '#D4A843',
-                }}
-              >
-                •
-              </div>
-              <p
-                style={{
-                  fontFamily: 'Lora, serif',
-                  fontSize: '17px',
-                  color: '#444444',
-                  lineHeight: '1.6',
-                }}
-              >
-                <strong style={{ fontWeight: 700 }}>Organizations</strong> navigating complex ethical challenges around user privacy, bias, or vulnerable populations
-              </p>
-            </div>
+            <p
+              style={{
+                fontFamily: 'Lora, serif',
+                fontSize: '20px',
+                color: 'var(--charcoal)',
+                lineHeight: '1.65',
+                fontStyle: 'italic',
+                margin: 0,
+              }}
+            >
+              "I help companies build research practices that uncover bias, reduce risk, and put real people at the center of AI-powered products."
+            </p>
           </div>
         </div>
       </section>
 
-      {/* Services Section */}
-      <section className="hiring-section-padding" style={{ backgroundColor: '#FFFFFF' }}>
+      {/* How I Can Help */}
+      <section className="hiring-section-padding" style={{ backgroundColor: 'var(--cream)' }}>
         <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
           {/* Eyebrow */}
           <div
@@ -208,13 +173,13 @@ export default function Hiring() {
               fontFamily: 'DM Sans, sans-serif',
               fontWeight: 700,
               fontSize: '11px',
-              color: '#1F5364',
+              color: 'var(--teal-dark)',
               letterSpacing: '1.5px',
               textTransform: 'uppercase',
               marginBottom: '48px',
             }}
           >
-            SERVICES
+            HOW I CAN HELP
           </div>
 
           {/* Service Cards */}
@@ -226,7 +191,7 @@ export default function Hiring() {
                 style={{
                   width: '80px',
                   flexShrink: 0,
-                  backgroundColor: '#1E1E1E',
+                  backgroundColor: 'var(--charcoal)',
                   borderRadius: '8px',
                   display: 'flex',
                   alignItems: 'center',
@@ -239,7 +204,7 @@ export default function Hiring() {
                     fontFamily: 'DM Sans, sans-serif',
                     fontWeight: 700,
                     fontSize: '32px',
-                    color: '#D4A843',
+                    color: 'var(--gold)',
                   }}
                 >
                   01
@@ -253,21 +218,21 @@ export default function Hiring() {
                     fontFamily: 'DM Sans, sans-serif',
                     fontWeight: 700,
                     fontSize: '24px',
-                    color: '#1E1E1E',
+                    color: 'var(--charcoal)',
                     marginBottom: '12px',
                   }}
                 >
-                  Research Leadership & Strategy
+                  UX Leadership & Strategy
                 </h3>
                 <p
                   style={{
                     fontFamily: 'Lora, serif',
                     fontSize: '17px',
-                    color: '#444444',
+                    color: 'var(--dark-gray)',
                     lineHeight: '1.6',
                   }}
                 >
-                  Build or scale your research function from the ground up. I'll help you define your research strategy, establish frameworks, create career ladders, and develop a roadmap for growth.
+                  You need a sustainable and durable UX function. I'll assess what you have, where you are, and where you want to go. I will build or scale your UX function from the ground up. I'll help you define your UX strategy, establish frameworks, and build the systems that make UX a real part of how your company makes decisions.
                 </p>
               </div>
             </div>
@@ -279,7 +244,7 @@ export default function Hiring() {
                 style={{
                   width: '80px',
                   flexShrink: 0,
-                  backgroundColor: '#1E1E1E',
+                  backgroundColor: 'var(--charcoal)',
                   borderRadius: '8px',
                   display: 'flex',
                   alignItems: 'center',
@@ -292,7 +257,7 @@ export default function Hiring() {
                     fontFamily: 'DM Sans, sans-serif',
                     fontWeight: 700,
                     fontSize: '32px',
-                    color: '#D4A843',
+                    color: 'var(--gold)',
                   }}
                 >
                   02
@@ -306,21 +271,21 @@ export default function Hiring() {
                     fontFamily: 'DM Sans, sans-serif',
                     fontWeight: 700,
                     fontSize: '24px',
-                    color: '#1E1E1E',
+                    color: 'var(--charcoal)',
                     marginBottom: '12px',
                   }}
                 >
-                  Team Building & Hiring
+                  Ethical AI UX Audit
                 </h3>
                 <p
                   style={{
                     fontFamily: 'Lora, serif',
                     fontSize: '17px',
-                    color: '#444444',
+                    color: 'var(--dark-gray)',
                     lineHeight: '1.6',
                   }}
                 >
-                  Hire the right researchers for your team. I'll help you write job descriptions, screen candidates, run interviews, and build diverse teams that bring different perspectives to your research practice.
+                  You're building with AI and you want to know where the risks are before your users find them. I'll audit how AI can be embedded as an internal process for the UX team, identify disparate impacts across demographic users, and help you build frameworks for ethical decision making.
                 </p>
               </div>
             </div>
@@ -332,7 +297,7 @@ export default function Hiring() {
                 style={{
                   width: '80px',
                   flexShrink: 0,
-                  backgroundColor: '#1E1E1E',
+                  backgroundColor: 'var(--charcoal)',
                   borderRadius: '8px',
                   display: 'flex',
                   alignItems: 'center',
@@ -345,7 +310,7 @@ export default function Hiring() {
                     fontFamily: 'DM Sans, sans-serif',
                     fontWeight: 700,
                     fontSize: '32px',
-                    color: '#D4A843',
+                    color: 'var(--gold)',
                   }}
                 >
                   03
@@ -359,74 +324,21 @@ export default function Hiring() {
                     fontFamily: 'DM Sans, sans-serif',
                     fontWeight: 700,
                     fontSize: '24px',
-                    color: '#1E1E1E',
+                    color: 'var(--charcoal)',
                     marginBottom: '12px',
                   }}
                 >
-                  Ethical AI & Bias Audits
+                  Team Building & Coaching
                 </h3>
                 <p
                   style={{
                     fontFamily: 'Lora, serif',
                     fontSize: '17px',
-                    color: '#444444',
+                    color: 'var(--dark-gray)',
                     lineHeight: '1.6',
                   }}
                 >
-                  Ensure your AI-driven products don't perpetuate harm. I'll audit your research practices, identify bias in your data and algorithms, and help you build frameworks for ethical decision-making.
-                </p>
-              </div>
-            </div>
-
-            {/* Service 4 */}
-            <div style={{ display: 'flex', gap: '32px' }}>
-              {/* Number Column */}
-              <div
-                style={{
-                  width: '80px',
-                  flexShrink: 0,
-                  backgroundColor: '#1E1E1E',
-                  borderRadius: '8px',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  padding: '24px',
-                }}
-              >
-                <div
-                  style={{
-                    fontFamily: 'DM Sans, sans-serif',
-                    fontWeight: 700,
-                    fontSize: '32px',
-                    color: '#D4A843',
-                  }}
-                >
-                  04
-                </div>
-              </div>
-
-              {/* Content */}
-              <div style={{ flex: 1 }}>
-                <h3
-                  style={{
-                    fontFamily: 'DM Sans, sans-serif',
-                    fontWeight: 700,
-                    fontSize: '24px',
-                    color: '#1E1E1E',
-                    marginBottom: '12px',
-                  }}
-                >
-                  Research Operations & Tools
-                </h3>
-                <p
-                  style={{
-                    fontFamily: 'Lora, serif',
-                    fontSize: '17px',
-                    color: '#444444',
-                    lineHeight: '1.6',
-                  }}
-                >
-                  Set up systems that help your research practice scale. From participant recruitment platforms to insight repositories, I'll help you choose and implement the right tools for your team.
+                  You have a UX practice. You need someone to lead them, elevate their work, and make sure it reaches the people who need to act on those insights. I build and lead diverse teams so that insights are representative of your real users to make a real impact.
                 </p>
               </div>
             </div>
@@ -434,8 +346,110 @@ export default function Hiring() {
         </div>
       </section>
 
+      {/* Who I Work With */}
+      <section className="hiring-section-padding" style={{ backgroundColor: 'var(--white)' }}>
+        <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
+          <div
+            style={{
+              fontFamily: 'DM Sans, sans-serif',
+              fontWeight: 700,
+              fontSize: '11px',
+              color: 'var(--teal-dark)',
+              letterSpacing: '1.5px',
+              textTransform: 'uppercase',
+              marginBottom: '48px',
+            }}
+          >
+            WHO I WORK WITH
+          </div>
+
+          <div className="hiring-who-grid">
+            <div
+              style={{
+                backgroundColor: 'var(--white)',
+                border: '1px solid var(--light-gray)',
+                borderRadius: '8px',
+                padding: '32px',
+              }}
+            >
+              <p
+                style={{
+                  fontFamily: 'Lora, serif',
+                  fontSize: '17px',
+                  color: 'var(--dark-gray)',
+                  lineHeight: '1.6',
+                  margin: 0,
+                }}
+              >
+                Product and tech companies building AI-powered features who want to make sure those features work equitably and sustainably across the people who will actually use them.
+              </p>
+            </div>
+            <div
+              style={{
+                backgroundColor: 'var(--white)',
+                border: '1px solid var(--light-gray)',
+                borderRadius: '8px',
+                padding: '32px',
+              }}
+            >
+              <p
+                style={{
+                  fontFamily: 'Lora, serif',
+                  fontSize: '17px',
+                  color: 'var(--dark-gray)',
+                  lineHeight: '1.6',
+                  margin: 0,
+                }}
+              >
+                Organizations navigating complex ethical challenges around user privacy, bias, or vulnerable populations.
+              </p>
+            </div>
+            <div
+              style={{
+                backgroundColor: 'var(--white)',
+                border: '1px solid var(--light-gray)',
+                borderRadius: '8px',
+                padding: '32px',
+              }}
+            >
+              <p
+                style={{
+                  fontFamily: 'Lora, serif',
+                  fontSize: '17px',
+                  color: 'var(--dark-gray)',
+                  lineHeight: '1.6',
+                  margin: 0,
+                }}
+              >
+                Teams without a UX practice (or with a research practice that isn't working). Teams who need someone to come in, assess the situation, and build something that lasts.
+              </p>
+            </div>
+            <div
+              style={{
+                backgroundColor: 'var(--white)',
+                border: '1px solid var(--light-gray)',
+                borderRadius: '8px',
+                padding: '32px',
+              }}
+            >
+              <p
+                style={{
+                  fontFamily: 'Lora, serif',
+                  fontSize: '17px',
+                  color: 'var(--dark-gray)',
+                  lineHeight: '1.6',
+                  margin: 0,
+                }}
+              >
+                Leaders who are willing to hear hard things and do something about them. If the goal is a report that sits on a shelf, I'm not the right fit.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Process Section */}
-      <section className="hiring-section-padding" style={{ backgroundColor: '#FAF7F2' }}>
+      <section className="hiring-section-padding" style={{ backgroundColor: 'var(--charcoal)' }}>
         <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
           {/* Eyebrow */}
           <div
@@ -443,13 +457,13 @@ export default function Hiring() {
               fontFamily: 'DM Sans, sans-serif',
               fontWeight: 700,
               fontSize: '11px',
-              color: '#1F5364',
+              color: 'var(--gold)',
               letterSpacing: '1.5px',
               textTransform: 'uppercase',
               marginBottom: '48px',
             }}
           >
-            PROCESS
+            THE PROCESS
           </div>
 
           {/* Three Numbered Steps */}
@@ -461,7 +475,7 @@ export default function Hiring() {
                   fontFamily: 'DM Sans, sans-serif',
                   fontWeight: 700,
                   fontSize: '56px',
-                  color: '#D4A843',
+                  color: 'var(--gold)',
                   marginBottom: '20px',
                 }}
               >
@@ -472,7 +486,7 @@ export default function Hiring() {
                   fontFamily: 'DM Sans, sans-serif',
                   fontWeight: 700,
                   fontSize: '19px',
-                  color: '#1E1E1E',
+                  color: 'var(--white)',
                   marginBottom: '12px',
                 }}
               >
@@ -482,11 +496,11 @@ export default function Hiring() {
                 style={{
                   fontFamily: 'Lora, serif',
                   fontSize: '15px',
-                  color: '#444444',
+                  color: 'var(--white)',
                   lineHeight: '1.6',
                 }}
               >
-                We'll talk about your research challenges, team structure, and goals. I'll share how I've solved similar problems and whether we're a good fit.
+                Tell me what you're working on, your challenges, structure, and goals. I'll tell you honestly whether I can help, and how I can help.
               </p>
             </div>
 
@@ -497,7 +511,7 @@ export default function Hiring() {
                   fontFamily: 'DM Sans, sans-serif',
                   fontWeight: 700,
                   fontSize: '56px',
-                  color: '#D4A843',
+                  color: 'var(--gold)',
                   marginBottom: '20px',
                 }}
               >
@@ -508,21 +522,21 @@ export default function Hiring() {
                   fontFamily: 'DM Sans, sans-serif',
                   fontWeight: 700,
                   fontSize: '19px',
-                  color: '#1E1E1E',
+                  color: 'var(--white)',
                   marginBottom: '12px',
                 }}
               >
-                Scoping & Proposal
+                Scoping and Proposal
               </h3>
               <p
                 style={{
                   fontFamily: 'Lora, serif',
                   fontSize: '15px',
-                  color: '#444444',
+                  color: 'var(--white)',
                   lineHeight: '1.6',
                 }}
               >
-                I'll create a detailed proposal outlining the work, timeline, deliverables, and investment. You'll know exactly what to expect before we begin.
+                If we are a fit, we'll define the engagement — the timeline, deliverables, what success looks like. You'll know exactly what to expect before we begin.
               </p>
             </div>
 
@@ -533,7 +547,7 @@ export default function Hiring() {
                   fontFamily: 'DM Sans, sans-serif',
                   fontWeight: 700,
                   fontSize: '56px',
-                  color: '#D4A843',
+                  color: 'var(--gold)',
                   marginBottom: '20px',
                 }}
               >
@@ -544,17 +558,17 @@ export default function Hiring() {
                   fontFamily: 'DM Sans, sans-serif',
                   fontWeight: 700,
                   fontSize: '19px',
-                  color: '#1E1E1E',
+                  color: 'var(--white)',
                   marginBottom: '12px',
                 }}
               >
-                Collaboration & Delivery
+                Get to work
               </h3>
               <p
                 style={{
                   fontFamily: 'Lora, serif',
                   fontSize: '15px',
-                  color: '#444444',
+                  color: 'var(--white)',
                   lineHeight: '1.6',
                 }}
               >
@@ -566,7 +580,7 @@ export default function Hiring() {
       </section>
 
       {/* Testimonials Section */}
-      <section className="hiring-section-padding" style={{ backgroundColor: '#FFFFFF' }}>
+      <section className="hiring-section-padding" style={{ backgroundColor: 'var(--cream)' }}>
         <div style={{ maxWidth: '900px', margin: '0 auto' }}>
           {/* Eyebrow */}
           <div
@@ -574,7 +588,7 @@ export default function Hiring() {
               fontFamily: 'DM Sans, sans-serif',
               fontWeight: 700,
               fontSize: '11px',
-              color: '#1F5364',
+              color: 'var(--teal-dark)',
               letterSpacing: '1.5px',
               textTransform: 'uppercase',
               marginBottom: '48px',
@@ -583,14 +597,14 @@ export default function Hiring() {
             TESTIMONIALS
           </div>
 
-          {/* Two Stacked Cards */}
+          {/* TODO: replace with real testimonials */}
           <div style={{ display: 'flex', flexDirection: 'column', gap: '32px' }}>
             {/* Testimonial 1 */}
             <div
               style={{
-                backgroundColor: '#FAF7F2',
-                border: '1px solid #EEEEEE',
-                borderLeft: '4px solid #1F5364',
+                backgroundColor: 'var(--white)',
+                border: '1px solid var(--light-gray)',
+                borderLeft: '4px solid var(--teal-dark)',
                 borderRadius: '8px',
                 padding: '40px',
               }}
@@ -599,41 +613,41 @@ export default function Hiring() {
                 style={{
                   fontFamily: 'Lora, serif',
                   fontSize: '17px',
-                  color: '#444444',
+                  color: 'var(--dark-gray)',
                   lineHeight: '1.6',
                   marginBottom: '24px',
                   fontStyle: 'italic',
                 }}
               >
-                "Jesse helped us establish our research practice from zero. Within six months, we went from no researchers to a team of five with clear frameworks, processes, and buy-in from leadership. Their strategic thinking and ability to coach others is unmatched."
+                "Placeholder testimonial text — client quote about our work together will go here."
               </p>
               <div
                 style={{
                   fontFamily: 'DM Sans, sans-serif',
                   fontSize: '14px',
-                  color: '#1E1E1E',
+                  color: 'var(--charcoal)',
                   fontWeight: 700,
                 }}
               >
-                Sarah Chen
+                Name
               </div>
               <div
                 style={{
                   fontFamily: 'DM Sans, sans-serif',
                   fontSize: '13px',
-                  color: '#888888',
+                  color: 'var(--gray)',
                 }}
               >
-                VP of Product, EdTech Startup
+                Title, Organization
               </div>
             </div>
 
             {/* Testimonial 2 */}
             <div
               style={{
-                backgroundColor: '#FAF7F2',
-                border: '1px solid #EEEEEE',
-                borderLeft: '4px solid #1F5364',
+                backgroundColor: 'var(--white)',
+                border: '1px solid var(--light-gray)',
+                borderLeft: '4px solid var(--teal-dark)',
                 borderRadius: '8px',
                 padding: '40px',
               }}
@@ -642,135 +656,138 @@ export default function Hiring() {
                 style={{
                   fontFamily: 'Lora, serif',
                   fontSize: '17px',
-                  color: '#444444',
+                  color: 'var(--dark-gray)',
                   lineHeight: '1.6',
                   marginBottom: '24px',
                   fontStyle: 'italic',
                 }}
               >
-                "We brought Jesse in to audit our AI bias practices. Not only did they identify critical issues we'd missed, but they helped us build a framework that's now part of our core product development process. Every AI company should have someone like Jesse on their side."
+                "Second placeholder testimonial — another client quote will go here when ready."
               </p>
               <div
                 style={{
                   fontFamily: 'DM Sans, sans-serif',
                   fontSize: '14px',
-                  color: '#1E1E1E',
+                  color: 'var(--charcoal)',
                   fontWeight: 700,
                 }}
               >
-                Marcus Williams
+                Name
               </div>
               <div
                 style={{
                   fontFamily: 'DM Sans, sans-serif',
                   fontSize: '13px',
-                  color: '#888888',
+                  color: 'var(--gray)',
                 }}
               >
-                Chief Product Officer, ML Platform
+                Title, Organization
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Book a Call Section */}
-      <section className="hiring-section-padding" style={{ backgroundColor: '#FAF7F2' }}>
-        <div style={{ maxWidth: '900px', margin: '0 auto' }}>
+      {/* Bottom: book + email */}
+      <section className="hiring-section-padding" style={{ backgroundColor: 'var(--white)' }}>
+        <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
           <div
-            style={{
-              backgroundColor: '#1E1E1E',
-              borderRadius: '8px',
-              padding: '64px 48px',
-              textAlign: 'center',
-            }}
-          >
-            <h2
-              style={{
-                fontFamily: 'DM Sans, sans-serif',
-                fontWeight: 700,
-                fontSize: '32px',
-                color: '#FFFFFF',
-                marginBottom: '16px',
-              }}
-            >
-              Let's talk about your research practice
-            </h2>
-            <p
-              style={{
-                fontFamily: 'Lora, serif',
-                fontSize: '17px',
-                color: 'rgba(255, 255, 255, 0.7)',
-                lineHeight: '1.6',
-                marginBottom: '40px',
-              }}
-            >
-              Book a 30-minute discovery call to discuss your needs and how I can help.
-            </p>
-
-            {/* Calendly Placeholder */}
-            <div
-              style={{
-                width: '100%',
-                height: '200px',
-                backgroundColor: '#444444',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                color: '#888888',
-                fontFamily: 'DM Sans, sans-serif',
-                fontSize: '14px',
-                borderRadius: '8px',
-                marginBottom: '32px',
-              }}
-            >
-              [Calendly Embed Placeholder]
-            </div>
-
-            <button
-              style={{
-                fontFamily: 'DM Sans, sans-serif',
-                fontWeight: 700,
-                fontSize: '15px',
-                color: '#1E1E1E',
-                backgroundColor: '#D4A843',
-                padding: '14px 32px',
-                borderRadius: '6px',
-                border: 'none',
-                cursor: 'pointer',
-              }}
-            >
-              Book a Call →
-            </button>
-          </div>
-        </div>
-      </section>
-
-      {/* Contact Section */}
-      <section className="hiring-section-padding" style={{ backgroundColor: '#FFFFFF', textAlign: 'center' }}>
-        <div style={{ maxWidth: '900px', margin: '0 auto' }}>
-          <p
-            style={{
-              fontFamily: 'Lora, serif',
-              fontSize: '17px',
-              color: '#444444',
-              marginBottom: '16px',
-            }}
-          >
-            Prefer email?
-          </p>
-          <a
-            href="mailto:jesse@example.com"
             style={{
               fontFamily: 'DM Sans, sans-serif',
               fontWeight: 700,
-              fontSize: '20px',
-              color: '#1F5364',
-              textDecoration: 'none',
+              fontSize: '11px',
+              color: 'var(--teal-dark)',
+              letterSpacing: '1.5px',
+              textTransform: 'uppercase',
+              marginBottom: '48px',
             }}
           >
-            jesse@example.com
-          </a>
+            Want to chat?
+          </div>
+          <div className="hiring-bottom-grid">
+            <div
+              style={{
+                backgroundColor: 'var(--charcoal)',
+                borderRadius: '8px',
+                padding: '40px',
+              }}
+            >
+              <h2
+                style={{
+                  fontFamily: 'DM Sans, sans-serif',
+                  fontWeight: 700,
+                  fontSize: '24px',
+                  color: 'var(--white)',
+                  marginBottom: '16px',
+                }}
+              >
+                Book a 30-minute chat.
+              </h2>
+              <p
+                style={{
+                  fontFamily: 'Lora, serif',
+                  fontSize: '17px',
+                  color: 'var(--white)',
+                  lineHeight: '1.6',
+                  marginBottom: '28px',
+                }}
+              >
+                No pitch deck. No pre-call questionnaire. Just a conversation to see if it makes sense to work together.
+              </p>
+              <a
+                href="https://calendly.com/jesseleedespard/chat-with-jesse"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  display: 'inline-block',
+                  fontFamily: 'DM Sans, sans-serif',
+                  fontWeight: 700,
+                  fontSize: '15px',
+                  color: 'var(--charcoal)',
+                  backgroundColor: 'var(--gold)',
+                  padding: '14px 32px',
+                  borderRadius: '6px',
+                  textDecoration: 'none',
+                }}
+              >
+                Book a Call →
+              </a>
+            </div>
+
+            <div
+              style={{
+                backgroundColor: 'var(--charcoal)',
+                borderRadius: '8px',
+                padding: '40px',
+              }}
+            >
+              <h2
+                style={{
+                  fontFamily: 'DM Sans, sans-serif',
+                  fontWeight: 700,
+                  fontSize: '24px',
+                  color: 'var(--white)',
+                  marginBottom: '16px',
+                }}
+              >
+                Prefer email?
+              </h2>
+              <p
+                style={{
+                  fontFamily: 'Lora, serif',
+                  fontSize: '17px',
+                  color: 'var(--white)',
+                  lineHeight: '1.6',
+                  marginBottom: '16px',
+                }}
+              >
+                That works too.
+              </p>
+              <a className="hiring-contact-email" href="mailto:jesse@jesseleedespard.com">
+                jesse@jesseleedespard.com
+              </a>
+            </div>
+          </div>
         </div>
       </section>
 

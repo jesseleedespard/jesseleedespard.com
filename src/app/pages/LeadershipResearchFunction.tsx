@@ -13,16 +13,6 @@ export default function LeadershipResearchFunction() {
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
 .leadership-research-function-page {
-  --charcoal:   #1E1E1E;
-  --cream:      #FAF7F2;
-  --teal:       #2C6E7F;
-  --teal-dark:  #1F5364;
-  --terra:      #C4622D;
-  --gold:       #D4A843;
-  --gray:       #888888;
-  --light-gray: #EEEEEE;
-  --dark-gray:  #444444;
-  --white:      #FFFFFF;
   --display: 'DM Sans', system-ui, sans-serif;
   --body:    'Lora', Georgia, serif;
   --wide: 1100px;
@@ -344,7 +334,7 @@ html { scroll-behavior: smooth; }
               </div>
             </div>
             <div className="act-card">
-              <div className="act-card-header" style={{ background: '#5A7A3A' }}>
+              <div className="act-card-header" style={{ background: 'var(--teal)' }}>
                 <span className="act-card-phase">Product Impact</span>
                 <span className="act-card-title">— Turning research into outcomes</span>
               </div>
@@ -515,7 +505,7 @@ html { scroll-behavior: smooth; }
               </div>
             </div>
             <div className="act-card">
-              <div className="act-card-header" style={{ background: '#5A7A3A' }}>
+              <div className="act-card-header" style={{ background: 'var(--teal)' }}>
                 <span className="act-card-phase">Business Outcomes</span>
                 <span className="act-card-title">— Post-acquisition results</span>
               </div>

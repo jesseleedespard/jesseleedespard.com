@@ -13,17 +13,6 @@ export default function CaseStudyWorkBeforeTools() {
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
 .work-before-tools-page {
-  --charcoal:   #1E1E1E;
-  --cream:      #FAF7F2;
-  --teal:       #2C6E7F;
-  --teal-dark:  #1F5364;
-  --terra:      #C4622D;
-  --gold:       #D4A843;
-  --gray:       #888888;
-  --light-gray: #EEEEEE;
-  --dark-gray:  #444444;
-  --white:      #FFFFFF;
-
   --display: 'DM Sans', system-ui, sans-serif;
   --body:    'Lora', Georgia, serif;
 
@@ -779,7 +768,7 @@ html { scroll-behavior: smooth; }
 
           <div className="pillars">
             <div className="pillar">
-              <div className="pillar-head" style={{ background: '#C0392B' }}>
+              <div className="pillar-head" style={{ background: 'var(--terra)' }}>
                 Holistic Journey
               </div>
               <div className="pillar-body">

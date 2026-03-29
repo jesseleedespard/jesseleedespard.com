@@ -12,16 +12,6 @@ export default function CaseStudyHealthtech() {
       <style>{`
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 .healthtech-case-study-page {
-  --charcoal:   #1E1E1E;
-  --cream:      #FAF7F2;
-  --teal:       #2C6E7F;
-  --teal-dark:  #1F5364;
-  --terra:      #C4622D;
-  --gold:       #D4A843;
-  --gray:       #888888;
-  --light-gray: #EEEEEE;
-  --dark-gray:  #444444;
-  --white:      #FFFFFF;
   --display: 'DM Sans', system-ui, sans-serif;
   --body:    'Lora', Georgia, serif;
   --wide: 1100px;

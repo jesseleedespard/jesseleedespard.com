@@ -13,16 +13,6 @@ export default function LeadershipWebStrategy() {
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
 .leadership-web-strategy-page {
-  --charcoal:   #1E1E1E;
-  --cream:      #FAF7F2;
-  --teal:       #2C6E7F;
-  --teal-dark:  #1F5364;
-  --terra:      #C4622D;
-  --gold:       #D4A843;
-  --gray:       #888888;
-  --light-gray: #EEEEEE;
-  --dark-gray:  #444444;
-  --white:      #FFFFFF;
   --display: 'DM Sans', system-ui, sans-serif;
   --body:    'Lora', Georgia, serif;
   --wide: 1100px;
@@ -401,28 +391,28 @@ html { scroll-behavior: smooth; }
           </div>
 
           <div className="daio-grid">
-            <div className="daio-cell" style={{ background: '#1E1E1E' }}>
+            <div className="daio-cell" style={{ background: 'var(--charcoal)' }}>
               <h4>Research & Data</h4>
               <ul>
                 <li>Quantitative and qualitative research to gain insights into which products and features need attention</li>
                 <li>Understand the problem space before ideating a solution</li>
               </ul>
             </div>
-            <div className="daio-cell" style={{ background: '#2C6E7F' }}>
+            <div className="daio-cell" style={{ background: 'var(--teal)' }}>
               <h4>Experiments</h4>
               <ul>
                 <li>Foster quick learnings — clarify the problem space and test potential solutions</li>
                 <li>Surface learnings to the broader team to inform other projects</li>
               </ul>
             </div>
-            <div className="daio-cell" style={{ background: '#333333' }}>
+            <div className="daio-cell" style={{ background: 'var(--charcoal)' }}>
               <h4>Drive Measurable Outcomes</h4>
               <ul>
                 <li>Focus on outcomes that connect user value to business results</li>
                 <li>Demonstrate successful new processes to the broader company</li>
               </ul>
             </div>
-            <div className="daio-cell" style={{ background: '#444444' }}>
+            <div className="daio-cell" style={{ background: 'var(--dark-gray)' }}>
               <h4>Apply the Learnings</h4>
               <ul>
                 <li>Apply learnings via existing products and features</li>
@@ -445,7 +435,7 @@ html { scroll-behavior: smooth; }
 
           <div className="discipline-grid">
             <div>
-              <div className="disc-head" style={{ background: '#2C6E7F' }}>
+              <div className="disc-head" style={{ background: 'var(--teal)' }}>
                 SEO
               </div>
               <div className="disc-body">
@@ -458,7 +448,7 @@ html { scroll-behavior: smooth; }
               </div>
             </div>
             <div>
-              <div className="disc-head" style={{ background: '#1E1E1E' }}>UX — The Connective Tissue</div>
+              <div className="disc-head" style={{ background: 'var(--charcoal)' }}>UX — The Connective Tissue</div>
               <div
                 className="disc-body"
                 style={{ borderLeft: '2px solid var(--gold)', borderRight: '2px solid var(--gold)' }}
@@ -472,7 +462,7 @@ html { scroll-behavior: smooth; }
               </div>
             </div>
             <div>
-              <div className="disc-head" style={{ background: '#C4622D' }}>
+              <div className="disc-head" style={{ background: 'var(--terra)' }}>
                 CRO
               </div>
               <div className="disc-body">
@@ -504,7 +494,7 @@ html { scroll-behavior: smooth; }
               <p style={{ color: 'rgba(255,255,255,0.6)' }}>All people discovering the company across channels</p>
             </div>
             <div className="tier-arrow">↓</div>
-            <div className="metrics-tier" style={{ background: '#333', color: 'var(--white)', width: '82%' }}>
+            <div className="metrics-tier" style={{ background: 'var(--charcoal)', color: 'var(--white)', width: '82%' }}>
               <h4 style={{ color: 'var(--gold)' }}>User Health Metrics (Leading Indicators)</h4>
               <p style={{ color: 'rgba(255,255,255,0.6)' }}>Combinable signals — e.g. SEO rankings + UX quality scores</p>
             </div>
@@ -537,7 +527,7 @@ html { scroll-behavior: smooth; }
 
           <div className="discipline-grid">
             <div>
-              <div className="disc-head" style={{ background: '#2C6E7F' }}>
+              <div className="disc-head" style={{ background: 'var(--teal)' }}>
                 UX × SEO
               </div>
               <div className="disc-body">
@@ -552,7 +542,7 @@ html { scroll-behavior: smooth; }
               </div>
             </div>
             <div>
-              <div className="disc-head" style={{ background: '#1E1E1E' }}>
+              <div className="disc-head" style={{ background: 'var(--charcoal)' }}>
                 UX × CRO
               </div>
               <div className="disc-body">
@@ -567,7 +557,7 @@ html { scroll-behavior: smooth; }
               </div>
             </div>
             <div>
-              <div className="disc-head" style={{ background: '#C4622D' }}>
+              <div className="disc-head" style={{ background: 'var(--terra)' }}>
                 SEO × CRO
               </div>
               <div className="disc-body">

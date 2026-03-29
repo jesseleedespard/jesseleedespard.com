@@ -4,10 +4,10 @@ import { Link } from 'react-router';
 
 export default function About() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen" style={{ backgroundColor: 'var(--white)' }}>
       <style>{`
         .about-hero-section {
-          background-color: #1E1E1E;
+          background-color: var(--charcoal);
           padding: 100px 48px;
         }
         
@@ -15,7 +15,7 @@ export default function About() {
           font-family: 'DM Sans', sans-serif;
           font-weight: 700;
           font-size: 52px;
-          color: #FFFFFF;
+          color: var(--white);
           line-height: 1.15;
           margin-bottom: 24px;
           max-width: 900px;
@@ -32,9 +32,11 @@ export default function About() {
         
         .about-photo-grid {
           display: grid;
-          grid-template-columns: 1fr 1fr;
-          gap: 48px;
-          align-items: center;
+          grid-template-columns: 1fr;
+          gap: 40px;
+          align-items: stretch;
+          max-width: 1200px;
+          margin: 0 auto;
         }
         
         .about-values-grid {
@@ -69,7 +71,6 @@ export default function About() {
           }
           
           .about-photo-grid {
-            grid-template-columns: 1fr;
             gap: 32px;
           }
           
@@ -97,7 +98,7 @@ export default function About() {
               fontFamily: 'DM Sans, sans-serif',
               fontWeight: 700,
               fontSize: '11px',
-              color: '#D4A843',
+              color: 'var(--gold)',
               marginBottom: '20px',
               letterSpacing: '1.5px',
             }}
@@ -118,18 +119,18 @@ export default function About() {
       </section>
 
       {/* Photo + Pull Quote Section */}
-      <section className="about-section-padding" style={{ backgroundColor: '#FAF7F2' }}>
+      <section className="about-section-padding" style={{ backgroundColor: 'var(--cream)' }}>
         <div className="about-photo-grid">
           {/* Placeholder Image */}
           <div
             style={{
               width: '100%',
               height: '500px',
-              backgroundColor: '#CCCCCC',
+              backgroundColor: 'var(--gray)',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
-              color: '#888888',
+              color: 'var(--gray)',
               fontFamily: 'DM Sans, sans-serif',
               fontSize: '14px',
               borderRadius: '8px',
@@ -141,9 +142,9 @@ export default function About() {
           {/* Pull Quote */}
           <div
             style={{
-              backgroundColor: '#FFFFFF',
-              border: '1px solid #EEEEEE',
-              borderLeft: '4px solid #1F5364',
+              backgroundColor: 'var(--white)',
+              border: '1px solid var(--light-gray)',
+              borderLeft: '4px solid var(--teal-dark)',
               padding: '40px',
               borderRadius: '8px',
             }}
@@ -152,7 +153,7 @@ export default function About() {
               style={{
                 fontFamily: 'Lora, serif',
                 fontSize: '20px',
-                color: '#1E1E1E',
+                color: 'var(--charcoal)',
                 lineHeight: '1.65',
                 fontStyle: 'italic',
                 marginBottom: '24px',
@@ -164,7 +165,7 @@ export default function About() {
               style={{
                 fontFamily: 'DM Sans, sans-serif',
                 fontSize: '14px',
-                color: '#1F5364',
+                color: 'var(--teal-dark)',
                 fontWeight: 700,
               }}
             >
@@ -175,7 +176,7 @@ export default function About() {
       </section>
 
       {/* Story Section */}
-      <section className="about-section-padding" style={{ backgroundColor: '#FFFFFF' }}>
+      <section className="about-section-padding" style={{ backgroundColor: 'var(--white)' }}>
         <div style={{ maxWidth: '900px', margin: '0 auto' }}>
           {/* Eyebrow */}
           <div
@@ -183,7 +184,7 @@ export default function About() {
               fontFamily: 'DM Sans, sans-serif',
               fontWeight: 700,
               fontSize: '11px',
-              color: '#1F5364',
+              color: 'var(--teal-dark)',
               letterSpacing: '1.5px',
               textTransform: 'uppercase',
               marginBottom: '24px',
@@ -197,7 +198,7 @@ export default function About() {
             style={{
               fontFamily: 'Lora, serif',
               fontSize: '17px',
-              color: '#444444',
+              color: 'var(--dark-gray)',
               lineHeight: '1.7',
             }}
           >
@@ -234,7 +235,7 @@ export default function About() {
       </section>
 
       {/* Values Section */}
-      <section className="about-section-padding" style={{ backgroundColor: '#FAF7F2' }}>
+      <section className="about-section-padding" style={{ backgroundColor: 'var(--cream)' }}>
         <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
           {/* Eyebrow */}
           <div
@@ -242,7 +243,7 @@ export default function About() {
               fontFamily: 'DM Sans, sans-serif',
               fontWeight: 700,
               fontSize: '11px',
-              color: '#1F5364',
+              color: 'var(--teal-dark)',
               letterSpacing: '1.5px',
               textTransform: 'uppercase',
               marginBottom: '24px',
@@ -260,7 +261,7 @@ export default function About() {
                   fontFamily: 'DM Sans, sans-serif',
                   fontWeight: 700,
                   fontSize: '48px',
-                  color: '#D4A843',
+                  color: 'var(--gold)',
                   marginBottom: '16px',
                 }}
               >
@@ -271,7 +272,7 @@ export default function About() {
                   fontFamily: 'DM Sans, sans-serif',
                   fontWeight: 700,
                   fontSize: '19px',
-                  color: '#1E1E1E',
+                  color: 'var(--charcoal)',
                   marginBottom: '12px',
                 }}
               >
@@ -281,7 +282,7 @@ export default function About() {
                 style={{
                   fontFamily: 'Lora, serif',
                   fontSize: '15px',
-                  color: '#444444',
+                  color: 'var(--dark-gray)',
                   lineHeight: '1.6',
                 }}
               >
@@ -296,7 +297,7 @@ export default function About() {
                   fontFamily: 'DM Sans, sans-serif',
                   fontWeight: 700,
                   fontSize: '48px',
-                  color: '#D4A843',
+                  color: 'var(--gold)',
                   marginBottom: '16px',
                 }}
               >
@@ -307,7 +308,7 @@ export default function About() {
                   fontFamily: 'DM Sans, sans-serif',
                   fontWeight: 700,
                   fontSize: '19px',
-                  color: '#1E1E1E',
+                  color: 'var(--charcoal)',
                   marginBottom: '12px',
                 }}
               >
@@ -317,7 +318,7 @@ export default function About() {
                 style={{
                   fontFamily: 'Lora, serif',
                   fontSize: '15px',
-                  color: '#444444',
+                  color: 'var(--dark-gray)',
                   lineHeight: '1.6',
                 }}
               >
@@ -332,7 +333,7 @@ export default function About() {
                   fontFamily: 'DM Sans, sans-serif',
                   fontWeight: 700,
                   fontSize: '48px',
-                  color: '#D4A843',
+                  color: 'var(--gold)',
                   marginBottom: '16px',
                 }}
               >
@@ -343,7 +344,7 @@ export default function About() {
                   fontFamily: 'DM Sans, sans-serif',
                   fontWeight: 700,
                   fontSize: '19px',
-                  color: '#1E1E1E',
+                  color: 'var(--charcoal)',
                   marginBottom: '12px',
                 }}
               >
@@ -353,7 +354,7 @@ export default function About() {
                 style={{
                   fontFamily: 'Lora, serif',
                   fontSize: '15px',
-                  color: '#444444',
+                  color: 'var(--dark-gray)',
                   lineHeight: '1.6',
                 }}
               >
@@ -365,7 +366,7 @@ export default function About() {
       </section>
 
       {/* Experience Section */}
-      <section className="about-section-padding" style={{ backgroundColor: '#FFFFFF' }}>
+      <section className="about-section-padding" style={{ backgroundColor: 'var(--white)' }}>
         <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
           {/* Eyebrow */}
           <div
@@ -373,7 +374,7 @@ export default function About() {
               fontFamily: 'DM Sans, sans-serif',
               fontWeight: 700,
               fontSize: '11px',
-              color: '#1F5364',
+              color: 'var(--teal-dark)',
               letterSpacing: '1.5px',
               textTransform: 'uppercase',
               marginBottom: '48px',
@@ -387,8 +388,8 @@ export default function About() {
             {/* EdTech Card */}
             <div
               style={{
-                backgroundColor: '#FAF7F2',
-                border: '1px solid #EEEEEE',
+                backgroundColor: 'var(--cream)',
+                border: '1px solid var(--light-gray)',
                 borderRadius: '8px',
                 padding: '32px',
               }}
@@ -398,7 +399,7 @@ export default function About() {
                   fontFamily: 'DM Sans, sans-serif',
                   fontWeight: 700,
                   fontSize: '11px',
-                  color: '#C4622D',
+                  color: 'var(--terra)',
                   letterSpacing: '1.5px',
                   textTransform: 'uppercase',
                   marginBottom: '16px',
@@ -411,7 +412,7 @@ export default function About() {
                   fontFamily: 'DM Sans, sans-serif',
                   fontWeight: 700,
                   fontSize: '19px',
-                  color: '#1E1E1E',
+                  color: 'var(--charcoal)',
                   marginBottom: '12px',
                 }}
               >
@@ -421,7 +422,7 @@ export default function About() {
                 style={{
                   fontFamily: 'Lora, serif',
                   fontSize: '15px',
-                  color: '#444444',
+                  color: 'var(--dark-gray)',
                   lineHeight: '1.6',
                   marginBottom: '16px',
                 }}
@@ -432,7 +433,7 @@ export default function About() {
                 style={{
                   fontFamily: 'DM Sans, sans-serif',
                   fontSize: '13px',
-                  color: '#888888',
+                  color: 'var(--gray)',
                 }}
               >
                 2020 – 2023
@@ -442,8 +443,8 @@ export default function About() {
             {/* HealthTech Card */}
             <div
               style={{
-                backgroundColor: '#FAF7F2',
-                border: '1px solid #EEEEEE',
+                backgroundColor: 'var(--cream)',
+                border: '1px solid var(--light-gray)',
                 borderRadius: '8px',
                 padding: '32px',
               }}
@@ -453,7 +454,7 @@ export default function About() {
                   fontFamily: 'DM Sans, sans-serif',
                   fontWeight: 700,
                   fontSize: '11px',
-                  color: '#1F5364',
+                  color: 'var(--teal-dark)',
                   letterSpacing: '1.5px',
                   textTransform: 'uppercase',
                   marginBottom: '16px',
@@ -466,7 +467,7 @@ export default function About() {
                   fontFamily: 'DM Sans, sans-serif',
                   fontWeight: 700,
                   fontSize: '19px',
-                  color: '#1E1E1E',
+                  color: 'var(--charcoal)',
                   marginBottom: '12px',
                 }}
               >
@@ -476,7 +477,7 @@ export default function About() {
                 style={{
                   fontFamily: 'Lora, serif',
                   fontSize: '15px',
-                  color: '#444444',
+                  color: 'var(--dark-gray)',
                   lineHeight: '1.6',
                   marginBottom: '16px',
                 }}
@@ -487,7 +488,7 @@ export default function About() {
                 style={{
                   fontFamily: 'DM Sans, sans-serif',
                   fontSize: '13px',
-                  color: '#888888',
+                  color: 'var(--gray)',
                 }}
               >
                 2017 – 2020
@@ -497,8 +498,8 @@ export default function About() {
             {/* PropTech Card */}
             <div
               style={{
-                backgroundColor: '#FAF7F2',
-                border: '1px solid #EEEEEE',
+                backgroundColor: 'var(--cream)',
+                border: '1px solid var(--light-gray)',
                 borderRadius: '8px',
                 padding: '32px',
               }}
@@ -508,7 +509,7 @@ export default function About() {
                   fontFamily: 'DM Sans, sans-serif',
                   fontWeight: 700,
                   fontSize: '11px',
-                  color: '#D4A843',
+                  color: 'var(--gold)',
                   letterSpacing: '1.5px',
                   textTransform: 'uppercase',
                   marginBottom: '16px',
@@ -521,7 +522,7 @@ export default function About() {
                   fontFamily: 'DM Sans, sans-serif',
                   fontWeight: 700,
                   fontSize: '19px',
-                  color: '#1E1E1E',
+                  color: 'var(--charcoal)',
                   marginBottom: '12px',
                 }}
               >
@@ -531,7 +532,7 @@ export default function About() {
                 style={{
                   fontFamily: 'Lora, serif',
                   fontSize: '15px',
-                  color: '#444444',
+                  color: 'var(--dark-gray)',
                   lineHeight: '1.6',
                   marginBottom: '16px',
                 }}
@@ -542,7 +543,7 @@ export default function About() {
                 style={{
                   fontFamily: 'DM Sans, sans-serif',
                   fontSize: '13px',
-                  color: '#888888',
+                  color: 'var(--gray)',
                 }}
               >
                 2014 – 2017
@@ -553,7 +554,7 @@ export default function About() {
       </section>
 
       {/* Testimonials Section */}
-      <section className="about-section-padding" style={{ backgroundColor: '#FAF7F2' }}>
+      <section className="about-section-padding" style={{ backgroundColor: 'var(--cream)' }}>
         <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
           {/* Eyebrow */}
           <div
@@ -561,7 +562,7 @@ export default function About() {
               fontFamily: 'DM Sans, sans-serif',
               fontWeight: 700,
               fontSize: '11px',
-              color: '#1F5364',
+              color: 'var(--teal-dark)',
               letterSpacing: '1.5px',
               textTransform: 'uppercase',
               marginBottom: '48px',
@@ -575,9 +576,9 @@ export default function About() {
             {/* Testimonial 1 */}
             <div
               style={{
-                backgroundColor: '#FFFFFF',
-                border: '1px solid #EEEEEE',
-                borderLeft: '4px solid #1F5364',
+                backgroundColor: 'var(--white)',
+                border: '1px solid var(--light-gray)',
+                borderLeft: '4px solid var(--teal-dark)',
                 borderRadius: '8px',
                 padding: '32px',
               }}
@@ -586,7 +587,7 @@ export default function About() {
                 style={{
                   fontFamily: 'Lora, serif',
                   fontSize: '15px',
-                  color: '#444444',
+                  color: 'var(--dark-gray)',
                   lineHeight: '1.6',
                   marginBottom: '20px',
                   fontStyle: 'italic',
@@ -598,7 +599,7 @@ export default function About() {
                 style={{
                   fontFamily: 'DM Sans, sans-serif',
                   fontSize: '13px',
-                  color: '#1E1E1E',
+                  color: 'var(--charcoal)',
                   fontWeight: 700,
                 }}
               >
@@ -608,7 +609,7 @@ export default function About() {
                 style={{
                   fontFamily: 'DM Sans, sans-serif',
                   fontSize: '12px',
-                  color: '#888888',
+                  color: 'var(--gray)',
                 }}
               >
                 VP of Product, EdTech Co.
@@ -618,9 +619,9 @@ export default function About() {
             {/* Testimonial 2 */}
             <div
               style={{
-                backgroundColor: '#FFFFFF',
-                border: '1px solid #EEEEEE',
-                borderLeft: '4px solid #1F5364',
+                backgroundColor: 'var(--white)',
+                border: '1px solid var(--light-gray)',
+                borderLeft: '4px solid var(--teal-dark)',
                 borderRadius: '8px',
                 padding: '32px',
               }}
@@ -629,7 +630,7 @@ export default function About() {
                 style={{
                   fontFamily: 'Lora, serif',
                   fontSize: '15px',
-                  color: '#444444',
+                  color: 'var(--dark-gray)',
                   lineHeight: '1.6',
                   marginBottom: '20px',
                   fontStyle: 'italic',
@@ -641,7 +642,7 @@ export default function About() {
                 style={{
                   fontFamily: 'DM Sans, sans-serif',
                   fontSize: '13px',
-                  color: '#1E1E1E',
+                  color: 'var(--charcoal)',
                   fontWeight: 700,
                 }}
               >
@@ -651,7 +652,7 @@ export default function About() {
                 style={{
                   fontFamily: 'DM Sans, sans-serif',
                   fontSize: '12px',
-                  color: '#888888',
+                  color: 'var(--gray)',
                 }}
               >
                 Chief Product Officer
@@ -661,9 +662,9 @@ export default function About() {
             {/* Testimonial 3 */}
             <div
               style={{
-                backgroundColor: '#FFFFFF',
-                border: '1px solid #EEEEEE',
-                borderLeft: '4px solid #1F5364',
+                backgroundColor: 'var(--white)',
+                border: '1px solid var(--light-gray)',
+                borderLeft: '4px solid var(--teal-dark)',
                 borderRadius: '8px',
                 padding: '32px',
               }}
@@ -672,7 +673,7 @@ export default function About() {
                 style={{
                   fontFamily: 'Lora, serif',
                   fontSize: '15px',
-                  color: '#444444',
+                  color: 'var(--dark-gray)',
                   lineHeight: '1.6',
                   marginBottom: '20px',
                   fontStyle: 'italic',
@@ -684,7 +685,7 @@ export default function About() {
                 style={{
                   fontFamily: 'DM Sans, sans-serif',
                   fontSize: '13px',
-                  color: '#1E1E1E',
+                  color: 'var(--charcoal)',
                   fontWeight: 700,
                 }}
               >
@@ -694,7 +695,7 @@ export default function About() {
                 style={{
                   fontFamily: 'DM Sans, sans-serif',
                   fontSize: '12px',
-                  color: '#888888',
+                  color: 'var(--gray)',
                 }}
               >
                 Senior UX Researcher
@@ -707,7 +708,7 @@ export default function About() {
       {/* CTA Strip */}
       <section
         style={{
-          backgroundColor: '#C4622D',
+          backgroundColor: 'var(--terra)',
           padding: '48px',
         }}
       >
@@ -718,7 +719,7 @@ export default function About() {
                 fontFamily: 'DM Sans, sans-serif',
                 fontWeight: 700,
                 fontSize: '21px',
-                color: '#1E1E1E',
+                color: 'var(--charcoal)',
                 marginBottom: '10px',
               }}
             >
@@ -728,7 +729,7 @@ export default function About() {
               style={{
                 fontFamily: 'Lora, serif',
                 fontSize: '16px',
-                color: '#1E1E1E',
+                color: 'var(--charcoal)',
                 opacity: 0.85,
                 lineHeight: '1.5',
               }}
@@ -742,8 +743,8 @@ export default function About() {
               fontFamily: 'DM Sans, sans-serif',
               fontWeight: 700,
               fontSize: '15px',
-              color: '#FFFFFF',
-              backgroundColor: '#1E1E1E',
+              color: 'var(--white)',
+              backgroundColor: 'var(--charcoal)',
               padding: '14px 32px',
               borderRadius: '6px',
               border: 'none',
