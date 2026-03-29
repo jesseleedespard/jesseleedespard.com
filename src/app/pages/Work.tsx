@@ -359,7 +359,7 @@ export default function Work() {
 
                   {/* Link */}
                   <Link
-                    to="/case-studies/ai-real-estate"
+                    to="/case-studies/proptech"
                     style={{
                       fontFamily: 'DM Sans, sans-serif',
                       fontWeight: 700,
@@ -430,7 +430,7 @@ export default function Work() {
 
                   {/* Link */}
                   <Link
-                    to="/case-studies/ai-personalization"
+                    to="/case-studies/work-before-the-tools"
                     style={{
                       fontFamily: 'DM Sans, sans-serif',
                       fontWeight: 700,
@@ -599,7 +599,7 @@ export default function Work() {
 
                   {/* Link */}
                   <Link
-                    to="/case-studies/building-research-practice"
+                    to="/leadership/research-function"
                     style={{
                       fontFamily: 'DM Sans, sans-serif',
                       fontWeight: 700,
@@ -669,19 +669,16 @@ export default function Work() {
                   </p>
 
                   {/* Link */}
-                  <Link
-                    to="/case-studies/scaling-research-ops"
+                  <div
                     style={{
                       fontFamily: 'DM Sans, sans-serif',
                       fontWeight: 700,
                       fontSize: '14px',
-                      color: '#C4622D',
-                      textDecoration: 'none',
-                      whiteSpace: 'nowrap',
+                      color: '#CCCCCC',
                     }}
                   >
-                    Read Case Study →
-                  </Link>
+                    Case Study →
+                  </div>
                 </div>
               </div>
             </div>
