@@ -4,7 +4,7 @@ import { Footer } from '../components/Footer';
 
 export default function CaseStudyHealthtech() {
   useEffect(() => {
-    document.title = 'Reducing the Time of Customer Onboarding — Jesse Lee Despard';
+    document.title = 'Reducing the Time of Customer Onboarding: Jesse Lee Despard';
   }, []);
 
   return (
@@ -42,33 +42,36 @@ html { scroll-behavior: smooth; }
 .section p:last-child { margin-bottom: 0; }
 .divider { height: 1px; background: var(--light-gray); margin: 48px 0 0; }
 
-/* FINDING CARDS — teal left border */
-.finding-stack { display: flex; flex-direction: column; gap: 4px; margin-top: 24px; }
-.finding-card { background: var(--white); border: 1px solid var(--light-gray); border-left: 3px solid var(--teal); border-radius: 0 6px 6px 0; padding: 16px; }
-.finding-title { font-family: var(--display); font-size: 14px; font-weight: 700; color: var(--charcoal); margin-bottom: 5px; }
-.finding-body { font-size: 14.5px; line-height: 1.7; color: var(--dark-gray); }
+/* THEME / NUMBERED CARDS */
+.theme-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-top: 24px; }
+.theme-card { background: var(--white); border: 1px solid var(--light-gray); border-radius: 6px; padding: 16px 18px; display: flex; gap: 12px; align-items: flex-start; }
+.theme-num { font-family: var(--display); font-size: 20px; font-weight: 700; color: var(--teal); min-width: 32px; }
+.theme-content h3 { font-family: var(--display); font-size: 15px; font-weight: 700; color: var(--charcoal); margin-bottom: 4px; }
+.theme-content p { font-size: 14.5px; line-height: 1.7; color: var(--dark-gray); margin: 0; }
 
-/* RESEARCH GOALS — same style */
-.goals-stack { display: flex; flex-direction: column; gap: 4px; margin-top: 24px; }
-
-/* METHOD STEPS */
-.method-steps { display: flex; flex-direction: column; gap: 16px; margin-top: 24px; }
-.method-step { display: flex; gap: 16px; align-items: flex-start; }
-.step-badge { background: var(--teal); color: var(--white); font-family: var(--display); font-weight: 700; font-size: 13px; width: 34px; height: 34px; border-radius: 8px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px; }
-.step-content h3 { font-family: var(--display); font-size: 15px; font-weight: 700; color: var(--charcoal); margin-bottom: 4px; }
-.step-content p { font-size: 14.5px; line-height: 1.7; color: var(--dark-gray); margin: 0; }
-
-/* STATS ROW — prominent */
+/* STATS ROW */
 .stats-callout { background: var(--charcoal); border-radius: 8px; padding: 36px 40px; margin-top: 24px; }
-.stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; }
-.stat-item { text-align: center; padding: 16px 12px; border-right: 1px solid rgba(255,255,255,0.12); }
+.stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; align-items: center; }
+.stat-item { text-align: center; padding: 24px 16px; border-right: 1px solid rgba(255,255,255,0.12); }
 .stat-item:last-child { border-right: none; }
-.stat-number { font-family: var(--display); font-size: clamp(20px, 2.5vw, 28px); font-weight: 700; color: var(--gold); margin-bottom: 8px; line-height: 1.2; }
-.stat-label { font-family: var(--display); font-size: 11px; color: rgba(255,255,255,0.75); font-weight: 500; line-height: 1.4; }
+.stat-number { font-family: var(--display); font-size: clamp(24px, 3vw, 36px); font-weight: 700; color: var(--gold); margin-bottom: 8px; line-height: 1.2; display: block; text-align: center; }
+.stat-label { font-family: var(--display); font-size: 12px; color: rgba(255,255,255,0.75); font-weight: 500; line-height: 1.4; text-align: center; }
 
-.lessons { display: flex; flex-direction: column; gap: 20px; margin-top: 24px; }
-.lesson { display: flex; gap: 16px; align-items: flex-start; }
-.lesson-num { font-family: var(--display); font-weight: 700; font-size: 13px; color: var(--teal-dark); flex-shrink: 0; min-width: 24px; }
+.lessons { display: flex; flex-direction: column; gap: 12px; margin-top: 24px; }
+.lesson {
+  background: var(--white);
+  border: 1px solid var(--light-gray);
+  border-radius: 6px;
+  padding: 20px 24px;
+}
+.lesson-num {
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: 28px;
+  color: var(--teal);
+  display: block;
+  margin-bottom: 12px;
+}
 .lesson-body { font-size: 14.5px; line-height: 1.7; color: var(--dark-gray); margin: 0; }
 .lesson-body strong { color: var(--charcoal); }
 
@@ -77,12 +80,10 @@ html { scroll-behavior: smooth; }
 .cta-strip-left a { color: var(--charcoal); font-family: var(--body); }
 .cta-btn { font-family: var(--display); font-weight: 700; font-size: 15px; color: var(--white); background: var(--charcoal); padding: 14px 32px; border-radius: 6px; text-decoration: none; display: inline-block; border: none; cursor: pointer; }
 
-/* ═══════════════════════════════════════════════════════════
-   MOBILE — 375px target, 8pt grid, centered text
-   ═══════════════════════════════════════════════════════════ */
+/* MOBILE: 375px target, 8pt grid, centered text */
 @media (max-width: 768px) {
 
-  /* HERO — centered */
+  /* HERO: centered */
   .hero { padding: 48px 24px 40px !important; text-align: center !important; }
   .hero-inner { max-width: 100% !important; }
   .hero-tag { font-size: 10px !important; }
@@ -100,7 +101,7 @@ html { scroll-behavior: smooth; }
   /* PAGE WRAP */
   .page-wrap { padding: 0 24px !important; }
 
-  /* SECTIONS — centered text on mobile */
+  /* SECTIONS: centered text on mobile */
   .section { padding: 48px 24px 0 !important; text-align: center !important; }
   .section h2 { font-size: clamp(20px, 5.5vw, 24px) !important; text-align: center !important; }
   .section p { text-align: center !important; }
@@ -115,7 +116,7 @@ html { scroll-behavior: smooth; }
   .card-grid { padding: 32px 0 !important; gap: 16px !important; }
   .cs-cards { grid-template-columns: 1fr !important; gap: 16px !important; }
 
-  /* CASE STUDY CARDS — left-align card content for readability */
+  /* CASE STUDY CARDS: left-align card content for readability */
   .cs-card-body { padding: 24px !important; text-align: left !important; }
   .lead-card-body { padding: 24px !important; text-align: left !important; }
   .cs-card-title { text-align: left !important; }
@@ -124,7 +125,7 @@ html { scroll-behavior: smooth; }
   .lead-card-title { text-align: left !important; }
   .lead-card-desc { text-align: left !important; }
 
-  /* GRIDS — all single column */
+  /* GRIDS: all single column */
   .two-col { grid-template-columns: 1fr !important; gap: 24px !important; }
   .grid2 { grid-template-columns: 1fr !important; gap: 16px !important; }
   .grid3 { grid-template-columns: 1fr !important; gap: 16px !important; }
@@ -239,7 +240,7 @@ html { scroll-behavior: smooth; }
             Customer Onboarding
           </h1>
           <p className="hero-sub">
-            A mid-sized healthcare technology company had a broken onboarding process — a 37-question form that took longer to complete than the phone call it was meant to prepare for. This study fixed it.
+            A mid-sized healthcare technology company had a broken onboarding process with a 37-question form that took longer to complete than the phone call it was meant to prepare for. This study fixed that problem.
           </p>
           <div className="meta-strip">
             <div className="meta-item">
@@ -272,12 +273,59 @@ html { scroll-behavior: smooth; }
           <div className="section-label">The Problem</div>
           <h2>A form so long, no one finished it.</h2>
           <p>
-            A mid-sized healthcare technology company (~500 employees) served small-to-mid-sized medical practices as a one-stop platform — handling everything from scheduling systems to website design, SEO, and client portals.
+            A mid-sized healthcare technology company (~500 employees) served small-to-mid-sized medical practices as a one-stop platform that handled everything from scheduling systems to website design, SEO, and client portals.
           </p>
           <p>
-            Their onboarding process required new customers to complete a 37-question form before a 90-minute phone call. The form alone took 2–3 hours to complete. It was rarely finished before the call began — creating downstream manual work for the Customer Success team and significant delays in getting customers launched.
+            Their onboarding process required new customers to complete a 37-question form before a 90-minute phone call. The form alone took 2–3 hours to complete. It was rarely finished before the call began, which created downstream manual work for the Customer Success team and significant delays in getting customers launched.
           </p>
           <p>Research was needed to identify the bottlenecks, prioritize what questions actually mattered, and redesign the flow.</p>
+          <div
+            className="img-block"
+            style={{
+              marginTop: '16px',
+              maxWidth: '980px',
+              marginLeft: 'auto',
+              marginRight: 'auto',
+            }}
+          >
+            <div
+              style={{
+                position: 'relative',
+                width: '100%',
+                maxWidth: '760px',
+                height: '380px',
+                margin: '0 auto',
+                overflow: 'visible',
+              }}
+            >
+              <img
+                src="/healthtech_storyboard.png"
+                alt="Hand-drawn storyboard showing the customer experience: rushing to fill out a 37-question form before a 90-minute onboarding call"
+                style={{
+                  position: 'absolute',
+                  top: '50%',
+                  left: '50%',
+                  height: '250%',
+                  width: 'auto',
+                  transform: 'translate(-50%, -50%) rotate(270deg)',
+                  transformOrigin: 'center center',
+                  display: 'block',
+                }}
+              />
+            </div>
+            <p
+              style={{
+                fontFamily: 'var(--display)',
+                fontSize: '13px',
+                color: 'var(--gray)',
+                fontStyle: 'italic',
+                marginTop: '8px',
+                textAlign: 'center',
+              }}
+            >
+              Early storyboard sketched to frame the problem, with customers racing to complete a 37-question form before a 90-minute call they were not ready for.
+            </p>
+          </div>
         </div>
 
         <div className="divider" />
@@ -286,22 +334,34 @@ html { scroll-behavior: smooth; }
         <div className="section">
           <div className="section-label">Research Goal</div>
           <h2>Four things we needed to understand.</h2>
-          <div className="goals-stack">
-            <div className="finding-card">
-              <div className="finding-title">Identify bottlenecks</div>
-              <div className="finding-body">Which questions were causing the most friction, redundancy, and delay?</div>
+          <div className="theme-grid">
+            <div className="theme-card">
+              <div className="theme-num">01</div>
+              <div className="theme-content">
+                <h3>Identify Bottlenecks</h3>
+                <p>Which questions were causing the most friction, redundancy, and delay?</p>
+              </div>
             </div>
-            <div className="finding-card">
-              <div className="finding-title">Prioritize questions</div>
-              <div className="finding-body">Which questions were essential, nice-to-have, or unnecessary?</div>
+            <div className="theme-card">
+              <div className="theme-num">02</div>
+              <div className="theme-content">
+                <h3>Prioritize Questions</h3>
+                <p>Which questions were essential, nice to have, or unnecessary?</p>
+              </div>
             </div>
-            <div className="finding-card">
-              <div className="finding-title">Redesign the flow</div>
-              <div className="finding-body">What order reflected the natural conversation flow of onboarding calls?</div>
+            <div className="theme-card">
+              <div className="theme-num">03</div>
+              <div className="theme-content">
+                <h3>Redesign the Flow</h3>
+                <p>What question order reflected the natural conversation flow of onboarding calls?</p>
+              </div>
             </div>
-            <div className="finding-card">
-              <div className="finding-title">Reduce time-to-launch</div>
-              <div className="finding-body">What changes would increase the rate of completed forms before the call?</div>
+            <div className="theme-card">
+              <div className="theme-num">04</div>
+              <div className="theme-content">
+                <h3>Reduce Time-to-Launch</h3>
+                <p>What changes would increase the rate of completed forms before the call?</p>
+              </div>
             </div>
           </div>
         </div>
@@ -313,38 +373,106 @@ html { scroll-behavior: smooth; }
           <div className="section-label">Methodology</div>
           <h2>Modified Delphi Card Sort</h2>
           <p>
-            With no budget and a one-week timeline, I chose the Modified Delphi Card Sort — a method that enables participants to physically reorganize and prioritize questions, surfacing consensus-driven insights that standard surveys would miss.
+            With no budget and a one-week timeline, I chose the Modified Delphi Card Sort, a method that enables participants to physically reorganize and prioritize questions and surfaces consensus-driven insights that standard surveys would miss.
           </p>
 
-          <div className="method-steps">
-            <div className="method-step">
-              <div className="step-badge">01</div>
-              <div className="step-content">
-                <h3>Sticker prioritization</h3>
-                <p>Each participant rated every question with colored stickers: green (necessary), yellow (nice to have), red (unnecessary).</p>
+          <div className="theme-grid">
+            <div className="theme-card">
+              <div className="theme-num">01</div>
+              <div className="theme-content">
+                <h3>Sticker Prioritization</h3>
+                <p>Participants applied colored stickers to each card: green and blue (necessary), yellow (nice to have), and red (unnecessary).</p>
               </div>
             </div>
-            <div className="method-step">
-              <div className="step-badge">02</div>
-              <div className="step-content">
-                <h3>Card sort and reordering</h3>
-                <p>Participants reorganized cards to match their natural workflow, noting why they changed, omitted, or merged questions.</p>
+            <div className="theme-card">
+              <div className="theme-num">02</div>
+              <div className="theme-content">
+                <h3>Card Sort and Reordering</h3>
+                <p>Participants reorganized cards to match their natural workflow while noting why they changed, omitted, or merged questions.</p>
               </div>
             </div>
-            <div className="method-step">
-              <div className="step-badge">03</div>
-              <div className="step-content">
-                <h3>Consensus reached</h3>
-                <p>The study concluded after three consecutive participants made no changes to the card order — signaling methodological saturation.</p>
+            <div className="theme-card">
+              <div className="theme-num">03</div>
+              <div className="theme-content">
+                <h3>Consensus Reached</h3>
+                <p>The study concluded after three consecutive participants made no changes to the card order, which signaled methodological saturation.</p>
               </div>
             </div>
-            <div className="method-step">
-              <div className="step-badge">04</div>
-              <div className="step-content">
-                <h3>Mockup creation</h3>
+            <div className="theme-card">
+              <div className="theme-num">04</div>
+              <div className="theme-content">
+                <h3>Mockup Creation</h3>
                 <p>I documented the final order and created wireframe mockups of the proposed redesigned onboarding form.</p>
               </div>
             </div>
+          </div>
+
+          <div
+            style={{
+              display: 'grid',
+              gridTemplateColumns: '1fr 1fr',
+              gap: '16px',
+              marginTop: '28px',
+            }}
+          >
+            <div>
+              <img
+                src="/healthtech_cardsort_before.jpg"
+                alt="Before card sort, with all 37 questions spread across the whiteboard"
+                style={{ width: '100%', borderRadius: '6px', border: '1px solid var(--light-gray)' }}
+              />
+              <p
+                style={{
+                  fontFamily: 'var(--display)',
+                  fontSize: '13px',
+                  color: 'var(--gray)',
+                  fontStyle: 'italic',
+                  marginTop: '8px',
+                  textAlign: 'center',
+                }}
+              >
+                Before: all 37 questions on the board, with colored stickers showing participant priority ratings.
+              </p>
+            </div>
+            <div>
+              <img
+                src="/healthtech_cardsort_after.jpg"
+                alt="After card sort, with questions reorganized and removed questions separated"
+                style={{ width: '100%', borderRadius: '6px', border: '1px solid var(--light-gray)' }}
+              />
+              <p
+                style={{
+                  fontFamily: 'var(--display)',
+                  fontSize: '13px',
+                  color: 'var(--gray)',
+                  fontStyle: 'italic',
+                  marginTop: '8px',
+                  textAlign: 'center',
+                }}
+              >
+                After: questions reorganized by participants, with a clear "questions we should not have" section emerging.
+              </p>
+            </div>
+          </div>
+
+          <div className="img-block" style={{ marginTop: '16px' }}>
+            <img
+              src="/healthtech_notes.jpg"
+              alt="Handwritten research notes documenting participant feedback on each question"
+              style={{ width: '100%', borderRadius: '6px', border: '1px solid var(--light-gray)' }}
+            />
+            <p
+              style={{
+                fontFamily: 'var(--display)',
+                fontSize: '13px',
+                color: 'var(--gray)',
+                fontStyle: 'italic',
+                marginTop: '8px',
+                textAlign: 'center',
+              }}
+            >
+              Field notes captured during sessions that documented participant-by-participant feedback on each question's clarity, necessity, and placement.
+            </p>
           </div>
         </div>
 
@@ -354,25 +482,47 @@ html { scroll-behavior: smooth; }
         <div className="section">
           <div className="section-label">Key Findings</div>
           <h2>What 28 participants agreed on.</h2>
-          <div className="finding-stack">
-            <div className="finding-card">
-              <div className="finding-title">Redundant questions</div>
-              <div className="finding-body">
-                Multiple questions captured overlapping information — flagged as sources of confusion and fatigue, particularly in the first third of the form.
+          <div className="theme-grid">
+            <div className="theme-card">
+              <div className="theme-num">01</div>
+              <div className="theme-content">
+                <h3>Redundant Questions</h3>
+                <p>Multiple questions captured overlapping information and created confusion and fatigue, especially in the first third of the form.</p>
               </div>
             </div>
-            <div className="finding-card">
-              <div className="finding-title">Unnecessary questions</div>
-              <div className="finding-body">Six questions were rated unnecessary by the majority of participants and removed entirely from the redesigned form.</div>
+            <div className="theme-card">
+              <div className="theme-num">02</div>
+              <div className="theme-content">
+                <h3>Unnecessary Questions Removed</h3>
+                <p>Six questions were rated unnecessary by most participants and removed entirely from the redesigned form.</p>
+              </div>
             </div>
-            <div className="finding-card">
-              <div className="finding-title">Merge opportunities</div>
-              <div className="finding-body">14 questions were successfully merged into 6 consolidated questions without losing the data Customer Success needed.</div>
+            <div className="theme-card">
+              <div className="theme-num">03</div>
+              <div className="theme-content">
+                <h3>Question Merge Opportunities</h3>
+                <p>Fourteen questions were successfully merged into six consolidated questions without losing the data Customer Success needed.</p>
+              </div>
             </div>
-            <div className="finding-card">
-              <div className="finding-title">Order mismatch</div>
-              <div className="finding-body">
-                The original question order didn't reflect the natural flow of onboarding calls. Reordering reduced cognitive load for both parties.
+            <div className="theme-card">
+              <div className="theme-num">04</div>
+              <div className="theme-content">
+                <h3>Order Mismatch Discovered</h3>
+                <p>The original question order did not reflect the natural flow of onboarding calls, so reordering reduced cognitive load for both parties.</p>
+              </div>
+            </div>
+            <div className="theme-card">
+              <div className="theme-num">05</div>
+              <div className="theme-content">
+                <h3>Internal vs. External Agreement</h3>
+                <p>Customer Success staff and external participants largely agreed on which questions were essential and which could be removed.</p>
+              </div>
+            </div>
+            <div className="theme-card">
+              <div className="theme-num">06</div>
+              <div className="theme-content">
+                <h3>Form Completion Barrier</h3>
+                <p>The length and redundancy of the original form were the main reasons customers struggled to complete it before the onboarding call.</p>
               </div>
             </div>
           </div>
@@ -386,6 +536,9 @@ html { scroll-behavior: smooth; }
           <h2>Numbers that changed how the team worked.</h2>
           <p>
             The redesigned form reduced completion friction, improved Customer Success team efficiency, and was validated through an A/B test that measured onboarding call duration before and after the change.
+          </p>
+          <p>
+            The A/B test measured onboarding call duration directly: the redesigned form reduced the 90-minute call to 45 minutes on average.
           </p>
 
           <div className="stats-callout">
@@ -403,8 +556,94 @@ html { scroll-behavior: smooth; }
                 <div className="stat-label">Questions merged or eliminated</div>
               </div>
               <div className="stat-item">
-                <div className="stat-number">50%</div>
-                <div className="stat-label">Onboarding time cut via A/B test</div>
+                <div className="stat-number">90 → 45 min</div>
+                <div className="stat-label">Onboarding call time cut via A/B test</div>
+              </div>
+            </div>
+          </div>
+
+          <div style={{ marginTop: '32px' }}>
+            <p
+              style={{
+                fontFamily: 'var(--display)',
+                fontSize: '11px',
+                fontWeight: 700,
+                letterSpacing: '2px',
+                textTransform: 'uppercase',
+                color: 'var(--teal)',
+                marginBottom: '16px',
+              }}
+            >
+              REDESIGN MOCKUPS
+            </p>
+            <div
+              style={{
+                display: 'flex',
+                flexDirection: 'column',
+                gap: '16px',
+              }}
+            >
+              <div style={{ position: 'relative', marginBottom: '8px' }}>
+                <img
+                  src="/healthtech_mockup1.png"
+                  alt="Wireframe mockup showing merged questions with checkbox interface"
+                  style={{ width: '100%', borderRadius: '6px', border: '1px solid var(--light-gray)', display: 'block' }}
+                />
+                <div
+                  style={{
+                    position: 'absolute',
+                    top: '0px',
+                    right: '0px',
+                    left: 'auto',
+                    width: '520px',
+                    height: '64px',
+                    backgroundColor: 'var(--white)',
+                    zIndex: 10,
+                  }}
+                />
+                <p
+                  style={{
+                    fontFamily: 'var(--display)',
+                    fontSize: '13px',
+                    color: 'var(--gray)',
+                    fontStyle: 'italic',
+                    marginTop: '8px',
+                    textAlign: 'center',
+                  }}
+                >
+                  Mockup 1: merging overlapping questions into a single checkbox interface so that three questions become one.
+                </p>
+              </div>
+              <div style={{ position: 'relative', marginBottom: '8px' }}>
+                <img
+                  src="/healthtech_mockup2.png"
+                  alt="Wireframe mockup showing redesigned insurance question with clearer structure"
+                  style={{ width: '100%', borderRadius: '6px', border: '1px solid var(--light-gray)', display: 'block' }}
+                />
+                <div
+                  style={{
+                    position: 'absolute',
+                    top: '4px',
+                    right: '10px',
+                    left: 'auto',
+                    width: '360px',
+                    height: '30px',
+                    backgroundColor: 'var(--white)',
+                    zIndex: 10,
+                  }}
+                />
+                <p
+                  style={{
+                    fontFamily: 'var(--display)',
+                    fontSize: '13px',
+                    color: 'var(--gray)',
+                    fontStyle: 'italic',
+                    marginTop: '8px',
+                    textAlign: 'center',
+                  }}
+                >
+                  Mockup 2: redesigning the insurance question to reduce open-text burden and align it with how Customer Success actually uses the data.
+                </p>
               </div>
             </div>
           </div>
@@ -445,7 +684,7 @@ html { scroll-behavior: smooth; }
         </div>
       </div>
 
-      <div className="cta-strip">
+      <div className="cta-strip" style={{ marginTop: '72px' }}>
         <div className="cta-strip-left">
           <h3>Want to talk about what research could do for your team?</h3>
           <a href="mailto:jesse@jesseleedespard.com">jesse@jesseleedespard.com</a>
