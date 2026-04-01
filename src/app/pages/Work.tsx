@@ -653,7 +653,7 @@ export default function Work() {
 
                   {/* Link */}
                   <Link
-                    to="/leadership/web-strategy"
+                    to="/leadership/three-disciplines-one-team"
                     style={{
                       fontFamily: 'DM Sans, sans-serif',
                       fontWeight: 700,

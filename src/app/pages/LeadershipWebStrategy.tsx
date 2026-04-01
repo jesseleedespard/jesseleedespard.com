@@ -1,10 +1,9 @@
 import { useEffect } from 'react';
 import { Link } from 'react-router';
-import { Footer } from '../components/Footer';
 
 export default function LeadershipWebStrategy() {
   useEffect(() => {
-    document.title = 'Web Strategy: Team Vision — Jesse Lee Despard';
+    document.title = 'Three Disciplines, One Team · Jesse Lee Despard';
   }, []);
 
   return (
@@ -58,34 +57,103 @@ html { scroll-behavior: smooth; }
 /* TWO COL */
 .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 8px; }
 
-/* — referenced in body, not in source <style> — */
-.tension-box { background: var(--white); border: 1px solid var(--light-gray); border-radius: 8px; padding: 20px 22px; text-align: left; }
-.tension-box h4 { font-family: var(--display); font-size: 14px; font-weight: 700; color: var(--charcoal); margin-bottom: 14px; }
-.tension-title { font-family: var(--display); font-size: 12px; font-weight: 700; color: var(--teal-dark); margin: 14px 0 8px; text-transform: uppercase; letter-spacing: 0.5px; }
-.tension-box ul { margin: 0 0 8px; padding-left: 18px; color: var(--dark-gray); font-size: 14.5px; line-height: 1.65; }
-.tension-box li { margin-bottom: 6px; }
+.theme-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-top: 8px; }
+.theme-card { background: var(--white); border: 1px solid var(--light-gray); border-radius: 6px; padding: 20px; display: flex; gap: 16px; align-items: flex-start; }
+.theme-num { font-family: var(--display); font-size: 20px; font-weight: 700; color: var(--teal); min-width: 28px; flex-shrink: 0; }
+.theme-content { flex: 1; min-width: 0; }
+.theme-content h3 { margin-top: 0; font-family: var(--display); font-size: 16px; font-weight: 700; color: var(--charcoal); margin-bottom: 8px; }
+.theme-content h4 { margin-top: 0; font-family: var(--display); font-size: 16px; font-weight: 700; color: var(--charcoal); margin-bottom: 8px; }
+.theme-content p { margin: 0; color: var(--dark-gray); font-size: 16px; line-height: 1.75; }
+
+.daio-donut-wrap { overflow: visible; width: 100%; max-width: 480px; margin: 24px auto 0; align-self: center; }
+
+.listening-tour-label { font-family: var(--display); font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--teal-dark); margin: 24px 0 12px; }
+.listening-questions { list-style: none; padding-left: 0; margin: 0 0 16px; }
+.listening-questions li {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  border-left: 3px solid var(--teal);
+  padding: 10px 16px;
+  margin-bottom: 8px;
+  background: var(--white);
+  border-radius: 0 4px 4px 0;
+  font-size: 15px;
+  color: var(--dark-gray);
+}
+.listening-q-num {
+  font-family: var(--display);
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--teal);
+  min-width: 28px;
+  flex-shrink: 0;
+  line-height: 1.35;
+}
+.listening-q-text { flex: 1; min-width: 0; line-height: 1.65; }
+
+.built-theme-stack { display: flex; flex-direction: column; gap: 24px; margin-top: 24px; }
+
+.daio-desc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 16px; }
+.daio-desc-card { border: 1px solid var(--light-gray); border-radius: 6px; overflow: hidden; background: var(--white); }
+.daio-desc-card-head {
+  padding: 11px 14px;
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 1.3;
+  color: var(--white);
+}
+.daio-desc-card-body { padding: 14px 16px 16px; }
+.daio-desc-card-body ul {
+  margin: 0;
+  padding-left: 1.15em;
+  list-style: disc;
+  list-style-position: outside;
+  line-height: 1.55;
+}
+.daio-desc-card-body li { margin-bottom: 6px; font-size: 14px; color: var(--dark-gray); }
+.daio-desc-card-body li:last-child { margin-bottom: 0; }
+
+.funnel-three { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 16px; }
+.funnel-card { border: 1px solid var(--light-gray); border-radius: 6px; overflow: hidden; background: var(--white); }
+.funnel-card-head {
+  padding: 12px 14px;
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: 13px;
+  color: var(--white);
+  text-align: center;
+}
+.funnel-card-body { padding: 14px 16px; }
+.funnel-card-body ul {
+  margin: 0;
+  padding-left: 1.15em;
+  list-style: disc;
+  list-style-position: outside;
+  line-height: 1.55;
+}
+.funnel-card-body li { margin-bottom: 6px; font-size: 14px; color: var(--dark-gray); }
+.funnel-card-body li:last-child { margin-bottom: 0; }
+
+.venn-stack { display: flex; flex-direction: column; gap: 28px; margin-top: 16px; }
+.venn-block { width: 100%; text-align: center; }
+.venn-label {
+  font-family: var(--display);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--teal-dark);
+  margin: 0 auto 10px;
+  text-align: center;
+  max-width: 580px;
+}
+.venn-svg { width: 100%; max-width: 580px; height: auto; display: block; margin: 0 auto; }
+.venn-svg text { font-family: var(--display), system-ui, sans-serif; }
 
 .pull-quote { margin: 32px 0; padding: 22px 28px; border-left: 4px solid var(--gold); background: var(--white); border-radius: 0 6px 6px 0; }
 .pull-quote p { font-family: var(--body); font-size: 20px; color: var(--charcoal); line-height: 1.5; font-style: italic; margin: 0 !important; }
-
-.built-list { display: flex; flex-direction: column; gap: 24px; margin-top: 24px; }
-.built-item { display: flex; gap: 18px; align-items: flex-start; }
-.built-num { flex-shrink: 0; width: 38px; height: 38px; background: var(--teal); color: var(--white); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-family: var(--display); font-weight: 700; font-size: 16px; }
-.built-content h3 { margin-top: 0; font-family: var(--display); font-size: 16px; font-weight: 700; color: var(--charcoal); margin-bottom: 8px; }
-.built-content p { margin-bottom: 0; color: var(--dark-gray); font-size: 16px; line-height: 1.75; }
-
-.daio-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 20px; }
-.daio-cell { border-radius: 8px; padding: 18px 20px; }
-.daio-cell h4 { font-family: var(--display); font-size: 13px; font-weight: 700; color: var(--gold); margin-bottom: 10px; }
-.daio-cell ul { margin: 0; padding-left: 18px; font-size: 13.5px; line-height: 1.55; color: rgba(255,255,255,0.9); }
-.daio-cell li { margin-bottom: 6px; }
-
-.discipline-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 20px; }
-.disc-head { padding: 12px 14px; text-align: center; font-family: var(--display); font-weight: 700; font-size: 11px; color: var(--white); letter-spacing: 0.5px; line-height: 1.3; }
-.disc-body { padding: 16px; border: 1px solid var(--light-gray); border-top: none; background: var(--white); border-radius: 0 0 6px 6px; }
-.disc-body ul { margin: 0; padding-left: 16px; font-size: 14px; line-height: 1.6; color: var(--dark-gray); }
-.disc-body li { margin-bottom: 6px; }
-.disc-body em { font-style: italic; }
 
 .metrics-flow { display: flex; flex-direction: column; align-items: center; gap: 6px; margin-top: 24px; }
 .metrics-tier { border-radius: 8px; padding: 16px 20px; text-align: center; box-sizing: border-box; }
@@ -94,10 +162,10 @@ html { scroll-behavior: smooth; }
 .tier-arrow { color: var(--gray); font-size: 18px; line-height: 1; padding: 2px 0; }
 
 .outcomes-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 20px; }
-.outcome-card { background: var(--white); border: 1px solid var(--light-gray); border-radius: 8px; padding: 24px; }
-.outcome-number { font-family: var(--display); font-size: 32px; font-weight: 700; color: var(--teal); margin-bottom: 8px; line-height: 1.1; }
-.outcome-label { font-family: var(--display); font-size: 13px; font-weight: 700; color: var(--charcoal); margin-bottom: 10px; }
-.outcome-desc { font-size: 14px; color: var(--dark-gray); margin: 0; line-height: 1.65; }
+.outcome-card { background: var(--white); border: 1px solid var(--light-gray); border-top: 3px solid var(--teal); border-radius: 0 0 6px 6px; padding: 24px; text-align: center; }
+.outcome-number { font-family: var(--display); font-size: 36px; font-weight: 700; color: var(--teal); margin-bottom: 8px; line-height: 1.1; }
+.outcome-label { font-family: var(--display); font-size: 13px; font-weight: 700; color: var(--charcoal); margin-bottom: 8px; }
+.outcome-desc { font-size: 14px; color: var(--dark-gray); margin: 0; line-height: 1.65; text-align: left; }
 
 .highlight-box { border: 1px solid var(--light-gray); border-radius: 8px; overflow: hidden; background: var(--white); }
 .highlight-box-head { font-family: var(--display); font-size: 14px; font-weight: 700; color: var(--charcoal); padding: 14px 18px; background: var(--cream); border-bottom: 1px solid var(--light-gray); }
@@ -109,9 +177,7 @@ html { scroll-behavior: smooth; }
 .cta-strip-left a { font-family: var(--display); font-size: 14px; color: var(--charcoal); text-decoration: none; opacity: 0.7; }
 .cta-btn { background: var(--charcoal); color: var(--white); font-family: var(--display); font-weight: 700; font-size: 14px; padding: 13px 28px; border-radius: 6px; text-decoration: none; white-space: nowrap; flex-shrink: 0; display: inline-block; border: none; cursor: pointer; }
 
-/* ═══════════════════════════════════════════════════════════
-   MOBILE — 375px target, 8pt grid, centered text
-   ═══════════════════════════════════════════════════════════ */
+/* MOBILE: 375px target, 8pt grid, centered text */
 @media (max-width: 768px) {
 
   .leadership-web-strategy-page .hero { padding: 48px 24px 40px !important; text-align: center !important; }
@@ -137,15 +203,17 @@ html { scroll-behavior: smooth; }
 
   .leadership-web-strategy-page .two-col h3,
   .leadership-web-strategy-page .two-col p,
-  .leadership-web-strategy-page .tension-box,
-  .leadership-web-strategy-page .tension-box li,
-  .leadership-web-strategy-page .built-content,
-  .leadership-web-strategy-page .built-content p,
+  .leadership-web-strategy-page .theme-content p,
+  .leadership-web-strategy-page .listening-questions li,
+  .leadership-web-strategy-page .listening-q-text,
+  .leadership-web-strategy-page .daio-desc-card,
+  .leadership-web-strategy-page .daio-desc-card-head,
+  .leadership-web-strategy-page .funnel-card-body li,
+  .leadership-web-strategy-page .funnel-card-body ul,
   .leadership-web-strategy-page .highlight-box-body,
   .leadership-web-strategy-page .highlight-box-body li,
   .leadership-web-strategy-page .outcome-desc,
-  .leadership-web-strategy-page .disc-body,
-  .leadership-web-strategy-page .disc-body li { text-align: left !important; }
+  .leadership-web-strategy-page .daio-desc-card-body ul { text-align: left !important; }
 
   .leadership-web-strategy-page .pull-quote { padding: 24px !important; margin: 24px 0 !important; border-left: none !important; border-top: 4px solid var(--gold) !important; text-align: center !important; }
   .leadership-web-strategy-page .pull-quote p { font-size: 17px !important; text-align: center !important; }
@@ -174,8 +242,8 @@ html { scroll-behavior: smooth; }
   .leadership-web-strategy-page .stats-row.two { grid-template-columns: 1fr 1fr !important; }
   .leadership-web-strategy-page .stat-row { grid-template-columns: 1fr 1fr !important; }
   .leadership-web-strategy-page .platforms-grid { grid-template-columns: 1fr !important; }
-  .leadership-web-strategy-page .discipline-grid { grid-template-columns: 1fr !important; }
-  .leadership-web-strategy-page .daio-grid { grid-template-columns: 1fr !important; }
+  .leadership-web-strategy-page .funnel-three { grid-template-columns: 1fr !important; }
+  .leadership-web-strategy-page .daio-desc-grid { grid-template-columns: 1fr !important; }
   .leadership-web-strategy-page .photo-block { grid-template-columns: 1fr !important; }
 
   .leadership-web-strategy-page .show-block { flex-direction: column !important; align-items: center !important; gap: 24px !important; text-align: center !important; }
@@ -197,7 +265,7 @@ html { scroll-behavior: smooth; }
   .leadership-web-strategy-page .about-box p { text-align: left !important; }
   .leadership-web-strategy-page .medium-strip { flex-direction: column !important; gap: 16px !important; text-align: center !important; }
   .leadership-web-strategy-page .post-card-top { flex-direction: column !important; align-items: flex-start !important; gap: 4px !important; }
-  .leadership-web-strategy-page .built-item { flex-direction: column !important; align-items: flex-start !important; gap: 12px !important; }
+  .leadership-web-strategy-page .theme-card { flex-direction: column !important; align-items: flex-start !important; }
   .leadership-web-strategy-page .value-content p { text-align: left !important; }
   .leadership-web-strategy-page .who-text { text-align: left !important; }
   .leadership-web-strategy-page .process-content p { text-align: left !important; }
@@ -258,11 +326,9 @@ html { scroll-behavior: smooth; }
       <header className="hero">
         <div className="hero-inner">
           <span className="hero-tag">Leadership · Team Building</span>
-          <h1>
-            Web Strategy: <em>Team Vision</em>
-          </h1>
+          <h1>Three Disciplines, One Team</h1>
           <p className="hero-sub">
-            Building a cross-functional team from the ground up — and giving UX, SEO, and CRO a shared identity, operating model, and north star.
+            Building a cross-functional team from the ground up. UX, SEO, and CRO needed a shared identity, operating model, and a north star.
           </p>
           <div className="meta-strip">
             <div className="meta-item">
@@ -288,12 +354,12 @@ html { scroll-behavior: smooth; }
       <div className="page-wrap">
         <div className="section">
           <div className="section-label">Overview</div>
-          <h2>A new team needed more than a mandate — it needed a shared philosophy</h2>
+          <h2>A new team needed more than a mandate: it needed a shared philosophy</h2>
           <p>
             When I joined a large EdTech company as Manager of UX, SEO, and CRO, I inherited an understaffed function of five where the majority of members had been at the company less than a year. Each discipline had its own priorities and metrics. There was no shared language, no unified operating model, and no clear picture of how UX, SEO, and CRO could work <em>together</em> rather than alongside each other.
           </p>
           <p>
-            Before I could lead the team toward any outcome, I had to do something more fundamental: listen, define, and align. This is the artifact of that work — a team vision I built from scratch to give three distinct disciplines a common identity, a shared principle, and a practical operating model for delivering results together.
+            Before I could lead the team toward any outcome, I had to do something more fundamental: listen, define, and align. This is the artifact of that work: a team vision I built from scratch to give three distinct disciplines a common identity, a shared principle, and a practical operating model for delivering results together.
           </p>
         </div>
 
@@ -302,28 +368,32 @@ html { scroll-behavior: smooth; }
         <div className="section">
           <div className="section-label">The Situation</div>
           <h2>Three disciplines. One funnel. No shared model.</h2>
-          <div className="two-col">
-            <div>
-              <p>
-                The company's growth depended on a complex enrollment funnel spanning awareness through to active student onboarding. UX, SEO, and CRO each touched this funnel — but from different angles, with different toolsets, and often without visibility into what the others were doing.
-              </p>
-              <p>
-                Without alignment, each discipline would optimize for its own metrics in isolation. SEO would chase rankings. CRO would chase conversion rates. UX would chase usability scores. None of these are wrong — but optimizing them separately, without a shared user lens, was a path to fragmented decisions and missed growth opportunities.
-              </p>
+          <p>
+            The company&apos;s growth depended on a complex enrollment funnel spanning awareness through to active student onboarding. UX, SEO, and CRO each touched this funnel from different research and design angles, with different toolsets, and often without visibility into what the other disciplines were doing.
+          </p>
+          <p>
+            Without alignment, each discipline would optimize for its own metrics in isolation. SEO would chase rankings. CRO would chase conversion rates. UX would chase usability scores. None of these are wrong, but optimizing them separately, without a shared user lens, was a path to fragmented decisions and missed growth opportunities.
+          </p>
+          <div className="section-label" style={{ marginTop: '24px', marginBottom: '12px' }}>
+            What the listening tour revealed
+          </div>
+          <div className="theme-grid">
+            <div className="theme-card">
+              <div className="theme-num">01</div>
+              <div className="theme-content">
+                <h3>Implementation of Insights</h3>
+                <p>
+                  Research insights were being acted on too quickly, without the original researcher&apos;s input. There was no structured process to propose experiments before committing to solutions.
+                </p>
+              </div>
             </div>
-            <div>
-              <div className="tension-box">
-                <h4>Two chasms identified from the listening tour</h4>
-                <div className="tension-title">#1 — Implementation of Insights</div>
-                <ul>
-                  <li>Research insights were being acted on too quickly, without the original researcher's input</li>
-                  <li>No structured process to propose experiments before committing to solutions</li>
-                </ul>
-                <div className="tension-title">#2 — Cross-Team Collaboration</div>
-                <ul>
-                  <li>New team, new members — no shared problem space or camaraderie yet</li>
-                  <li>No mechanism for surfacing learnings across disciplines</li>
-                </ul>
+            <div className="theme-card">
+              <div className="theme-num">02</div>
+              <div className="theme-content">
+                <h3>Cross-Team Collaboration</h3>
+                <p>
+                  A new team with new members had no shared problem space or camaraderie yet. There was no mechanism for surfacing learnings across disciplines.
+                </p>
               </div>
             </div>
           </div>
@@ -337,29 +407,63 @@ html { scroll-behavior: smooth; }
           <p>
             Before writing a single slide, I ran a listening tour. I wanted to understand not just what each discipline did, but what each person thought they were there to accomplish, where they felt blocked, and what they wished the team could be.
           </p>
+
+          <div className="listening-tour-label">
+            Five questions asked to 20+ colleagues, stakeholders, and team members
+          </div>
+          <ul className="listening-questions">
+            <li>
+              <span className="listening-q-num">01</span>
+              <span className="listening-q-text">What is working well?</span>
+            </li>
+            <li>
+              <span className="listening-q-num">02</span>
+              <span className="listening-q-text">What is not working?</span>
+            </li>
+            <li>
+              <span className="listening-q-num">03</span>
+              <span className="listening-q-text">What should we do that we are not doing today?</span>
+            </li>
+            <li>
+              <span className="listening-q-num">04</span>
+              <span className="listening-q-text">What would you do if you were in my shoes?</span>
+            </li>
+            <li>
+              <span className="listening-q-num">05</span>
+              <span className="listening-q-text">
+                What should I learn about this company and product that will be helpful to me in my role?
+              </span>
+            </li>
+          </ul>
+
           <p>
-            What I heard shaped everything that came after. The team didn't need more process — they needed a clear answer to the question: "why does it matter that we're one team, and not three separate functions?" My job was to make that answer impossible to argue with.
+            The Buckingham survey was also deployed. I wanted to understand my team&apos;s experience when they interact with others on the team, as well as their individual experience of work.
+          </p>
+
+          <p>
+            What I heard from that listening tour shaped everything after. The team questioned why they were not three different teams, divided up by discipline. This told me that the team did not need more process. They needed structure and to be unified as a single team. My job was to help unify them in that way.
           </p>
 
           <div className="pull-quote">
-            <p>"User value drives business value. A cohesive user experience leads to users engaging with our products and offerings more."</p>
+            <p>
+              &quot;User value drives business value. SEO, UX, and CRO all enhance user value in their own unique way. A cohesive user experience leads to users engaging with our products and offerings more. These three disciplines just have different methods to answer what a cohesive user experience is.&quot;
+            </p>
           </div>
 
-          <p>That became the founding principle of the Web Strategy team — and the anchor for every framework, model, and operating decision that followed.</p>
+          <p>That became the founding principle of our team and the anchor for every framework, model, and operating decision that followed.</p>
 
           <h3>What the listening tour actually revealed</h3>
           <p>
-            The most significant thing I learned wasn't about the disciplines — it was about how the company operated. There was no agile methodology. The organization worked in a project-based model, not a product-based one. Teams delivered against fixed scopes with defined endpoints. The idea of an iterative cycle — running research, learning, adapting, and going again — was genuinely foreign to how decisions were made.
+            The most significant thing I learned was not about the disciplines. It was about how the company operated. The organization worked in a project-based model, not a product-based one. Teams delivered against fixed scopes with defined endpoints.
           </p>
           <p>
-            This meant that my proposal for leading indicators, iterative research, and a continuous design-and-test loop wasn't just a new framework. It was a different way of thinking about work entirely. It surprised a lot of people. It took sustained effort to get it partially adopted across the broader organization.
-          </p>
-          <p>
-            But within the team, it took hold. I built the Web Strategy function to be agile enough to operate in that mode consistently — and the model was durable enough that the team continued to function that way after the restructure that followed my departure.
+            The idea of an iterative cycle (running research, learning, adapting, and going again in a smaller cycle) was genuinely new to how decisions were made. It was a different way of thinking about work entirely.
           </p>
 
           <div className="pull-quote">
-            <p>"I didn't just introduce a new process. I changed how the team understood its own work."</p>
+            <p>
+              &quot;I didn&apos;t just introduce a new process. I changed how the team understood its own work.&quot;
+            </p>
           </div>
         </div>
 
@@ -369,204 +473,522 @@ html { scroll-behavior: smooth; }
           <div className="section-label">What I Built</div>
           <h2>Five foundations that made collaboration possible</h2>
 
-          <div className="built-list">
-            <div className="built-item">
-              <div className="built-num">1</div>
-              <div className="built-content">
+          <div className="built-theme-stack">
+            <div className="theme-card">
+              <div className="theme-num">01</div>
+              <div className="theme-content">
                 <h3>A unified team identity</h3>
                 <p>
                   I defined the team not by its component disciplines but by its strategic position: an internal, experiment-driven startup, cross-functional and multidisciplinary, uniquely positioned to own the full digital funnel from awareness to retention.
                 </p>
               </div>
             </div>
-            <div className="built-item">
-              <div className="built-num">2</div>
-              <div className="built-content">
+
+            <div className="theme-card">
+              <div className="theme-num">02</div>
+              <div className="theme-content">
                 <h3>The DAIO operating model</h3>
                 <p>
                   Rather than defining the team by outputs, I defined it by a cycle: <strong>D</strong>ata → <strong>A</strong>ction → <strong>I</strong>terate → <strong>O</strong>utcomes. The DAIO principle gave every discipline a shared process language so everyone could describe their work in the same terms.
                 </p>
+                <div className="daio-donut-wrap">
+                  <svg
+                    viewBox="-100 -52 600 504"
+                    xmlns="http://www.w3.org/2000/svg"
+                    preserveAspectRatio="xMidYMid meet"
+                    style={{ width: '100%', height: 'auto', display: 'block', overflow: 'visible' }}
+                    aria-label="DAIO cycle: Research and Data, Experiments, Apply the Learnings, Drive Measurable Outcomes, clockwise"
+                  >
+                    <defs>
+                      <path
+                        id="daio-text-teal"
+                        d="M 225 81 A 122 122 0 0 1 319 175"
+                        fill="none"
+                      />
+                      <path
+                        id="daio-text-gold"
+                        d="M 319 225 A 122 122 0 0 1 225 319"
+                        fill="none"
+                      />
+                      <path
+                        id="daio-text-dark"
+                        d="M 81 225 A 122 122 0 0 0 175 319"
+                        fill="none"
+                      />
+                      <path
+                        id="daio-text-terra"
+                        d="M 175 81 A 122 122 0 0 0 81 175"
+                        fill="none"
+                      />
+                    </defs>
+                    <path
+                      d="M 209.3 48.3 A 152 152 0 0 1 351.7 190.7 L 330 200 L 307.8 206.6 A 108 108 0 0 0 193.4 92.2 L 200 70 L 209.3 48.3 Z"
+                      fill="var(--teal)"
+                      stroke="var(--cream)"
+                      strokeWidth="2.5"
+                      strokeLinejoin="miter"
+                      strokeMiterlimit="8"
+                      paintOrder="stroke fill"
+                    />
+                    <path
+                      d="M 351.7 209.3 A 152 152 0 0 1 209.3 351.7 L 200 330 L 193.4 307.8 A 108 108 0 0 0 307.8 193.4 L 330 200 L 351.7 209.3 Z"
+                      fill="var(--gold)"
+                      stroke="var(--cream)"
+                      strokeWidth="2.5"
+                      strokeLinejoin="miter"
+                      strokeMiterlimit="8"
+                      paintOrder="stroke fill"
+                    />
+                    <path
+                      d="M 190.7 351.7 A 152 152 0 0 1 48.3 209.3 L 70 200 L 92.2 193.4 A 108 108 0 0 0 206.6 307.8 L 200 330 L 190.7 351.7 Z"
+                      fill="var(--dark-gray)"
+                      stroke="var(--cream)"
+                      strokeWidth="2.5"
+                      strokeLinejoin="miter"
+                      strokeMiterlimit="8"
+                      paintOrder="stroke fill"
+                    />
+                    <path
+                      d="M 48.3 190.7 A 152 152 0 0 1 190.7 48.3 L 200 70 L 206.6 92.2 A 108 108 0 0 0 92.2 206.6 L 70 200 L 48.3 190.7 Z"
+                      fill="var(--terra)"
+                      stroke="var(--cream)"
+                      strokeWidth="2.5"
+                      strokeLinejoin="miter"
+                      strokeMiterlimit="8"
+                      paintOrder="stroke fill"
+                    />
+                    <circle cx="200" cy="200" r="62" fill="var(--white)" />
+                    <text
+                      x="200"
+                      y="206"
+                      textAnchor="middle"
+                      style={{ fontFamily: 'var(--display)', fontSize: '20px', fontWeight: 700 }}
+                      fill="var(--charcoal)"
+                    >
+                      DAIO
+                    </text>
+                    <text
+                      style={{
+                        fontFamily: 'var(--display)',
+                        fontSize: '9px',
+                        fontWeight: 700,
+                        letterSpacing: '0.02em',
+                        fill: 'var(--white)',
+                      }}
+                    >
+                      <textPath href="#daio-text-teal" startOffset="50%" textAnchor="middle">
+                        Research &amp; Data
+                      </textPath>
+                    </text>
+                    <text
+                      style={{
+                        fontFamily: 'var(--display)',
+                        fontSize: '10px',
+                        fontWeight: 700,
+                        letterSpacing: '0.02em',
+                        fill: 'var(--white)',
+                      }}
+                    >
+                      <textPath href="#daio-text-gold" startOffset="50%" textAnchor="middle">
+                        Experiments
+                      </textPath>
+                    </text>
+                    <text
+                      style={{
+                        fontFamily: 'var(--display)',
+                        fontSize: '8px',
+                        fontWeight: 700,
+                        letterSpacing: '0.02em',
+                        fill: 'var(--white)',
+                      }}
+                    >
+                      <textPath href="#daio-text-dark" startOffset="50%" textAnchor="middle">
+                        Apply the Learnings
+                      </textPath>
+                    </text>
+                    <text
+                      style={{
+                        fontFamily: 'var(--display)',
+                        fontSize: '7.5px',
+                        fontWeight: 700,
+                        letterSpacing: '0.02em',
+                        fill: 'var(--white)',
+                      }}
+                    >
+                      <textPath href="#daio-text-terra" startOffset="50%" textAnchor="middle">
+                        Drive Measurable Outcomes
+                      </textPath>
+                    </text>
+                  </svg>
+                </div>
+                <div className="daio-desc-grid">
+                  <div className="daio-desc-card">
+                    <div className="daio-desc-card-head" style={{ background: 'var(--teal)' }}>
+                      Research &amp; Data
+                    </div>
+                    <div className="daio-desc-card-body">
+                      <ul>
+                        <li>Quantitative and qualitative research to gain insights into which products and features need attention</li>
+                        <li>Understand the problem space before ideating a solution</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div className="daio-desc-card">
+                    <div
+                      className="daio-desc-card-head"
+                      style={{ background: 'var(--gold)', color: 'var(--charcoal)' }}
+                    >
+                      Experiments
+                    </div>
+                    <div className="daio-desc-card-body">
+                      <ul>
+                        <li>Foster quick learnings: clarify the problem space and test potential solutions</li>
+                        <li>Surface learnings to the broader team to inform other projects</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div className="daio-desc-card">
+                    <div className="daio-desc-card-head" style={{ background: 'var(--terra)' }}>
+                      Drive Measurable Outcomes
+                    </div>
+                    <div className="daio-desc-card-body">
+                      <ul>
+                        <li>Focus on outcomes that connect user value to business results</li>
+                        <li>Demonstrate successful new processes to the broader company</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div className="daio-desc-card">
+                    <div className="daio-desc-card-head" style={{ background: 'var(--dark-gray)' }}>
+                      Apply the Learnings
+                    </div>
+                    <div className="daio-desc-card-body">
+                      <ul>
+                        <li>Apply learnings via existing products and features</li>
+                        <li>Propose new products and features to the broader company</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
 
-          <div className="daio-grid">
-            <div className="daio-cell" style={{ background: 'var(--charcoal)' }}>
-              <h4>Research & Data</h4>
-              <ul>
-                <li>Quantitative and qualitative research to gain insights into which products and features need attention</li>
-                <li>Understand the problem space before ideating a solution</li>
-              </ul>
-            </div>
-            <div className="daio-cell" style={{ background: 'var(--teal)' }}>
-              <h4>Experiments</h4>
-              <ul>
-                <li>Foster quick learnings — clarify the problem space and test potential solutions</li>
-                <li>Surface learnings to the broader team to inform other projects</li>
-              </ul>
-            </div>
-            <div className="daio-cell" style={{ background: 'var(--charcoal)' }}>
-              <h4>Drive Measurable Outcomes</h4>
-              <ul>
-                <li>Focus on outcomes that connect user value to business results</li>
-                <li>Demonstrate successful new processes to the broader company</li>
-              </ul>
-            </div>
-            <div className="daio-cell" style={{ background: 'var(--dark-gray)' }}>
-              <h4>Apply the Learnings</h4>
-              <ul>
-                <li>Apply learnings via existing products and features</li>
-                <li>Propose new products and features to the broader company</li>
-              </ul>
-            </div>
-          </div>
-
-          <div className="built-list" style={{ marginTop: '32px' }}>
-            <div className="built-item">
-              <div className="built-num">3</div>
-              <div className="built-content">
+            <div className="theme-card">
+              <div className="theme-num">03</div>
+              <div className="theme-content">
                 <h3>A funnel model with UX as the connective tissue</h3>
                 <p>
-                  I repositioned UX — not as a single lane in the funnel, but as the lens that encapsulated every stage. SEO brings families in. CRO converts them at the right moment. UX ensures the entire experience is cohesive, builds trust, and meets families where they are at each step.
+                  I repositioned UX not as a single lane in the funnel, but as the lens that encapsulated every stage. SEO brings families in. CRO converts them at the right moment. UX ensures the entire experience is cohesive, builds trust, and meets families where they are at each step.
                 </p>
+                <div className="funnel-three">
+                  <div className="funnel-card">
+                    <div className="funnel-card-head" style={{ background: 'var(--teal)' }}>
+                      SEO
+                    </div>
+                    <div className="funnel-card-body">
+                      <ul>
+                        <li>Drives organic traffic into the top of the funnel</li>
+                        <li>Makes the company findable at the moment of intent</li>
+                        <li>Keyword, content, and code optimization</li>
+                        <li>Link building and rankings</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div className="funnel-card">
+                    <div className="funnel-card-head" style={{ background: 'var(--charcoal)' }}>
+                      UX: The Connective Tissue
+                    </div>
+                    <div className="funnel-card-body">
+                      <ul>
+                        <li>Encapsulates the entire funnel end-to-end</li>
+                        <li>Creates a cohesive journey from awareness to retention</li>
+                        <li>Research, personas, information architecture</li>
+                        <li>Meets users where they are, emotionally and practically</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div className="funnel-card">
+                    <div className="funnel-card-head" style={{ background: 'var(--terra)' }}>
+                      CRO
+                    </div>
+                    <div className="funnel-card-body">
+                      <ul>
+                        <li>Optimizes conversion at every stage of the funnel</li>
+                        <li>Strategically engages users when they&apos;re ready</li>
+                        <li>Tracks bounce rates, traffic patterns, CTAs</li>
+                        <li>Leakiest part should be at the top, not the bottom</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
 
-          <div className="discipline-grid">
-            <div>
-              <div className="disc-head" style={{ background: 'var(--teal)' }}>
-                SEO
-              </div>
-              <div className="disc-body">
-                <ul>
-                  <li>Drives organic traffic into the top of the funnel</li>
-                  <li>Makes the company findable at the moment of intent</li>
-                  <li>Keyword, content, and code optimization</li>
-                  <li>Link building and rankings</li>
-                </ul>
-              </div>
-            </div>
-            <div>
-              <div className="disc-head" style={{ background: 'var(--charcoal)' }}>UX — The Connective Tissue</div>
-              <div
-                className="disc-body"
-                style={{ borderLeft: '2px solid var(--gold)', borderRight: '2px solid var(--gold)' }}
-              >
-                <ul>
-                  <li>Encapsulates the entire funnel end-to-end</li>
-                  <li>Creates a cohesive journey from awareness to retention</li>
-                  <li>Research, personas, information architecture</li>
-                  <li>Meets users where they are — emotionally and practically</li>
-                </ul>
-              </div>
-            </div>
-            <div>
-              <div className="disc-head" style={{ background: 'var(--terra)' }}>
-                CRO
-              </div>
-              <div className="disc-body">
-                <ul>
-                  <li>Optimizes conversion at every stage of the funnel</li>
-                  <li>Strategically engages users when they're ready</li>
-                  <li>Tracks bounce rates, traffic patterns, CTAs</li>
-                  <li>Leakiest part should be at the top, not the bottom</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <div className="built-list" style={{ marginTop: '32px' }}>
-            <div className="built-item">
-              <div className="built-num">4</div>
-              <div className="built-content">
+            <div className="theme-card">
+              <div className="theme-num">04</div>
+              <div className="theme-content">
                 <h3>A metrics model with leading indicators</h3>
                 <p>
-                  My proposal added a layer of smaller, combinable user health metrics that rolled up to the broader business numbers — preventing the team from optimizing only for conversion while ignoring the upstream signals that cause drop-off in the first place.
+                  My proposal added a layer of smaller, combinable user health metrics (also known as leading indicators) that rolled up to the broader business numbers, preventing the team from optimizing only for conversion while ignoring the upstream signals that cause drop-off in the first place.
                 </p>
+                <div className="metrics-flow">
+                  <div className="metrics-tier" style={{ background: 'var(--charcoal)', color: 'var(--white)', width: '100%' }}>
+                    <h4 style={{ color: 'var(--white)' }}>Traffic</h4>
+                    <p style={{ color: 'var(--white)' }}>All people discovering the company across channels</p>
+                  </div>
+                  <div className="tier-arrow">↓</div>
+                  <div className="metrics-tier" style={{ background: 'var(--terra)', color: '#000000', width: '82%' }}>
+                    <h4 style={{ color: '#000000' }}>User Health Metrics (Leading Indicators)</h4>
+                    <p style={{ color: '#000000' }}>Combinable signals: e.g. SEO rankings + UX quality scores</p>
+                  </div>
+                  <div className="tier-arrow">↓</div>
+                  <div className="metrics-tier" style={{ background: 'var(--teal-dark)', color: 'var(--white)', width: '64%' }}>
+                    <h4 style={{ color: 'var(--white)' }}>Conversion Rate Optimization</h4>
+                    <p style={{ color: 'var(--white)' }}>Rate of Applications · Rate of Enrollments</p>
+                  </div>
+                  <div className="tier-arrow">↓</div>
+                  <div className="metrics-tier" style={{ background: 'var(--gold)', width: '48%' }}>
+                    <h4 style={{ color: 'var(--charcoal)', fontSize: '15px' }}>Growth</h4>
+                    <p style={{ color: 'var(--charcoal)' }}>The department&apos;s main objective</p>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
 
-          <div className="metrics-flow">
-            <div className="metrics-tier" style={{ background: 'var(--charcoal)', color: 'var(--white)', width: '100%' }}>
-              <h4 style={{ color: 'var(--white)' }}>Traffic</h4>
-              <p style={{ color: 'rgba(255,255,255,0.6)' }}>All people discovering the company across channels</p>
-            </div>
-            <div className="tier-arrow">↓</div>
-            <div className="metrics-tier" style={{ background: 'var(--charcoal)', color: 'var(--white)', width: '82%' }}>
-              <h4 style={{ color: 'var(--gold)' }}>User Health Metrics (Leading Indicators)</h4>
-              <p style={{ color: 'rgba(255,255,255,0.6)' }}>Combinable signals — e.g. SEO rankings + UX quality scores</p>
-            </div>
-            <div className="tier-arrow">↓</div>
-            <div
-              className="metrics-tier"
-              style={{ background: 'var(--white)', border: '1px solid var(--light-gray)', width: '64%' }}
-            >
-              <h4 style={{ color: 'var(--charcoal)' }}>Conversion Rate Optimization</h4>
-              <p style={{ color: 'var(--dark-gray)' }}>Rate of Applications · Rate of Enrollments</p>
-            </div>
-            <div className="tier-arrow">↓</div>
-            <div className="metrics-tier" style={{ background: 'var(--gold)', width: '48%' }}>
-              <h4 style={{ color: 'var(--charcoal)', fontSize: '15px' }}>Growth</h4>
-              <p style={{ color: 'var(--charcoal)' }}>The department's main objective</p>
-            </div>
-          </div>
-
-          <div className="built-list" style={{ marginTop: '32px' }}>
-            <div className="built-item">
-              <div className="built-num">5</div>
-              <div className="built-content">
+            <div className="theme-card">
+              <div className="theme-num">05</div>
+              <div className="theme-content">
                 <h3>Explicit maps of where disciplines intersect</h3>
                 <p>
-                  A key part of the vision was making explicit the overlapping responsibilities between each pair of disciplines — the shared work that only happens when they collaborate.
+                  A key part of the vision was making explicit the overlapping responsibilities between each pair of disciplines: the shared work that only happens when they collaborate.
                 </p>
-              </div>
-            </div>
-          </div>
-
-          <div className="discipline-grid">
-            <div>
-              <div className="disc-head" style={{ background: 'var(--teal)' }}>
-                UX × SEO
-              </div>
-              <div className="disc-body">
-                <ul>
-                  <li>Title page and headline optimization</li>
-                  <li>Navigation and information architecture</li>
-                  <li>Mobile-first responsiveness</li>
-                  <li>
-                    <em>"SEO talks to robots, UX talks to people."</em>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div>
-              <div className="disc-head" style={{ background: 'var(--charcoal)' }}>
-                UX × CRO
-              </div>
-              <div className="disc-body">
-                <ul>
-                  <li>Page hierarchy and form design</li>
-                  <li>Strategic, user-centric CTAs</li>
-                  <li>Streamlined navigation that reduces friction</li>
-                  <li>
-                    <em>A positive UX boosts CRO from the start</em>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div>
-              <div className="disc-head" style={{ background: 'var(--terra)' }}>
-                SEO × CRO
-              </div>
-              <div className="disc-body">
-                <ul>
-                  <li>Landing page optimization</li>
-                  <li>Generate revenue by increasing brand reach</li>
-                  <li>Bring the right traffic, then convert it</li>
-                  <li>Reduce drop-off at the point of intent</li>
-                </ul>
+                <div className="venn-stack">
+                  <div className="venn-block">
+                    <div className="venn-label">UX × SEO</div>
+                    <svg
+                      className="venn-svg"
+                      viewBox="0 0 500 304"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden={true}
+                    >
+                      <circle cx="188" cy="186" r="125" fill="var(--charcoal)" fillOpacity={0.78} />
+                      <circle cx="312" cy="186" r="125" fill="var(--teal)" fillOpacity={0.78} />
+                      <text
+                        x="188"
+                        y="80"
+                        fill="#ffffff"
+                        fontSize="12pt"
+                        fontWeight="700"
+                        textAnchor="middle"
+                        dominantBaseline="middle"
+                      >
+                        UX
+                      </text>
+                      <text
+                        x="312"
+                        y="80"
+                        fill="#000000"
+                        fontSize="12pt"
+                        fontWeight="700"
+                        textAnchor="middle"
+                        dominantBaseline="middle"
+                      >
+                        SEO
+                      </text>
+                      <text x="250" y="112" fill="#ffffff" fontSize="12pt" textAnchor="middle">
+                        Title &amp; Headline
+                      </text>
+                      <text x="250" y="128" fill="#ffffff" fontSize="12pt" textAnchor="middle">
+                        Optimization
+                      </text>
+                      <text x="250" y="144" fill="#ffffff" fontSize="12pt" textAnchor="middle">
+                        Navigation &amp; IA
+                      </text>
+                      <text x="250" y="160" fill="#ffffff" fontSize="12pt" textAnchor="middle">
+                        Mobile-First
+                      </text>
+                      <text x="250" y="176" fill="#ffffff" fontSize="12pt" textAnchor="middle">
+                        Responsiveness
+                      </text>
+                      <text x="124" y="204" fill="#ffffff" fontSize="12pt" textAnchor="middle">
+                        Information
+                      </text>
+                      <text x="124" y="220" fill="#ffffff" fontSize="12pt" textAnchor="middle">
+                        Architecture
+                      </text>
+                      <text x="124" y="236" fill="#ffffff" fontSize="12pt" textAnchor="middle">
+                        Design, Research
+                      </text>
+                      <text x="124" y="252" fill="#ffffff" fontSize="12pt" textAnchor="middle">
+                        Personas
+                      </text>
+                      <text x="124" y="268" fill="#ffffff" fontSize="12pt" textAnchor="middle">
+                        Microcopy
+                      </text>
+                      <text x="376" y="204" fill="#000000" fontSize="12pt" textAnchor="middle">
+                        Keyword Optimization
+                      </text>
+                      <text x="376" y="220" fill="#000000" fontSize="12pt" textAnchor="middle">
+                        Code Optimization
+                      </text>
+                      <text x="376" y="236" fill="#000000" fontSize="12pt" textAnchor="middle">
+                        Content Optimization
+                      </text>
+                      <text x="376" y="252" fill="#000000" fontSize="12pt" textAnchor="middle">
+                        Link Building
+                      </text>
+                      <text x="376" y="268" fill="#000000" fontSize="12pt" textAnchor="middle">
+                        Rankings
+                      </text>
+                    </svg>
+                  </div>
+                  <div className="venn-block">
+                    <div className="venn-label">UX × CRO</div>
+                    <svg
+                      className="venn-svg"
+                      viewBox="0 0 500 304"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden={true}
+                    >
+                      <circle cx="188" cy="186" r="125" fill="var(--charcoal)" fillOpacity={0.78} />
+                      <circle cx="312" cy="186" r="125" fill="var(--terra)" fillOpacity={0.78} />
+                      <text
+                        x="188"
+                        y="80"
+                        fill="#ffffff"
+                        fontSize="12pt"
+                        fontWeight="700"
+                        textAnchor="middle"
+                        dominantBaseline="middle"
+                      >
+                        UX
+                      </text>
+                      <text
+                        x="312"
+                        y="80"
+                        fill="#000000"
+                        fontSize="12pt"
+                        fontWeight="700"
+                        textAnchor="middle"
+                        dominantBaseline="middle"
+                      >
+                        CRO
+                      </text>
+                      <text x="250" y="116" fill="#ffffff" fontSize="12pt" textAnchor="middle">
+                        Page Hierarchy
+                      </text>
+                      <text x="250" y="132" fill="#ffffff" fontSize="12pt" textAnchor="middle">
+                        Form Design
+                      </text>
+                      <text x="250" y="148" fill="#ffffff" fontSize="12pt" textAnchor="middle">
+                        Streamline Navigation
+                      </text>
+                      <text x="250" y="164" fill="#ffffff" fontSize="12pt" textAnchor="middle">
+                        Strategic CTAs
+                      </text>
+                      <text x="124" y="204" fill="#ffffff" fontSize="12pt" textAnchor="middle">
+                        Information
+                      </text>
+                      <text x="124" y="220" fill="#ffffff" fontSize="12pt" textAnchor="middle">
+                        Architecture
+                      </text>
+                      <text x="124" y="236" fill="#ffffff" fontSize="12pt" textAnchor="middle">
+                        Design, Research
+                      </text>
+                      <text x="124" y="252" fill="#ffffff" fontSize="12pt" textAnchor="middle">
+                        Personas
+                      </text>
+                      <text x="124" y="268" fill="#ffffff" fontSize="12pt" textAnchor="middle">
+                        Microcopy
+                      </text>
+                      <text x="376" y="204" fill="#000000" fontSize="12pt" textAnchor="middle">
+                        Convert Customers
+                      </text>
+                      <text x="376" y="220" fill="#000000" fontSize="12pt" textAnchor="middle">
+                        Session Duration
+                      </text>
+                      <text x="376" y="236" fill="#000000" fontSize="12pt" textAnchor="middle">
+                        Track Bounce Rates
+                      </text>
+                      <text x="376" y="252" fill="#000000" fontSize="12pt" textAnchor="middle">
+                        Traffic Patterns
+                      </text>
+                      <text x="376" y="268" fill="#000000" fontSize="12pt" textAnchor="middle">
+                        Button &amp; Interaction Clicks
+                      </text>
+                    </svg>
+                  </div>
+                  <div className="venn-block">
+                    <div className="venn-label">CRO × SEO</div>
+                    <svg
+                      className="venn-svg"
+                      viewBox="0 0 500 304"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden={true}
+                    >
+                      <circle cx="188" cy="186" r="125" fill="var(--terra)" fillOpacity={0.78} />
+                      <circle cx="312" cy="186" r="125" fill="var(--teal)" fillOpacity={0.78} />
+                      <text
+                        x="188"
+                        y="80"
+                        fill="#000000"
+                        fontSize="12pt"
+                        fontWeight="700"
+                        textAnchor="middle"
+                        dominantBaseline="middle"
+                      >
+                        CRO
+                      </text>
+                      <text
+                        x="312"
+                        y="80"
+                        fill="#000000"
+                        fontSize="12pt"
+                        fontWeight="700"
+                        textAnchor="middle"
+                        dominantBaseline="middle"
+                      >
+                        SEO
+                      </text>
+                      <text x="250" y="120" fill="#ffffff" fontSize="12pt" textAnchor="middle">
+                        Generate Revenue
+                      </text>
+                      <text x="250" y="136" fill="#ffffff" fontSize="12pt" textAnchor="middle">
+                        Increase Brand Reach
+                      </text>
+                      <text x="250" y="152" fill="#ffffff" fontSize="12pt" textAnchor="middle">
+                        Landing Page Optimization
+                      </text>
+                      <text x="124" y="204" fill="#000000" fontSize="12pt" textAnchor="middle">
+                        Convert Customers
+                      </text>
+                      <text x="124" y="220" fill="#000000" fontSize="12pt" textAnchor="middle">
+                        Session Duration
+                      </text>
+                      <text x="124" y="236" fill="#000000" fontSize="12pt" textAnchor="middle">
+                        Track Bounce Rates
+                      </text>
+                      <text x="124" y="252" fill="#000000" fontSize="12pt" textAnchor="middle">
+                        Traffic Patterns
+                      </text>
+                      <text x="376" y="204" fill="#000000" fontSize="12pt" textAnchor="middle">
+                        Keyword Optimization
+                      </text>
+                      <text x="376" y="220" fill="#000000" fontSize="12pt" textAnchor="middle">
+                        Code Optimization
+                      </text>
+                      <text x="376" y="236" fill="#000000" fontSize="12pt" textAnchor="middle">
+                        Content Optimization
+                      </text>
+                      <text x="376" y="252" fill="#000000" fontSize="12pt" textAnchor="middle">
+                        Link Building
+                      </text>
+                      <text x="376" y="268" fill="#000000" fontSize="12pt" textAnchor="middle">
+                        Rankings
+                      </text>
+                    </svg>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -577,21 +999,21 @@ html { scroll-behavior: smooth; }
         <div className="section">
           <div className="section-label">Measured Outcomes</div>
           <h2>The operating model changed how the team actually worked</h2>
-          <p>Leadership vision work is easy to describe and hard to verify. Three outcomes from this period stand out as concrete evidence that the model took hold.</p>
+          <p>Leadership vision work is easy to describe and hard to verify. Two outcomes from this period stand out as concrete evidence that the model took hold.</p>
 
           <div className="outcomes-grid">
             <div className="outcome-card">
               <div className="outcome-number">25%</div>
               <div className="outcome-label">Increase in team collaboration</div>
               <p className="outcome-desc">
-                Measured by the Buckingham Survey — a validated instrument for team health. A structured measure of how the team experienced working together, before and after the operating model was introduced.
+                Measured by the Buckingham Survey, a validated instrument for team health. A structured measure of how the team experienced working together, before and after the operating model was introduced.
               </p>
             </div>
             <div className="outcome-card">
               <div className="outcome-number">5 → 9</div>
               <div className="outcome-label">Direct reports scaled</div>
               <p className="outcome-desc">
-                Recruited and onboarded 4 new members across UX research, SEO, and CRO while the operating model was being built — increasing delivery velocity by 30%.
+                Recruited and onboarded 4 new members across UX research, SEO, and CRO while the operating model was being built, increasing delivery velocity by 30%.
               </p>
             </div>
           </div>
@@ -601,7 +1023,7 @@ html { scroll-behavior: smooth; }
             <div className="highlight-box-body">
               <ul>
                 <li>
-                  The team continued to operate in the agile model after the restructure that followed my departure. I didn't build something that depended on me being in the room. That's the test of whether a leadership intervention actually worked.
+                  The team continued to operate in the agile model after the restructure that followed my departure. I didn&apos;t build something that depended on me being in the room. That&apos;s the test of whether a leadership intervention actually worked.
                 </li>
               </ul>
             </div>
@@ -614,10 +1036,10 @@ html { scroll-behavior: smooth; }
           <div className="section-label">Why This Matters</div>
           <h2>What this kind of leadership actually looks like</h2>
           <p>
-            Building this vision wasn't a presentation exercise. It was the foundation that let me manage three disciplines simultaneously without losing the thread between them. Every prioritization decision, every experiment, every stakeholder conversation could be anchored back to the same model: user value drives business value, and UX is the connective tissue that makes it real.
+            Building this vision wasn&apos;t a presentation exercise. It was the foundation that let me manage three disciplines simultaneously without losing the thread between them. Every prioritization decision, every experiment, every stakeholder conversation could be anchored back to the same model: user value drives business value, and UX is the connective tissue that makes it real.
           </p>
           <p>
-            The work here reflects a specific leadership philosophy: before you ask a team to move fast, you have to make sure they're pointing in the same direction. The listening tour, the shared principle, the DAIO model, the metrics architecture — these weren't bureaucratic artifacts. They were the conditions that made genuine cross-functional collaboration possible.
+            The work here reflects a specific leadership philosophy: before you ask a team to move fast, you have to make sure they&apos;re pointing in the same direction. The listening tour, the shared principle, the DAIO model, and the metrics architecture were not bureaucratic artifacts. They were the conditions that made genuine cross-functional collaboration possible.
           </p>
 
           <div className="pull-quote">
@@ -636,7 +1058,6 @@ html { scroll-behavior: smooth; }
         </Link>
       </div>
 
-      <Footer />
     </div>
   );
 }

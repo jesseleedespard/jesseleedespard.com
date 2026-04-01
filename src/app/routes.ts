@@ -28,7 +28,7 @@ export const router = createBrowserRouter([
       { path: 'case-studies/proptech', Component: CaseStudyProptech },
       { path: 'case-studies/work-before-the-tools', Component: CaseStudyWorkBeforeTools },
       { path: 'leadership/research-function', Component: LeadershipResearchFunction },
-      { path: 'leadership/web-strategy', Component: LeadershipWebStrategy },
+      { path: 'leadership/three-disciplines-one-team', Component: LeadershipWebStrategy },
       { path: 'design-system', Component: DesignSystem },
     ],
   },
