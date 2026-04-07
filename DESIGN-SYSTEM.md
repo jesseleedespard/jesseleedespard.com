@@ -128,7 +128,7 @@ Ratios below come from **`AccessibilityAuditReport.tsx`** (post-fix) and **`Acce
 
 | Role | Family | Weight | Typical sizes | Where used |
 |------|--------|--------|----------------|------------|
-| Display / UI | DM Sans | 700 | 10–11px labels; 14–21px UI; 24–52px heroes | Nav, buttons, section labels, card titles, headings |
+| Display / UI | DM Sans | 700 | 12px labels; 14–18px UI; 24–48px heroes | Nav, buttons, section labels, card titles, headings |
 | Display / UI | DM Sans | 500 | 14–16px | Default nav links |
 | Body | Lora | 400 (italic for subheads) | 16–18px | Paragraphs, descriptions, podcast copy |
 | Base HTML | (theme) | medium / normal | `var(--text-*)` via Tailwind | Fallback `theme.css` `@layer base` |
@@ -169,7 +169,7 @@ Ratios below come from **`AccessibilityAuditReport.tsx`** (post-fix) and **`Acce
 ### Section labels (“eyebrows”)
 
 - **Family:** DM Sans **700**
-- **Size:** ~**11px**
+- **Size:** **12px**
 - **Letter-spacing:** ~**1.5px–2px**
 - **Transform:** `uppercase` for global section labels
 - **Color:** **`--teal-dark`** on **cream** or **white** (AA/AAA for small caps)
@@ -224,10 +224,15 @@ Ratios below come from **`AccessibilityAuditReport.tsx`** (post-fix) and **`Acce
 
 ### Never hardcode (use variables)
 
+- **No hardcoded values without explicit permission.** All colors, font sizes, font families, and spacing must reference CSS variables from `theme.css`. If a value doesn't have a variable yet, create the variable first, then reference it. No exceptions unless explicitly approved.
 - All **brand** fills, strokes, and text colors: **`var(--charcoal)`**, **`var(--cream)`**, **`var(--teal)`**, **`var(--teal-dark)`**, **`var(--terra)`**, **`var(--gold)`**, **`var(--gray)`**, **`var(--light-gray)`**, **`var(--dark-gray)`**, **`var(--white)`**.
 - **Links** on marketing pages: prefer **`.brand-link`** classes or **`--brand-link*`** tokens.
 
 **Tech debt:** Some files (e.g. `Navigation.tsx`, `Button.tsx`, `CTAStrip.tsx`) still use raw hex — align with tokens when editing.
+
+### No direct file edits without approval
+
+- **All changes to project files must go through the developer (Jesse) via Cursor.** Do not edit files in the project folder directly, especially since this project is stored in GitHub. Jesse controls what gets committed.
 
 ### Safe foreground ↔ background matrix (summary)
 
@@ -261,4 +266,4 @@ Ratios below come from **`AccessibilityAuditReport.tsx`** (post-fix) and **`Acce
 
 ---
 
-*Last aligned with codebase conventions: March 2026. Update this document when tokens or audit data change.*
+*Last aligned with codebase conventions: April 2026. Update this document when tokens or audit data change.*
