@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 304" fill="none">
+  <circle cx="188" cy="186" r="125" fill="#1e1e1e" fill-opacity="0.78"/>
+  <circle cx="312" cy="186" r="125" fill="#2c6e7f" fill-opacity="0.78"/>
+  <text x="188" y="80" fill="#ffffff" font-size="12pt" font-weight="700" text-anchor="middle" dominant-baseline="middle" font-family="'DM Sans', system-ui, sans-serif">UX</text>
+  <text x="312" y="80" fill="#000000" font-size="12pt" font-weight="700" text-anchor="middle" dominant-baseline="middle" font-family="'DM Sans', system-ui, sans-serif">SEO</text>
+  <text x="250" y="112" fill="#ffffff" font-size="12pt" text-anchor="middle" font-family="'DM Sans', system-ui, sans-serif">Title &amp; Headline</text>
+  <text x="250" y="128" fill="#ffffff" font-size="12pt" text-anchor="middle" font-family="'DM Sans', system-ui, sans-serif">Optimization</text>
+  <text x="250" y="144" fill="#ffffff" font-size="12pt" text-anchor="middle" font-family="'DM Sans', system-ui, sans-serif">Navigation &amp; IA</text>
+  <text x="250" y="160" fill="#ffffff" font-size="12pt" text-anchor="middle" font-family="'DM Sans', system-ui, sans-serif">Mobile-First</text>
+  <text x="250" y="176" fill="#ffffff" font-size="12pt" text-anchor="middle" font-family="'DM Sans', system-ui, sans-serif">Responsiveness</text>
+  <text x="124" y="204" fill="#ffffff" font-size="12pt" text-anchor="middle" font-family="'DM Sans', system-ui, sans-serif">Information</text>
+  <text x="124" y="220" fill="#ffffff" font-size="12pt" text-anchor="middle" font-family="'DM Sans', system-ui, sans-serif">Architecture</text>
+  <text x="124" y="236" fill="#ffffff" font-size="12pt" text-anchor="middle" font-family="'DM Sans', system-ui, sans-serif">Design, Research</text>
+  <text x="124" y="252" fill="#ffffff" font-size="12pt" text-anchor="middle" font-family="'DM Sans', system-ui, sans-serif">Personas</text>
+  <text x="124" y="268" fill="#ffffff" font-size="12pt" text-anchor="middle" font-family="'DM Sans', system-ui, sans-serif">Microcopy</text>
+  <text x="376" y="204" fill="#000000" font-size="12pt" text-anchor="middle" font-family="'DM Sans', system-ui, sans-serif">Keyword Optimization</text>
+  <text x="376" y="220" fill="#000000" font-size="12pt" text-anchor="middle" font-family="'DM Sans', system-ui, sans-serif">Code Optimization</text>
+  <text x="376" y="236" fill="#000000" font-size="12pt" text-anchor="middle" font-family="'DM Sans', system-ui, sans-serif">Content Optimization</text>
+  <text x="376" y="252" fill="#000000" font-size="12pt" text-anchor="middle" font-family="'DM Sans', system-ui, sans-serif">Link Building</text>
+  <text x="376" y="268" fill="#000000" font-size="12pt" text-anchor="middle" font-family="'DM Sans', system-ui, sans-serif">Rankings</text>
+</svg>

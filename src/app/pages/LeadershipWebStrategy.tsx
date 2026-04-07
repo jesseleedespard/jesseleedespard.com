@@ -58,14 +58,43 @@ html { scroll-behavior: smooth; }
 .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 8px; }
 
 .theme-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-top: 8px; }
-.theme-card { background: var(--white); border: 1px solid var(--light-gray); border-radius: 6px; padding: 20px; display: flex; gap: 16px; align-items: flex-start; }
-.theme-num { font-family: var(--display); font-size: 20px; font-weight: 700; color: var(--teal); min-width: 28px; flex-shrink: 0; }
-.theme-content { flex: 1; min-width: 0; }
-.theme-content h3 { margin-top: 0; font-family: var(--display); font-size: 16px; font-weight: 700; color: var(--charcoal); margin-bottom: 8px; }
-.theme-content h4 { margin-top: 0; font-family: var(--display); font-size: 16px; font-weight: 700; color: var(--charcoal); margin-bottom: 8px; }
-.theme-content p { margin: 0; color: var(--dark-gray); font-size: 16px; line-height: 1.75; }
+.theme-card {
+  background: var(--white);
+  border: 1px solid var(--light-gray);
+  border-radius: 6px;
+  padding-block: 20px;
+  padding-inline: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 12px;
+  box-sizing: border-box;
+}
+.theme-card-head {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  gap: 16px;
+  width: 100%;
+  min-width: 0;
+}
+.theme-num { font-family: var(--display); font-size: 20px; font-weight: 700; color: var(--teal); min-width: 28px; flex-shrink: 0; line-height: 1.2; }
+.theme-card-head h3 {
+  margin: 0;
+  flex: 1;
+  min-width: 0;
+  font-family: var(--display);
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--charcoal);
+  line-height: 1.3;
+}
+.theme-card-body { width: 100%; min-width: 0; box-sizing: border-box; }
+.theme-card-body p { margin: 0; color: var(--dark-gray); font-size: 16px; line-height: 1.75; }
+.theme-card-body h4 { margin-top: 0; font-family: var(--display); font-size: 16px; font-weight: 700; color: var(--charcoal); margin-bottom: 8px; }
 
-.daio-donut-wrap { overflow: visible; width: 100%; max-width: 480px; margin: 24px auto 0; align-self: center; }
+.daio-donut-wrap { overflow: visible; width: 100%; max-width: 720px; margin: 24px auto 0; align-self: center; }
+.daio-donut-wrap img { width: 100%; height: auto; display: block; margin: 0 auto; }
 
 .listening-tour-label { font-family: var(--display); font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--teal-dark); margin: 24px 0 12px; }
 .listening-questions { list-style: none; padding-left: 0; margin: 0 0 16px; }
@@ -97,19 +126,19 @@ html { scroll-behavior: smooth; }
 .daio-desc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 16px; }
 .daio-desc-card { border: 1px solid var(--light-gray); border-radius: 6px; overflow: hidden; background: var(--white); }
 .daio-desc-card-head {
-  padding: 11px 14px;
+  padding: 11px 20px;
   font-family: var(--display);
   font-weight: 700;
   font-size: 12px;
   line-height: 1.3;
   color: var(--white);
 }
-.daio-desc-card-body { padding: 14px 16px 16px; }
+.daio-desc-card-body { padding: 14px 20px 16px; }
 .daio-desc-card-body ul {
   margin: 0;
-  padding-left: 1.15em;
+  padding-inline: 0;
   list-style: disc;
-  list-style-position: outside;
+  list-style-position: inside;
   line-height: 1.55;
 }
 .daio-desc-card-body li { margin-bottom: 6px; font-size: 14px; color: var(--dark-gray); }
@@ -118,19 +147,19 @@ html { scroll-behavior: smooth; }
 .funnel-three { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 16px; }
 .funnel-card { border: 1px solid var(--light-gray); border-radius: 6px; overflow: hidden; background: var(--white); }
 .funnel-card-head {
-  padding: 12px 14px;
+  padding: 12px 20px;
   font-family: var(--display);
   font-weight: 700;
   font-size: 13px;
   color: var(--white);
   text-align: center;
 }
-.funnel-card-body { padding: 14px 16px; }
+.funnel-card-body { padding: 14px 20px; }
 .funnel-card-body ul {
   margin: 0;
-  padding-left: 1.15em;
+  padding-inline: 0;
   list-style: disc;
-  list-style-position: outside;
+  list-style-position: inside;
   line-height: 1.55;
 }
 .funnel-card-body li { margin-bottom: 6px; font-size: 14px; color: var(--dark-gray); }
@@ -149,8 +178,7 @@ html { scroll-behavior: smooth; }
   text-align: center;
   max-width: 580px;
 }
-.venn-svg { width: 100%; max-width: 580px; height: auto; display: block; margin: 0 auto; }
-.venn-svg text { font-family: var(--display), system-ui, sans-serif; }
+.venn-block img { width: 100%; max-width: 820px; height: auto; display: block; margin: 0 auto; }
 
 .pull-quote { margin: 32px 0; padding: 22px 28px; border-left: 4px solid var(--gold); background: var(--white); border-radius: 0 6px 6px 0; }
 .pull-quote p { font-family: var(--body); font-size: 20px; color: var(--charcoal); line-height: 1.5; font-style: italic; margin: 0 !important; }
@@ -162,15 +190,11 @@ html { scroll-behavior: smooth; }
 .tier-arrow { color: var(--gray); font-size: 18px; line-height: 1; padding: 2px 0; }
 
 .outcomes-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 20px; }
+.leadership-web-strategy-page .outcomes-grid + h2 { margin-top: 36px; }
 .outcome-card { background: var(--white); border: 1px solid var(--light-gray); border-top: 3px solid var(--teal); border-radius: 0 0 6px 6px; padding: 24px; text-align: center; }
 .outcome-number { font-family: var(--display); font-size: 36px; font-weight: 700; color: var(--teal); margin-bottom: 8px; line-height: 1.1; }
 .outcome-label { font-family: var(--display); font-size: 13px; font-weight: 700; color: var(--charcoal); margin-bottom: 8px; }
 .outcome-desc { font-size: 14px; color: var(--dark-gray); margin: 0; line-height: 1.65; text-align: left; }
-
-.highlight-box { border: 1px solid var(--light-gray); border-radius: 8px; overflow: hidden; background: var(--white); }
-.highlight-box-head { font-family: var(--display); font-size: 14px; font-weight: 700; color: var(--charcoal); padding: 14px 18px; background: var(--cream); border-bottom: 1px solid var(--light-gray); }
-.highlight-box-body { padding: 18px 20px; }
-.highlight-box-body ul { margin: 0; padding-left: 18px; color: var(--dark-gray); font-size: 15px; line-height: 1.7; }
 
 .cta-strip { background: var(--terra); padding: 48px; display: flex; justify-content: space-between; align-items: center; gap: 24px; flex-wrap: wrap; box-sizing: border-box; margin-top: 0; }
 .cta-strip-left h3 { font-family: var(--display); font-size: 20px; font-weight: 700; color: var(--charcoal); margin-bottom: 8px; }
@@ -203,15 +227,13 @@ html { scroll-behavior: smooth; }
 
   .leadership-web-strategy-page .two-col h3,
   .leadership-web-strategy-page .two-col p,
-  .leadership-web-strategy-page .theme-content p,
+  .leadership-web-strategy-page .theme-card-body p,
   .leadership-web-strategy-page .listening-questions li,
   .leadership-web-strategy-page .listening-q-text,
   .leadership-web-strategy-page .daio-desc-card,
   .leadership-web-strategy-page .daio-desc-card-head,
   .leadership-web-strategy-page .funnel-card-body li,
   .leadership-web-strategy-page .funnel-card-body ul,
-  .leadership-web-strategy-page .highlight-box-body,
-  .leadership-web-strategy-page .highlight-box-body li,
   .leadership-web-strategy-page .outcome-desc,
   .leadership-web-strategy-page .daio-desc-card-body ul { text-align: left !important; }
 
@@ -265,7 +287,13 @@ html { scroll-behavior: smooth; }
   .leadership-web-strategy-page .about-box p { text-align: left !important; }
   .leadership-web-strategy-page .medium-strip { flex-direction: column !important; gap: 16px !important; text-align: center !important; }
   .leadership-web-strategy-page .post-card-top { flex-direction: column !important; align-items: flex-start !important; gap: 4px !important; }
-  .leadership-web-strategy-page .theme-card { flex-direction: column !important; align-items: flex-start !important; }
+  .leadership-web-strategy-page .theme-card { flex-direction: column !important; align-items: stretch !important; }
+  .leadership-web-strategy-page .theme-card-head {
+    align-items: baseline !important;
+    width: 100% !important;
+    text-align: left !important;
+  }
+  .leadership-web-strategy-page .theme-card-head h3 { text-align: left !important; }
   .leadership-web-strategy-page .value-content p { text-align: left !important; }
   .leadership-web-strategy-page .who-text { text-align: left !important; }
   .leadership-web-strategy-page .process-content p { text-align: left !important; }
@@ -273,8 +301,6 @@ html { scroll-behavior: smooth; }
   .leadership-web-strategy-page .finding-body { text-align: left !important; }
   .leadership-web-strategy-page .card-body { text-align: left !important; }
   .leadership-web-strategy-page .act-card-body li { text-align: left !important; }
-  .leadership-web-strategy-page .highlight-box-body li { text-align: left !important; }
-
   .leadership-web-strategy-page .lead-intro { padding: 32px 24px 0 !important; text-align: center !important; }
   .leadership-web-strategy-page .lead-intro p { text-align: center !important; }
 
@@ -379,18 +405,22 @@ html { scroll-behavior: smooth; }
           </div>
           <div className="theme-grid">
             <div className="theme-card">
-              <div className="theme-num">01</div>
-              <div className="theme-content">
+              <div className="theme-card-head">
+                <div className="theme-num">01</div>
                 <h3>Implementation of Insights</h3>
+              </div>
+              <div className="theme-card-body">
                 <p>
                   Research insights were being acted on too quickly, without the original researcher&apos;s input. There was no structured process to propose experiments before committing to solutions.
                 </p>
               </div>
             </div>
             <div className="theme-card">
-              <div className="theme-num">02</div>
-              <div className="theme-content">
+              <div className="theme-card-head">
+                <div className="theme-num">02</div>
                 <h3>Cross-Team Collaboration</h3>
+              </div>
+              <div className="theme-card-body">
                 <p>
                   A new team with new members had no shared problem space or camaraderie yet. There was no mechanism for surfacing learnings across disciplines.
                 </p>
@@ -475,9 +505,11 @@ html { scroll-behavior: smooth; }
 
           <div className="built-theme-stack">
             <div className="theme-card">
-              <div className="theme-num">01</div>
-              <div className="theme-content">
+              <div className="theme-card-head">
+                <div className="theme-num">01</div>
                 <h3>A unified team identity</h3>
+              </div>
+              <div className="theme-card-body">
                 <p>
                   I defined the team not by its component disciplines but by its strategic position: an internal, experiment-driven startup, cross-functional and multidisciplinary, uniquely positioned to own the full digital funnel from awareness to retention.
                 </p>
@@ -485,141 +517,21 @@ html { scroll-behavior: smooth; }
             </div>
 
             <div className="theme-card">
-              <div className="theme-num">02</div>
-              <div className="theme-content">
+              <div className="theme-card-head">
+                <div className="theme-num">02</div>
                 <h3>The DAIO operating model</h3>
+              </div>
+              <div className="theme-card-body">
                 <p>
                   Rather than defining the team by outputs, I defined it by a cycle: <strong>D</strong>ata → <strong>A</strong>ction → <strong>I</strong>terate → <strong>O</strong>utcomes. The DAIO principle gave every discipline a shared process language so everyone could describe their work in the same terms.
                 </p>
                 <div className="daio-donut-wrap">
-                  <svg
-                    viewBox="-100 -52 600 504"
-                    xmlns="http://www.w3.org/2000/svg"
-                    preserveAspectRatio="xMidYMid meet"
-                    style={{ width: '100%', height: 'auto', display: 'block', overflow: 'visible' }}
-                    aria-label="DAIO cycle: Research and Data, Experiments, Apply the Learnings, Drive Measurable Outcomes, clockwise"
-                  >
-                    <defs>
-                      <path
-                        id="daio-text-teal"
-                        d="M 225 81 A 122 122 0 0 1 319 175"
-                        fill="none"
-                      />
-                      <path
-                        id="daio-text-gold"
-                        d="M 319 225 A 122 122 0 0 1 225 319"
-                        fill="none"
-                      />
-                      <path
-                        id="daio-text-dark"
-                        d="M 81 225 A 122 122 0 0 0 175 319"
-                        fill="none"
-                      />
-                      <path
-                        id="daio-text-terra"
-                        d="M 175 81 A 122 122 0 0 0 81 175"
-                        fill="none"
-                      />
-                    </defs>
-                    <path
-                      d="M 209.3 48.3 A 152 152 0 0 1 351.7 190.7 L 330 200 L 307.8 206.6 A 108 108 0 0 0 193.4 92.2 L 200 70 L 209.3 48.3 Z"
-                      fill="var(--teal)"
-                      stroke="var(--cream)"
-                      strokeWidth="2.5"
-                      strokeLinejoin="miter"
-                      strokeMiterlimit="8"
-                      paintOrder="stroke fill"
-                    />
-                    <path
-                      d="M 351.7 209.3 A 152 152 0 0 1 209.3 351.7 L 200 330 L 193.4 307.8 A 108 108 0 0 0 307.8 193.4 L 330 200 L 351.7 209.3 Z"
-                      fill="var(--gold)"
-                      stroke="var(--cream)"
-                      strokeWidth="2.5"
-                      strokeLinejoin="miter"
-                      strokeMiterlimit="8"
-                      paintOrder="stroke fill"
-                    />
-                    <path
-                      d="M 190.7 351.7 A 152 152 0 0 1 48.3 209.3 L 70 200 L 92.2 193.4 A 108 108 0 0 0 206.6 307.8 L 200 330 L 190.7 351.7 Z"
-                      fill="var(--dark-gray)"
-                      stroke="var(--cream)"
-                      strokeWidth="2.5"
-                      strokeLinejoin="miter"
-                      strokeMiterlimit="8"
-                      paintOrder="stroke fill"
-                    />
-                    <path
-                      d="M 48.3 190.7 A 152 152 0 0 1 190.7 48.3 L 200 70 L 206.6 92.2 A 108 108 0 0 0 92.2 206.6 L 70 200 L 48.3 190.7 Z"
-                      fill="var(--terra)"
-                      stroke="var(--cream)"
-                      strokeWidth="2.5"
-                      strokeLinejoin="miter"
-                      strokeMiterlimit="8"
-                      paintOrder="stroke fill"
-                    />
-                    <circle cx="200" cy="200" r="62" fill="var(--white)" />
-                    <text
-                      x="200"
-                      y="206"
-                      textAnchor="middle"
-                      style={{ fontFamily: 'var(--display)', fontSize: '20px', fontWeight: 700 }}
-                      fill="var(--charcoal)"
-                    >
-                      DAIO
-                    </text>
-                    <text
-                      style={{
-                        fontFamily: 'var(--display)',
-                        fontSize: '9px',
-                        fontWeight: 700,
-                        letterSpacing: '0.02em',
-                        fill: 'var(--white)',
-                      }}
-                    >
-                      <textPath href="#daio-text-teal" startOffset="50%" textAnchor="middle">
-                        Research &amp; Data
-                      </textPath>
-                    </text>
-                    <text
-                      style={{
-                        fontFamily: 'var(--display)',
-                        fontSize: '10px',
-                        fontWeight: 700,
-                        letterSpacing: '0.02em',
-                        fill: 'var(--white)',
-                      }}
-                    >
-                      <textPath href="#daio-text-gold" startOffset="50%" textAnchor="middle">
-                        Experiments
-                      </textPath>
-                    </text>
-                    <text
-                      style={{
-                        fontFamily: 'var(--display)',
-                        fontSize: '8px',
-                        fontWeight: 700,
-                        letterSpacing: '0.02em',
-                        fill: 'var(--white)',
-                      }}
-                    >
-                      <textPath href="#daio-text-dark" startOffset="50%" textAnchor="middle">
-                        Apply the Learnings
-                      </textPath>
-                    </text>
-                    <text
-                      style={{
-                        fontFamily: 'var(--display)',
-                        fontSize: '7.5px',
-                        fontWeight: 700,
-                        letterSpacing: '0.02em',
-                        fill: 'var(--white)',
-                      }}
-                    >
-                      <textPath href="#daio-text-terra" startOffset="50%" textAnchor="middle">
-                        Drive Measurable Outcomes
-                      </textPath>
-                    </text>
-                  </svg>
+                  <img
+                    src="/daio-cycle.png"
+                    alt="DAIO cycle diagram showing four phases: Research and Data, Experiments, Apply the Learnings, and Drive Measurable Outcomes"
+                    loading="lazy"
+                    decoding="async"
+                  />
                 </div>
                 <div className="daio-desc-grid">
                   <div className="daio-desc-card">
@@ -674,9 +586,11 @@ html { scroll-behavior: smooth; }
             </div>
 
             <div className="theme-card">
-              <div className="theme-num">03</div>
-              <div className="theme-content">
+              <div className="theme-card-head">
+                <div className="theme-num">03</div>
                 <h3>A funnel model with UX as the connective tissue</h3>
+              </div>
+              <div className="theme-card-body">
                 <p>
                   I repositioned UX not as a single lane in the funnel, but as the lens that encapsulated every stage. SEO brings families in. CRO converts them at the right moment. UX ensures the entire experience is cohesive, builds trust, and meets families where they are at each step.
                 </p>
@@ -725,9 +639,11 @@ html { scroll-behavior: smooth; }
             </div>
 
             <div className="theme-card">
-              <div className="theme-num">04</div>
-              <div className="theme-content">
+              <div className="theme-card-head">
+                <div className="theme-num">04</div>
                 <h3>A metrics model with leading indicators</h3>
+              </div>
+              <div className="theme-card-body">
                 <p>
                   My proposal added a layer of smaller, combinable user health metrics (also known as leading indicators) that rolled up to the broader business numbers, preventing the team from optimizing only for conversion while ignoring the upstream signals that cause drop-off in the first place.
                 </p>
@@ -756,237 +672,41 @@ html { scroll-behavior: smooth; }
             </div>
 
             <div className="theme-card">
-              <div className="theme-num">05</div>
-              <div className="theme-content">
+              <div className="theme-card-head">
+                <div className="theme-num">05</div>
                 <h3>Explicit maps of where disciplines intersect</h3>
+              </div>
+              <div className="theme-card-body">
                 <p>
                   A key part of the vision was making explicit the overlapping responsibilities between each pair of disciplines: the shared work that only happens when they collaborate.
                 </p>
                 <div className="venn-stack">
                   <div className="venn-block">
                     <div className="venn-label">UX × SEO</div>
-                    <svg
-                      className="venn-svg"
-                      viewBox="0 0 500 304"
-                      xmlns="http://www.w3.org/2000/svg"
-                      aria-hidden={true}
-                    >
-                      <circle cx="188" cy="186" r="125" fill="var(--charcoal)" fillOpacity={0.78} />
-                      <circle cx="312" cy="186" r="125" fill="var(--teal)" fillOpacity={0.78} />
-                      <text
-                        x="188"
-                        y="80"
-                        fill="#ffffff"
-                        fontSize="12pt"
-                        fontWeight="700"
-                        textAnchor="middle"
-                        dominantBaseline="middle"
-                      >
-                        UX
-                      </text>
-                      <text
-                        x="312"
-                        y="80"
-                        fill="#000000"
-                        fontSize="12pt"
-                        fontWeight="700"
-                        textAnchor="middle"
-                        dominantBaseline="middle"
-                      >
-                        SEO
-                      </text>
-                      <text x="250" y="112" fill="#ffffff" fontSize="12pt" textAnchor="middle">
-                        Title &amp; Headline
-                      </text>
-                      <text x="250" y="128" fill="#ffffff" fontSize="12pt" textAnchor="middle">
-                        Optimization
-                      </text>
-                      <text x="250" y="144" fill="#ffffff" fontSize="12pt" textAnchor="middle">
-                        Navigation &amp; IA
-                      </text>
-                      <text x="250" y="160" fill="#ffffff" fontSize="12pt" textAnchor="middle">
-                        Mobile-First
-                      </text>
-                      <text x="250" y="176" fill="#ffffff" fontSize="12pt" textAnchor="middle">
-                        Responsiveness
-                      </text>
-                      <text x="124" y="204" fill="#ffffff" fontSize="12pt" textAnchor="middle">
-                        Information
-                      </text>
-                      <text x="124" y="220" fill="#ffffff" fontSize="12pt" textAnchor="middle">
-                        Architecture
-                      </text>
-                      <text x="124" y="236" fill="#ffffff" fontSize="12pt" textAnchor="middle">
-                        Design, Research
-                      </text>
-                      <text x="124" y="252" fill="#ffffff" fontSize="12pt" textAnchor="middle">
-                        Personas
-                      </text>
-                      <text x="124" y="268" fill="#ffffff" fontSize="12pt" textAnchor="middle">
-                        Microcopy
-                      </text>
-                      <text x="376" y="204" fill="#000000" fontSize="12pt" textAnchor="middle">
-                        Keyword Optimization
-                      </text>
-                      <text x="376" y="220" fill="#000000" fontSize="12pt" textAnchor="middle">
-                        Code Optimization
-                      </text>
-                      <text x="376" y="236" fill="#000000" fontSize="12pt" textAnchor="middle">
-                        Content Optimization
-                      </text>
-                      <text x="376" y="252" fill="#000000" fontSize="12pt" textAnchor="middle">
-                        Link Building
-                      </text>
-                      <text x="376" y="268" fill="#000000" fontSize="12pt" textAnchor="middle">
-                        Rankings
-                      </text>
-                    </svg>
+                    <img
+                      src="/venn-ux-seo.png"
+                      alt="Venn diagram of UX and SEO: overlapping responsibilities in the center, and separate lists for UX-only work (information architecture through microcopy) and SEO-only work (keyword through rankings)."
+                      loading="lazy"
+                      decoding="async"
+                    />
                   </div>
                   <div className="venn-block">
                     <div className="venn-label">UX × CRO</div>
-                    <svg
-                      className="venn-svg"
-                      viewBox="0 0 500 304"
-                      xmlns="http://www.w3.org/2000/svg"
-                      aria-hidden={true}
-                    >
-                      <circle cx="188" cy="186" r="125" fill="var(--charcoal)" fillOpacity={0.78} />
-                      <circle cx="312" cy="186" r="125" fill="var(--terra)" fillOpacity={0.78} />
-                      <text
-                        x="188"
-                        y="80"
-                        fill="#ffffff"
-                        fontSize="12pt"
-                        fontWeight="700"
-                        textAnchor="middle"
-                        dominantBaseline="middle"
-                      >
-                        UX
-                      </text>
-                      <text
-                        x="312"
-                        y="80"
-                        fill="#000000"
-                        fontSize="12pt"
-                        fontWeight="700"
-                        textAnchor="middle"
-                        dominantBaseline="middle"
-                      >
-                        CRO
-                      </text>
-                      <text x="250" y="116" fill="#ffffff" fontSize="12pt" textAnchor="middle">
-                        Page Hierarchy
-                      </text>
-                      <text x="250" y="132" fill="#ffffff" fontSize="12pt" textAnchor="middle">
-                        Form Design
-                      </text>
-                      <text x="250" y="148" fill="#ffffff" fontSize="12pt" textAnchor="middle">
-                        Streamline Navigation
-                      </text>
-                      <text x="250" y="164" fill="#ffffff" fontSize="12pt" textAnchor="middle">
-                        Strategic CTAs
-                      </text>
-                      <text x="124" y="204" fill="#ffffff" fontSize="12pt" textAnchor="middle">
-                        Information
-                      </text>
-                      <text x="124" y="220" fill="#ffffff" fontSize="12pt" textAnchor="middle">
-                        Architecture
-                      </text>
-                      <text x="124" y="236" fill="#ffffff" fontSize="12pt" textAnchor="middle">
-                        Design, Research
-                      </text>
-                      <text x="124" y="252" fill="#ffffff" fontSize="12pt" textAnchor="middle">
-                        Personas
-                      </text>
-                      <text x="124" y="268" fill="#ffffff" fontSize="12pt" textAnchor="middle">
-                        Microcopy
-                      </text>
-                      <text x="376" y="204" fill="#000000" fontSize="12pt" textAnchor="middle">
-                        Convert Customers
-                      </text>
-                      <text x="376" y="220" fill="#000000" fontSize="12pt" textAnchor="middle">
-                        Session Duration
-                      </text>
-                      <text x="376" y="236" fill="#000000" fontSize="12pt" textAnchor="middle">
-                        Track Bounce Rates
-                      </text>
-                      <text x="376" y="252" fill="#000000" fontSize="12pt" textAnchor="middle">
-                        Traffic Patterns
-                      </text>
-                      <text x="376" y="268" fill="#000000" fontSize="12pt" textAnchor="middle">
-                        Button &amp; Interaction Clicks
-                      </text>
-                    </svg>
+                    <img
+                      src="/venn-ux-cro.png"
+                      alt="Venn diagram of UX and CRO: overlapping responsibilities in the center, and separate lists for UX-only and CRO-only work including conversion metrics and interaction tracking."
+                      loading="lazy"
+                      decoding="async"
+                    />
                   </div>
                   <div className="venn-block">
                     <div className="venn-label">CRO × SEO</div>
-                    <svg
-                      className="venn-svg"
-                      viewBox="0 0 500 304"
-                      xmlns="http://www.w3.org/2000/svg"
-                      aria-hidden={true}
-                    >
-                      <circle cx="188" cy="186" r="125" fill="var(--terra)" fillOpacity={0.78} />
-                      <circle cx="312" cy="186" r="125" fill="var(--teal)" fillOpacity={0.78} />
-                      <text
-                        x="188"
-                        y="80"
-                        fill="#000000"
-                        fontSize="12pt"
-                        fontWeight="700"
-                        textAnchor="middle"
-                        dominantBaseline="middle"
-                      >
-                        CRO
-                      </text>
-                      <text
-                        x="312"
-                        y="80"
-                        fill="#000000"
-                        fontSize="12pt"
-                        fontWeight="700"
-                        textAnchor="middle"
-                        dominantBaseline="middle"
-                      >
-                        SEO
-                      </text>
-                      <text x="250" y="120" fill="#ffffff" fontSize="12pt" textAnchor="middle">
-                        Generate Revenue
-                      </text>
-                      <text x="250" y="136" fill="#ffffff" fontSize="12pt" textAnchor="middle">
-                        Increase Brand Reach
-                      </text>
-                      <text x="250" y="152" fill="#ffffff" fontSize="12pt" textAnchor="middle">
-                        Landing Page Optimization
-                      </text>
-                      <text x="124" y="204" fill="#000000" fontSize="12pt" textAnchor="middle">
-                        Convert Customers
-                      </text>
-                      <text x="124" y="220" fill="#000000" fontSize="12pt" textAnchor="middle">
-                        Session Duration
-                      </text>
-                      <text x="124" y="236" fill="#000000" fontSize="12pt" textAnchor="middle">
-                        Track Bounce Rates
-                      </text>
-                      <text x="124" y="252" fill="#000000" fontSize="12pt" textAnchor="middle">
-                        Traffic Patterns
-                      </text>
-                      <text x="376" y="204" fill="#000000" fontSize="12pt" textAnchor="middle">
-                        Keyword Optimization
-                      </text>
-                      <text x="376" y="220" fill="#000000" fontSize="12pt" textAnchor="middle">
-                        Code Optimization
-                      </text>
-                      <text x="376" y="236" fill="#000000" fontSize="12pt" textAnchor="middle">
-                        Content Optimization
-                      </text>
-                      <text x="376" y="252" fill="#000000" fontSize="12pt" textAnchor="middle">
-                        Link Building
-                      </text>
-                      <text x="376" y="268" fill="#000000" fontSize="12pt" textAnchor="middle">
-                        Rankings
-                      </text>
-                    </svg>
+                    <img
+                      src="/venn-cro-seo.png"
+                      alt="Venn diagram of CRO and SEO: overlapping responsibilities in the center, and separate lists for CRO-focused metrics and SEO-focused optimization work."
+                      loading="lazy"
+                      decoding="async"
+                    />
                   </div>
                 </div>
               </div>
@@ -1018,16 +738,10 @@ html { scroll-behavior: smooth; }
             </div>
           </div>
 
-          <div className="highlight-box" style={{ marginTop: '14px' }}>
-            <div className="highlight-box-head">The outcome that matters most</div>
-            <div className="highlight-box-body">
-              <ul>
-                <li>
-                  The team continued to operate in the agile model after the restructure that followed my departure. I didn&apos;t build something that depended on me being in the room. That&apos;s the test of whether a leadership intervention actually worked.
-                </li>
-              </ul>
-            </div>
-          </div>
+          <h2>The outcome that matters most</h2>
+          <p>
+            The team continued to operate in the agile model after the restructure that followed my departure. I didn&apos;t build something that depended on me being in the room. That&apos;s the test of whether a leadership intervention actually worked.
+          </p>
         </div>
 
         <div className="divider" />

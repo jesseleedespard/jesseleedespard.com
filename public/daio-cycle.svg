@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-100 -52 600 504" fill="none" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <path id="daio-text-teal" d="M 225 81 A 122 122 0 0 1 319 175" fill="none"/>
+    <path id="daio-text-gold" d="M 319 225 A 122 122 0 0 1 225 319" fill="none"/>
+    <path id="daio-text-dark" d="M 81 225 A 122 122 0 0 0 175 319" fill="none"/>
+    <path id="daio-text-terra" d="M 175 81 A 122 122 0 0 0 81 175" fill="none"/>
+  </defs>
+  <path d="M 209.3 48.3 A 152 152 0 0 1 351.7 190.7 L 330 200 L 307.8 206.6 A 108 108 0 0 0 193.4 92.2 L 200 70 L 209.3 48.3 Z" fill="#2c6e7f" stroke="#faf7f2" stroke-width="2.5" stroke-linejoin="miter" stroke-miterlimit="8" paint-order="stroke fill"/>
+  <path d="M 351.7 209.3 A 152 152 0 0 1 209.3 351.7 L 200 330 L 193.4 307.8 A 108 108 0 0 0 307.8 193.4 L 330 200 L 351.7 209.3 Z" fill="#d4a843" stroke="#faf7f2" stroke-width="2.5" stroke-linejoin="miter" stroke-miterlimit="8" paint-order="stroke fill"/>
+  <path d="M 190.7 351.7 A 152 152 0 0 1 48.3 209.3 L 70 200 L 92.2 193.4 A 108 108 0 0 0 206.6 307.8 L 200 330 L 190.7 351.7 Z" fill="#444444" stroke="#faf7f2" stroke-width="2.5" stroke-linejoin="miter" stroke-miterlimit="8" paint-order="stroke fill"/>
+  <path d="M 48.3 190.7 A 152 152 0 0 1 190.7 48.3 L 200 70 L 206.6 92.2 A 108 108 0 0 0 92.2 206.6 L 70 200 L 48.3 190.7 Z" fill="#c4622d" stroke="#faf7f2" stroke-width="2.5" stroke-linejoin="miter" stroke-miterlimit="8" paint-order="stroke fill"/>
+  <circle cx="200" cy="200" r="62" fill="#ffffff"/>
+  <text x="200" y="206" text-anchor="middle" fill="#1e1e1e" font-family="'DM Sans', system-ui, sans-serif" font-size="20" font-weight="700">DAIO</text>
+  <text font-family="'DM Sans', system-ui, sans-serif" font-size="9" font-weight="700" letter-spacing="0.02em" fill="#ffffff">
+    <textPath href="#daio-text-teal" startOffset="50%" text-anchor="middle">Research &amp; Data</textPath>
+  </text>
+  <text font-family="'DM Sans', system-ui, sans-serif" font-size="10" font-weight="700" letter-spacing="0.02em" fill="#ffffff">
+    <textPath href="#daio-text-gold" startOffset="50%" text-anchor="middle">Experiments</textPath>
+  </text>
+  <text font-family="'DM Sans', system-ui, sans-serif" font-size="8" font-weight="700" letter-spacing="0.02em" fill="#ffffff">
+    <textPath href="#daio-text-dark" startOffset="50%" text-anchor="middle">Apply the Learnings</textPath>
+  </text>
+  <text font-family="'DM Sans', system-ui, sans-serif" font-size="7.5" font-weight="700" letter-spacing="0.02em" fill="#ffffff">
+    <textPath href="#daio-text-terra" startOffset="50%" text-anchor="middle">Drive Measurable Outcomes</textPath>
+  </text>
+</svg>
