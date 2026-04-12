@@ -35,7 +35,7 @@ html { scroll-behavior: smooth; }
 .hero { background: var(--charcoal); padding: 80px 48px 72px; position: relative; overflow: hidden; }
 .hero::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 4px; background: linear-gradient(to right, var(--teal), var(--gold), transparent); }
 .hero-inner { max-width: var(--max); margin: 0 auto; }
-.hero-tag { font-family: var(--display); display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); margin-bottom: 24px; border: 1px solid rgba(212,168,67,0.4); padding: 8px 16px; border-radius: 4px; }
+.hero-tag { font-family: var(--display); display: inline-block; font-size: var(--font-size-xs); font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); margin-bottom: 24px; border: 1px solid rgba(212,168,67,0.4); padding: 8px 16px; border-radius: 4px; }
 .hero h1 { font-family: var(--display); font-size: clamp(28px, 4vw, 44px); font-weight: 700; color: var(--white); line-height: 1.18; letter-spacing: -0.4px; margin-bottom: 8px; }
 .hero h1 em { color: var(--gold); font-style: normal; }
 .hero-sub { font-family: var(--body); font-size: 17px; color: rgba(255,255,255,0.6); line-height: 1.7; max-width: 580px; margin-bottom: 36px; font-style: italic; }
@@ -48,9 +48,9 @@ html { scroll-behavior: smooth; }
 /* LAYOUT */
 .page-wrap { max-width: var(--max); margin: 0 auto; padding: 0 48px; }
 .section { padding: 52px 0 0; }
-.section-label { font-family: var(--display); font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--teal-dark); margin-bottom: 8px; }
+.section-label { font-family: var(--display); font-size: var(--font-size-xs); font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--teal-dark); margin-bottom: 8px; }
 .section h2 { font-family: var(--display); font-size: clamp(22px, 3vw, 28px); font-weight: 700; color: var(--charcoal); line-height: 1.25; letter-spacing: -0.3px; margin-bottom: 18px; }
-.section h3 { font-family: var(--display); font-size: 16px; font-weight: 700; color: var(--charcoal); margin-bottom: 8px; margin-top: 24px; }
+.section h3 { font-family: var(--display); font-size: var(--font-size-base); font-weight: 700; color: var(--charcoal); margin-bottom: 8px; margin-top: 24px; }
 .section p { color: var(--dark-gray); margin-bottom: 16px; }
 .section p:last-child { margin-bottom: 0; }
 .divider { height: 1px; background: var(--light-gray); margin: 48px 0 0; }
@@ -61,7 +61,7 @@ html { scroll-behavior: smooth; }
   display: inline-block;
   max-width: 100%;
   font-family: var(--display);
-  font-size: 11px;
+  font-size: var(--font-size-xs);
   font-weight: 700;
   letter-spacing: 1.2px;
   line-height: 1.45;
@@ -83,7 +83,7 @@ html { scroll-behavior: smooth; }
 .act-card-header { padding: 14px 18px; display: flex; flex-wrap: wrap; align-items: center; gap: 0.35em; }
 .act-card-phase {
   font-family: var(--display);
-  font-size: 14px;
+  font-size: var(--font-size-sm);
   font-weight: 700;
   letter-spacing: 0.02em;
   line-height: 1.35;
@@ -92,7 +92,7 @@ html { scroll-behavior: smooth; }
 }
 .act-card-title {
   font-family: var(--display);
-  font-size: 14px;
+  font-size: var(--font-size-sm);
   font-weight: 700;
   line-height: 1.35;
   letter-spacing: 0.01em;
@@ -180,7 +180,7 @@ html { scroll-behavior: smooth; }
   flex: 1;
   min-width: 0;
   font-family: var(--display);
-  font-size: 16px;
+  font-size: var(--font-size-base);
   font-weight: 700;
   color: var(--charcoal);
   line-height: 1.3;
@@ -193,7 +193,7 @@ html { scroll-behavior: smooth; }
 .leadership-research-function-page .theme-card-body p {
   margin: 0;
   color: var(--dark-gray);
-  font-size: 16px;
+  font-size: var(--font-size-base);
   line-height: 1.75;
 }
 .leadership-research-function-page .theme-card-body p + p {
@@ -201,7 +201,7 @@ html { scroll-behavior: smooth; }
 }
 
 .highlight-box { margin-top: 24px; border: 1px solid var(--light-gray); border-radius: 8px; overflow: hidden; background: var(--white); }
-.highlight-box-head { font-family: var(--display); font-size: 14px; font-weight: 700; color: var(--charcoal); padding: 14px 18px; background: var(--cream); border-bottom: 1px solid var(--light-gray); }
+.highlight-box-head { font-family: var(--display); font-size: var(--font-size-sm); font-weight: 700; color: var(--charcoal); padding: 14px 18px; background: var(--cream); border-bottom: 1px solid var(--light-gray); }
 .highlight-box-body { padding: 18px 20px; }
 .highlight-box-body ul { margin: 0; padding-left: 18px; color: var(--dark-gray); font-size: 14.5px; line-height: 1.65; }
 .highlight-box-body li { margin-bottom: 10px; }
@@ -246,15 +246,15 @@ html { scroll-behavior: smooth; }
 .stat-card { background: var(--white); border: 1px solid var(--light-gray); border-radius: 8px; padding: 24px; text-align: center; }
 .stat-number { font-family: var(--display); font-size: 36px; font-weight: 700; color: var(--teal); margin-bottom: 8px; line-height: 1.1; }
 .stat-label { font-family: var(--display); font-size: 13px; font-weight: 700; color: var(--charcoal); margin-bottom: 8px; }
-.stat-desc { font-size: 14px; line-height: 1.6; color: var(--dark-gray); margin: 0; text-align: left; }
+.stat-desc { font-size: var(--font-size-sm); line-height: 1.6; color: var(--dark-gray); margin: 0; text-align: left; }
 
 .cta-strip { background: var(--terra); padding: 48px; display: flex; justify-content: space-between; align-items: center; gap: 24px; flex-wrap: wrap; box-sizing: border-box; margin-top: 0; }
 .leadership-research-function-page .cta-strip {
   margin-top: clamp(48px, 7vw, 88px);
 }
 .cta-strip-left h3 { font-family: var(--display); font-size: 20px; font-weight: 700; color: var(--charcoal); margin-bottom: 8px; }
-.cta-strip-left a { font-family: var(--display); font-size: 14px; color: var(--charcoal); text-decoration: none; opacity: 0.7; }
-.cta-btn { background: var(--charcoal); color: var(--white); font-family: var(--display); font-weight: 700; font-size: 14px; padding: 13px 28px; border-radius: 6px; text-decoration: none; white-space: nowrap; flex-shrink: 0; display: inline-block; border: none; cursor: pointer; }
+.cta-strip-left a { font-family: var(--display); font-size: var(--font-size-sm); color: var(--charcoal); text-decoration: none; opacity: 0.7; }
+.cta-btn { background: var(--charcoal); color: var(--white); font-family: var(--display); font-weight: 700; font-size: var(--font-size-sm); padding: 13px 28px; border-radius: 6px; text-decoration: none; white-space: nowrap; flex-shrink: 0; display: inline-block; border: none; cursor: pointer; }
 
 /* ═══════════════════════════════════════════════════════════
    MOBILE: 375px target, 8pt grid, centered text
@@ -363,7 +363,7 @@ html { scroll-behavior: smooth; }
     gap: 24px !important;
     margin-top: clamp(40px, 10vw, 64px) !important;
   }
-  .leadership-research-function-page .cta-strip-left h3 { font-size: 18px !important; text-align: center !important; }
+  .leadership-research-function-page .cta-strip-left h3 { font-size: var(--font-size-lg) !important; text-align: center !important; }
   .leadership-research-function-page .cta-strip-left a { text-align: center !important; display: block !important; }
   .leadership-research-function-page .cta-btn { display: block !important; text-align: center !important; width: 100% !important; }
 
@@ -378,7 +378,7 @@ html { scroll-behavior: smooth; }
 
   .leadership-research-function-page .hero { padding: 40px 16px 32px !important; }
   .leadership-research-function-page .hero h1 { font-size: clamp(22px, 7vw, 26px) !important; }
-  .leadership-research-function-page .hero-sub { font-size: 14px !important; }
+  .leadership-research-function-page .hero-sub { font-size: var(--font-size-sm) !important; }
 
   .leadership-research-function-page .page-wrap { padding: 0 16px !important; }
   .leadership-research-function-page .section { padding: 40px 16px 0 !important; }
@@ -394,7 +394,7 @@ html { scroll-behavior: smooth; }
   .leadership-research-function-page .cta-btn { padding: 16px !important; }
 
   .leadership-research-function-page .tabs-wrapper { padding: 0 !important; }
-  .leadership-research-function-page .tab { padding: 16px 12px !important; font-size: 12px !important; }
+  .leadership-research-function-page .tab { padding: 16px 12px !important; font-size: var(--font-size-xs) !important; }
 
   .leadership-research-function-page .podcast-card { padding: 24px 16px !important; }
   .leadership-research-function-page .reflection-box { padding: 24px 16px !important; }

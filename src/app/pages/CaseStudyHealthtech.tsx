@@ -4,7 +4,8 @@ import { Footer } from '../components/Footer';
 
 export default function CaseStudyHealthtech() {
   useEffect(() => {
-    document.title = 'Reducing the Time of Customer Onboarding: Jesse Lee Despard';
+    document.title =
+      'From 90 Minutes to 45: Redesigning a Broken Onboarding Flow: Jesse Lee Despard';
   }, []);
 
   return (
@@ -24,7 +25,7 @@ html { scroll-behavior: smooth; }
 .hero { background: var(--charcoal); padding: 80px 48px 72px; position: relative; overflow: hidden; }
 .hero::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 4px; background: linear-gradient(to right, var(--teal), var(--gold), transparent); }
 .hero-inner { max-width: var(--max); margin: 0 auto; }
-.hero-tag { font-family: var(--display); display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); margin-bottom: 24px; border: 1px solid rgba(212,168,67,0.4); padding: 8px 16px; border-radius: 4px; }
+.hero-tag { font-family: var(--display); display: inline-block; font-size: var(--font-size-xs); font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); margin-bottom: 24px; border: 1px solid rgba(212,168,67,0.4); padding: 8px 16px; border-radius: 4px; }
 .hero h1 { font-family: var(--display); font-size: clamp(30px, 4.5vw, 46px); font-weight: 700; color: var(--white); line-height: 1.18; letter-spacing: -0.4px; margin-bottom: 14px; }
 .hero-sub { font-family: var(--body); font-size: 17px; color: rgba(255,255,255,0.6); line-height: 1.7; max-width: 560px; margin-bottom: 36px; font-style: italic; }
 .meta-strip { display: flex; flex-wrap: wrap; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 24px; gap: 0; }
@@ -36,7 +37,7 @@ html { scroll-behavior: smooth; }
 /* LAYOUT */
 .page-wrap { max-width: var(--max); margin: 0 auto; padding: 0 48px; }
 .section { padding: 52px 0 0; }
-.section-label { font-family: var(--display); font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--teal-dark); margin-bottom: 8px; }
+.section-label { font-family: var(--display); font-size: var(--font-size-xs); font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--teal-dark); margin-bottom: 8px; }
 .section h2 { font-family: var(--display); font-size: clamp(20px, 2.8vw, 26px); font-weight: 700; color: var(--charcoal); line-height: 1.3; letter-spacing: -0.3px; margin-bottom: 16px; }
 .section p { color: var(--dark-gray); margin-bottom: 16px; }
 .section p:last-child { margin-bottom: 0; }
@@ -55,7 +56,7 @@ html { scroll-behavior: smooth; }
 .stat-item { text-align: center; padding: 24px 16px; border-right: 1px solid rgba(255,255,255,0.12); }
 .stat-item:last-child { border-right: none; }
 .stat-number { font-family: var(--display); font-size: clamp(24px, 3vw, 36px); font-weight: 700; color: var(--gold); margin-bottom: 8px; line-height: 1.2; display: block; text-align: center; }
-.stat-label { font-family: var(--display); font-size: 12px; color: rgba(255,255,255,0.75); font-weight: 500; line-height: 1.4; text-align: center; }
+.stat-label { font-family: var(--display); font-size: var(--font-size-xs); color: rgba(255,255,255,0.75); font-weight: 500; line-height: 1.4; text-align: center; }
 
 .lessons { display: flex; flex-direction: column; gap: 12px; margin-top: 24px; }
 .lesson {
@@ -179,7 +180,7 @@ html { scroll-behavior: smooth; }
 
   /* CTA STRIP */
   .cta-strip { flex-direction: column !important; padding: 48px 24px !important; text-align: center !important; gap: 24px !important; }
-  .cta-strip-left h3 { font-size: 18px !important; text-align: center !important; }
+  .cta-strip-left h3 { font-size: var(--font-size-lg) !important; text-align: center !important; }
   .cta-strip-left a { text-align: center !important; display: block !important; }
   .cta-btn { display: block !important; text-align: center !important; width: 100% !important; }
 
@@ -196,7 +197,7 @@ html { scroll-behavior: smooth; }
   /* HERO */
   .hero { padding: 40px 16px 32px !important; }
   .hero h1 { font-size: clamp(22px, 7vw, 26px) !important; }
-  .hero-sub { font-size: 14px !important; }
+  .hero-sub { font-size: var(--font-size-sm) !important; }
 
   /* LAYOUT */
   .page-wrap { padding: 0 16px !important; }
@@ -217,7 +218,7 @@ html { scroll-behavior: smooth; }
 
   /* TABS */
   .tabs-wrapper { padding: 0 !important; }
-  .tab { padding: 16px 12px !important; font-size: 12px !important; }
+  .tab { padding: 16px 12px !important; font-size: var(--font-size-xs) !important; }
 
   /* COMPONENTS */
   .podcast-card { padding: 24px 16px !important; }
@@ -235,9 +236,9 @@ html { scroll-behavior: smooth; }
         <div className="hero-inner">
           <span className="hero-tag">Case Study · HealthTech · UX Research</span>
           <h1>
-            Reducing the Time of
+            From 90 Minutes to 45: Redesigning a
             <br />
-            Customer Onboarding
+            Broken Onboarding Flow
           </h1>
           <p className="hero-sub">
             A mid-sized healthcare technology company had a broken onboarding process with a 37-question form that took longer to complete than the phone call it was meant to prepare for. This study fixed that problem.
@@ -566,7 +567,7 @@ html { scroll-behavior: smooth; }
             <p
               style={{
                 fontFamily: 'var(--display)',
-                fontSize: '11px',
+                fontSize: 'var(--font-size-xs)',
                 fontWeight: 700,
                 letterSpacing: '2px',
                 textTransform: 'uppercase',

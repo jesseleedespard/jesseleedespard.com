@@ -79,33 +79,35 @@ export function WorkCard({
         </p>
 
         {/* Link */}
-        {disabled ? (
-          <div
-            style={{
-              fontFamily: 'DM Sans, sans-serif',
-              fontWeight: 700,
-              fontSize: '14px',
-              color: '#CCCCCC',
-              whiteSpace: 'nowrap',
-            }}
-          >
-            {linkText}
-          </div>
-        ) : (
-          <Link
-            to={linkTo}
-            style={{
-              fontFamily: 'DM Sans, sans-serif',
-              fontWeight: 700,
-              fontSize: '14px',
-              color: linkColor,
-              textDecoration: 'none',
-              whiteSpace: 'nowrap',
-            }}
-          >
-            {linkText}
-          </Link>
-        )}
+        <div className="card-cta-row">
+          {disabled ? (
+            <div
+              style={{
+                fontFamily: 'DM Sans, sans-serif',
+                fontWeight: 700,
+                fontSize: '14px',
+                color: '#CCCCCC',
+                whiteSpace: 'nowrap',
+              }}
+            >
+              {linkText}
+            </div>
+          ) : (
+            <Link
+              to={linkTo}
+              style={{
+                fontFamily: 'DM Sans, sans-serif',
+                fontWeight: 700,
+                fontSize: '14px',
+                color: linkColor,
+                textDecoration: 'none',
+                whiteSpace: 'nowrap',
+              }}
+            >
+              {linkText}
+            </Link>
+          )}
+        </div>
       </div>
     </div>
   );

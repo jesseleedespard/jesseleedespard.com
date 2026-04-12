@@ -124,7 +124,7 @@ function ethicsBadgePillStyle(badge: string): CSSProperties {
   const base: CSSProperties = {
     fontFamily: 'DM Sans, sans-serif',
     fontWeight: 700,
-    fontSize: '12px',
+    fontSize: 'var(--font-size-xs)',
     letterSpacing: '0.02em',
     padding: '4px 10px',
     borderRadius: '4px',
@@ -180,16 +180,14 @@ export default function Writing() {
           color: var(--white);
           line-height: 1.15;
           margin-bottom: 24px;
-          max-width: 900px;
         }
 
         .writing-hero-subtitle {
           font-family: 'Lora', serif;
           font-weight: 400;
           font-style: italic;
-          font-size: 18px;
+          font-size: var(--font-size-lg);
           color: color-mix(in srgb, var(--white) 65%, transparent);
-          max-width: 700px;
           line-height: 1.6;
           padding-bottom: 60px;
         }
@@ -207,7 +205,7 @@ export default function Writing() {
         .writing-section-label-teal {
           font-family: 'DM Sans', sans-serif;
           font-weight: 700;
-          font-size: 11px;
+          font-size: var(--font-size-xs);
           letter-spacing: 1.5px;
           text-transform: uppercase;
           color: var(--teal);
@@ -232,18 +230,21 @@ export default function Writing() {
         .writing-pdf-btn {
           font-family: 'DM Sans', sans-serif;
           font-weight: 700;
-          font-size: 12px;
+          font-size: var(--font-size-xs);
           color: var(--teal-dark);
           background: transparent;
           border: 2px solid var(--teal-dark);
           border-radius: 6px;
           padding: 10px 18px;
           cursor: pointer;
-          align-self: flex-start;
-          margin-top: auto;
           text-decoration: none;
           display: inline-block;
+          white-space: nowrap;
           transition: background-color 0.2s ease, color 0.2s ease;
+        }
+
+        .writing-pub-card-cta {
+          margin-top: auto;
         }
 
         .writing-pdf-btn:hover {
@@ -258,11 +259,10 @@ export default function Writing() {
 
         .writing-intro-muted {
           font-family: 'DM Sans', sans-serif;
-          font-size: 14px;
+          font-size: var(--font-size-sm);
           color: var(--gray);
           line-height: 1.5;
           margin-bottom: 24px;
-          max-width: 720px;
         }
 
         .writing-contrib-note {
@@ -273,21 +273,13 @@ export default function Writing() {
           margin-bottom: 12px;
         }
 
-        .writing-framing-strip {
-          background-color: var(--white);
-          border: 1px solid var(--light-gray);
-          border-left: 4px solid var(--teal);
-          border-radius: 8px;
-          padding: 24px 32px;
-          margin-top: 52px;
-        }
-
-        .writing-framing-strip p {
+        /* Ethics tab: series framing copy as body prose (not a card). */
+        .writing-ethics-series-intro {
           font-family: 'Lora', serif;
           font-size: 17px;
           color: var(--dark-gray);
           line-height: 1.65;
-          margin: 0;
+          margin: 0 0 32px;
         }
 
         .writing-legend {
@@ -295,7 +287,7 @@ export default function Writing() {
           flex-wrap: wrap;
           gap: 24px 32px;
           align-items: center;
-          margin-top: 32px;
+          margin-top: 0;
         }
 
         .writing-legend-item {
@@ -364,7 +356,7 @@ export default function Writing() {
 
         .writing-medium-strip p {
           font-family: 'Lora', serif;
-          font-size: 16px;
+          font-size: var(--font-size-base);
           color: var(--dark-gray);
           margin: 0;
           line-height: 1.5;
@@ -373,7 +365,7 @@ export default function Writing() {
         .writing-medium-follow {
           font-family: 'DM Sans', sans-serif;
           font-weight: 700;
-          font-size: 14px;
+          font-size: var(--font-size-sm);
           color: var(--teal);
           text-decoration: underline;
           text-underline-offset: 0.2em;
@@ -392,7 +384,7 @@ export default function Writing() {
         .writing-card-link {
           font-family: 'DM Sans', sans-serif;
           font-weight: 700;
-          font-size: 14px;
+          font-size: var(--font-size-sm);
           color: var(--teal-dark);
           text-decoration: none;
           white-space: nowrap;
@@ -433,11 +425,11 @@ export default function Writing() {
           }
 
           .writing-hero-title {
-            font-size: 32px;
+            font-size: var(--font-size-2xl);
           }
 
           .writing-hero-subtitle {
-            font-size: 16px;
+            font-size: var(--font-size-base);
             padding-bottom: 40px;
           }
 
@@ -457,7 +449,7 @@ export default function Writing() {
             style={{
               fontFamily: 'DM Sans, sans-serif',
               fontWeight: 700,
-              fontSize: '11px',
+              fontSize: 'var(--font-size-xs)',
               color: 'var(--gold)',
               marginBottom: '20px',
               letterSpacing: '1.5px',
@@ -499,7 +491,7 @@ export default function Writing() {
                 style={{
                   fontFamily: 'DM Sans, sans-serif',
                   fontWeight: 700,
-                  fontSize: '11px',
+                  fontSize: 'var(--font-size-xs)',
                   color: activeTab === 'academic' ? 'var(--white)' : 'var(--charcoal)',
                   backgroundColor: activeTab === 'academic' ? 'var(--teal-dark)' : 'var(--gray)',
                   borderRadius: '10px',
@@ -534,7 +526,7 @@ export default function Writing() {
                 style={{
                   fontFamily: 'DM Sans, sans-serif',
                   fontWeight: 700,
-                  fontSize: '11px',
+                  fontSize: 'var(--font-size-xs)',
                   color: activeTab === 'ethics' ? 'var(--white)' : 'var(--charcoal)',
                   backgroundColor: activeTab === 'ethics' ? 'var(--teal-dark)' : 'var(--gray)',
                   borderRadius: '10px',
@@ -572,7 +564,7 @@ export default function Writing() {
                   <p
                     style={{
                       fontFamily: 'Lora, serif',
-                      fontSize: '16px',
+                      fontSize: 'var(--font-size-base)',
                       color: 'var(--dark-gray)',
                       lineHeight: 1.65,
                       marginBottom: '16px',
@@ -583,7 +575,7 @@ export default function Writing() {
                   <p
                     style={{
                       fontFamily: 'Lora, serif',
-                      fontSize: '14px',
+                      fontSize: 'var(--font-size-sm)',
                       color: 'var(--dark-gray)',
                       lineHeight: 1.6,
                       marginBottom: '20px',
@@ -591,14 +583,16 @@ export default function Writing() {
                   >
                     {pub.apa}
                   </p>
-                  <a
-                    className="writing-pdf-btn"
-                    href={pub.pdfPath}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Download PDF
-                  </a>
+                  <div className="card-cta-row writing-pub-card-cta">
+                    <a
+                      className="writing-pdf-btn"
+                      href={pub.pdfPath}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Download PDF
+                    </a>
+                  </div>
                 </article>
               ))}
             </div>
@@ -626,7 +620,7 @@ export default function Writing() {
                   <p
                     style={{
                       fontFamily: 'Lora, serif',
-                      fontSize: '16px',
+                      fontSize: 'var(--font-size-base)',
                       color: 'var(--dark-gray)',
                       lineHeight: 1.65,
                       marginBottom: '16px',
@@ -637,7 +631,7 @@ export default function Writing() {
                   <p
                     style={{
                       fontFamily: 'Lora, serif',
-                      fontSize: '14px',
+                      fontSize: 'var(--font-size-sm)',
                       color: 'var(--dark-gray)',
                       lineHeight: 1.6,
                       marginBottom: '20px',
@@ -645,14 +639,16 @@ export default function Writing() {
                   >
                     {pub.apa}
                   </p>
-                  <a
-                    className="writing-pdf-btn"
-                    href={pub.pdfPath}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Download PDF
-                  </a>
+                  <div className="card-cta-row writing-pub-card-cta">
+                    <a
+                      className="writing-pdf-btn"
+                      href={pub.pdfPath}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Download PDF
+                    </a>
+                  </div>
                 </article>
               ))}
             </div>
@@ -663,13 +659,11 @@ export default function Writing() {
       {activeTab === 'ethics' && (
         <section className="writing-section-padding" style={{ backgroundColor: 'var(--cream)' }}>
           <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
-            <div className="writing-framing-strip">
-              <p>
-                All posts are published on Medium. The narrative parables and systemic analyses are written as companions —
-                scenes that tell the story, followed by analysis that names the structure underneath it. Scene 1 combines both
-                in a single post. From Scene 2 onward, the parable and analysis are published separately, a few days apart.
-              </p>
-            </div>
+            <p className="writing-ethics-series-intro">
+              All posts are published on Medium. The narrative parables and systemic analyses are written as companions —
+              scenes that tell the story, followed by analysis that names the structure underneath it. Scene 1 combines both in
+              a single post. From Scene 2 onward, the parable and analysis are published separately, a few days apart.
+            </p>
 
             <div className="writing-legend">
               <div className="writing-legend-item">
@@ -714,7 +708,7 @@ export default function Writing() {
                         style={{
                           fontFamily: 'DM Sans, sans-serif',
                           fontWeight: 700,
-                          fontSize: '24px',
+                          fontSize: 'var(--font-size-xl)',
                           color: 'var(--charcoal)',
                           marginBottom: '8px',
                           lineHeight: 1.25,
@@ -738,7 +732,7 @@ export default function Writing() {
                       <p
                         style={{
                           fontFamily: 'Lora, serif',
-                          fontSize: '16px',
+                          fontSize: 'var(--font-size-base)',
                           color: 'var(--dark-gray)',
                           lineHeight: 1.65,
                           marginBottom: '24px',
@@ -746,12 +740,13 @@ export default function Writing() {
                       >
                         {article.excerpt}
                       </p>
-                      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '12px' }}>
+                      <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', alignItems: 'stretch' }}>
                         <span
                           style={{
                             fontFamily: 'DM Sans, sans-serif',
                             fontSize: '13px',
                             color: 'var(--gray)',
+                            alignSelf: 'flex-start',
                           }}
                         >
                           {article.date && `${article.date} · `}
@@ -764,14 +759,16 @@ export default function Writing() {
                           )}
                         </span>
                         {!isSoon && article.link && (
-                          <a
-                            className="writing-card-link"
-                            href={article.link}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            Read on Medium →
-                          </a>
+                          <div className="card-cta-row">
+                            <a
+                              className="writing-card-link"
+                              href={article.link}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              Read on Medium →
+                            </a>
+                          </div>
                         )}
                       </div>
                     </div>

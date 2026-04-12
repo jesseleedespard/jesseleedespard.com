@@ -20,6 +20,7 @@ import { Divider } from '../components/Divider';
 import { Hero } from '../components/Hero';
 import { Section } from '../components/Section';
 import { Navigation } from '../components/Navigation';
+import { Link } from 'react-router';
 
 export default function DesignSystem() {
   const colorTokens = [
@@ -42,7 +43,7 @@ export default function DesignSystem() {
       style: {
         fontFamily: 'DM Sans, sans-serif',
         fontWeight: 700,
-        fontSize: '48px',
+        fontSize: 'var(--font-size-3xl)',
         color: '#1E1E1E',
       },
       text: 'Heading 1',
@@ -53,7 +54,7 @@ export default function DesignSystem() {
       style: {
         fontFamily: 'DM Sans, sans-serif',
         fontWeight: 700,
-        fontSize: '32px',
+        fontSize: 'var(--font-size-2xl)',
         color: '#1E1E1E',
       },
       text: 'Heading 2',
@@ -64,7 +65,7 @@ export default function DesignSystem() {
       style: {
         fontFamily: 'DM Sans, sans-serif',
         fontWeight: 700,
-        fontSize: '24px',
+        fontSize: 'var(--font-size-xl)',
         color: '#1E1E1E',
       },
       text: 'Heading 3',
@@ -75,7 +76,7 @@ export default function DesignSystem() {
       style: {
         fontFamily: 'DM Sans, sans-serif',
         fontWeight: 500,
-        fontSize: '14px',
+        fontSize: 'var(--font-size-sm)',
         color: '#444444',
       },
       text: 'Navigation Link',
@@ -86,7 +87,7 @@ export default function DesignSystem() {
       style: {
         fontFamily: 'DM Sans, sans-serif',
         fontWeight: 700,
-        fontSize: '12px',
+        fontSize: 'var(--font-size-xs)',
         color: '#1F5364',
         letterSpacing: '2px',
         textTransform: 'uppercase' as const,
@@ -99,7 +100,7 @@ export default function DesignSystem() {
       style: {
         fontFamily: 'DM Sans, sans-serif',
         fontWeight: 700,
-        fontSize: '14px',
+        fontSize: 'var(--font-size-sm)',
         color: '#1E1E1E',
       },
       text: 'Button Text',
@@ -110,7 +111,7 @@ export default function DesignSystem() {
       style: {
         fontFamily: 'Lora, serif',
         fontWeight: 400,
-        fontSize: '18px',
+        fontSize: 'var(--font-size-lg)',
         color: '#444444',
       },
       text: 'The quick brown fox jumps over the lazy dog.',
@@ -121,7 +122,7 @@ export default function DesignSystem() {
       style: {
         fontFamily: 'Lora, serif',
         fontWeight: 400,
-        fontSize: '16px',
+        fontSize: 'var(--font-size-base)',
         color: '#444444',
       },
       text: 'The quick brown fox jumps over the lazy dog.',
@@ -133,7 +134,7 @@ export default function DesignSystem() {
         fontFamily: 'Lora, serif',
         fontWeight: 400,
         fontStyle: 'italic' as const,
-        fontSize: '16px',
+        fontSize: 'var(--font-size-base)',
         color: '#444444',
       },
       text: 'The quick brown fox jumps over the lazy dog.',
@@ -153,7 +154,7 @@ export default function DesignSystem() {
             Design System Updates & Standards
           </h2>
           
-          <div className="space-y-6" style={{ fontFamily: 'Lora, serif', fontSize: '16px', lineHeight: '1.6', color: '#444444' }}>
+          <div className="space-y-6" style={{ fontFamily: 'Lora, serif', fontSize: 'var(--font-size-base)', lineHeight: '1.6', color: '#444444' }}>
             {/* Recent Updates */}
             <div className="border-l-4 border-teal-500 pl-6 py-2" style={{ borderColor: '#1F5364' }}>
               <h3 className="text-lg mb-3" style={{ fontFamily: 'DM Sans, sans-serif', fontWeight: 700, color: '#1E1E1E' }}>
@@ -178,7 +179,7 @@ export default function DesignSystem() {
                 
                 <div>
                   <strong style={{ fontFamily: 'DM Sans, sans-serif', color: '#1F5364' }}>✓ Text Link Wrapping Fix</strong>
-                  <p className="mt-1">Added whiteSpace: 'nowrap' to all arrow links ("Read Article →", "Read Case Study →", "View All Writing →", "See All Work →") to prevent arrows from wrapping to new lines across Home, Writing, Work pages and all card components.</p>
+                  <p className="mt-1">Card CTAs use the <code className="text-xs">card-cta-row</code> utility (right-aligned flex row) plus <code className="text-xs">whiteSpace: &apos;nowrap&apos;</code> on arrow links ("Read Article →", "Read Case Study →", "View All Writing →", "See All Work →", etc.) so arrows do not wrap awkwardly.</p>
                 </div>
                 
                 <div>
@@ -196,35 +197,35 @@ export default function DesignSystem() {
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                 <div className="flex items-center gap-2">
                   <div style={{ width: '8px', height: '8px', backgroundColor: '#1F5364', borderRadius: '2px' }}></div>
-                  <span style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '14px' }}>8px</span>
+                  <span style={{ fontFamily: 'DM Sans, sans-serif', fontSize: 'var(--font-size-sm)' }}>8px</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <div style={{ width: '16px', height: '16px', backgroundColor: '#1F5364', borderRadius: '2px' }}></div>
-                  <span style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '14px' }}>16px</span>
+                  <span style={{ fontFamily: 'DM Sans, sans-serif', fontSize: 'var(--font-size-sm)' }}>16px</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <div style={{ width: '24px', height: '24px', backgroundColor: '#1F5364', borderRadius: '2px' }}></div>
-                  <span style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '14px' }}>24px</span>
+                  <span style={{ fontFamily: 'DM Sans, sans-serif', fontSize: 'var(--font-size-sm)' }}>24px</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <div style={{ width: '32px', height: '32px', backgroundColor: '#1F5364', borderRadius: '2px' }}></div>
-                  <span style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '14px' }}>32px</span>
+                  <span style={{ fontFamily: 'DM Sans, sans-serif', fontSize: 'var(--font-size-sm)' }}>32px</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <div style={{ width: '40px', height: '40px', backgroundColor: '#1F5364', borderRadius: '2px' }}></div>
-                  <span style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '14px' }}>40px</span>
+                  <span style={{ fontFamily: 'DM Sans, sans-serif', fontSize: 'var(--font-size-sm)' }}>40px</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <div style={{ width: '48px', height: '48px', backgroundColor: '#1F5364', borderRadius: '2px' }}></div>
-                  <span style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '14px' }}>48px</span>
+                  <span style={{ fontFamily: 'DM Sans, sans-serif', fontSize: 'var(--font-size-sm)' }}>48px</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <div style={{ width: '56px', height: '56px', backgroundColor: '#1F5364', borderRadius: '2px' }}></div>
-                  <span style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '14px' }}>56px</span>
+                  <span style={{ fontFamily: 'DM Sans, sans-serif', fontSize: 'var(--font-size-sm)' }}>56px</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <div style={{ width: '64px', height: '64px', backgroundColor: '#1F5364', borderRadius: '2px' }}></div>
-                  <span style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '14px' }}>64px</span>
+                  <span style={{ fontFamily: 'DM Sans, sans-serif', fontSize: 'var(--font-size-sm)' }}>64px</span>
                 </div>
               </div>
             </div>
@@ -234,7 +235,7 @@ export default function DesignSystem() {
               <h4 className="mb-3" style={{ fontFamily: 'DM Sans, sans-serif', fontWeight: 700, color: '#1E1E1E' }}>
                 Responsive Typography Scale
               </h4>
-              <div className="space-y-2" style={{ fontSize: '14px' }}>
+              <div className="space-y-2" style={{ fontSize: 'var(--font-size-sm)' }}>
                 <div style={{ fontFamily: 'DM Sans, sans-serif' }}>
                   <strong>Desktop:</strong> 12px, 14px, 16px, 18px, 24px, 32px, 48px, 52px
                 </div>
@@ -304,7 +305,7 @@ export default function DesignSystem() {
                   style={{
                     fontFamily: 'DM Sans, sans-serif',
                     fontWeight: 700,
-                    fontSize: '14px',
+                    fontSize: 'var(--font-size-sm)',
                     color: '#1E1E1E',
                     backgroundColor: '#D4A843',
                     padding: '16px 32px',
@@ -320,7 +321,7 @@ export default function DesignSystem() {
                   style={{
                     fontFamily: 'DM Sans, sans-serif',
                     fontWeight: 700,
-                    fontSize: '14px',
+                    fontSize: 'var(--font-size-sm)',
                     color: '#1E1E1E',
                     backgroundColor: '#EEEEEE',
                     padding: '16px 32px',
@@ -345,7 +346,7 @@ export default function DesignSystem() {
                   style={{
                     fontFamily: 'DM Sans, sans-serif',
                     fontWeight: 700,
-                    fontSize: '14px',
+                    fontSize: 'var(--font-size-sm)',
                     color: '#FFFFFF',
                     backgroundColor: '#1E1E1E',
                     padding: '16px 32px',
@@ -360,7 +361,7 @@ export default function DesignSystem() {
                   style={{
                     fontFamily: 'DM Sans, sans-serif',
                     fontWeight: 700,
-                    fontSize: '14px',
+                    fontSize: 'var(--font-size-sm)',
                     color: '#FFFFFF',
                     backgroundColor: '#1E1E1E',
                     padding: '16px 32px',
@@ -378,7 +379,7 @@ export default function DesignSystem() {
                   style={{
                     fontFamily: 'DM Sans, sans-serif',
                     fontWeight: 700,
-                    fontSize: '14px',
+                    fontSize: 'var(--font-size-sm)',
                     color: '#1E1E1E',
                     backgroundColor: '#EEEEEE',
                     padding: '16px 32px',
@@ -403,7 +404,7 @@ export default function DesignSystem() {
                   style={{
                     fontFamily: 'DM Sans, sans-serif',
                     fontWeight: 700,
-                    fontSize: '14px',
+                    fontSize: 'var(--font-size-sm)',
                     color: '#1F5364',
                     backgroundColor: 'transparent',
                     padding: '16px 32px',
@@ -418,7 +419,7 @@ export default function DesignSystem() {
                   style={{
                     fontFamily: 'DM Sans, sans-serif',
                     fontWeight: 700,
-                    fontSize: '14px',
+                    fontSize: 'var(--font-size-sm)',
                     color: '#FFFFFF',
                     backgroundColor: '#1F5364',
                     padding: '16px 32px',
@@ -434,7 +435,7 @@ export default function DesignSystem() {
                   style={{
                     fontFamily: 'DM Sans, sans-serif',
                     fontWeight: 700,
-                    fontSize: '14px',
+                    fontSize: 'var(--font-size-sm)',
                     color: '#1E1E1E',
                     backgroundColor: 'transparent',
                     padding: '16px 32px',
@@ -491,7 +492,7 @@ export default function DesignSystem() {
                       style={{
                         fontFamily: 'DM Sans, sans-serif',
                         fontWeight: 500,
-                        fontSize: '14px',
+                        fontSize: 'var(--font-size-sm)',
                         color: '#444444',
                         textDecoration: 'none',
                       }}
@@ -503,7 +504,7 @@ export default function DesignSystem() {
                       style={{
                         fontFamily: 'DM Sans, sans-serif',
                         fontWeight: 500,
-                        fontSize: '14px',
+                        fontSize: 'var(--font-size-sm)',
                         color: '#444444',
                         textDecoration: 'none',
                       }}
@@ -515,7 +516,7 @@ export default function DesignSystem() {
                       style={{
                         fontFamily: 'DM Sans, sans-serif',
                         fontWeight: 500,
-                        fontSize: '14px',
+                        fontSize: 'var(--font-size-sm)',
                         color: '#444444',
                         textDecoration: 'none',
                       }}
@@ -527,7 +528,7 @@ export default function DesignSystem() {
                       style={{
                         fontFamily: 'DM Sans, sans-serif',
                         fontWeight: 500,
-                        fontSize: '14px',
+                        fontSize: 'var(--font-size-sm)',
                         color: '#444444',
                         textDecoration: 'none',
                       }}
@@ -538,7 +539,7 @@ export default function DesignSystem() {
                       style={{
                         fontFamily: 'DM Sans, sans-serif',
                         fontWeight: 700,
-                        fontSize: '14px',
+                        fontSize: 'var(--font-size-sm)',
                         color: '#1E1E1E',
                         backgroundColor: '#D4A843',
                         padding: '8px 16px',
@@ -585,7 +586,7 @@ export default function DesignSystem() {
                       style={{
                         fontFamily: 'DM Sans, sans-serif',
                         fontWeight: 500,
-                        fontSize: '14px',
+                        fontSize: 'var(--font-size-sm)',
                         color: '#444444',
                         textDecoration: 'none',
                         borderBottom: '2px solid #1F5364',
@@ -599,7 +600,7 @@ export default function DesignSystem() {
                       style={{
                         fontFamily: 'DM Sans, sans-serif',
                         fontWeight: 500,
-                        fontSize: '14px',
+                        fontSize: 'var(--font-size-sm)',
                         color: '#444444',
                         textDecoration: 'none',
                       }}
@@ -611,7 +612,7 @@ export default function DesignSystem() {
                       style={{
                         fontFamily: 'DM Sans, sans-serif',
                         fontWeight: 500,
-                        fontSize: '14px',
+                        fontSize: 'var(--font-size-sm)',
                         color: '#444444',
                         textDecoration: 'none',
                       }}
@@ -623,7 +624,7 @@ export default function DesignSystem() {
                       style={{
                         fontFamily: 'DM Sans, sans-serif',
                         fontWeight: 500,
-                        fontSize: '14px',
+                        fontSize: 'var(--font-size-sm)',
                         color: '#444444',
                         textDecoration: 'none',
                       }}
@@ -634,7 +635,7 @@ export default function DesignSystem() {
                       style={{
                         fontFamily: 'DM Sans, sans-serif',
                         fontWeight: 700,
-                        fontSize: '14px',
+                        fontSize: 'var(--font-size-sm)',
                         color: '#1E1E1E',
                         backgroundColor: '#D4A843',
                         padding: '8px 16px',
@@ -681,7 +682,7 @@ export default function DesignSystem() {
                       style={{
                         fontFamily: 'DM Sans, sans-serif',
                         fontWeight: 500,
-                        fontSize: '14px',
+                        fontSize: 'var(--font-size-sm)',
                         color: '#444444',
                         textDecoration: 'none',
                       }}
@@ -693,7 +694,7 @@ export default function DesignSystem() {
                       style={{
                         fontFamily: 'DM Sans, sans-serif',
                         fontWeight: 500,
-                        fontSize: '14px',
+                        fontSize: 'var(--font-size-sm)',
                         color: '#444444',
                         textDecoration: 'none',
                       }}
@@ -705,7 +706,7 @@ export default function DesignSystem() {
                       style={{
                         fontFamily: 'DM Sans, sans-serif',
                         fontWeight: 500,
-                        fontSize: '14px',
+                        fontSize: 'var(--font-size-sm)',
                         color: '#444444',
                         textDecoration: 'none',
                       }}
@@ -717,7 +718,7 @@ export default function DesignSystem() {
                       style={{
                         fontFamily: 'DM Sans, sans-serif',
                         fontWeight: 500,
-                        fontSize: '14px',
+                        fontSize: 'var(--font-size-sm)',
                         color: '#444444',
                         textDecoration: 'none',
                       }}
@@ -728,7 +729,7 @@ export default function DesignSystem() {
                       style={{
                         fontFamily: 'DM Sans, sans-serif',
                         fontWeight: 700,
-                        fontSize: '14px',
+                        fontSize: 'var(--font-size-sm)',
                         color: '#1E1E1E',
                         backgroundColor: '#D4A843',
                         padding: '8px 16px',
@@ -779,7 +780,7 @@ export default function DesignSystem() {
                     style={{
                       fontFamily: 'DM Sans, sans-serif',
                       fontWeight: 700,
-                      fontSize: '12px',
+                      fontSize: 'var(--font-size-xs)',
                       color: '#1F5364',
                       letterSpacing: '1.5px',
                       textTransform: 'uppercase',
@@ -800,7 +801,7 @@ export default function DesignSystem() {
                       lineHeight: '1.4',
                     }}
                   >
-                    Reducing the Time of Customer Onboarding
+                    From 90 Minutes to 45: Redesigning a Broken Onboarding Flow
                   </h3>
 
                   {/* Description */}
@@ -808,7 +809,7 @@ export default function DesignSystem() {
                     style={{
                       fontFamily: 'Lora, serif',
                       fontWeight: 400,
-                      fontSize: '16px',
+                      fontSize: 'var(--font-size-base)',
                       color: '#444444',
                       lineHeight: '1.6',
                       marginBottom: '24px',
@@ -820,54 +821,51 @@ export default function DesignSystem() {
                   {/* Divider */}
                   <div style={{ height: '1px', backgroundColor: '#EEEEEE', marginBottom: '20px' }} />
 
-                  {/* Footer with tags and link */}
-                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '12px' }}>
-                    {/* Tags */}
-                    <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
-                      <span
-                        style={{
-                          fontFamily: 'DM Sans, sans-serif',
-                          fontWeight: 500,
-                          fontSize: '12px',
-                          color: '#1F5364',
-                          backgroundColor: '#FAF7F2',
-                          border: '1px solid #EEEEEE',
-                          borderRadius: '20px',
-                          padding: '4px 12px',
-                        }}
-                      >
-                        HealthTech
-                      </span>
-                      <span
-                        style={{
-                          fontFamily: 'DM Sans, sans-serif',
-                          fontWeight: 500,
-                          fontSize: '12px',
-                          color: '#1F5364',
-                          backgroundColor: '#FAF7F2',
-                          border: '1px solid #EEEEEE',
-                          borderRadius: '20px',
-                          padding: '4px 12px',
-                        }}
-                      >
-                        Research Ops
-                      </span>
-                    </div>
-
-                    {/* Link */}
-                    <a
-                      href="#"
+                  {/* Tags + CTA */}
+                  <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap', marginBottom: '16px' }}>
+                    <span
+                      style={{
+                        fontFamily: 'DM Sans, sans-serif',
+                        fontWeight: 500,
+                        fontSize: 'var(--font-size-xs)',
+                        color: '#1F5364',
+                        backgroundColor: '#FAF7F2',
+                        border: '1px solid #EEEEEE',
+                        borderRadius: '20px',
+                        padding: '4px 12px',
+                      }}
+                    >
+                      HealthTech
+                    </span>
+                    <span
+                      style={{
+                        fontFamily: 'DM Sans, sans-serif',
+                        fontWeight: 500,
+                        fontSize: 'var(--font-size-xs)',
+                        color: '#1F5364',
+                        backgroundColor: '#FAF7F2',
+                        border: '1px solid #EEEEEE',
+                        borderRadius: '20px',
+                        padding: '4px 12px',
+                      }}
+                    >
+                      Research Ops
+                    </span>
+                  </div>
+                  <div className="card-cta-row">
+                    <Link
+                      to="/case-studies/healthtech-onboarding"
                       style={{
                         fontFamily: 'DM Sans, sans-serif',
                         fontWeight: 700,
-                        fontSize: '14px',
+                        fontSize: 'var(--font-size-sm)',
                         color: '#1F5364',
                         textDecoration: 'none',
                         whiteSpace: 'nowrap',
                       }}
                     >
                       Read Case Study →
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -897,7 +895,7 @@ export default function DesignSystem() {
                     style={{
                       fontFamily: 'DM Sans, sans-serif',
                       fontWeight: 700,
-                      fontSize: '12px',
+                      fontSize: 'var(--font-size-xs)',
                       color: '#1F5364',
                       letterSpacing: '1.5px',
                       textTransform: 'uppercase',
@@ -926,7 +924,7 @@ export default function DesignSystem() {
                     style={{
                       fontFamily: 'Lora, serif',
                       fontWeight: 400,
-                      fontSize: '16px',
+                      fontSize: 'var(--font-size-base)',
                       color: '#444444',
                       lineHeight: '1.6',
                       marginBottom: '24px',
@@ -938,54 +936,51 @@ export default function DesignSystem() {
                   {/* Divider */}
                   <div style={{ height: '1px', backgroundColor: '#EEEEEE', marginBottom: '20px' }} />
 
-                  {/* Footer with tags and link */}
-                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '12px' }}>
-                    {/* Tags */}
-                    <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
-                      <span
-                        style={{
-                          fontFamily: 'DM Sans, sans-serif',
-                          fontWeight: 500,
-                          fontSize: '12px',
-                          color: '#1F5364',
-                          backgroundColor: '#FAF7F2',
-                          border: '1px solid #EEEEEE',
-                          borderRadius: '20px',
-                          padding: '4px 12px',
-                        }}
-                      >
-                        EdTech
-                      </span>
-                      <span
-                        style={{
-                          fontFamily: 'DM Sans, sans-serif',
-                          fontWeight: 500,
-                          fontSize: '12px',
-                          color: '#1F5364',
-                          backgroundColor: '#FAF7F2',
-                          border: '1px solid #EEEEEE',
-                          borderRadius: '20px',
-                          padding: '4px 12px',
-                        }}
-                      >
-                        Team Building
-                      </span>
-                    </div>
-
-                    {/* Link */}
-                    <a
-                      href="#"
+                  {/* Tags + CTA */}
+                  <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap', marginBottom: '16px' }}>
+                    <span
+                      style={{
+                        fontFamily: 'DM Sans, sans-serif',
+                        fontWeight: 500,
+                        fontSize: 'var(--font-size-xs)',
+                        color: '#1F5364',
+                        backgroundColor: '#FAF7F2',
+                        border: '1px solid #EEEEEE',
+                        borderRadius: '20px',
+                        padding: '4px 12px',
+                      }}
+                    >
+                      EdTech
+                    </span>
+                    <span
+                      style={{
+                        fontFamily: 'DM Sans, sans-serif',
+                        fontWeight: 500,
+                        fontSize: 'var(--font-size-xs)',
+                        color: '#1F5364',
+                        backgroundColor: '#FAF7F2',
+                        border: '1px solid #EEEEEE',
+                        borderRadius: '20px',
+                        padding: '4px 12px',
+                      }}
+                    >
+                      Team Building
+                    </span>
+                  </div>
+                  <div className="card-cta-row">
+                    <Link
+                      to="/leadership/three-disciplines-one-team"
                       style={{
                         fontFamily: 'DM Sans, sans-serif',
                         fontWeight: 700,
-                        fontSize: '14px',
+                        fontSize: 'var(--font-size-sm)',
                         color: '#1F5364',
                         textDecoration: 'none',
                         whiteSpace: 'nowrap',
                       }}
                     >
-                      Read More →
-                    </a>
+                      Read Case Study →
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -1093,7 +1088,7 @@ export default function DesignSystem() {
                     style={{
                       fontFamily: 'Lora, serif',
                       fontWeight: 400,
-                      fontSize: '16px',
+                      fontSize: 'var(--font-size-base)',
                       color: '#1E1E1E',
                       opacity: 0.85,
                       lineHeight: '1.5',
@@ -1149,7 +1144,7 @@ export default function DesignSystem() {
                     display: 'inline-block',
                     fontFamily: 'DM Sans, sans-serif',
                     fontWeight: 700,
-                    fontSize: '11px',
+                    fontSize: 'var(--font-size-xs)',
                     color: '#D4A843',
                     border: '1px solid rgba(212, 168, 67, 0.4)',
                     padding: '5px 12px',
@@ -1172,7 +1167,7 @@ export default function DesignSystem() {
                     maxWidth: '900px',
                   }}
                 >
-                  Reducing the Time of Customer Onboarding
+                  From 90 Minutes to 45: Redesigning a Broken Onboarding Flow
                 </h1>
 
                 {/* Subheading */}
@@ -1269,7 +1264,7 @@ export default function DesignSystem() {
                   style={{
                     fontFamily: 'DM Sans, sans-serif',
                     fontWeight: 700,
-                    fontSize: '12px',
+                    fontSize: 'var(--font-size-xs)',
                     color: '#D4A843',
                     marginBottom: '20px',
                     letterSpacing: '0.5px',
@@ -1298,7 +1293,7 @@ export default function DesignSystem() {
                   style={{
                     fontFamily: 'Lora, serif',
                     fontWeight: 400,
-                    fontSize: '18px',
+                    fontSize: 'var(--font-size-lg)',
                     color: 'rgba(255, 255, 255, 0.65)',
                     marginBottom: '36px',
                     maxWidth: '750px',
@@ -1406,14 +1401,16 @@ export default function DesignSystem() {
                 <CaseStudyCard
                   tag="CASE STUDY · HEALTHTECH"
                   tagColor="#1F5364"
-                  title="Reducing Customer Onboarding Time"
+                  title="From 90 Minutes to 45: Redesigning a Broken Onboarding Flow"
                   description="A 37-question form reduced by 20% — cutting onboarding call time by 50% via A/B test."
+                  linkTo="/case-studies/healthtech-onboarding"
                 />
                 <CaseStudyCard
                   tag="LEADERSHIP · EDTECH"
                   tagColor="#1F5364"
                   title="Building a Research Practice from Zero"
                   description="Establishing frameworks, hiring researchers, and creating a data-driven culture at scale."
+                  linkTo="/leadership/three-disciplines-one-team"
                 />
               </div>
             </div>
@@ -1494,7 +1491,7 @@ export default function DesignSystem() {
               </div>
               <div className="max-w-4xl">
                 <ContentFrameCard borderColor="#1F5364">
-                  <p style={{ fontFamily: 'Lora, serif', fontSize: '16px', color: '#444444', lineHeight: '1.6' }}>
+                  <p style={{ fontFamily: 'Lora, serif', fontSize: 'var(--font-size-base)', color: '#444444', lineHeight: '1.6' }}>
                     I write about the intersection of ethics, leadership, and product development. Each piece explores real challenges facing research leaders today — from algorithmic bias to building inclusive teams.
                   </p>
                 </ContentFrameCard>
@@ -1618,28 +1615,28 @@ export default function DesignSystem() {
               </div>
               <div style={{ backgroundColor: '#FFFFFF', padding: '32px', borderRadius: '8px', border: '1px solid #EEEEEE' }}>
                 <div style={{ marginBottom: '24px' }}>
-                  <p style={{ fontFamily: 'Lora, serif', fontSize: '14px', color: '#444444', marginBottom: '16px', lineHeight: '1.6' }}>
+                  <p style={{ fontFamily: 'Lora, serif', fontSize: 'var(--font-size-sm)', color: '#444444', marginBottom: '16px', lineHeight: '1.6' }}>
                     Responsive navigation with hamburger menu for mobile devices. Features active link indicators, keyboard navigation support, and WCAG AA compliant focus states.
                   </p>
                   <div style={{ display: 'flex', flexWrap: 'wrap', gap: '16px', marginBottom: '16px' }}>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
                       <div style={{ width: '12px', height: '12px', borderRadius: '50%', backgroundColor: '#1F5364' }} />
-                      <span style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '12px', color: '#444444' }}>Desktop: Horizontal nav with active underline</span>
+                      <span style={{ fontFamily: 'DM Sans, sans-serif', fontSize: 'var(--font-size-xs)', color: '#444444' }}>Desktop: Horizontal nav with active underline</span>
                     </div>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
                       <div style={{ width: '12px', height: '12px', borderRadius: '50%', backgroundColor: '#1F5364' }} />
-                      <span style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '12px', color: '#444444' }}>Mobile: Hamburger menu (≤768px)</span>
+                      <span style={{ fontFamily: 'DM Sans, sans-serif', fontSize: 'var(--font-size-xs)', color: '#444444' }}>Mobile: Hamburger menu (≤768px)</span>
                     </div>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
                       <div style={{ width: '12px', height: '12px', borderRadius: '50%', backgroundColor: '#1F5364' }} />
-                      <span style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '12px', color: '#444444' }}>Accessible: ARIA labels, keyboard support (ESC to close)</span>
+                      <span style={{ fontFamily: 'DM Sans, sans-serif', fontSize: 'var(--font-size-xs)', color: '#444444' }}>Accessible: ARIA labels, keyboard support (ESC to close)</span>
                     </div>
                   </div>
                 </div>
                 
                 {/* Desktop Preview */}
                 <div style={{ marginBottom: '24px' }}>
-                  <div style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '12px', fontWeight: 700, color: '#1F5364', marginBottom: '8px', letterSpacing: '1px', textTransform: 'uppercase' }}>
+                  <div style={{ fontFamily: 'DM Sans, sans-serif', fontSize: 'var(--font-size-xs)', fontWeight: 700, color: '#1F5364', marginBottom: '8px', letterSpacing: '1px', textTransform: 'uppercase' }}>
                     Desktop View (&gt;768px)
                   </div>
                   <div style={{ border: '1px solid #EEEEEE', borderRadius: '8px', overflow: 'hidden' }}>
@@ -1649,14 +1646,14 @@ export default function DesignSystem() {
 
                 {/* Mobile Preview */}
                 <div>
-                  <div style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '12px', fontWeight: 700, color: '#1F5364', marginBottom: '8px', letterSpacing: '1px', textTransform: 'uppercase' }}>
+                  <div style={{ fontFamily: 'DM Sans, sans-serif', fontSize: 'var(--font-size-xs)', fontWeight: 700, color: '#1F5364', marginBottom: '8px', letterSpacing: '1px', textTransform: 'uppercase' }}>
                     Mobile View (&le;768px)
                   </div>
                   <div style={{ border: '1px solid #EEEEEE', borderRadius: '8px', overflow: 'hidden', backgroundColor: '#FAF7F2' }}>
                     <div style={{ maxWidth: '375px', margin: '0 auto' }}>
                       <Navigation />
                     </div>
-                    <div style={{ padding: '16px', fontSize: '12px', color: '#888888', fontStyle: 'italic', textAlign: 'center', borderTop: '1px solid #EEEEEE' }}>
+                    <div style={{ padding: '16px', fontSize: 'var(--font-size-xs)', color: '#888888', fontStyle: 'italic', textAlign: 'center', borderTop: '1px solid #EEEEEE' }}>
                       Interactive hamburger menu demo (forced mobile view)
                     </div>
                   </div>
@@ -1664,10 +1661,10 @@ export default function DesignSystem() {
 
                 {/* Accessibility Features */}
                 <div style={{ marginTop: '24px', padding: '16px', backgroundColor: '#FAF7F2', borderRadius: '6px', border: '1px solid #EEEEEE' }}>
-                  <div style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '12px', fontWeight: 700, color: '#1E1E1E', marginBottom: '12px', letterSpacing: '1px', textTransform: 'uppercase' }}>
+                  <div style={{ fontFamily: 'DM Sans, sans-serif', fontSize: 'var(--font-size-xs)', fontWeight: 700, color: '#1E1E1E', marginBottom: '12px', letterSpacing: '1px', textTransform: 'uppercase' }}>
                     ✅ Accessibility Features
                   </div>
-                  <ul style={{ fontFamily: 'Lora, serif', fontSize: '14px', color: '#444444', lineHeight: '1.8', listStyle: 'disc', marginLeft: '24px' }}>
+                  <ul style={{ fontFamily: 'Lora, serif', fontSize: 'var(--font-size-sm)', color: '#444444', lineHeight: '1.8', listStyle: 'disc', marginLeft: '24px' }}>
                     <li>ARIA labels: role="navigation", aria-label, aria-expanded, aria-controls</li>
                     <li>Keyboard navigation: Tab, Enter, Escape key support</li>
                     <li>Focus indicators: 2px solid #1F5364 outline (6.8:1 contrast)</li>

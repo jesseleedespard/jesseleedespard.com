@@ -104,29 +104,32 @@ export function WritingPostCard({
         </p>
 
         {/* Footer */}
-        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', alignItems: 'stretch' }}>
           <span
             style={{
               fontFamily: 'DM Sans, sans-serif',
               fontSize: '14px',
               color: '#444444',
+              alignSelf: 'flex-start',
             }}
           >
             {readTime}
           </span>
-          <Link
-            to={linkTo}
-            style={{
-              fontFamily: 'DM Sans, sans-serif',
-              fontWeight: 700,
-              fontSize: '14px',
-              color: linkColor,
-              textDecoration: 'none',
-              whiteSpace: 'nowrap',
-            }}
-          >
-            Read Article →
-          </Link>
+          <div className="card-cta-row">
+            <Link
+              to={linkTo}
+              style={{
+                fontFamily: 'DM Sans, sans-serif',
+                fontWeight: 700,
+                fontSize: '14px',
+                color: linkColor,
+                textDecoration: 'none',
+                whiteSpace: 'nowrap',
+              }}
+            >
+              Read Article →
+            </Link>
+          </div>
         </div>
       </div>
     </div>

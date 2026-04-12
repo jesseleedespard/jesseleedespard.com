@@ -1,0 +1,28 @@
+---
+description: Use design tokens from theme; no hardcoded values without explicit user permission
+alwaysApply: true
+---
+
+# Design system and tokens
+
+When editing this codebase (especially UI, pages, and styles), **follow the design system**. Do **not** introduce hardcoded values—colors, font sizes, radii, spacing, shadows—unless the **user explicitly gives permission** for an exception.
+
+## Source of truth
+
+- **Tokens and globals**: `src/styles/theme.css` (e.g. `--charcoal`, `--teal-dark`, `--font-size-*`, `--radius`, `--radius-md`, brand link vars).
+- **Tailwind / `@theme`**: align with existing theme tokens where components use utility classes.
+
+## Do
+
+- Prefer **`var(--token-name)`** in inline styles and CSS-in-JS when a token exists.
+- Reuse existing patterns from nearby components and `theme.css`.
+- If a value is missing from the system, **ask the user** before adding a one-off literal; suggest adding a token if it will repeat.
+
+## Don’t
+
+- Add arbitrary hex colors, `px` font sizes, radii, or spacing **without** user approval when a token or established pattern exists.
+- Duplicate “magic numbers” when a variable already exists for the same role.
+
+## Exceptions
+
+- Only when the user **clearly approves** a specific hardcoded value (e.g. a one-off illustration size or third-party embed constraint). Prefer still extracting to a named constant or token if it appears more than once.

@@ -23,7 +23,7 @@ export default function Hiring() {
         .hiring-hero-subtitle {
           font-family: 'Lora', serif;
           font-weight: 400;
-          font-size: 18px;
+          font-size: var(--font-size-lg);
           color: color-mix(in srgb, var(--white) 65%, transparent);
           margin-bottom: 24px;
           max-width: 700px;
@@ -84,11 +84,11 @@ export default function Hiring() {
           }
           
           .hiring-hero-title {
-            font-size: 32px;
+            font-size: var(--font-size-2xl);
           }
           
           .hiring-hero-subtitle {
-            font-size: 16px;
+            font-size: var(--font-size-base);
           }
           
           .hiring-steps-grid {
@@ -117,7 +117,7 @@ export default function Hiring() {
             style={{
               fontFamily: 'DM Sans, sans-serif',
               fontWeight: 700,
-              fontSize: '11px',
+              fontSize: 'var(--font-size-xs)',
               color: 'var(--gold)',
               marginBottom: '20px',
               letterSpacing: '1.5px',
@@ -172,7 +172,7 @@ export default function Hiring() {
             style={{
               fontFamily: 'DM Sans, sans-serif',
               fontWeight: 700,
-              fontSize: '11px',
+              fontSize: 'var(--font-size-xs)',
               color: 'var(--teal-dark)',
               letterSpacing: '1.5px',
               textTransform: 'uppercase',
@@ -203,7 +203,7 @@ export default function Hiring() {
                   style={{
                     fontFamily: 'DM Sans, sans-serif',
                     fontWeight: 700,
-                    fontSize: '32px',
+                    fontSize: 'var(--font-size-2xl)',
                     color: 'var(--gold)',
                   }}
                 >
@@ -217,7 +217,7 @@ export default function Hiring() {
                   style={{
                     fontFamily: 'DM Sans, sans-serif',
                     fontWeight: 700,
-                    fontSize: '24px',
+                    fontSize: 'var(--font-size-xl)',
                     color: 'var(--charcoal)',
                     marginBottom: '12px',
                   }}
@@ -256,7 +256,7 @@ export default function Hiring() {
                   style={{
                     fontFamily: 'DM Sans, sans-serif',
                     fontWeight: 700,
-                    fontSize: '32px',
+                    fontSize: 'var(--font-size-2xl)',
                     color: 'var(--gold)',
                   }}
                 >
@@ -270,7 +270,7 @@ export default function Hiring() {
                   style={{
                     fontFamily: 'DM Sans, sans-serif',
                     fontWeight: 700,
-                    fontSize: '24px',
+                    fontSize: 'var(--font-size-xl)',
                     color: 'var(--charcoal)',
                     marginBottom: '12px',
                   }}
@@ -309,7 +309,7 @@ export default function Hiring() {
                   style={{
                     fontFamily: 'DM Sans, sans-serif',
                     fontWeight: 700,
-                    fontSize: '32px',
+                    fontSize: 'var(--font-size-2xl)',
                     color: 'var(--gold)',
                   }}
                 >
@@ -323,7 +323,7 @@ export default function Hiring() {
                   style={{
                     fontFamily: 'DM Sans, sans-serif',
                     fontWeight: 700,
-                    fontSize: '24px',
+                    fontSize: 'var(--font-size-xl)',
                     color: 'var(--charcoal)',
                     marginBottom: '12px',
                   }}
@@ -353,7 +353,7 @@ export default function Hiring() {
             style={{
               fontFamily: 'DM Sans, sans-serif',
               fontWeight: 700,
-              fontSize: '11px',
+              fontSize: 'var(--font-size-xs)',
               color: 'var(--teal-dark)',
               letterSpacing: '1.5px',
               textTransform: 'uppercase',
@@ -456,7 +456,7 @@ export default function Hiring() {
             style={{
               fontFamily: 'DM Sans, sans-serif',
               fontWeight: 700,
-              fontSize: '11px',
+              fontSize: 'var(--font-size-xs)',
               color: 'var(--gold)',
               letterSpacing: '1.5px',
               textTransform: 'uppercase',
@@ -587,7 +587,7 @@ export default function Hiring() {
             style={{
               fontFamily: 'DM Sans, sans-serif',
               fontWeight: 700,
-              fontSize: '11px',
+              fontSize: 'var(--font-size-xs)',
               color: 'var(--teal-dark)',
               letterSpacing: '1.5px',
               textTransform: 'uppercase',
@@ -624,7 +624,7 @@ export default function Hiring() {
               <div
                 style={{
                   fontFamily: 'DM Sans, sans-serif',
-                  fontSize: '14px',
+                  fontSize: 'var(--font-size-sm)',
                   color: 'var(--charcoal)',
                   fontWeight: 700,
                 }}
@@ -667,7 +667,7 @@ export default function Hiring() {
               <div
                 style={{
                   fontFamily: 'DM Sans, sans-serif',
-                  fontSize: '14px',
+                  fontSize: 'var(--font-size-sm)',
                   color: 'var(--charcoal)',
                   fontWeight: 700,
                 }}
@@ -695,7 +695,7 @@ export default function Hiring() {
             style={{
               fontFamily: 'DM Sans, sans-serif',
               fontWeight: 700,
-              fontSize: '11px',
+              fontSize: 'var(--font-size-xs)',
               color: 'var(--teal-dark)',
               letterSpacing: '1.5px',
               textTransform: 'uppercase',
@@ -716,7 +716,7 @@ export default function Hiring() {
                 style={{
                   fontFamily: 'DM Sans, sans-serif',
                   fontWeight: 700,
-                  fontSize: '24px',
+                  fontSize: 'var(--font-size-xl)',
                   color: 'var(--white)',
                   marginBottom: '16px',
                 }}
@@ -734,24 +734,27 @@ export default function Hiring() {
               >
                 No pitch deck. No pre-call questionnaire. Just a conversation to see if it makes sense to work together.
               </p>
-              <a
-                href="https://calendly.com/jesseleedespard/chat-with-jesse"
-                target="_blank"
-                rel="noopener noreferrer"
-                style={{
-                  display: 'inline-block',
-                  fontFamily: 'DM Sans, sans-serif',
-                  fontWeight: 700,
-                  fontSize: '15px',
-                  color: 'var(--charcoal)',
-                  backgroundColor: 'var(--gold)',
-                  padding: '14px 32px',
-                  borderRadius: '6px',
-                  textDecoration: 'none',
-                }}
-              >
-                Book a Call →
-              </a>
+              <div className="card-cta-row">
+                <a
+                  href="https://calendly.com/jesseleedespard/chat-with-jesse"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{
+                    display: 'inline-block',
+                    fontFamily: 'DM Sans, sans-serif',
+                    fontWeight: 700,
+                    fontSize: '15px',
+                    color: 'var(--charcoal)',
+                    backgroundColor: 'var(--gold)',
+                    padding: '14px 32px',
+                    borderRadius: '6px',
+                    textDecoration: 'none',
+                    whiteSpace: 'nowrap',
+                  }}
+                >
+                  Book a Call →
+                </a>
+              </div>
             </div>
 
             <div
@@ -765,7 +768,7 @@ export default function Hiring() {
                 style={{
                   fontFamily: 'DM Sans, sans-serif',
                   fontWeight: 700,
-                  fontSize: '24px',
+                  fontSize: 'var(--font-size-xl)',
                   color: 'var(--white)',
                   marginBottom: '16px',
                 }}
@@ -783,9 +786,11 @@ export default function Hiring() {
               >
                 That works too.
               </p>
-              <a className="hiring-contact-email" href="mailto:jesse@jesseleedespard.com">
-                jesse@jesseleedespard.com
-              </a>
+              <div className="card-cta-row">
+                <a className="hiring-contact-email" href="mailto:jesse@jesseleedespard.com">
+                  jesse@jesseleedespard.com
+                </a>
+              </div>
             </div>
           </div>
         </div>

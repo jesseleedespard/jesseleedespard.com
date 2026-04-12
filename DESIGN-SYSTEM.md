@@ -224,7 +224,7 @@ Ratios below come from **`AccessibilityAuditReport.tsx`** (post-fix) and **`Acce
 
 ### Never hardcode (use variables)
 
-- **No hardcoded values without explicit permission.** All colors, font sizes, font families, and spacing must reference CSS variables from `theme.css`. If a value doesn't have a variable yet, create the variable first, then reference it. No exceptions unless explicitly approved.
+- **No hardcoded values. Ever.** All colors, font sizes, font families, spacing, border radii, and any other design values must reference CSS variables from `theme.css`. If a token doesn't exist yet, add it to `theme.css` first, then reference it. This applies to every prompt given to Cursor and every suggestion made by Claude. No exceptions unless Jesse explicitly grants permission for a specific value.
 - All **brand** fills, strokes, and text colors: **`var(--charcoal)`**, **`var(--cream)`**, **`var(--teal)`**, **`var(--teal-dark)`**, **`var(--terra)`**, **`var(--gold)`**, **`var(--gray)`**, **`var(--light-gray)`**, **`var(--dark-gray)`**, **`var(--white)`**.
 - **Links** on marketing pages: prefer **`.brand-link`** classes or **`--brand-link*`** tokens.
 

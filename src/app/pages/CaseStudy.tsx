@@ -18,7 +18,7 @@ export default function CaseStudy() {
               display: 'inline-block',
               fontFamily: 'DM Sans, sans-serif',
               fontWeight: 700,
-              fontSize: '11px',
+              fontSize: 'var(--font-size-xs)',
               color: '#D4A843',
               border: '1px solid rgba(212, 168, 67, 0.4)',
               padding: '5px 12px',
@@ -41,7 +41,7 @@ export default function CaseStudy() {
               maxWidth: '900px',
             }}
           >
-            Reducing the Time of Customer Onboarding
+            From 90 Minutes to 45: Redesigning a Broken Onboarding Flow
           </h1>
 
           {/* Italic Subheading */}
@@ -50,7 +50,7 @@ export default function CaseStudy() {
               fontFamily: 'Lora, serif',
               fontWeight: 400,
               fontStyle: 'italic',
-              fontSize: '18px',
+              fontSize: 'var(--font-size-lg)',
               color: 'rgba(255, 255, 255, 0.6)',
               marginBottom: '40px',
               maxWidth: '700px',
@@ -129,7 +129,7 @@ export default function CaseStudy() {
             style={{
               fontFamily: 'DM Sans, sans-serif',
               fontWeight: 700,
-              fontSize: '11px',
+              fontSize: 'var(--font-size-xs)',
               color: '#1F5364',
               letterSpacing: '1.5px',
               textTransform: 'uppercase',
@@ -144,7 +144,7 @@ export default function CaseStudy() {
             style={{
               fontFamily: 'DM Sans, sans-serif',
               fontWeight: 700,
-              fontSize: '32px',
+              fontSize: 'var(--font-size-2xl)',
               color: '#1E1E1E',
               marginBottom: '32px',
             }}
@@ -182,7 +182,7 @@ export default function CaseStudy() {
             style={{
               fontFamily: 'DM Sans, sans-serif',
               fontWeight: 700,
-              fontSize: '11px',
+              fontSize: 'var(--font-size-xs)',
               color: '#1F5364',
               letterSpacing: '1.5px',
               textTransform: 'uppercase',
@@ -197,7 +197,7 @@ export default function CaseStudy() {
             style={{
               fontFamily: 'DM Sans, sans-serif',
               fontWeight: 700,
-              fontSize: '32px',
+              fontSize: 'var(--font-size-2xl)',
               color: '#1E1E1E',
               marginBottom: '48px',
             }}
@@ -306,7 +306,7 @@ export default function CaseStudy() {
             style={{
               fontFamily: 'DM Sans, sans-serif',
               fontWeight: 700,
-              fontSize: '11px',
+              fontSize: 'var(--font-size-xs)',
               color: '#1F5364',
               letterSpacing: '1.5px',
               textTransform: 'uppercase',
@@ -321,7 +321,7 @@ export default function CaseStudy() {
             style={{
               fontFamily: 'DM Sans, sans-serif',
               fontWeight: 700,
-              fontSize: '32px',
+              fontSize: 'var(--font-size-2xl)',
               color: '#1E1E1E',
               marginBottom: '24px',
             }}
@@ -535,7 +535,7 @@ export default function CaseStudy() {
             style={{
               fontFamily: 'DM Sans, sans-serif',
               fontWeight: 700,
-              fontSize: '11px',
+              fontSize: 'var(--font-size-xs)',
               color: '#1F5364',
               letterSpacing: '1.5px',
               textTransform: 'uppercase',
@@ -550,7 +550,7 @@ export default function CaseStudy() {
             style={{
               fontFamily: 'DM Sans, sans-serif',
               fontWeight: 700,
-              fontSize: '32px',
+              fontSize: 'var(--font-size-2xl)',
               color: '#1E1E1E',
               marginBottom: '48px',
             }}
@@ -699,7 +699,7 @@ export default function CaseStudy() {
             style={{
               fontFamily: 'DM Sans, sans-serif',
               fontWeight: 700,
-              fontSize: '11px',
+              fontSize: 'var(--font-size-xs)',
               color: '#1F5364',
               letterSpacing: '1.5px',
               textTransform: 'uppercase',
@@ -714,7 +714,7 @@ export default function CaseStudy() {
             style={{
               fontFamily: 'DM Sans, sans-serif',
               fontWeight: 700,
-              fontSize: '32px',
+              fontSize: 'var(--font-size-2xl)',
               color: '#1E1E1E',
               marginBottom: '24px',
             }}
@@ -750,7 +750,7 @@ export default function CaseStudy() {
                   style={{
                     fontFamily: 'DM Sans, sans-serif',
                     fontWeight: 700,
-                    fontSize: '48px',
+                    fontSize: 'var(--font-size-3xl)',
                     color: '#D4A843',
                     marginBottom: '8px',
                   }}
@@ -775,7 +775,7 @@ export default function CaseStudy() {
                   style={{
                     fontFamily: 'DM Sans, sans-serif',
                     fontWeight: 700,
-                    fontSize: '48px',
+                    fontSize: 'var(--font-size-3xl)',
                     color: '#D4A843',
                     marginBottom: '8px',
                   }}
@@ -800,7 +800,7 @@ export default function CaseStudy() {
                   style={{
                     fontFamily: 'DM Sans, sans-serif',
                     fontWeight: 700,
-                    fontSize: '48px',
+                    fontSize: 'var(--font-size-3xl)',
                     color: '#D4A843',
                     marginBottom: '8px',
                   }}
@@ -825,7 +825,7 @@ export default function CaseStudy() {
                   style={{
                     fontFamily: 'DM Sans, sans-serif',
                     fontWeight: 700,
-                    fontSize: '48px',
+                    fontSize: 'var(--font-size-3xl)',
                     color: '#D4A843',
                     marginBottom: '8px',
                   }}
@@ -856,7 +856,7 @@ export default function CaseStudy() {
             style={{
               fontFamily: 'DM Sans, sans-serif',
               fontWeight: 700,
-              fontSize: '11px',
+              fontSize: 'var(--font-size-xs)',
               color: '#1F5364',
               letterSpacing: '1.5px',
               textTransform: 'uppercase',
@@ -871,7 +871,7 @@ export default function CaseStudy() {
             style={{
               fontFamily: 'DM Sans, sans-serif',
               fontWeight: 700,
-              fontSize: '32px',
+              fontSize: 'var(--font-size-2xl)',
               color: '#1E1E1E',
               marginBottom: '48px',
             }}
@@ -895,7 +895,7 @@ export default function CaseStudy() {
                   justifyContent: 'center',
                   fontFamily: 'DM Sans, sans-serif',
                   fontWeight: 700,
-                  fontSize: '18px',
+                  fontSize: 'var(--font-size-lg)',
                   color: '#1E1E1E',
                 }}
               >
@@ -927,7 +927,7 @@ export default function CaseStudy() {
                   justifyContent: 'center',
                   fontFamily: 'DM Sans, sans-serif',
                   fontWeight: 700,
-                  fontSize: '18px',
+                  fontSize: 'var(--font-size-lg)',
                   color: '#1E1E1E',
                 }}
               >
@@ -959,7 +959,7 @@ export default function CaseStudy() {
                   justifyContent: 'center',
                   fontFamily: 'DM Sans, sans-serif',
                   fontWeight: 700,
-                  fontSize: '18px',
+                  fontSize: 'var(--font-size-lg)',
                   color: '#1E1E1E',
                 }}
               >
@@ -991,7 +991,7 @@ export default function CaseStudy() {
                   justifyContent: 'center',
                   fontFamily: 'DM Sans, sans-serif',
                   fontWeight: 700,
-                  fontSize: '18px',
+                  fontSize: 'var(--font-size-lg)',
                   color: '#1E1E1E',
                 }}
               >
@@ -1035,7 +1035,7 @@ export default function CaseStudy() {
             <p
               style={{
                 fontFamily: 'Lora, serif',
-                fontSize: '16px',
+                fontSize: 'var(--font-size-base)',
                 color: '#1E1E1E',
                 opacity: 0.85,
                 lineHeight: '1.5',

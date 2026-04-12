@@ -24,7 +24,7 @@ export default function Home() {
         .home-hero-subtitle {
           font-family: 'Lora', serif;
           font-weight: 400;
-          font-size: 18px;
+          font-size: var(--font-size-lg);
           color: rgba(255, 255, 255, 0.65);
           margin-bottom: 40px;
           max-width: 700px;
@@ -51,7 +51,7 @@ export default function Home() {
         }
         
         .home-section-title {
-          font-size: 32px;
+          font-size: var(--font-size-2xl);
         }
         
         .home-card-title {
@@ -59,11 +59,11 @@ export default function Home() {
         }
         
         .home-featured-title {
-          font-size: 24px;
+          font-size: var(--font-size-xl);
         }
         
         .home-podcast-title {
-          font-size: 24px;
+          font-size: var(--font-size-xl);
         }
         
         .home-cta-title {
@@ -102,11 +102,11 @@ export default function Home() {
           }
           
           .home-hero-title {
-            font-size: 32px;
+            font-size: var(--font-size-2xl);
           }
           
           .home-hero-subtitle {
-            font-size: 16px;
+            font-size: var(--font-size-base);
           }
           
           .home-case-studies-grid {
@@ -124,23 +124,23 @@ export default function Home() {
           }
           
           .home-section-title {
-            font-size: 24px;
+            font-size: var(--font-size-xl);
           }
           
           .home-card-title {
-            font-size: 18px;
+            font-size: var(--font-size-lg);
           }
           
           .home-featured-title {
-            font-size: 18px;
+            font-size: var(--font-size-lg);
           }
           
           .home-podcast-title {
-            font-size: 18px;
+            font-size: var(--font-size-lg);
           }
           
           .home-cta-title {
-            font-size: 18px;
+            font-size: var(--font-size-lg);
           }
         }
       `}</style>
@@ -152,7 +152,7 @@ export default function Home() {
             style={{
               fontFamily: 'DM Sans, sans-serif',
               fontWeight: 700,
-              fontSize: '11px',
+              fontSize: 'var(--font-size-xs)',
               color: '#D4A843',
               marginBottom: '24px',
               letterSpacing: '1.5px',
@@ -202,7 +202,7 @@ export default function Home() {
             style={{
               fontFamily: 'DM Sans, sans-serif',
               fontWeight: 700,
-              fontSize: '11px',
+              fontSize: 'var(--font-size-xs)',
               color: '#1F5364',
               letterSpacing: '1.5px',
               textTransform: 'uppercase',
@@ -247,7 +247,7 @@ export default function Home() {
                   justifyContent: 'center',
                   color: '#888888',
                   fontFamily: 'DM Sans, sans-serif',
-                  fontSize: '14px',
+                  fontSize: 'var(--font-size-sm)',
                 }}
               >
                 [Image Placeholder]
@@ -259,7 +259,7 @@ export default function Home() {
                   style={{
                     fontFamily: 'DM Sans, sans-serif',
                     fontWeight: 700,
-                    fontSize: '12px',
+                    fontSize: 'var(--font-size-xs)',
                     color: '#1F5364',
                     letterSpacing: '1.5px',
                     textTransform: 'uppercase',
@@ -277,18 +277,34 @@ export default function Home() {
                     marginBottom: '16px',
                   }}
                 >
-                  Reducing Customer Onboarding Time
+                  From 90 Minutes to 45: Redesigning a Broken Onboarding Flow
                 </h3>
                 <p
                   style={{
                     fontFamily: 'Lora, serif',
-                    fontSize: '16px',
+                    fontSize: 'var(--font-size-base)',
                     color: '#444444',
                     lineHeight: '1.6',
+                    marginBottom: '24px',
                   }}
                 >
                   A 37-question form reduced by 20% — cutting onboarding call time by 50% via A/B test.
                 </p>
+                <div className="card-cta-row">
+                  <Link
+                    to="/case-studies/healthtech-onboarding"
+                    style={{
+                      fontFamily: 'DM Sans, sans-serif',
+                      fontWeight: 700,
+                      fontSize: 'var(--font-size-sm)',
+                      color: '#1F5364',
+                      textDecoration: 'none',
+                      whiteSpace: 'nowrap',
+                    }}
+                  >
+                    Read Case Study →
+                  </Link>
+                </div>
               </div>
             </div>
 
@@ -312,7 +328,7 @@ export default function Home() {
                   justifyContent: 'center',
                   color: '#888888',
                   fontFamily: 'DM Sans, sans-serif',
-                  fontSize: '14px',
+                  fontSize: 'var(--font-size-sm)',
                 }}
               >
                 [Image Placeholder]
@@ -324,14 +340,14 @@ export default function Home() {
                   style={{
                     fontFamily: 'DM Sans, sans-serif',
                     fontWeight: 700,
-                    fontSize: '12px',
-                    color: '#1F5364',
+                    fontSize: 'var(--font-size-xs)',
+                    color: '#C4622D',
                     letterSpacing: '1.5px',
                     textTransform: 'uppercase',
                     marginBottom: '16px',
                   }}
                 >
-                  LEADERSHIP · EDTECH
+                  LEADERSHIP · REAL ESTATE TECH
                 </div>
                 <h3
                   className="home-card-title"
@@ -342,35 +358,54 @@ export default function Home() {
                     marginBottom: '16px',
                   }}
                 >
-                  Building a Research Practice from Zero
+                  Building a Research Function from the Ground Up, and Through an Acquisition
                 </h3>
                 <p
                   style={{
                     fontFamily: 'Lora, serif',
-                    fontSize: '16px',
+                    fontSize: 'var(--font-size-base)',
                     color: '#444444',
                     lineHeight: '1.6',
+                    marginBottom: '24px',
                   }}
                 >
-                  Establishing frameworks, hiring researchers, and creating a data-driven culture at scale.
+                  Built a research practice from scratch, survived an acquisition, and turned research from a gatekept discipline into something the whole org could see and use.
                 </p>
+                <div className="card-cta-row">
+                  <Link
+                    to="/leadership/research-function"
+                    style={{
+                      fontFamily: 'DM Sans, sans-serif',
+                      fontWeight: 700,
+                      fontSize: 'var(--font-size-sm)',
+                      color: '#C4622D',
+                      textDecoration: 'none',
+                      whiteSpace: 'nowrap',
+                    }}
+                  >
+                    Read Case Study →
+                  </Link>
+                </div>
               </div>
             </div>
           </div>
 
           {/* See All Link */}
-          <Link
-            to="/work"
-            style={{
-              fontFamily: 'DM Sans, sans-serif',
-              fontWeight: 700,
-              fontSize: '14px',
-              color: '#1F5364',
-              textDecoration: 'none',
-            }}
-          >
-            See All Work →
-          </Link>
+          <div className="card-cta-row">
+            <Link
+              to="/work"
+              style={{
+                fontFamily: 'DM Sans, sans-serif',
+                fontWeight: 700,
+                fontSize: 'var(--font-size-sm)',
+                color: '#1F5364',
+                textDecoration: 'none',
+                whiteSpace: 'nowrap',
+              }}
+            >
+              See All Work →
+            </Link>
+          </div>
         </div>
       </section>
 
@@ -385,7 +420,7 @@ export default function Home() {
             style={{
               fontFamily: 'DM Sans, sans-serif',
               fontWeight: 700,
-              fontSize: '11px',
+              fontSize: 'var(--font-size-xs)',
               color: '#1F5364',
               letterSpacing: '1.5px',
               textTransform: 'uppercase',
@@ -411,11 +446,23 @@ export default function Home() {
                 fontFamily: 'DM Sans, sans-serif',
                 fontWeight: 700,
                 color: '#1E1E1E',
-                marginBottom: '16px',
+                marginBottom: '12px',
               }}
             >
-              The Ethics of AI Research: Balancing Innovation with User Protection
+              Ethical Leadership Is Not Just a Soft Skill
             </h3>
+            <p
+              style={{
+                fontFamily: 'Lora, serif',
+                fontSize: '17px',
+                fontStyle: 'italic',
+                color: '#555555',
+                lineHeight: '1.55',
+                marginBottom: '20px',
+              }}
+            >
+              Why ethical management shows up in the quiet places — not the policies
+            </p>
             <p
               style={{
                 fontFamily: 'Lora, serif',
@@ -425,28 +472,15 @@ export default function Home() {
                 marginBottom: '24px',
               }}
             >
-              As AI becomes more integrated into product development, UX researchers face new ethical challenges. How do we study user behavior while protecting privacy? How do we ensure our research doesn't perpetuate algorithmic bias?
+              Ethical management isn’t about being nice. It isn’t about having the right values written on a website. It shows up when someone on your team says something feels off, and you decide whether curiosity or defensiveness comes first.
             </p>
-            <div style={{ display: 'flex', gap: '24px' }}>
-              <Link
-                to="/writing/ethics-ai-research"
-                style={{
-                  fontFamily: 'DM Sans, sans-serif',
-                  fontWeight: 700,
-                  fontSize: '14px',
-                  color: '#1F5364',
-                  textDecoration: 'none',
-                  whiteSpace: 'nowrap',
-                }}
-              >
-                Read Article →
-              </Link>
+            <div className="card-cta-row">
               <Link
                 to="/writing"
                 style={{
                   fontFamily: 'DM Sans, sans-serif',
                   fontWeight: 700,
-                  fontSize: '14px',
+                  fontSize: 'var(--font-size-sm)',
                   color: '#1F5364',
                   textDecoration: 'none',
                   whiteSpace: 'nowrap',
@@ -470,7 +504,7 @@ export default function Home() {
             style={{
               fontFamily: 'DM Sans, sans-serif',
               fontWeight: 700,
-              fontSize: '11px',
+              fontSize: 'var(--font-size-xs)',
               color: '#1F5364',
               letterSpacing: '1.5px',
               textTransform: 'uppercase',
@@ -511,21 +545,25 @@ export default function Home() {
             >
               Bi-weekly conversations with UX researchers, product leaders, and ethicists about building inclusive research practices and addressing algorithmic bias.
             </p>
-            <button
-              style={{
-                fontFamily: 'DM Sans, sans-serif',
-                fontWeight: 700,
-                fontSize: '14px',
-                color: '#1E1E1E',
-                backgroundColor: '#D4A843',
-                padding: '16px 32px',
-                borderRadius: '8px',
-                border: 'none',
-                cursor: 'pointer',
-              }}
-            >
-              Listen Now →
-            </button>
+            <div className="card-cta-row">
+              <button
+                type="button"
+                style={{
+                  fontFamily: 'DM Sans, sans-serif',
+                  fontWeight: 700,
+                  fontSize: 'var(--font-size-sm)',
+                  color: '#1E1E1E',
+                  backgroundColor: '#D4A843',
+                  padding: '16px 32px',
+                  borderRadius: '8px',
+                  border: 'none',
+                  cursor: 'pointer',
+                  whiteSpace: 'nowrap',
+                }}
+              >
+                Listen Now →
+              </button>
+            </div>
           </div>
         </div>
       </section>
@@ -553,7 +591,7 @@ export default function Home() {
             <p
               style={{
                 fontFamily: 'Lora, serif',
-                fontSize: '16px',
+                fontSize: 'var(--font-size-base)',
                 color: '#1E1E1E',
                 opacity: 0.85,
                 lineHeight: '1.5',

@@ -52,7 +52,7 @@ export function FeaturedWritingCard({
       >
         {description}
       </p>
-      <div style={{ display: 'flex', gap: '24px' }}>
+      <div className="card-cta-row">
         <Link
           to={primaryLinkTo}
           style={{

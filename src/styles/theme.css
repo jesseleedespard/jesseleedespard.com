@@ -13,6 +13,13 @@
   --light-gray: #eeeeee;
   --dark-gray: #444444;
   --white: #ffffff;
+  --font-size-xs: 12px;
+  --font-size-sm: 14px;
+  --font-size-base: 16px;
+  --font-size-lg: 18px;
+  --font-size-xl: 24px;
+  --font-size-2xl: 32px;
+  --font-size-3xl: 48px;
   /**
    * Brand links — contrast targets from AccessibilityAuditReport.tsx (Figma Make).
    * - Light surfaces (white / cream): Teal Dark for links & focus ring (~6.8:1 AA). Gold on cream is advisory-only (~3.9:1); do not use as default link color on light backgrounds.
@@ -258,5 +265,76 @@
     font-family: 'DM Sans', system-ui, sans-serif;
     font-size: 14px;
     font-weight: 700;
+  }
+
+  /**
+   * Card footers: arrow CTAs (Read Case Study →, View All Writing →, etc.) align to the trailing edge.
+   */
+  .card-cta-row {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 24px;
+    width: 100%;
+  }
+
+  /**
+   * Site footer — same width rhythm as Work / Home (1200px), stacks under 768px like work-cta-flex.
+   */
+  .site-footer {
+    background-color: var(--cream);
+    padding: 48px;
+    border-top: 1px solid var(--light-gray);
+  }
+
+  .site-footer__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+
+  .site-footer__name {
+    font-family: 'DM Sans', system-ui, sans-serif;
+    font-weight: 700;
+    font-size: var(--font-size-sm);
+    color: var(--charcoal);
+  }
+
+  .site-footer__nav {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .site-footer__link {
+    font-family: 'DM Sans', system-ui, sans-serif;
+    font-weight: 500;
+    font-size: var(--font-size-sm);
+    color: var(--dark-gray);
+    text-decoration: none;
+  }
+
+  .site-footer__link:hover {
+    color: var(--charcoal);
+    text-decoration: underline;
+    text-underline-offset: 0.15em;
+  }
+
+  .site-footer__copy {
+    font-family: 'DM Sans', system-ui, sans-serif;
+    font-size: var(--font-size-sm);
+    color: var(--gray);
+  }
+
+  @media (max-width: 768px) {
+    .site-footer__inner {
+      flex-direction: column;
+      align-items: flex-start;
+    }
   }
 }

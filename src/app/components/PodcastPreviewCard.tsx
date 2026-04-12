@@ -44,9 +44,11 @@ export function PodcastPreviewCard({
       >
         {description}
       </p>
-      <Button variant="primary" size="medium" onClick={onButtonClick}>
-        {buttonText}
-      </Button>
+      <div className="card-cta-row">
+        <Button variant="primary" size="medium" onClick={onButtonClick}>
+          {buttonText}
+        </Button>
+      </div>
     </div>
   );
 }

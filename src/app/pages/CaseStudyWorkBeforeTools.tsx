@@ -53,7 +53,7 @@ html { scroll-behavior: smooth; }
 .hero-tag {
   font-family: var(--display);
   display: inline-block;
-  font-size: 11px;
+  font-size: var(--font-size-xs);
   font-weight: 700;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -78,7 +78,7 @@ html { scroll-behavior: smooth; }
 }
 .hero-sub {
   font-family: var(--body);
-  font-size: 18px;
+  font-size: var(--font-size-lg);
   color: rgba(255,255,255,0.6);
   line-height: 1.7;
   max-width: 600px;
@@ -109,7 +109,7 @@ html { scroll-behavior: smooth; }
 }
 .meta-value {
   font-family: var(--display);
-  font-size: 14px;
+  font-size: var(--font-size-sm);
   color: rgba(255,255,255,0.82);
   font-weight: 500;
 }
@@ -125,7 +125,7 @@ html { scroll-behavior: smooth; }
 
 .section-label {
   font-family: var(--display);
-  font-size: 11px;
+  font-size: var(--font-size-xs);
   font-weight: 700;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -145,7 +145,7 @@ html { scroll-behavior: smooth; }
 
 .section h3 {
   font-family: var(--display);
-  font-size: 16px;
+  font-size: var(--font-size-base);
   font-weight: 700;
   color: var(--charcoal);
   margin-bottom: 8px;
@@ -183,7 +183,7 @@ html { scroll-behavior: smooth; }
 }
 .tension-box h4 {
   font-family: var(--display);
-  font-size: 14px;
+  font-size: var(--font-size-sm);
   font-weight: 700;
   color: var(--charcoal);
   margin-bottom: 12px;
@@ -226,7 +226,7 @@ html { scroll-behavior: smooth; }
 }
 .pull-quote p {
   font-family: var(--body);
-  font-size: 18px;
+  font-size: var(--font-size-lg);
   font-style: italic;
   color: var(--charcoal);
   margin: 0;
@@ -255,12 +255,12 @@ html { scroll-behavior: smooth; }
 .activity-title {
   font-family: var(--display);
   font-weight: 700;
-  font-size: 14px;
+  font-size: var(--font-size-sm);
   color: var(--charcoal);
 }
 .activity-duration {
   font-family: var(--display);
-  font-size: 12px;
+  font-size: var(--font-size-xs);
   color: var(--gray);
   font-weight: 600;
 }
@@ -270,7 +270,7 @@ html { scroll-behavior: smooth; }
 .activity-prompt {
   font-family: var(--display);
   font-weight: 700;
-  font-size: 14px;
+  font-size: var(--font-size-sm);
   color: var(--teal-dark);
   margin-bottom: 12px;
 }
@@ -316,7 +316,7 @@ html { scroll-behavior: smooth; }
   margin: 20px 0 0;
   padding-left: 22px;
   color: var(--dark-gray);
-  font-size: 16px;
+  font-size: var(--font-size-base);
   line-height: 1.75;
 }
 .impact-list li { margin-bottom: 14px; }
@@ -362,7 +362,7 @@ html { scroll-behavior: smooth; }
 }
 .cta-strip-left a {
   font-family: var(--display);
-  font-size: 14px;
+  font-size: var(--font-size-sm);
   color: var(--charcoal);
   text-decoration: none;
   opacity: 0.7;
@@ -372,7 +372,7 @@ html { scroll-behavior: smooth; }
   color: var(--white);
   font-family: var(--display);
   font-weight: 700;
-  font-size: 14px;
+  font-size: var(--font-size-sm);
   padding: 13px 28px;
   border-radius: 6px;
   text-decoration: none;
@@ -497,7 +497,7 @@ html { scroll-behavior: smooth; }
 
   /* CTA STRIP */
   .work-before-tools-page .cta-strip { flex-direction: column !important; padding: 48px 24px !important; text-align: center !important; gap: 24px !important; }
-  .work-before-tools-page .cta-strip-left h3 { font-size: 18px !important; text-align: center !important; }
+  .work-before-tools-page .cta-strip-left h3 { font-size: var(--font-size-lg) !important; text-align: center !important; }
   .work-before-tools-page .cta-strip-left a { text-align: center !important; display: block !important; }
   .work-before-tools-page .cta-btn { display: block !important; text-align: center !important; width: 100% !important; }
 
@@ -513,7 +513,7 @@ html { scroll-behavior: smooth; }
 
   .work-before-tools-page .hero { padding: 40px 16px 32px !important; }
   .work-before-tools-page .hero h1 { font-size: clamp(22px, 7vw, 26px) !important; }
-  .work-before-tools-page .hero-sub { font-size: 14px !important; }
+  .work-before-tools-page .hero-sub { font-size: var(--font-size-sm) !important; }
 
   .work-before-tools-page .page-wrap { padding: 0 16px !important; }
   .work-before-tools-page .section { padding: 40px 16px 0 !important; }
@@ -529,7 +529,7 @@ html { scroll-behavior: smooth; }
   .work-before-tools-page .cta-btn { padding: 16px !important; }
 
   .work-before-tools-page .tabs-wrapper { padding: 0 !important; }
-  .work-before-tools-page .tab { padding: 16px 12px !important; font-size: 12px !important; }
+  .work-before-tools-page .tab { padding: 16px 12px !important; font-size: var(--font-size-xs) !important; }
 
   .work-before-tools-page .podcast-card { padding: 24px 16px !important; }
   .work-before-tools-page .hinge-box { padding: 24px 16px !important; }

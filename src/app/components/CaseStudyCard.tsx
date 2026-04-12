@@ -1,11 +1,26 @@
+import { Link } from 'react-router';
+
 interface CaseStudyCardProps {
   tag: string;
   title: string;
   description: string;
+  linkTo: string;
   tagColor?: string;
+  linkColor?: string;
+  linkText?: string;
 }
 
-export function CaseStudyCard({ tag, title, description, tagColor = '#1F5364' }: CaseStudyCardProps) {
+export function CaseStudyCard({
+  tag,
+  title,
+  description,
+  linkTo,
+  tagColor = '#1F5364',
+  linkColor,
+  linkText = 'Read Case Study →',
+}: CaseStudyCardProps) {
+  const ctaColor = linkColor ?? tagColor;
+
   return (
     <div
       style={{
@@ -64,10 +79,26 @@ export function CaseStudyCard({ tag, title, description, tagColor = '#1F5364' }:
             fontSize: '16px',
             color: '#444444',
             lineHeight: '1.6',
+            marginBottom: '24px',
           }}
         >
           {description}
         </p>
+        <div className="card-cta-row">
+          <Link
+            to={linkTo}
+            style={{
+              fontFamily: 'DM Sans, sans-serif',
+              fontWeight: 700,
+              fontSize: '14px',
+              color: ctaColor,
+              textDecoration: 'none',
+              whiteSpace: 'nowrap',
+            }}
+          >
+            {linkText}
+          </Link>
+        </div>
       </div>
     </div>
   );

@@ -25,7 +25,7 @@ export default function Work() {
         
         .work-hero-subtitle {
           font-family: 'Lora', serif;
-          font-size: 18px;
+          font-size: var(--font-size-lg);
           color: rgba(255, 255, 255, 0.65);
           max-width: 700px;
           line-height: 1.6;
@@ -69,11 +69,11 @@ export default function Work() {
           }
           
           .work-hero-title {
-            font-size: 32px;
+            font-size: var(--font-size-2xl);
           }
           
           .work-hero-subtitle {
-            font-size: 16px;
+            font-size: var(--font-size-base);
           }
           
           .work-tab-section {
@@ -95,11 +95,11 @@ export default function Work() {
           }
           
           .work-card-title {
-            font-size: 18px;
+            font-size: var(--font-size-lg);
           }
           
           .work-cta-title {
-            font-size: 18px;
+            font-size: var(--font-size-lg);
           }
         }
       `}</style>
@@ -112,7 +112,7 @@ export default function Work() {
             style={{
               fontFamily: 'DM Sans, sans-serif',
               fontWeight: 700,
-              fontSize: '11px',
+              fontSize: 'var(--font-size-xs)',
               color: '#D4A843',
               marginBottom: '20px',
               letterSpacing: '1.5px',
@@ -166,7 +166,7 @@ export default function Work() {
                 style={{
                   fontFamily: 'DM Sans, sans-serif',
                   fontWeight: 700,
-                  fontSize: '11px',
+                  fontSize: 'var(--font-size-xs)',
                   color: activeTab === 'research' ? '#FFFFFF' : '#1E1E1E',
                   backgroundColor: activeTab === 'research' ? '#1F5364' : '#888888',
                   borderRadius: '10px',
@@ -212,7 +212,7 @@ export default function Work() {
                 style={{
                   fontFamily: 'DM Sans, sans-serif',
                   fontWeight: 700,
-                  fontSize: '11px',
+                  fontSize: 'var(--font-size-xs)',
                   color: activeTab === 'leadership' ? '#FFFFFF' : '#1E1E1E',
                   backgroundColor: activeTab === 'leadership' ? '#1F5364' : '#888888',
                   borderRadius: '10px',
@@ -253,7 +253,7 @@ export default function Work() {
                     style={{
                       fontFamily: 'DM Sans, sans-serif',
                       fontWeight: 700,
-                      fontSize: '11px',
+                      fontSize: 'var(--font-size-xs)',
                       color: '#888888',
                       letterSpacing: '1.5px',
                       textTransform: 'uppercase',
@@ -268,7 +268,7 @@ export default function Work() {
                     style={{
                       fontFamily: 'DM Sans, sans-serif',
                       fontWeight: 700,
-                      fontSize: '24px',
+                      fontSize: 'var(--font-size-xl)',
                       color: '#888888',
                       marginBottom: '12px',
                     }}
@@ -290,15 +290,18 @@ export default function Work() {
                   </p>
 
                   {/* Link Disabled */}
-                  <div
-                    style={{
-                      fontFamily: 'DM Sans, sans-serif',
-                      fontWeight: 700,
-                      fontSize: '14px',
-                      color: '#CCCCCC',
-                    }}
-                  >
-                    Case Study →
+                  <div className="card-cta-row">
+                    <div
+                      style={{
+                        fontFamily: 'DM Sans, sans-serif',
+                        fontWeight: 700,
+                        fontSize: 'var(--font-size-sm)',
+                        color: '#CCCCCC',
+                        whiteSpace: 'nowrap',
+                      }}
+                    >
+                      Read Case Study →
+                    </div>
                   </div>
                 </div>
               </div>
@@ -321,7 +324,7 @@ export default function Work() {
                     style={{
                       fontFamily: 'DM Sans, sans-serif',
                       fontWeight: 700,
-                      fontSize: '11px',
+                      fontSize: 'var(--font-size-xs)',
                       color: '#2C6E7F',
                       letterSpacing: '1.5px',
                       textTransform: 'uppercase',
@@ -336,12 +339,12 @@ export default function Work() {
                     style={{
                       fontFamily: 'DM Sans, sans-serif',
                       fontWeight: 700,
-                      fontSize: '24px',
+                      fontSize: 'var(--font-size-xl)',
                       color: '#1E1E1E',
                       marginBottom: '12px',
                     }}
                   >
-                    Designing an AI Product for a Real Estate Startup
+                    Ethical AI Research That Doubled Product-Market Fit for a PropTech Startup
                   </h3>
 
                   {/* Description */}
@@ -358,19 +361,21 @@ export default function Work() {
                   </p>
 
                   {/* Link */}
-                  <Link
-                    to="/case-studies/proptech"
-                    style={{
-                      fontFamily: 'DM Sans, sans-serif',
-                      fontWeight: 700,
-                      fontSize: '14px',
-                      color: '#2C6E7F',
-                      textDecoration: 'none',
-                      whiteSpace: 'nowrap',
-                    }}
-                  >
-                    Read Case Study →
-                  </Link>
+                  <div className="card-cta-row">
+                    <Link
+                      to="/case-studies/proptech"
+                      style={{
+                        fontFamily: 'DM Sans, sans-serif',
+                        fontWeight: 700,
+                        fontSize: 'var(--font-size-sm)',
+                        color: '#2C6E7F',
+                        textDecoration: 'none',
+                        whiteSpace: 'nowrap',
+                      }}
+                    >
+                      Read Case Study →
+                    </Link>
+                  </div>
                 </div>
               </div>
 
@@ -392,7 +397,7 @@ export default function Work() {
                     style={{
                       fontFamily: 'DM Sans, sans-serif',
                       fontWeight: 700,
-                      fontSize: '11px',
+                      fontSize: 'var(--font-size-xs)',
                       color: '#2C6E7F',
                       letterSpacing: '1.5px',
                       textTransform: 'uppercase',
@@ -407,7 +412,7 @@ export default function Work() {
                     style={{
                       fontFamily: 'DM Sans, sans-serif',
                       fontWeight: 700,
-                      fontSize: '24px',
+                      fontSize: 'var(--font-size-xl)',
                       color: '#1E1E1E',
                       marginBottom: '12px',
                     }}
@@ -429,19 +434,21 @@ export default function Work() {
                   </p>
 
                   {/* Link */}
-                  <Link
-                    to="/case-studies/work-before-the-tools"
-                    style={{
-                      fontFamily: 'DM Sans, sans-serif',
-                      fontWeight: 700,
-                      fontSize: '14px',
-                      color: '#2C6E7F',
-                      textDecoration: 'none',
-                      whiteSpace: 'nowrap',
-                    }}
-                  >
-                    Read Case Study →
-                  </Link>
+                  <div className="card-cta-row">
+                    <Link
+                      to="/case-studies/work-before-the-tools"
+                      style={{
+                        fontFamily: 'DM Sans, sans-serif',
+                        fontWeight: 700,
+                        fontSize: 'var(--font-size-sm)',
+                        color: '#2C6E7F',
+                        textDecoration: 'none',
+                        whiteSpace: 'nowrap',
+                      }}
+                    >
+                      Read Case Study →
+                    </Link>
+                  </div>
                 </div>
               </div>
 
@@ -463,7 +470,7 @@ export default function Work() {
                     style={{
                       fontFamily: 'DM Sans, sans-serif',
                       fontWeight: 700,
-                      fontSize: '11px',
+                      fontSize: 'var(--font-size-xs)',
                       color: '#2C6E7F',
                       letterSpacing: '1.5px',
                       textTransform: 'uppercase',
@@ -478,12 +485,12 @@ export default function Work() {
                     style={{
                       fontFamily: 'DM Sans, sans-serif',
                       fontWeight: 700,
-                      fontSize: '24px',
+                      fontSize: 'var(--font-size-xl)',
                       color: '#1E1E1E',
                       marginBottom: '12px',
                     }}
                   >
-                    Reducing the Time of Customer Onboarding
+                    From 90 Minutes to 45: Redesigning a Broken Onboarding Flow
                   </h3>
 
                   {/* Description */}
@@ -500,19 +507,21 @@ export default function Work() {
                   </p>
 
                   {/* Link */}
-                  <Link
-                    to="/case-studies/healthtech-onboarding"
-                    style={{
-                      fontFamily: 'DM Sans, sans-serif',
-                      fontWeight: 700,
-                      fontSize: '14px',
-                      color: '#2C6E7F',
-                      textDecoration: 'none',
-                      whiteSpace: 'nowrap',
-                    }}
-                  >
-                    Read Case Study →
-                  </Link>
+                  <div className="card-cta-row">
+                    <Link
+                      to="/case-studies/healthtech-onboarding"
+                      style={{
+                        fontFamily: 'DM Sans, sans-serif',
+                        fontWeight: 700,
+                        fontSize: 'var(--font-size-sm)',
+                        color: '#2C6E7F',
+                        textDecoration: 'none',
+                        whiteSpace: 'nowrap',
+                      }}
+                    >
+                      Read Case Study →
+                    </Link>
+                  </div>
                 </div>
               </div>
             </div>
@@ -544,14 +553,14 @@ export default function Work() {
                     style={{
                       fontFamily: 'DM Sans, sans-serif',
                       fontWeight: 700,
-                      fontSize: '11px',
+                      fontSize: 'var(--font-size-xs)',
                       color: '#C4622D',
                       letterSpacing: '1.5px',
                       textTransform: 'uppercase',
                       marginBottom: '16px',
                     }}
                   >
-                    LEADERSHIP · Real Estate Tech
+                    LEADERSHIP · REAL ESTATE TECH
                   </div>
 
                   {/* Title */}
@@ -559,12 +568,12 @@ export default function Work() {
                     style={{
                       fontFamily: 'DM Sans, sans-serif',
                       fontWeight: 700,
-                      fontSize: '24px',
+                      fontSize: 'var(--font-size-xl)',
                       color: '#1E1E1E',
                       marginBottom: '12px',
                     }}
                   >
-                    Building a Research Practice from Zero
+                    Building a Research Function from the Ground Up, and Through an Acquisition
                   </h3>
 
                   {/* Description */}
@@ -577,23 +586,25 @@ export default function Work() {
                       marginBottom: '24px',
                     }}
                   >
-                    Establishing frameworks, hiring researchers, and creating a data-driven culture at scale — from 0 to 8 researchers in 18 months.
+                    Built a research practice from scratch, led it through an acquisition, and merged two separate research teams into one cohesive function.
                   </p>
 
                   {/* Link */}
-                  <Link
-                    to="/leadership/research-function"
-                    style={{
-                      fontFamily: 'DM Sans, sans-serif',
-                      fontWeight: 700,
-                      fontSize: '14px',
-                      color: '#C4622D',
-                      textDecoration: 'none',
-                      whiteSpace: 'nowrap',
-                    }}
-                  >
-                    Read Case Study →
-                  </Link>
+                  <div className="card-cta-row">
+                    <Link
+                      to="/leadership/research-function"
+                      style={{
+                        fontFamily: 'DM Sans, sans-serif',
+                        fontWeight: 700,
+                        fontSize: 'var(--font-size-sm)',
+                        color: '#C4622D',
+                        textDecoration: 'none',
+                        whiteSpace: 'nowrap',
+                      }}
+                    >
+                      Read Case Study →
+                    </Link>
+                  </div>
                 </div>
               </div>
 
@@ -615,7 +626,7 @@ export default function Work() {
                     style={{
                       fontFamily: 'DM Sans, sans-serif',
                       fontWeight: 700,
-                      fontSize: '11px',
+                      fontSize: 'var(--font-size-xs)',
                       color: '#C4622D',
                       letterSpacing: '1.5px',
                       textTransform: 'uppercase',
@@ -630,7 +641,7 @@ export default function Work() {
                     style={{
                       fontFamily: 'DM Sans, sans-serif',
                       fontWeight: 700,
-                      fontSize: '24px',
+                      fontSize: 'var(--font-size-xl)',
                       color: '#1E1E1E',
                       marginBottom: '12px',
                     }}
@@ -648,23 +659,25 @@ export default function Work() {
                       marginBottom: '24px',
                     }}
                   >
-                    Creating shared research infrastructure, insight repositories, and processes that helped 40+ product managers make better decisions.
+                    Built the conditions for three product disciplines to trust each other and move faster — 30% velocity increase, 25% collaboration lift, and a team that kept operating the same way after I left.
                   </p>
 
                   {/* Link */}
-                  <Link
-                    to="/leadership/three-disciplines-one-team"
-                    style={{
-                      fontFamily: 'DM Sans, sans-serif',
-                      fontWeight: 700,
-                      fontSize: '14px',
-                      color: '#C4622D',
-                      textDecoration: 'none',
-                      whiteSpace: 'nowrap',
-                    }}
-                  >
-                    Read Case Study →
-                  </Link>
+                  <div className="card-cta-row">
+                    <Link
+                      to="/leadership/three-disciplines-one-team"
+                      style={{
+                        fontFamily: 'DM Sans, sans-serif',
+                        fontWeight: 700,
+                        fontSize: 'var(--font-size-sm)',
+                        color: '#C4622D',
+                        textDecoration: 'none',
+                        whiteSpace: 'nowrap',
+                      }}
+                    >
+                      Read Case Study →
+                    </Link>
+                  </div>
                 </div>
               </div>
             </div>
@@ -695,7 +708,7 @@ export default function Work() {
             <p
               style={{
                 fontFamily: 'Lora, serif',
-                fontSize: '16px',
+                fontSize: 'var(--font-size-base)',
                 color: '#1E1E1E',
                 opacity: 0.85,
                 lineHeight: '1.5',
