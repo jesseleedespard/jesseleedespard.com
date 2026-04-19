@@ -20,6 +20,7 @@
   --font-size-xl: 24px;
   --font-size-2xl: 32px;
   --font-size-3xl: 48px;
+  --page-padding: 48px;
   /**
    * Brand links — contrast targets from AccessibilityAuditReport.tsx (Figma Make).
    * - Light surfaces (white / cream): Teal Dark for links & focus ring (~6.8:1 AA). Gold on cream is advisory-only (~3.9:1); do not use as default link color on light backgrounds.

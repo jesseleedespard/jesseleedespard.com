@@ -35,7 +35,7 @@ html { scroll-behavior: smooth; }
 .meta-value { font-family: var(--display); font-size: 13px; color: rgba(255,255,255,0.82); font-weight: 500; }
 
 /* LAYOUT */
-.page-wrap { max-width: var(--max); margin: 0 auto; padding: 0 48px; }
+.page-wrap { max-width: calc(var(--max) + (var(--page-padding) * 2)); margin: 0 auto; padding: 0 var(--page-padding); }
 .section { padding: 52px 0 0; }
 .section-label { font-family: var(--display); font-size: var(--font-size-xs); font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--teal); margin-bottom: 10px; }
 .section h2 { font-family: var(--display); font-size: clamp(20px, 2.8vw, 26px); font-weight: 700; color: var(--charcoal); line-height: 1.3; letter-spacing: -0.3px; margin-bottom: 16px; }

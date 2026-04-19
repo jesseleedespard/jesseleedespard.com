@@ -116,9 +116,9 @@ html { scroll-behavior: smooth; }
 
 /* ── LAYOUT ───────────────────────────────────────────────── */
 .page-wrap {
-  max-width: var(--max);
+  max-width: calc(var(--max) + (var(--page-padding) * 2));
   margin: 0 auto;
-  padding: 0 48px;
+  padding: 0 var(--page-padding);
 }
 
 .section { padding: 56px 0 0; }
