@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import type { CSSProperties } from 'react';
+import { Footer } from '../components/Footer';
 
 type ArticleStatus = 'live' | 'coming-soon';
 
@@ -791,6 +792,8 @@ export default function Writing() {
           </div>
         </section>
       )}
+
+      <Footer />
     </div>
   );
 }

@@ -2,7 +2,7 @@ import { Link } from 'react-router';
 
 export function Footer() {
   return (
-    <footer className="site-footer">
+    <footer className="site-footer w-full self-stretch">
       <div className="site-footer__inner">
         <div className="site-footer__name">Jesse Lee Despard</div>
 

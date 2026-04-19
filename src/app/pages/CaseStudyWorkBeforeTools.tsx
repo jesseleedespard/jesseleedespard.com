@@ -1,6 +1,7 @@
-import { useEffect } from 'react';
+import { Fragment, useEffect } from 'react';
 import { Link } from 'react-router';
 import { Footer } from '../components/Footer';
+import { MarketingCtaStrip } from '../components/MarketingCtaStrip';
 
 export default function CaseStudyWorkBeforeTools() {
   useEffect(() => {
@@ -8,9 +9,17 @@ export default function CaseStudyWorkBeforeTools() {
   }, []);
 
   return (
-    <div className="work-before-tools-page">
-      <style>{`
-*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    <Fragment>
+      <div className="work-before-tools-page">
+        <style>{`
+.work-before-tools-page,
+.work-before-tools-page *,
+.work-before-tools-page *::before,
+.work-before-tools-page *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 .work-before-tools-page {
   --display: 'DM Sans', system-ui, sans-serif;
@@ -342,47 +351,6 @@ html { scroll-behavior: smooth; }
   font-size: 15px;
 }
 
-.cta-strip {
-  background: var(--terra);
-  padding: 48px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 24px;
-  flex-wrap: wrap;
-  box-sizing: border-box;
-  margin-top: 0;
-}
-.cta-strip-left h3 {
-  font-family: var(--display);
-  font-size: 20px;
-  font-weight: 700;
-  color: var(--charcoal);
-  margin-bottom: 8px;
-}
-.cta-strip-left a {
-  font-family: var(--display);
-  font-size: var(--font-size-sm);
-  color: var(--charcoal);
-  text-decoration: none;
-  opacity: 0.7;
-}
-.cta-btn {
-  background: var(--charcoal);
-  color: var(--white);
-  font-family: var(--display);
-  font-weight: 700;
-  font-size: var(--font-size-sm);
-  padding: 13px 28px;
-  border-radius: 6px;
-  text-decoration: none;
-  white-space: nowrap;
-  flex-shrink: 0;
-  display: inline-block;
-  border: none;
-  cursor: pointer;
-}
-
 /* ═══════════════════════════════════════════════════════════
    MOBILE — 375px target, 8pt grid, centered text
    ═══════════════════════════════════════════════════════════ */
@@ -496,11 +464,6 @@ html { scroll-behavior: smooth; }
   .work-before-tools-page .lead-intro p { text-align: center !important; }
 
   /* CTA STRIP */
-  .work-before-tools-page .cta-strip { flex-direction: column !important; padding: 48px 24px !important; text-align: center !important; gap: 24px !important; }
-  .work-before-tools-page .cta-strip-left h3 { font-size: var(--font-size-lg) !important; text-align: center !important; }
-  .work-before-tools-page .cta-strip-left a { text-align: center !important; display: block !important; }
-  .work-before-tools-page .cta-btn { display: block !important; text-align: center !important; width: 100% !important; }
-
   /* WRITING PAGE */
   .work-before-tools-page .framing-strip { text-align: left !important; }
   .work-before-tools-page .legend { justify-content: center !important; }
@@ -524,9 +487,6 @@ html { scroll-behavior: smooth; }
   .work-before-tools-page .stats-row.three { grid-template-columns: 1fr !important; }
   .work-before-tools-page .stats-row.two { grid-template-columns: 1fr !important; }
   .work-before-tools-page .stat-row { grid-template-columns: 1fr !important; }
-
-  .work-before-tools-page .cta-strip { padding: 40px 16px !important; }
-  .work-before-tools-page .cta-btn { padding: 16px !important; }
 
   .work-before-tools-page .tabs-wrapper { padding: 0 !important; }
   .work-before-tools-page .tab { padding: 16px 12px !important; font-size: var(--font-size-xs) !important; }
@@ -874,17 +834,15 @@ html { scroll-behavior: smooth; }
         </div>
       </div>
 
-      <div className="cta-strip">
-        <div className="cta-strip-left">
-          <h3>Want to talk about what research could do for your team?</h3>
-          <a href="mailto:jesse@jesseleedespard.com">jesse@jesseleedespard.com</a>
-        </div>
-        <Link to="/hiring" className="cta-btn">
-          Hiring? →
-        </Link>
-      </div>
-
-      <Footer />
     </div>
+
+    <MarketingCtaStrip
+      title="Want to talk about what research could do for your team?"
+      body={<a href="mailto:jesse@jesseleedespard.com">jesse@jesseleedespard.com</a>}
+      cta={<Link to="/hiring" className="primary-cta-dark">Hiring? →</Link>}
+    />
+
+    <Footer />
+    </Fragment>
   );
 }

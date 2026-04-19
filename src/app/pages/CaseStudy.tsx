@@ -1,5 +1,7 @@
+import { Link } from 'react-router';
 import { Navigation } from '../components/Navigation';
 import { Footer } from '../components/Footer';
+import { MarketingCtaStrip } from '../components/MarketingCtaStrip';
 
 export default function CaseStudy() {
   return (
@@ -1013,55 +1015,11 @@ export default function CaseStudy() {
       </section>
 
       {/* CTA Strip */}
-      <section
-        style={{
-          backgroundColor: '#C4622D',
-          padding: '48px',
-        }}
-      >
-        <div style={{ maxWidth: '1200px', margin: '0 auto', display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '32px', flexWrap: 'wrap' }}>
-          <div style={{ maxWidth: '700px' }}>
-            <h3
-              style={{
-                fontFamily: 'DM Sans, sans-serif',
-                fontWeight: 700,
-                fontSize: '21px',
-                color: '#1E1E1E',
-                marginBottom: '10px',
-              }}
-            >
-              Interested in similar research for your team?
-            </h3>
-            <p
-              style={{
-                fontFamily: 'Lora, serif',
-                fontSize: 'var(--font-size-base)',
-                color: '#1E1E1E',
-                opacity: 0.85,
-                lineHeight: '1.5',
-              }}
-            >
-              I'd love to talk about how I can help streamline your user experience.
-            </p>
-          </div>
-          <button
-            style={{
-              fontFamily: 'DM Sans, sans-serif',
-              fontWeight: 700,
-              fontSize: '15px',
-              color: '#FFFFFF',
-              backgroundColor: '#1E1E1E',
-              padding: '14px 32px',
-              borderRadius: '6px',
-              border: 'none',
-              cursor: 'pointer',
-              whiteSpace: 'nowrap',
-            }}
-          >
-            Get in Touch →
-          </button>
-        </div>
-      </section>
+      <MarketingCtaStrip
+        title="Interested in similar research for your team?"
+        body="I'd love to talk about how I can help streamline your user experience."
+        cta={<Link to="/hiring" className="primary-cta-dark">Get in Touch →</Link>}
+      />
 
       <Footer />
     </div>

@@ -1,6 +1,7 @@
-import { useEffect } from 'react';
+import { Fragment, useEffect } from 'react';
 import { Link } from 'react-router';
 import { Footer } from '../components/Footer';
+import { MarketingCtaStrip } from '../components/MarketingCtaStrip';
 
 export default function CaseStudyHealthtech() {
   useEffect(() => {
@@ -9,9 +10,18 @@ export default function CaseStudyHealthtech() {
   }, []);
 
   return (
-    <div className="healthtech-case-study-page">
-      <style>{`
-*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    <Fragment>
+      <div className="healthtech-case-study-page">
+        <style>{`
+/* Scoped reset only — a global * reset overrides @layer footer rules and breaks parity with Home. */
+.healthtech-case-study-page,
+.healthtech-case-study-page *,
+.healthtech-case-study-page *::before,
+.healthtech-case-study-page *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 .healthtech-case-study-page {
   --display: 'DM Sans', system-ui, sans-serif;
   --body:    'Lora', Georgia, serif;
@@ -75,11 +85,6 @@ html { scroll-behavior: smooth; }
 }
 .lesson-body { font-size: var(--font-size-sm); line-height: 1.7; color: var(--dark-gray); margin: 0; }
 .lesson-body strong { color: var(--charcoal); }
-
-.cta-strip { background: var(--terra); padding: 48px; display: flex; align-items: center; justify-content: space-between; gap: 32px; flex-wrap: wrap; box-sizing: border-box; }
-.cta-strip-left h3 { font-family: var(--display); font-size: 21px; font-weight: 700; color: var(--charcoal); margin-bottom: 8px; }
-.cta-strip-left a { color: var(--charcoal); font-family: var(--body); }
-.cta-btn { font-family: var(--display); font-weight: 700; font-size: 15px; color: var(--white); background: var(--charcoal); padding: 14px 32px; border-radius: var(--radius-sm); text-decoration: none; display: inline-block; border: none; cursor: pointer; }
 
 /* MOBILE: 375px target, 8pt grid, centered text */
 @media (max-width: 768px) {
@@ -178,12 +183,6 @@ html { scroll-behavior: smooth; }
   .lead-intro { padding: 32px 24px 0 !important; text-align: center !important; }
   .lead-intro p { text-align: center !important; }
 
-  /* CTA STRIP */
-  .cta-strip { flex-direction: column !important; padding: 48px 24px !important; text-align: center !important; gap: 24px !important; }
-  .cta-strip-left h3 { font-size: var(--font-size-lg) !important; text-align: center !important; }
-  .cta-strip-left a { text-align: center !important; display: block !important; }
-  .cta-btn { display: block !important; text-align: center !important; width: 100% !important; }
-
   /* WRITING PAGE */
   .framing-strip { text-align: left !important; }
   .legend { justify-content: center !important; }
@@ -212,10 +211,6 @@ html { scroll-behavior: smooth; }
   .stat-row { grid-template-columns: 1fr !important; }
   .stats-grid { grid-template-columns: 1fr !important; }
 
-  /* CTA */
-  .cta-strip { padding: 40px 16px !important; }
-  .cta-btn { padding: 16px !important; }
-
   /* TABS */
   .tabs-wrapper { padding: 0 !important; }
   .tab { padding: 16px 12px !important; font-size: var(--font-size-xs) !important; }
@@ -232,7 +227,7 @@ html { scroll-behavior: smooth; }
 }
 `}</style>
 
-      <header className="hero">
+        <header className="hero">
         <div className="hero-inner">
           <span className="hero-tag">Case Study · HealthTech · UX Research</span>
           <h1>
@@ -680,17 +675,16 @@ html { scroll-behavior: smooth; }
         </div>
       </div>
 
-      <div className="cta-strip" style={{ marginTop: '72px' }}>
-        <div className="cta-strip-left">
-          <h3>Want to talk about what research could do for your team?</h3>
-          <a href="mailto:jesse@jesseleedespard.com">jesse@jesseleedespard.com</a>
-        </div>
-        <Link to="/hiring" className="cta-btn">
-          Hiring? →
-        </Link>
-      </div>
-
-      <Footer />
     </div>
+
+    <MarketingCtaStrip
+      title="Want to talk about what research could do for your team?"
+      body={<a href="mailto:jesse@jesseleedespard.com">jesse@jesseleedespard.com</a>}
+      cta={<Link to="/hiring" className="primary-cta-dark">Hiring? →</Link>}
+      style={{ marginTop: '72px' }}
+    />
+
+    <Footer />
+    </Fragment>
   );
 }

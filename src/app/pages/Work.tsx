@@ -1,5 +1,6 @@
 import { Navigation } from '../components/Navigation';
 import { Footer } from '../components/Footer';
+import { MarketingCtaStrip } from '../components/MarketingCtaStrip';
 import { Link } from 'react-router';
 import { useState } from 'react';
 
@@ -46,20 +47,8 @@ export default function Work() {
           padding: 80px 48px;
         }
         
-        .work-cta-flex {
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-          gap: 32px;
-          flex-wrap: wrap;
-        }
-        
         .work-card-title {
           font-size: 19px;
-        }
-        
-        .work-cta-title {
-          font-size: 21px;
         }
         
         @media (max-width: 768px) {
@@ -88,16 +77,7 @@ export default function Work() {
             padding: 48px 24px;
           }
           
-          .work-cta-flex {
-            flex-direction: column;
-            align-items: flex-start;
-          }
-          
           .work-card-title {
-            font-size: var(--font-size-lg);
-          }
-          
-          .work-cta-title {
             font-size: var(--font-size-lg);
           }
         }
@@ -685,58 +665,11 @@ export default function Work() {
       )}
 
       {/* CTA Strip */}
-      <section
-        style={{
-          backgroundColor: '#C4622D',
-          padding: '48px',
-        }}
-      >
-        <div className="work-cta-flex" style={{ maxWidth: '1200px', margin: '0 auto' }}>
-          <div style={{ maxWidth: '700px' }}>
-            <h3
-              style={{
-                fontFamily: 'DM Sans, sans-serif',
-                fontWeight: 700,
-                fontSize: '21px',
-                color: '#1E1E1E',
-                marginBottom: '10px',
-              }}
-            >
-              Looking for a research leader who can drive impact?
-            </h3>
-            <p
-              style={{
-                fontFamily: 'Lora, serif',
-                fontSize: 'var(--font-size-base)',
-                color: '#1E1E1E',
-                opacity: 0.85,
-                lineHeight: '1.5',
-              }}
-            >
-              Let's talk about how I can help your team build better products through ethical research practices.
-            </p>
-          </div>
-          <Link
-            to="/hiring"
-            style={{
-              fontFamily: 'DM Sans, sans-serif',
-              fontWeight: 700,
-              fontSize: '15px',
-              color: '#FFFFFF',
-              backgroundColor: '#1E1E1E',
-              padding: '14px 32px',
-              borderRadius: '6px',
-              border: 'none',
-              cursor: 'pointer',
-              whiteSpace: 'nowrap',
-              textDecoration: 'none',
-              display: 'inline-block',
-            }}
-          >
-            Get in Touch →
-          </Link>
-        </div>
-      </section>
+      <MarketingCtaStrip
+        title="Looking for a research leader who can drive impact?"
+        body="Let's talk about how I can help your team build better products through ethical research practices."
+        cta={<Link to="/hiring" className="primary-cta-dark">Get in Touch →</Link>}
+      />
 
       <Footer />
     </div>

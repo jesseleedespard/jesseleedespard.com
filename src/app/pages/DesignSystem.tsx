@@ -20,6 +20,7 @@ import { Divider } from '../components/Divider';
 import { Hero } from '../components/Hero';
 import { Section } from '../components/Section';
 import { Navigation } from '../components/Navigation';
+import { Footer } from '../components/Footer';
 import { Link } from 'react-router';
 
 export default function DesignSystem() {
@@ -1687,6 +1688,8 @@ export default function DesignSystem() {
         {/* Post-Fix Accessibility Audit Report */}
         <AccessibilityAuditReport />
       </div>
+
+      <Footer />
     </div>
   );
 }

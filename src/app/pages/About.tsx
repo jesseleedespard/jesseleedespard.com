@@ -1,6 +1,7 @@
 import { useState, type ReactNode } from 'react';
 import { Navigation } from '../components/Navigation';
 import { Footer } from '../components/Footer';
+import { MarketingCtaStrip } from '../components/MarketingCtaStrip';
 import { Link } from 'react-router';
 
 function TestimonialCard({
@@ -117,14 +118,6 @@ export default function About() {
           padding: 80px 48px;
         }
         
-        .about-cta-flex {
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-          gap: 32px;
-          flex-wrap: wrap;
-        }
-
         .about-testimonials-grid {
           display: grid;
           grid-template-columns: 1fr 1fr 1fr;
@@ -259,10 +252,6 @@ export default function About() {
             padding: 48px 24px;
           }
           
-          .about-cta-flex {
-            flex-direction: column;
-            align-items: flex-start;
-          }
         }
       `}</style>
       {/* Hero Section */}
@@ -790,58 +779,11 @@ export default function About() {
       </section>
 
       {/* CTA Strip */}
-      <section
-        style={{
-          backgroundColor: 'var(--terra)',
-          padding: '48px',
-        }}
-      >
-        <div className="about-cta-flex" style={{ maxWidth: '1200px', margin: '0 auto' }}>
-          <div style={{ maxWidth: '700px' }}>
-            <h3
-              style={{
-                fontFamily: 'DM Sans, sans-serif',
-                fontWeight: 700,
-                fontSize: 'var(--font-size-xl)',
-                color: 'var(--charcoal)',
-                marginBottom: '10px',
-              }}
-            >
-              Ready to improve your research practice?
-            </h3>
-            <p
-              style={{
-                fontFamily: 'Lora, serif',
-                fontSize: 'var(--font-size-base)',
-                color: 'var(--charcoal)',
-                opacity: 0.85,
-                lineHeight: '1.5',
-              }}
-            >
-              Let's talk about how I can help your team make better decisions.
-            </p>
-          </div>
-          <Link
-            to="/hiring"
-            style={{
-              fontFamily: 'DM Sans, sans-serif',
-              fontWeight: 700,
-              fontSize: 'var(--font-size-sm)',
-              color: 'var(--white)',
-              backgroundColor: 'var(--charcoal)',
-              padding: '14px 32px',
-              borderRadius: 'var(--radius-sm)',
-              border: 'none',
-              cursor: 'pointer',
-              whiteSpace: 'nowrap',
-              textDecoration: 'none',
-              display: 'inline-block',
-            }}
-          >
-            Get in Touch →
-          </Link>
-        </div>
-      </section>
+      <MarketingCtaStrip
+        title="Ready to improve your research practice?"
+        body="Let's talk about how I can help your team make better decisions."
+        cta={<Link to="/hiring" className="primary-cta-dark">Get in Touch →</Link>}
+      />
 
       <Footer />
     </div>

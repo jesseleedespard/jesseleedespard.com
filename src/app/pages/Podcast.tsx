@@ -1,5 +1,6 @@
 import { Navigation } from '../components/Navigation';
 import { Footer } from '../components/Footer';
+import { MarketingCtaStrip } from '../components/MarketingCtaStrip';
 import { ComingSoonBadge } from '../components/ComingSoonBadge';
 import { Link } from 'react-router';
 
@@ -62,19 +63,6 @@ export default function Podcast() {
         }
         
         .primary-cta-gold:focus {
-          outline: none;
-          box-shadow: 0 0 0 3px #2C6E7F;
-        }
-        
-        .primary-cta-dark {
-          transition: all 0.2s ease;
-        }
-        
-        .primary-cta-dark:hover {
-          background-color: #333333;
-        }
-        
-        .primary-cta-dark:focus {
           outline: none;
           box-shadow: 0 0 0 3px #2C6E7F;
         }
@@ -820,58 +808,11 @@ export default function Podcast() {
       </section>
 
       {/* CTA Strip */}
-      <section
-        style={{
-          backgroundColor: '#C4622D',
-          padding: '48px',
-        }}
-      >
-        <div style={{ maxWidth: '1200px', margin: '0 auto', display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '32px', flexWrap: 'wrap' }}>
-          <div style={{ maxWidth: '700px' }}>
-            <h3
-              style={{
-                fontFamily: 'DM Sans, sans-serif',
-                fontWeight: 700,
-                fontSize: '21px',
-                color: '#1E1E1E',
-                marginBottom: '10px',
-              }}
-            >
-              Want to be a guest on the show?
-            </h3>
-            <p
-              style={{
-                fontFamily: 'Lora, serif',
-                fontSize: 'var(--font-size-base)',
-                color: '#1E1E1E',
-                opacity: 0.85,
-                lineHeight: '1.5',
-              }}
-            >
-              I'm looking for researchers, product leaders, and ethicists with stories to share.
-            </p>
-          </div>
-          <Link
-            to="/hiring"
-            style={{
-              fontFamily: 'DM Sans, sans-serif',
-              fontWeight: 700,
-              fontSize: '15px',
-              color: '#FFFFFF',
-              backgroundColor: '#1E1E1E',
-              padding: '14px 32px',
-              borderRadius: '6px',
-              border: 'none',
-              cursor: 'pointer',
-              whiteSpace: 'nowrap',
-              textDecoration: 'none',
-              display: 'inline-block',
-            }}
-          >
-            Get in Touch →
-          </Link>
-        </div>
-      </section>
+      <MarketingCtaStrip
+        title="Want to be a guest on the show?"
+        body="I'm looking for researchers, product leaders, and ethicists with stories to share."
+        cta={<Link to="/hiring" className="primary-cta-dark">Get in Touch →</Link>}
+      />
 
       <Footer />
     </div>

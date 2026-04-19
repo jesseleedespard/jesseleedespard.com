@@ -1,6 +1,7 @@
-import { useEffect } from 'react';
+import { Fragment, useEffect } from 'react';
 import { Link } from 'react-router';
 import { Footer } from '../components/Footer';
+import { MarketingCtaStrip } from '../components/MarketingCtaStrip';
 
 export default function CaseStudyProptech() {
   useEffect(() => {
@@ -9,9 +10,17 @@ export default function CaseStudyProptech() {
   }, []);
 
   return (
-    <div className="proptech-case-study-page">
-      <style>{`
-*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    <Fragment>
+      <div className="proptech-case-study-page">
+        <style>{`
+.proptech-case-study-page,
+.proptech-case-study-page *,
+.proptech-case-study-page *::before,
+.proptech-case-study-page *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 .proptech-case-study-page {
   --display: 'DM Sans', system-ui, sans-serif;
   --body:    'Lora', Georgia, serif;
@@ -125,12 +134,6 @@ html { scroll-behavior: smooth; }
 .pdf-link { display: inline-flex; align-items: center; gap: 8px; font-family: var(--display); font-size: 13.5px; font-weight: 700; color: var(--teal); text-decoration: none; border: 1px solid var(--teal); padding: 10px 20px; border-radius: 6px; margin-top: 28px; transition: background 0.2s; }
 .pdf-link:hover { background: var(--teal); color: var(--white); }
 
-/* CTA STRIP — Charcoal text on Terra — AA 5.4:1 ✓ */
-.cta-strip { background: var(--terra); padding: 48px; display: flex; justify-content: space-between; align-items: center; gap: 24px; margin-top: 72px; flex-wrap: wrap; box-sizing: border-box; }
-.cta-strip-left h3 { font-family: var(--display); font-size: 20px; font-weight: 700; color: var(--charcoal); margin-bottom: 8px; }
-.cta-strip-left a { font-family: var(--display); font-size: var(--font-size-sm); color: var(--charcoal); text-decoration: none; opacity: 0.7; }
-.cta-btn { background: var(--charcoal); color: var(--white); font-family: var(--display); font-weight: 700; font-size: var(--font-size-sm); padding: 13px 28px; border-radius: 6px; text-decoration: none; white-space: nowrap; flex-shrink: 0; display: inline-block; border: none; cursor: pointer; }
-
 @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
 .proptech-case-study-page .hero-inner > * { animation: fadeUp 0.55s ease both; }
 .proptech-case-study-page .hero-inner > *:nth-child(1) { animation-delay: 0.05s; }
@@ -139,7 +142,7 @@ html { scroll-behavior: smooth; }
 .proptech-case-study-page .hero-inner > *:nth-child(4) { animation-delay: 0.28s; }
 `}</style>
 
-      <header className="hero">
+        <header className="hero">
         <div className="hero-inner">
           <span className="hero-tag">Case Study · PropTech · AI Product Design</span>
           <h1>Ethical AI Research That Doubled Product-Market Fit for a PropTech Startup</h1>
@@ -505,17 +508,16 @@ html { scroll-behavior: smooth; }
         </div>
       </div>
 
-      <div className="cta-strip">
-        <div className="cta-strip-left">
-          <h3>Want to talk about what research could do for your team?</h3>
-          <a href="mailto:jesse@jesseleedespard.com">jesse@jesseleedespard.com</a>
-        </div>
-        <Link to="/hiring" className="cta-btn">
-          Hiring? →
-        </Link>
-      </div>
-
-      <Footer />
     </div>
+
+    <MarketingCtaStrip
+      title="Want to talk about what research could do for your team?"
+      body={<a href="mailto:jesse@jesseleedespard.com">jesse@jesseleedespard.com</a>}
+      cta={<Link to="/hiring" className="primary-cta-dark">Hiring? →</Link>}
+      style={{ marginTop: '72px' }}
+    />
+
+    <Footer />
+    </Fragment>
   );
 }

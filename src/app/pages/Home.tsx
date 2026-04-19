@@ -1,5 +1,6 @@
 import { Navigation } from '../components/Navigation';
 import { Footer } from '../components/Footer';
+import { MarketingCtaStrip } from '../components/MarketingCtaStrip';
 import { Link } from 'react-router';
 
 export default function Home() {
@@ -41,14 +42,6 @@ export default function Home() {
           padding: 80px 48px;
         }
         
-        .home-cta-flex {
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-          gap: 32px;
-          flex-wrap: wrap;
-        }
-        
         .home-section-title {
           font-size: var(--font-size-2xl);
         }
@@ -65,10 +58,6 @@ export default function Home() {
           font-size: var(--font-size-xl);
         }
         
-        .home-cta-title {
-          font-size: 21px;
-        }
-        
         .primary-cta-gold {
           transition: all 0.2s ease;
         }
@@ -78,19 +67,6 @@ export default function Home() {
         }
         
         .primary-cta-gold:focus {
-          outline: none;
-          box-shadow: 0 0 0 3px #2C6E7F;
-        }
-        
-        .primary-cta-dark {
-          transition: all 0.2s ease;
-        }
-        
-        .primary-cta-dark:hover {
-          background-color: #333333;
-        }
-        
-        .primary-cta-dark:focus {
           outline: none;
           box-shadow: 0 0 0 3px #2C6E7F;
         }
@@ -117,11 +93,6 @@ export default function Home() {
             padding: 48px 24px;
           }
           
-          .home-cta-flex {
-            flex-direction: column;
-            align-items: flex-start;
-          }
-          
           .home-section-title {
             font-size: var(--font-size-xl);
           }
@@ -138,9 +109,6 @@ export default function Home() {
             font-size: var(--font-size-lg);
           }
           
-          .home-cta-title {
-            font-size: var(--font-size-lg);
-          }
         }
       `}</style>
       {/* Hero Section */}
@@ -568,59 +536,11 @@ export default function Home() {
       </section>
 
       {/* CTA Strip */}
-      <section
-        style={{
-          backgroundColor: '#C4622D',
-          padding: '48px',
-        }}
-      >
-        <div className="home-cta-flex" style={{ maxWidth: '1200px', margin: '0 auto' }}>
-          <div style={{ maxWidth: '700px' }}>
-            <h3
-              className="home-cta-title"
-              style={{
-                fontFamily: 'DM Sans, sans-serif',
-                fontWeight: 700,
-                color: '#1E1E1E',
-                marginBottom: '8px',
-              }}
-            >
-              Looking to hire a UX Research leader?
-            </h3>
-            <p
-              style={{
-                fontFamily: 'Lora, serif',
-                fontSize: 'var(--font-size-base)',
-                color: '#1E1E1E',
-                opacity: 0.85,
-                lineHeight: '1.5',
-              }}
-            >
-              I build research practices that scale — from establishing frameworks to growing high-performing teams.
-            </p>
-          </div>
-          <Link
-            to="/work"
-            className="primary-cta-dark"
-            style={{
-              fontFamily: 'DM Sans, sans-serif',
-              fontWeight: 700,
-              fontSize: '15px',
-              color: '#FFFFFF',
-              backgroundColor: '#1E1E1E',
-              padding: '16px 32px',
-              borderRadius: '8px',
-              border: 'none',
-              cursor: 'pointer',
-              whiteSpace: 'nowrap',
-              textDecoration: 'none',
-              display: 'inline-block',
-            }}
-          >
-            View My Work →
-          </Link>
-        </div>
-      </section>
+      <MarketingCtaStrip
+        title="Looking to hire a UX Research leader?"
+        body="I build research practices that scale — from establishing frameworks to growing high-performing teams."
+        cta={<Link to="/work" className="primary-cta-dark">View My Work →</Link>}
+      />
 
       <Footer />
     </div>

@@ -1,6 +1,7 @@
-import { useEffect } from 'react';
+import { Fragment, useEffect } from 'react';
 import { Link } from 'react-router';
 import { Footer } from '../components/Footer';
+import { MarketingCtaStrip } from '../components/MarketingCtaStrip';
 
 export default function LeadershipResearchFunction() {
   useEffect(() => {
@@ -8,9 +9,17 @@ export default function LeadershipResearchFunction() {
   }, []);
 
   return (
-    <div className="leadership-research-function-page">
-      <style>{`
-*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    <Fragment>
+      <div className="leadership-research-function-page">
+        <style>{`
+.leadership-research-function-page,
+.leadership-research-function-page *,
+.leadership-research-function-page *::before,
+.leadership-research-function-page *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 .leadership-research-function-page {
   --display: 'DM Sans', system-ui, sans-serif;
@@ -248,14 +257,6 @@ html { scroll-behavior: smooth; }
 .stat-label { font-family: var(--display); font-size: 13px; font-weight: 700; color: var(--charcoal); margin-bottom: 8px; }
 .stat-desc { font-size: var(--font-size-sm); line-height: 1.6; color: var(--dark-gray); margin: 0; text-align: left; }
 
-.cta-strip { background: var(--terra); padding: 48px; display: flex; justify-content: space-between; align-items: center; gap: 24px; flex-wrap: wrap; box-sizing: border-box; margin-top: 0; }
-.leadership-research-function-page .cta-strip {
-  margin-top: clamp(48px, 7vw, 88px);
-}
-.cta-strip-left h3 { font-family: var(--display); font-size: 20px; font-weight: 700; color: var(--charcoal); margin-bottom: 8px; }
-.cta-strip-left a { font-family: var(--display); font-size: var(--font-size-sm); color: var(--charcoal); text-decoration: none; opacity: 0.7; }
-.cta-btn { background: var(--charcoal); color: var(--white); font-family: var(--display); font-weight: 700; font-size: var(--font-size-sm); padding: 13px 28px; border-radius: 6px; text-decoration: none; white-space: nowrap; flex-shrink: 0; display: inline-block; border: none; cursor: pointer; }
-
 /* ═══════════════════════════════════════════════════════════
    MOBILE: 375px target, 8pt grid, centered text
    ═══════════════════════════════════════════════════════════ */
@@ -356,17 +357,6 @@ html { scroll-behavior: smooth; }
   .leadership-research-function-page .lead-intro { padding: 32px 24px 0 !important; text-align: center !important; }
   .leadership-research-function-page .lead-intro p { text-align: center !important; }
 
-  .leadership-research-function-page .cta-strip {
-    flex-direction: column !important;
-    padding: 48px 24px !important;
-    text-align: center !important;
-    gap: 24px !important;
-    margin-top: clamp(40px, 10vw, 64px) !important;
-  }
-  .leadership-research-function-page .cta-strip-left h3 { font-size: var(--font-size-lg) !important; text-align: center !important; }
-  .leadership-research-function-page .cta-strip-left a { text-align: center !important; display: block !important; }
-  .leadership-research-function-page .cta-btn { display: block !important; text-align: center !important; width: 100% !important; }
-
   .leadership-research-function-page .framing-strip { text-align: left !important; }
   .leadership-research-function-page .legend { justify-content: center !important; }
   .leadership-research-function-page .post-title { text-align: left !important; }
@@ -389,9 +379,6 @@ html { scroll-behavior: smooth; }
   .leadership-research-function-page .stats-row.three { grid-template-columns: 1fr !important; }
   .leadership-research-function-page .stats-row.two { grid-template-columns: 1fr !important; }
   .leadership-research-function-page .stat-row { grid-template-columns: 1fr !important; }
-
-  .leadership-research-function-page .cta-strip { padding: 40px 16px !important; }
-  .leadership-research-function-page .cta-btn { padding: 16px !important; }
 
   .leadership-research-function-page .tabs-wrapper { padding: 0 !important; }
   .leadership-research-function-page .tab { padding: 16px 12px !important; font-size: var(--font-size-xs) !important; }
@@ -775,17 +762,16 @@ html { scroll-behavior: smooth; }
         </div>
       </div>
 
-      <div className="cta-strip">
-        <div className="cta-strip-left">
-          <h3>Want to talk about what research could do for your team?</h3>
-          <a href="mailto:jesse@jesseleedespard.com">jesse@jesseleedespard.com</a>
-        </div>
-        <Link to="/hiring" className="cta-btn">
-          Hiring? →
-        </Link>
-      </div>
-
-      <Footer />
     </div>
+
+    <MarketingCtaStrip
+      title="Want to talk about what research could do for your team?"
+      body={<a href="mailto:jesse@jesseleedespard.com">jesse@jesseleedespard.com</a>}
+      cta={<Link to="/hiring" className="primary-cta-dark">Hiring? →</Link>}
+      style={{ marginTop: 'clamp(48px, 7vw, 88px)' }}
+    />
+
+    <Footer />
+    </Fragment>
   );
 }
