@@ -13,7 +13,7 @@ export default function Hiring() {
         .hiring-hero-title {
           font-family: 'DM Sans', sans-serif;
           font-weight: 700;
-          font-size: 52px;
+          font-size: var(--font-size-3xl);
           color: var(--white);
           line-height: 1.15;
           margin-bottom: 24px;
@@ -26,7 +26,6 @@ export default function Hiring() {
           font-size: var(--font-size-lg);
           color: color-mix(in srgb, var(--white) 65%, transparent);
           margin-bottom: 24px;
-          max-width: 700px;
           line-height: 1.6;
         }
         
@@ -62,7 +61,7 @@ export default function Hiring() {
         .hiring-contact-email {
           font-family: 'DM Sans', sans-serif;
           font-weight: 700;
-          font-size: 20px;
+          font-size: var(--font-size-xl);
           color: var(--white);
           text-decoration: none;
           cursor: pointer;
@@ -145,13 +144,13 @@ export default function Hiring() {
               border: '1px solid var(--light-gray)',
               borderLeft: '4px solid var(--teal-dark)',
               padding: '40px',
-              borderRadius: '8px',
+              borderRadius: 'var(--radius-md)',
             }}
           >
             <p
               style={{
                 fontFamily: 'Lora, serif',
-                fontSize: '20px',
+                fontSize: 'var(--font-size-xl)',
                 color: 'var(--charcoal)',
                 lineHeight: '1.65',
                 fontStyle: 'italic',
@@ -192,7 +191,7 @@ export default function Hiring() {
                   width: '80px',
                   flexShrink: 0,
                   backgroundColor: 'var(--charcoal)',
-                  borderRadius: '8px',
+                  borderRadius: 'var(--radius-md)',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
@@ -227,7 +226,7 @@ export default function Hiring() {
                 <p
                   style={{
                     fontFamily: 'Lora, serif',
-                    fontSize: '17px',
+                    fontSize: 'var(--font-size-base)',
                     color: 'var(--dark-gray)',
                     lineHeight: '1.6',
                   }}
@@ -245,7 +244,7 @@ export default function Hiring() {
                   width: '80px',
                   flexShrink: 0,
                   backgroundColor: 'var(--charcoal)',
-                  borderRadius: '8px',
+                  borderRadius: 'var(--radius-md)',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
@@ -280,7 +279,7 @@ export default function Hiring() {
                 <p
                   style={{
                     fontFamily: 'Lora, serif',
-                    fontSize: '17px',
+                    fontSize: 'var(--font-size-base)',
                     color: 'var(--dark-gray)',
                     lineHeight: '1.6',
                   }}
@@ -298,7 +297,7 @@ export default function Hiring() {
                   width: '80px',
                   flexShrink: 0,
                   backgroundColor: 'var(--charcoal)',
-                  borderRadius: '8px',
+                  borderRadius: 'var(--radius-md)',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
@@ -333,7 +332,7 @@ export default function Hiring() {
                 <p
                   style={{
                     fontFamily: 'Lora, serif',
-                    fontSize: '17px',
+                    fontSize: 'var(--font-size-base)',
                     color: 'var(--dark-gray)',
                     lineHeight: '1.6',
                   }}
@@ -368,14 +367,14 @@ export default function Hiring() {
               style={{
                 backgroundColor: 'var(--white)',
                 border: '1px solid var(--light-gray)',
-                borderRadius: '8px',
+                borderRadius: 'var(--radius-md)',
                 padding: '32px',
               }}
             >
               <p
                 style={{
                   fontFamily: 'Lora, serif',
-                  fontSize: '17px',
+                  fontSize: 'var(--font-size-base)',
                   color: 'var(--dark-gray)',
                   lineHeight: '1.6',
                   margin: 0,
@@ -388,14 +387,14 @@ export default function Hiring() {
               style={{
                 backgroundColor: 'var(--white)',
                 border: '1px solid var(--light-gray)',
-                borderRadius: '8px',
+                borderRadius: 'var(--radius-md)',
                 padding: '32px',
               }}
             >
               <p
                 style={{
                   fontFamily: 'Lora, serif',
-                  fontSize: '17px',
+                  fontSize: 'var(--font-size-base)',
                   color: 'var(--dark-gray)',
                   lineHeight: '1.6',
                   margin: 0,
@@ -408,14 +407,14 @@ export default function Hiring() {
               style={{
                 backgroundColor: 'var(--white)',
                 border: '1px solid var(--light-gray)',
-                borderRadius: '8px',
+                borderRadius: 'var(--radius-md)',
                 padding: '32px',
               }}
             >
               <p
                 style={{
                   fontFamily: 'Lora, serif',
-                  fontSize: '17px',
+                  fontSize: 'var(--font-size-base)',
                   color: 'var(--dark-gray)',
                   lineHeight: '1.6',
                   margin: 0,
@@ -428,14 +427,14 @@ export default function Hiring() {
               style={{
                 backgroundColor: 'var(--white)',
                 border: '1px solid var(--light-gray)',
-                borderRadius: '8px',
+                borderRadius: 'var(--radius-md)',
                 padding: '32px',
               }}
             >
               <p
                 style={{
                   fontFamily: 'Lora, serif',
-                  fontSize: '17px',
+                  fontSize: 'var(--font-size-base)',
                   color: 'var(--dark-gray)',
                   lineHeight: '1.6',
                   margin: 0,
@@ -474,7 +473,7 @@ export default function Hiring() {
                 style={{
                   fontFamily: 'DM Sans, sans-serif',
                   fontWeight: 700,
-                  fontSize: '56px',
+                  fontSize: 'var(--font-size-3xl)',
                   color: 'var(--gold)',
                   marginBottom: '20px',
                 }}
@@ -485,7 +484,7 @@ export default function Hiring() {
                 style={{
                   fontFamily: 'DM Sans, sans-serif',
                   fontWeight: 700,
-                  fontSize: '19px',
+                  fontSize: 'var(--font-size-lg)',
                   color: 'var(--white)',
                   marginBottom: '12px',
                 }}
@@ -495,7 +494,7 @@ export default function Hiring() {
               <p
                 style={{
                   fontFamily: 'Lora, serif',
-                  fontSize: '15px',
+                  fontSize: 'var(--font-size-sm)',
                   color: 'var(--white)',
                   lineHeight: '1.6',
                 }}
@@ -510,7 +509,7 @@ export default function Hiring() {
                 style={{
                   fontFamily: 'DM Sans, sans-serif',
                   fontWeight: 700,
-                  fontSize: '56px',
+                  fontSize: 'var(--font-size-3xl)',
                   color: 'var(--gold)',
                   marginBottom: '20px',
                 }}
@@ -521,7 +520,7 @@ export default function Hiring() {
                 style={{
                   fontFamily: 'DM Sans, sans-serif',
                   fontWeight: 700,
-                  fontSize: '19px',
+                  fontSize: 'var(--font-size-lg)',
                   color: 'var(--white)',
                   marginBottom: '12px',
                 }}
@@ -531,7 +530,7 @@ export default function Hiring() {
               <p
                 style={{
                   fontFamily: 'Lora, serif',
-                  fontSize: '15px',
+                  fontSize: 'var(--font-size-sm)',
                   color: 'var(--white)',
                   lineHeight: '1.6',
                 }}
@@ -546,7 +545,7 @@ export default function Hiring() {
                 style={{
                   fontFamily: 'DM Sans, sans-serif',
                   fontWeight: 700,
-                  fontSize: '56px',
+                  fontSize: 'var(--font-size-3xl)',
                   color: 'var(--gold)',
                   marginBottom: '20px',
                 }}
@@ -557,7 +556,7 @@ export default function Hiring() {
                 style={{
                   fontFamily: 'DM Sans, sans-serif',
                   fontWeight: 700,
-                  fontSize: '19px',
+                  fontSize: 'var(--font-size-lg)',
                   color: 'var(--white)',
                   marginBottom: '12px',
                 }}
@@ -567,7 +566,7 @@ export default function Hiring() {
               <p
                 style={{
                   fontFamily: 'Lora, serif',
-                  fontSize: '15px',
+                  fontSize: 'var(--font-size-sm)',
                   color: 'var(--white)',
                   lineHeight: '1.6',
                 }}
@@ -597,29 +596,27 @@ export default function Hiring() {
             TESTIMONIALS
           </div>
 
-          {/* TODO: replace with real testimonials */}
           <div style={{ display: 'flex', flexDirection: 'column', gap: '32px' }}>
-            {/* Testimonial 1 */}
             <div
               style={{
                 backgroundColor: 'var(--white)',
                 border: '1px solid var(--light-gray)',
                 borderLeft: '4px solid var(--teal-dark)',
-                borderRadius: '8px',
+                borderRadius: 'var(--radius-md)',
                 padding: '40px',
               }}
             >
               <p
                 style={{
                   fontFamily: 'Lora, serif',
-                  fontSize: '17px',
+                  fontSize: 'var(--font-size-base)',
                   color: 'var(--dark-gray)',
                   lineHeight: '1.6',
                   marginBottom: '24px',
                   fontStyle: 'italic',
                 }}
               >
-                "Placeholder testimonial text — client quote about our work together will go here."
+                "As her manager, I can only sing her praises. Jesse is a delight to work with not only because she's kind and intellectually generous, but because she's extremely direct and laser focused on the 'why' behind not only her work, but the mission of the entire company. She understands the friction between business and user needs and delivers both the science and the candor that leadership needs to make decisions at the highest level for the brand and company. Even before she took on her role as Lead, she generously mentored members of the UX team and organized user discovery coaching across all of Product Management. She's always brushing up on the latest from leaders in her space and beyond. Her academic background never fails to come in handy when lofty ideas or risky decisions warrant closer inspection through research. I could trust Jesse with any project, any feedback, and any of the hard truths that come with directing UX in a revenue focused business."
               </p>
               <div
                 style={{
@@ -629,59 +626,16 @@ export default function Hiring() {
                   fontWeight: 700,
                 }}
               >
-                Name
+                Jules Wood
               </div>
               <div
                 style={{
                   fontFamily: 'DM Sans, sans-serif',
-                  fontSize: '13px',
+                  fontSize: 'var(--font-size-xs)',
                   color: 'var(--gray)',
                 }}
               >
-                Title, Organization
-              </div>
-            </div>
-
-            {/* Testimonial 2 */}
-            <div
-              style={{
-                backgroundColor: 'var(--white)',
-                border: '1px solid var(--light-gray)',
-                borderLeft: '4px solid var(--teal-dark)',
-                borderRadius: '8px',
-                padding: '40px',
-              }}
-            >
-              <p
-                style={{
-                  fontFamily: 'Lora, serif',
-                  fontSize: '17px',
-                  color: 'var(--dark-gray)',
-                  lineHeight: '1.6',
-                  marginBottom: '24px',
-                  fontStyle: 'italic',
-                }}
-              >
-                "Second placeholder testimonial — another client quote will go here when ready."
-              </p>
-              <div
-                style={{
-                  fontFamily: 'DM Sans, sans-serif',
-                  fontSize: 'var(--font-size-sm)',
-                  color: 'var(--charcoal)',
-                  fontWeight: 700,
-                }}
-              >
-                Name
-              </div>
-              <div
-                style={{
-                  fontFamily: 'DM Sans, sans-serif',
-                  fontSize: '13px',
-                  color: 'var(--gray)',
-                }}
-              >
-                Title, Organization
+                UX Strategist
               </div>
             </div>
           </div>
@@ -708,7 +662,7 @@ export default function Hiring() {
             <div
               style={{
                 backgroundColor: 'var(--charcoal)',
-                borderRadius: '8px',
+                borderRadius: 'var(--radius-md)',
                 padding: '40px',
               }}
             >
@@ -726,7 +680,7 @@ export default function Hiring() {
               <p
                 style={{
                   fontFamily: 'Lora, serif',
-                  fontSize: '17px',
+                  fontSize: 'var(--font-size-base)',
                   color: 'var(--white)',
                   lineHeight: '1.6',
                   marginBottom: '28px',
@@ -743,11 +697,11 @@ export default function Hiring() {
                     display: 'inline-block',
                     fontFamily: 'DM Sans, sans-serif',
                     fontWeight: 700,
-                    fontSize: '15px',
+                    fontSize: 'var(--font-size-sm)',
                     color: 'var(--charcoal)',
                     backgroundColor: 'var(--gold)',
                     padding: '14px 32px',
-                    borderRadius: '6px',
+                    borderRadius: 'var(--radius-sm)',
                     textDecoration: 'none',
                     whiteSpace: 'nowrap',
                   }}
@@ -760,7 +714,7 @@ export default function Hiring() {
             <div
               style={{
                 backgroundColor: 'var(--charcoal)',
-                borderRadius: '8px',
+                borderRadius: 'var(--radius-md)',
                 padding: '40px',
               }}
             >
@@ -778,7 +732,7 @@ export default function Hiring() {
               <p
                 style={{
                   fontFamily: 'Lora, serif',
-                  fontSize: '17px',
+                  fontSize: 'var(--font-size-base)',
                   color: 'var(--white)',
                   lineHeight: '1.6',
                   marginBottom: '16px',

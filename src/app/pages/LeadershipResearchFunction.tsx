@@ -38,7 +38,7 @@ html { scroll-behavior: smooth; }
 .hero-tag { font-family: var(--display); display: inline-block; font-size: var(--font-size-xs); font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); margin-bottom: 24px; border: 1px solid rgba(212,168,67,0.4); padding: 8px 16px; border-radius: 4px; }
 .hero h1 { font-family: var(--display); font-size: clamp(28px, 4vw, 44px); font-weight: 700; color: var(--white); line-height: 1.18; letter-spacing: -0.4px; margin-bottom: 8px; }
 .hero h1 em { color: var(--gold); font-style: normal; }
-.hero-sub { font-family: var(--body); font-size: 17px; color: rgba(255,255,255,0.6); line-height: 1.7; max-width: 580px; margin-bottom: 36px; font-style: italic; }
+.hero-sub { font-family: var(--body); font-size: 17px; color: rgba(255,255,255,0.6); line-height: 1.7; margin-bottom: 36px; font-style: italic; }
 .meta-strip { display: flex; flex-wrap: wrap; gap: 0; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 24px; }
 .meta-item { padding-right: 28px; margin-right: 28px; border-right: 1px solid rgba(255,255,255,0.1); }
 .meta-item:last-child { border-right: none; margin-right: 0; }

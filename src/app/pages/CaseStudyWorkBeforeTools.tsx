@@ -81,7 +81,6 @@ html { scroll-behavior: smooth; }
   font-size: var(--font-size-lg);
   color: rgba(255,255,255,0.6);
   line-height: 1.7;
-  max-width: 600px;
   margin-bottom: 40px;
   font-style: italic;
 }

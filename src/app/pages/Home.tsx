@@ -27,7 +27,6 @@ export default function Home() {
           font-size: var(--font-size-lg);
           color: rgba(255, 255, 255, 0.65);
           margin-bottom: 40px;
-          max-width: 700px;
           line-height: 1.6;
         }
         
