@@ -241,7 +241,7 @@ html { scroll-behavior: smooth; }
             Broken Onboarding Flow
           </h1>
           <p className="hero-sub">
-            A mid-sized healthcare technology company had a broken onboarding process with a 37-question form that took longer to complete than the phone call it was meant to prepare for. This study fixed that problem.
+            A mid-sized healthcare technology company had a broken onboarding process with a 37-question form that took longer to complete than the phone call it was meant to prepare for. Research cut that call in half and reshaped how Customer Success launched every new client.
           </p>
           <div className="meta-strip">
             <div className="meta-item">
