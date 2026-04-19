@@ -5,7 +5,7 @@ import { Footer } from '../components/Footer';
 export default function CaseStudyHealthtech() {
   useEffect(() => {
     document.title =
-      'From 90 Minutes to 45: Redesigning a Broken Onboarding Flow: Jesse Lee Despard';
+      'From 90 Minutes to 45: Redesigning a Broken Onboarding Flow · Jesse Lee Despard';
   }, []);
 
   return (
@@ -535,9 +535,6 @@ html { scroll-behavior: smooth; }
           <h2>Numbers that changed how the team worked.</h2>
           <p>
             The redesigned form reduced completion friction, improved Customer Success team efficiency, and was validated through an A/B test that measured onboarding call duration before and after the change.
-          </p>
-          <p>
-            The A/B test measured onboarding call duration directly: the redesigned form reduced the 90-minute call to 45 minutes on average.
           </p>
 
           <div className="stats-callout">
