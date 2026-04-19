@@ -25,7 +25,7 @@ html { scroll-behavior: smooth; }
 .hero { background: var(--charcoal); padding: 80px 48px 72px; position: relative; overflow: hidden; }
 .hero::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 4px; background: linear-gradient(to right, var(--teal), var(--gold), transparent); }
 .hero-inner { max-width: var(--max); margin: 0 auto; }
-.hero-tag { font-family: var(--display); display: inline-block; font-size: var(--font-size-xs); font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); margin-bottom: 24px; border: 1px solid rgba(212,168,67,0.4); padding: 8px 16px; border-radius: 4px; }
+.hero-tag { font-family: var(--display); display: inline-block; font-size: var(--font-size-xs); font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); margin-bottom: 24px; border: 1px solid rgba(212,168,67,0.4); padding: 8px 16px; border-radius: var(--radius-sm); }
 .hero h1 { font-family: var(--display); font-size: clamp(var(--font-size-2xl), 4.5vw, var(--font-size-3xl)); font-weight: 700; color: var(--white); line-height: 1.18; letter-spacing: -0.4px; margin-bottom: 14px; }
 .hero-sub { font-family: var(--body); font-size: var(--font-size-base); color: rgba(255,255,255,0.6); line-height: 1.7; max-width: 100%; margin-bottom: 36px; font-style: italic; }
 .meta-strip { display: flex; flex-wrap: wrap; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 24px; gap: 0; }
@@ -45,13 +45,13 @@ html { scroll-behavior: smooth; }
 
 /* THEME / NUMBERED CARDS */
 .theme-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-top: 24px; }
-.theme-card { background: var(--white); border: 1px solid var(--light-gray); border-radius: 6px; padding: 16px 18px; display: flex; gap: 12px; align-items: flex-start; }
+.theme-card { background: var(--white); border: 1px solid var(--light-gray); border-radius: var(--radius-sm); padding: 16px 18px; display: flex; gap: 12px; align-items: flex-start; }
 .theme-num { font-family: var(--display); font-size: var(--font-size-lg); font-weight: 700; color: var(--teal); min-width: 32px; }
 .theme-content h3 { font-family: var(--display); font-size: var(--font-size-sm); font-weight: 700; color: var(--charcoal); margin-bottom: 4px; }
 .theme-content p { font-size: var(--font-size-sm); line-height: 1.7; color: var(--dark-gray); margin: 0; }
 
 /* STATS ROW */
-.stats-callout { background: var(--charcoal); border-radius: 8px; padding: 36px 40px; margin-top: 24px; }
+.stats-callout { background: var(--charcoal); border-radius: var(--radius-md); padding: 36px 40px; margin-top: 24px; }
 .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; align-items: center; }
 .stat-item { text-align: center; padding: 24px 16px; border-right: 1px solid rgba(255,255,255,0.12); }
 .stat-item:last-child { border-right: none; }
@@ -62,7 +62,7 @@ html { scroll-behavior: smooth; }
 .lesson {
   background: var(--white);
   border: 1px solid var(--light-gray);
-  border-radius: 6px;
+  border-radius: var(--radius-sm);
   padding: 20px 24px;
 }
 .lesson-num {
@@ -79,7 +79,7 @@ html { scroll-behavior: smooth; }
 .cta-strip { background: var(--terra); padding: 48px; display: flex; align-items: center; justify-content: space-between; gap: 32px; flex-wrap: wrap; box-sizing: border-box; }
 .cta-strip-left h3 { font-family: var(--display); font-size: 21px; font-weight: 700; color: var(--charcoal); margin-bottom: 8px; }
 .cta-strip-left a { color: var(--charcoal); font-family: var(--body); }
-.cta-btn { font-family: var(--display); font-weight: 700; font-size: 15px; color: var(--white); background: var(--charcoal); padding: 14px 32px; border-radius: 6px; text-decoration: none; display: inline-block; border: none; cursor: pointer; }
+.cta-btn { font-family: var(--display); font-weight: 700; font-size: 15px; color: var(--white); background: var(--charcoal); padding: 14px 32px; border-radius: var(--radius-sm); text-decoration: none; display: inline-block; border: none; cursor: pointer; }
 
 /* MOBILE: 375px target, 8pt grid, centered text */
 @media (max-width: 768px) {
@@ -420,7 +420,7 @@ html { scroll-behavior: smooth; }
               <img
                 src="/healthtech_cardsort_before.jpg"
                 alt="Before card sort, with all 37 questions spread across the whiteboard"
-                style={{ width: '100%', borderRadius: '6px', border: '1px solid var(--light-gray)' }}
+                style={{ width: '100%', borderRadius: 'var(--radius-sm)', border: '1px solid var(--light-gray)' }}
               />
               <p
                 style={{
@@ -439,7 +439,7 @@ html { scroll-behavior: smooth; }
               <img
                 src="/healthtech_cardsort_after.jpg"
                 alt="After card sort, with questions reorganized and removed questions separated"
-                style={{ width: '100%', borderRadius: '6px', border: '1px solid var(--light-gray)' }}
+                style={{ width: '100%', borderRadius: 'var(--radius-sm)', border: '1px solid var(--light-gray)' }}
               />
               <p
                 style={{
@@ -460,7 +460,7 @@ html { scroll-behavior: smooth; }
             <img
               src="/healthtech_notes.jpg"
               alt="Handwritten research notes documenting participant feedback on each question"
-              style={{ width: '100%', borderRadius: '6px', border: '1px solid var(--light-gray)' }}
+              style={{ width: '100%', borderRadius: 'var(--radius-sm)', border: '1px solid var(--light-gray)' }}
             />
             <p
               style={{
@@ -588,7 +588,7 @@ html { scroll-behavior: smooth; }
                 <img
                   src="/healthtech_mockup1.png"
                   alt="Wireframe mockup showing merged questions with checkbox interface"
-                  style={{ width: '100%', borderRadius: '6px', border: '1px solid var(--light-gray)', display: 'block' }}
+                  style={{ width: '100%', borderRadius: 'var(--radius-sm)', border: '1px solid var(--light-gray)', display: 'block' }}
                 />
                 <div
                   style={{
@@ -619,7 +619,7 @@ html { scroll-behavior: smooth; }
                 <img
                   src="/healthtech_mockup2.png"
                   alt="Wireframe mockup showing redesigned insurance question with clearer structure"
-                  style={{ width: '100%', borderRadius: '6px', border: '1px solid var(--light-gray)', display: 'block' }}
+                  style={{ width: '100%', borderRadius: 'var(--radius-sm)', border: '1px solid var(--light-gray)', display: 'block' }}
                 />
                 <div
                   style={{
