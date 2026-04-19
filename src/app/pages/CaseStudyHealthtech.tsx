@@ -26,7 +26,7 @@ html { scroll-behavior: smooth; }
 .hero::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 4px; background: linear-gradient(to right, var(--teal), var(--gold), transparent); }
 .hero-inner { max-width: var(--max); margin: 0 auto; }
 .hero-tag { font-family: var(--display); display: inline-block; font-size: var(--font-size-xs); font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); margin-bottom: 24px; border: 1px solid rgba(212,168,67,0.4); padding: 8px 16px; border-radius: var(--radius-sm); }
-.hero h1 { font-family: var(--display); font-size: clamp(var(--font-size-2xl), 4.5vw, var(--font-size-3xl)); font-weight: 700; color: var(--white); line-height: 1.18; letter-spacing: -0.4px; margin-bottom: 14px; }
+.hero h1 { font-family: var(--display); font-size: clamp(var(--font-size-2xl), 4.5vw, var(--font-size-3xl)); font-weight: 700; color: var(--white); line-height: 1.18; letter-spacing: -0.4px; margin-bottom: 14px; text-wrap: balance; }
 .hero-sub { font-family: var(--body); font-size: var(--font-size-base); color: rgba(255,255,255,0.6); line-height: 1.7; margin-bottom: 36px; font-style: italic; }
 .meta-strip { display: flex; flex-wrap: wrap; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 24px; gap: 0; }
 .meta-item { padding-right: 24px; margin-right: 24px; border-right: 1px solid rgba(255,255,255,0.1); }
@@ -236,9 +236,7 @@ html { scroll-behavior: smooth; }
         <div className="hero-inner">
           <span className="hero-tag">Case Study · HealthTech · UX Research</span>
           <h1>
-            From 90 Minutes to 45: Redesigning a
-            <br />
-            Broken Onboarding Flow
+            From 90 Minutes to 45: Redesigning a Broken Onboarding Flow
           </h1>
           <p className="hero-sub">
             A mid-sized healthcare technology company had a broken onboarding process with a 37-question form that took longer to complete than the phone call it was meant to prepare for. Research cut that call in half and reshaped how Customer Success launched every new client.

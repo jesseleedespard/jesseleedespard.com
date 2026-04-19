@@ -7,18 +7,17 @@ function TestimonialCard({
   id,
   name,
   role,
-  expandedId,
-  onExpand,
+  isExpanded,
+  onToggle,
   children,
 }: {
   id: string;
   name: string;
   role: string;
-  expandedId: string | null;
-  onExpand: (id: string | null) => void;
+  isExpanded: boolean;
+  onToggle: (id: string) => void;
   children: ReactNode;
 }) {
-  const isExpanded = expandedId === id;
   return (
     <div className="about-testimonial-card">
       <div className="about-testimonial-head">
@@ -34,7 +33,7 @@ function TestimonialCard({
         type="button"
         className="about-testimonial-toggle"
         aria-expanded={isExpanded}
-        onClick={() => onExpand(isExpanded ? null : id)}
+        onClick={() => onToggle(id)}
       >
         {isExpanded ? 'Read less' : 'Read more'}
       </button>
@@ -43,7 +42,14 @@ function TestimonialCard({
 }
 
 export default function About() {
-  const [expandedTestimonial, setExpandedTestimonial] = useState<string | null>(null);
+  const [expandedTestimonials, setExpandedTestimonials] = useState<Record<string, boolean>>({});
+
+  const handleTestimonialToggle = (id: string) => {
+    setExpandedTestimonials((prev) => ({
+      ...prev,
+      [id]: !prev[id],
+    }));
+  };
   return (
     <div className="min-h-screen" style={{ backgroundColor: 'var(--white)' }}>
       <style>{`
@@ -121,7 +127,7 @@ export default function About() {
 
         .about-testimonials-grid {
           display: grid;
-          grid-template-columns: 1fr;
+          grid-template-columns: 1fr 1fr 1fr;
           gap: 32px;
           align-items: start;
         }
@@ -244,6 +250,10 @@ export default function About() {
             grid-template-columns: 1fr;
             gap: 24px;
           }
+
+          .about-testimonials-grid {
+            grid-template-columns: 1fr;
+          }
           
           .about-section-padding {
             padding: 48px 24px;
@@ -313,7 +323,7 @@ export default function About() {
           <div
             style={{
               fontFamily: 'Lora, serif',
-              fontSize: '17px',
+              fontSize: 'var(--font-size-base)',
               color: 'var(--dark-gray)',
               lineHeight: '1.7',
             }}
@@ -406,7 +416,7 @@ export default function About() {
                 style={{
                   fontFamily: 'DM Sans, sans-serif',
                   fontWeight: 700,
-                  fontSize: '19px',
+                  fontSize: 'var(--font-size-lg)',
                   color: 'var(--charcoal)',
                   marginBottom: '12px',
                 }}
@@ -416,7 +426,7 @@ export default function About() {
               <p
                 style={{
                   fontFamily: 'Lora, serif',
-                  fontSize: '15px',
+                  fontSize: 'var(--font-size-sm)',
                   color: 'var(--dark-gray)',
                   lineHeight: '1.6',
                 }}
@@ -442,7 +452,7 @@ export default function About() {
                 style={{
                   fontFamily: 'DM Sans, sans-serif',
                   fontWeight: 700,
-                  fontSize: '19px',
+                  fontSize: 'var(--font-size-lg)',
                   color: 'var(--charcoal)',
                   marginBottom: '12px',
                 }}
@@ -452,7 +462,7 @@ export default function About() {
               <p
                 style={{
                   fontFamily: 'Lora, serif',
-                  fontSize: '15px',
+                  fontSize: 'var(--font-size-sm)',
                   color: 'var(--dark-gray)',
                   lineHeight: '1.6',
                 }}
@@ -478,7 +488,7 @@ export default function About() {
                 style={{
                   fontFamily: 'DM Sans, sans-serif',
                   fontWeight: 700,
-                  fontSize: '19px',
+                  fontSize: 'var(--font-size-lg)',
                   color: 'var(--charcoal)',
                   marginBottom: '12px',
                 }}
@@ -488,7 +498,7 @@ export default function About() {
               <p
                 style={{
                   fontFamily: 'Lora, serif',
-                  fontSize: '15px',
+                  fontSize: 'var(--font-size-sm)',
                   color: 'var(--dark-gray)',
                   lineHeight: '1.6',
                 }}
@@ -525,7 +535,7 @@ export default function About() {
               style={{
                 backgroundColor: 'var(--cream)',
                 border: '1px solid var(--light-gray)',
-                borderRadius: '8px',
+                borderRadius: 'var(--radius-md)',
                 padding: '32px',
               }}
             >
@@ -546,7 +556,7 @@ export default function About() {
                 style={{
                   fontFamily: 'DM Sans, sans-serif',
                   fontWeight: 700,
-                  fontSize: '19px',
+                  fontSize: 'var(--font-size-lg)',
                   color: 'var(--charcoal)',
                   marginBottom: '12px',
                 }}
@@ -556,7 +566,7 @@ export default function About() {
               <p
                 style={{
                   fontFamily: 'Lora, serif',
-                  fontSize: '15px',
+                  fontSize: 'var(--font-size-sm)',
                   color: 'var(--dark-gray)',
                   lineHeight: '1.6',
                   marginBottom: '16px',
@@ -567,7 +577,7 @@ export default function About() {
               <div
                 style={{
                   fontFamily: 'DM Sans, sans-serif',
-                  fontSize: '13px',
+                  fontSize: 'var(--font-size-xs)',
                   color: 'var(--gray)',
                 }}
               >
@@ -580,7 +590,7 @@ export default function About() {
               style={{
                 backgroundColor: 'var(--cream)',
                 border: '1px solid var(--light-gray)',
-                borderRadius: '8px',
+                borderRadius: 'var(--radius-md)',
                 padding: '32px',
               }}
             >
@@ -601,7 +611,7 @@ export default function About() {
                 style={{
                   fontFamily: 'DM Sans, sans-serif',
                   fontWeight: 700,
-                  fontSize: '19px',
+                  fontSize: 'var(--font-size-lg)',
                   color: 'var(--charcoal)',
                   marginBottom: '12px',
                 }}
@@ -611,7 +621,7 @@ export default function About() {
               <p
                 style={{
                   fontFamily: 'Lora, serif',
-                  fontSize: '15px',
+                  fontSize: 'var(--font-size-sm)',
                   color: 'var(--dark-gray)',
                   lineHeight: '1.6',
                   marginBottom: '16px',
@@ -622,7 +632,7 @@ export default function About() {
               <div
                 style={{
                   fontFamily: 'DM Sans, sans-serif',
-                  fontSize: '13px',
+                  fontSize: 'var(--font-size-xs)',
                   color: 'var(--gray)',
                 }}
               >
@@ -635,7 +645,7 @@ export default function About() {
               style={{
                 backgroundColor: 'var(--cream)',
                 border: '1px solid var(--light-gray)',
-                borderRadius: '8px',
+                borderRadius: 'var(--radius-md)',
                 padding: '32px',
               }}
             >
@@ -656,7 +666,7 @@ export default function About() {
                 style={{
                   fontFamily: 'DM Sans, sans-serif',
                   fontWeight: 700,
-                  fontSize: '19px',
+                  fontSize: 'var(--font-size-lg)',
                   color: 'var(--charcoal)',
                   marginBottom: '12px',
                 }}
@@ -666,7 +676,7 @@ export default function About() {
               <p
                 style={{
                   fontFamily: 'Lora, serif',
-                  fontSize: '15px',
+                  fontSize: 'var(--font-size-sm)',
                   color: 'var(--dark-gray)',
                   lineHeight: '1.6',
                   marginBottom: '16px',
@@ -677,7 +687,7 @@ export default function About() {
               <div
                 style={{
                   fontFamily: 'DM Sans, sans-serif',
-                  fontSize: '13px',
+                  fontSize: 'var(--font-size-xs)',
                   color: 'var(--gray)',
                 }}
               >
@@ -711,8 +721,8 @@ export default function About() {
               id="medhaswi"
               name="Medhaswi Paturu"
               role="Product Design @ Stride"
-              expandedId={expandedTestimonial}
-              onExpand={setExpandedTestimonial}
+              isExpanded={Boolean(expandedTestimonials.medhaswi)}
+              onToggle={handleTestimonialToggle}
             >
               <p>
                 I had the pleasure of working with Jesse as my UX Manager, and they created the kind of team environment every
@@ -728,8 +738,8 @@ export default function About() {
               id="jules"
               name="Jules Wood"
               role="UX Strategist"
-              expandedId={expandedTestimonial}
-              onExpand={setExpandedTestimonial}
+              isExpanded={Boolean(expandedTestimonials.jules)}
+              onToggle={handleTestimonialToggle}
             >
               <p>
                 I worked with Jesse for three years to transform a real estate tech startup with no organized user experience
@@ -743,27 +753,14 @@ export default function About() {
                 empathy, kept track of user behavior and sentiment, and closed the gaps between our company&apos;s vision and our
                 users&apos; actual experience with our products.
               </p>
-              <p>
-                As her manager, I can only sing her praises. Jesse is a delight to work with not only because she&apos;s kind and
-                intellectually generous, but because she&apos;s extremely direct and laser focused on the &quot;why&quot; behind not only her
-                work, but the mission of the entire company. She understands the friction between business and user needs and
-                delivers both the science and the candor that leadership needs to make decisions at the highest level for the
-                brand and company. Even before she took on her role as Lead, she generously mentored members of the UX team and
-                organized user discovery coaching across all of Product Management. She&apos;s always brushing up on the latest from
-                leaders in her space and beyond. Her academic background never fails to come in handy when lofty ideas or risky
-                decisions warrant closer inspection through research — whether it be directly with users, our data, or deep dives
-                into the learnings of others in our industry. I could trust Jesse with any project, any feedback, and any of the
-                hard truths that come with directing UX in a revenue focused business (and she always helped us stay the course of
-                our vision because she&apos;s ethical and passionate about understanding our impact).
-              </p>
             </TestimonialCard>
 
             <TestimonialCard
               id="jon"
               name="Jon Cox"
               role="Head of Sales at Ethica AI"
-              expandedId={expandedTestimonial}
-              onExpand={setExpandedTestimonial}
+              isExpanded={Boolean(expandedTestimonials.jon)}
+              onToggle={handleTestimonialToggle}
             >
               <p>
                 I had the pleasure of working with Jesse, a Senior UX Researcher and Design Strategist, whose dynamic approach
@@ -805,7 +802,7 @@ export default function About() {
               style={{
                 fontFamily: 'DM Sans, sans-serif',
                 fontWeight: 700,
-                fontSize: '21px',
+                fontSize: 'var(--font-size-xl)',
                 color: 'var(--charcoal)',
                 marginBottom: '10px',
               }}
@@ -829,11 +826,11 @@ export default function About() {
             style={{
               fontFamily: 'DM Sans, sans-serif',
               fontWeight: 700,
-              fontSize: '15px',
+              fontSize: 'var(--font-size-sm)',
               color: 'var(--white)',
               backgroundColor: 'var(--charcoal)',
               padding: '14px 32px',
-              borderRadius: '6px',
+              borderRadius: 'var(--radius-sm)',
               border: 'none',
               cursor: 'pointer',
               whiteSpace: 'nowrap',

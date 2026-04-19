@@ -71,6 +71,7 @@ html { scroll-behavior: smooth; }
   line-height: 1.15;
   letter-spacing: -0.5px;
   margin-bottom: 8px;
+  text-wrap: balance;
 }
 .hero h1 em {
   color: var(--gold);
@@ -545,9 +546,7 @@ html { scroll-behavior: smooth; }
         <div className="hero-inner">
           <span className="hero-tag">UX Research · Workshop Facilitation</span>
           <h1>
-            The Work Before the Tools:
-            <br />
-            <em>Defining AI Personalization</em>
+            The Work Before the Tools: <em>Defining AI Personalization</em>
           </h1>
           <p className="hero-sub">
             When a large EdTech company decided to invest in AI-powered personalization, the instinct was to start evaluating tools. I paused — and defined what personalization actually meant for families first.

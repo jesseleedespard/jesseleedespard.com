@@ -36,7 +36,7 @@ html { scroll-behavior: smooth; }
 .hero::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 4px; background: linear-gradient(to right, var(--teal), var(--gold), transparent); }
 .hero-inner { max-width: var(--max); margin: 0 auto; }
 .hero-tag { font-family: var(--display); display: inline-block; font-size: var(--font-size-xs); font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); margin-bottom: 24px; border: 1px solid rgba(212,168,67,0.4); padding: 8px 16px; border-radius: 4px; }
-.hero h1 { font-family: var(--display); font-size: clamp(28px, 4vw, 44px); font-weight: 700; color: var(--white); line-height: 1.18; letter-spacing: -0.4px; margin-bottom: 8px; }
+.hero h1 { font-family: var(--display); font-size: clamp(28px, 4vw, 44px); font-weight: 700; color: var(--white); line-height: 1.18; letter-spacing: -0.4px; margin-bottom: 8px; text-wrap: balance; }
 .hero h1 em { color: var(--gold); font-style: normal; }
 .hero-sub { font-family: var(--body); font-size: 17px; color: rgba(255,255,255,0.6); line-height: 1.7; margin-bottom: 36px; font-style: italic; }
 .meta-strip { display: flex; flex-wrap: wrap; gap: 0; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 24px; }
@@ -410,11 +410,7 @@ html { scroll-behavior: smooth; }
         <div className="hero-inner">
           <span className="hero-tag">Leadership · Research Operations</span>
           <h1>
-            Building a Research Function
-            <br />
-            from the Ground Up,
-            <br />
-            <em>and Through an Acquisition</em>
+            Building a Research Function from the Ground Up, <em>and Through an Acquisition</em>
           </h1>
           <p className="hero-sub">
             How I went from being the first UX researcher at an early-stage real estate tech startup to leading the merged research function after its acquisition, and what I built that made both possible.
