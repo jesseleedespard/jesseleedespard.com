@@ -53,7 +53,7 @@ html { scroll-behavior: smooth; }
 .divider { height: 1px; background: var(--light-gray); margin: 48px 0 0; }
 
 /* NDA NOTE */
-.nda-note { background: var(--cream); border-left: 3px solid var(--gold); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 13px 18px; margin-top: 18px; font-family: var(--display); font-size: var(--font-size-xs); color: var(--dark-gray); font-style: italic; }
+.nda-note { background: var(--cream); border-left: 3px solid var(--gold); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 13px 18px; margin-top: 18px; font-family: var(--display); font-size: var(--font-size-sm); color: var(--dark-gray); font-style: italic; }
 
 /* GRID */
 .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 20px; }
@@ -61,8 +61,9 @@ html { scroll-behavior: smooth; }
 @media (max-width: 680px) { .proptech-case-study-page .grid2, .proptech-case-study-page .grid3 { grid-template-columns: 1fr; } }
 
 /* TEAL-BORDER CARD */
-.card { background: var(--white); border: 1px solid var(--light-gray); border-left: 3px solid var(--teal); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 18px 20px; }
-.card .theme-num { display: block; margin-bottom: 10px; line-height: 1; }
+.card { background: var(--white); border: 1px solid var(--light-gray); border-left: 3px solid var(--teal); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 18px 20px; display: flex; gap: 12px; align-items: flex-start; }
+.card .theme-num { min-width: 28px; flex-shrink: 0; line-height: 1.3; }
+.card-content { flex: 1; min-width: 0; }
 .card-title { font-family: var(--display); font-size: var(--font-size-sm); font-weight: 700; color: var(--charcoal); margin-bottom: 6px; }
 .card-body { font-size: var(--font-size-sm); line-height: 1.7; color: var(--dark-gray); }
 
@@ -76,16 +77,16 @@ html { scroll-behavior: smooth; }
 .track-body { padding: 18px; }
 .track-why { font-family: var(--display); font-size: var(--font-size-xs); font-weight: 700; color: var(--teal); margin-bottom: 5px; text-transform: uppercase; letter-spacing: 0.5px; }
 .track-text { font-size: var(--font-size-sm); line-height: 1.7; color: var(--dark-gray); margin-bottom: 12px; }
-.track-list-item { font-size: var(--font-size-xs); line-height: 1.65; color: var(--dark-gray); padding: 6px 0 6px 14px; border-bottom: 1px solid var(--light-gray); position: relative; }
+.track-list-item { font-size: var(--font-size-sm); line-height: 1.65; color: var(--dark-gray); padding: 6px 0 6px 14px; border-bottom: 1px solid var(--light-gray); position: relative; }
 .track-list-item::before { content: '•'; position: absolute; left: 0; color: var(--teal); }
 .track-list-item:last-child { border-bottom: none; }
 
 /* SEGMENT CARDS */
 .segment-card { background: var(--white); border: 1px solid var(--light-gray); border-radius: var(--radius-sm); overflow: hidden; }
 .segment-head { padding: 14px 18px; }
-.segment-title { font-family: var(--display); font-size: var(--font-size-xs); font-weight: 700; color: var(--white); letter-spacing: 0.5px; }
-.segment-count { font-family: var(--display); font-size: var(--font-size-xs); color: var(--white) !important; margin-top: 2px; }
-.segment-breakdown { font-family: var(--display); font-size: var(--font-size-xs); color: var(--white) !important; margin-top: 8px; line-height: 1.5; }
+.segment-title { font-family: var(--display); font-size: var(--font-size-sm); font-weight: 700; color: var(--white); letter-spacing: 0.5px; }
+.segment-count { font-family: var(--display); font-size: var(--font-size-sm); color: var(--white) !important; margin-top: 2px; }
+.segment-breakdown { font-family: var(--display); font-size: var(--font-size-sm); color: var(--white) !important; margin-top: 8px; line-height: 1.5; }
 .segment-body { padding: 16px 18px; }
 .segment-quote { font-family: var(--body); font-size: var(--font-size-sm); line-height: 1.65; color: var(--teal); font-style: italic; margin-bottom: 14px; border-left: 2px solid var(--teal); padding-left: 12px; }
 .segment-insight { font-family: var(--display); font-size: var(--font-size-xs); font-weight: 700; color: var(--teal); margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.5px; }
@@ -203,23 +204,31 @@ html { scroll-behavior: smooth; }
           <div className="grid2">
             <div className="card">
               <div className="theme-num">01</div>
-              <div className="card-title">Validate the AI concept</div>
-              <div className="card-body">Would users across all three segments actually use an AI to discover, evaluate, and maintain professional relationships?</div>
+              <div className="card-content">
+                <div className="card-title">Validate the AI concept</div>
+                <div className="card-body">Would users across all three segments actually use an AI to discover, evaluate, and maintain professional relationships?</div>
+              </div>
             </div>
             <div className="card">
               <div className="theme-num">02</div>
-              <div className="card-title">Understand relationship dynamics</div>
-              <div className="card-body">How did each user group currently find, evaluate, and maintain relationships, and where did those processes break down?</div>
+              <div className="card-content">
+                <div className="card-title">Understand relationship dynamics</div>
+                <div className="card-body">How did each user group currently find, evaluate, and maintain relationships, and where did those processes break down?</div>
+              </div>
             </div>
             <div className="card">
               <div className="theme-num">03</div>
-              <div className="card-title">Define personalization requirements</div>
-              <div className="card-body">What attributes mattered most when being matched? What would make an AI recommendation feel trustworthy rather than algorithmic?</div>
+              <div className="card-content">
+                <div className="card-title">Define personalization requirements</div>
+                <div className="card-body">What attributes mattered most when being matched? What would make an AI recommendation feel trustworthy rather than algorithmic?</div>
+              </div>
             </div>
             <div className="card">
               <div className="theme-num">04</div>
-              <div className="card-title">Inform algorithm design</div>
-              <div className="card-body">What qualitative insights, combined with the third-party data, could inform the behavioral and preference logic of the matching algorithm?</div>
+              <div className="card-content">
+                <div className="card-title">Inform algorithm design</div>
+                <div className="card-body">What qualitative insights, combined with the third-party data, could inform the behavioral and preference logic of the matching algorithm?</div>
+              </div>
             </div>
           </div>
         </div>
@@ -329,7 +338,7 @@ html { scroll-behavior: smooth; }
         <div className="divider" />
 
         <div className="section">
-          <div className="section-label">Cross-Cutting Themes</div>
+          <div className="section-label">Key Findings</div>
           <h2>What all three groups had in common.</h2>
           <p>
             Studying each segment separately, then looking for alignment across them, was the most valuable part of the research. The interdependencies revealed what the AI would need to optimize for and what would make or break user trust.
