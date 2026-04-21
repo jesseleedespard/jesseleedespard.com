@@ -35,7 +35,7 @@ html { scroll-behavior: smooth; }
 .hero::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 3px; background: linear-gradient(to right, var(--teal), var(--gold), transparent); }
 .hero-inner { max-width: var(--max); margin: 0 auto; }
 .hero-tag { font-family: var(--display); display: inline-block; font-size: var(--font-size-xs); font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); margin-bottom: 20px; border: 1px solid rgba(212,168,67,0.4); padding: 5px 12px; border-radius: 3px; }
-.hero h1 { font-family: var(--display); font-size: clamp(30px, 4.5vw, 46px); font-weight: 700; color: var(--white); line-height: 1.18; letter-spacing: -0.4px; margin-bottom: 14px; }
+.hero h1 { font-family: var(--display); font-size: clamp(var(--font-size-2xl), 4.5vw, var(--font-size-3xl)); font-weight: 700; color: var(--white); line-height: 1.18; letter-spacing: -0.4px; margin-bottom: 14px; }
 .hero-sub { font-family: var(--body); font-size: var(--font-size-base); color: rgba(255,255,255,0.6); line-height: 1.7; margin-bottom: 36px; font-style: italic; }
 .meta-strip { display: flex; flex-wrap: wrap; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 24px; }
 .meta-item { padding-right: 28px; margin-right: 28px; border-right: 1px solid rgba(255,255,255,0.1); }
@@ -47,7 +47,7 @@ html { scroll-behavior: smooth; }
 .page-wrap { max-width: calc(var(--max) + (var(--page-padding) * 2)); margin: 0 auto; padding: 0 var(--page-padding); }
 .section { padding: 52px 0 0; }
 .section-label { font-family: var(--display); font-size: var(--font-size-xs); font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--teal); margin-bottom: 10px; }
-.section h2 { font-family: var(--display); font-size: clamp(20px, 2.8vw, 26px); font-weight: 700; color: var(--charcoal); line-height: 1.3; letter-spacing: -0.3px; margin-bottom: 16px; }
+.section h2 { font-family: var(--display); font-size: clamp(var(--font-size-lg), 2.8vw, var(--font-size-xl)); font-weight: 700; color: var(--charcoal); line-height: 1.3; letter-spacing: -0.3px; margin-bottom: 16px; }
 .section p { color: var(--dark-gray); margin-bottom: 16px; }
 .section p:last-child { margin-bottom: 0; }
 .divider { height: 1px; background: var(--light-gray); margin: 48px 0 0; }
