@@ -29,7 +29,7 @@ export default function CaseStudyHealthtech() {
   --max:  860px;
 }
 html { scroll-behavior: smooth; }
-.healthtech-case-study-page { font-family: var(--body); background: var(--cream); color: var(--charcoal); font-size: var(--font-size-base); line-height: 1.75; -webkit-font-smoothing: antialiased; min-height: 100vh; }
+.healthtech-case-study-page { font-family: var(--body); background: var(--cream); color: var(--charcoal); font-size: var(--font-size-base); line-height: 1.75; -webkit-font-smoothing: antialiased; min-height: 100vh; padding-bottom: var(--page-padding); }
 
 /* HERO */
 .hero { background: var(--charcoal); padding: 80px 48px 72px; position: relative; overflow: hidden; }
@@ -46,7 +46,7 @@ html { scroll-behavior: smooth; }
 
 /* LAYOUT */
 .page-wrap { max-width: calc(var(--max) + (var(--page-padding) * 2)); margin: 0 auto; padding: 0 var(--page-padding); }
-.section { padding: 52px 0 0; }
+.section { padding: var(--page-padding) 0 0; }
 .section-label { font-family: var(--display); font-size: var(--font-size-xs); font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--teal-dark); margin-bottom: 8px; }
 .section h2 { font-family: var(--display); font-size: clamp(var(--font-size-lg), 2.8vw, var(--font-size-xl)); font-weight: 700; color: var(--charcoal); line-height: 1.3; letter-spacing: -0.3px; margin-bottom: 16px; }
 .section p { color: var(--dark-gray); margin-bottom: 16px; }
@@ -73,15 +73,19 @@ html { scroll-behavior: smooth; }
   background: var(--white);
   border: 1px solid var(--light-gray);
   border-radius: var(--radius-sm);
-  padding: 20px 24px;
+  padding: calc(var(--page-padding) / 2) 24px;
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
 }
 .lesson-num {
   font-family: var(--display);
   font-weight: 700;
   font-size: var(--font-size-xl);
   color: var(--teal);
-  display: block;
-  margin-bottom: 12px;
+  min-width: 40px;
+  flex-shrink: 0;
+  line-height: 1.3;
 }
 .lesson-body { font-size: var(--font-size-sm); line-height: 1.7; color: var(--dark-gray); margin: 0; }
 .lesson-body strong { color: var(--charcoal); }
@@ -681,7 +685,6 @@ html { scroll-behavior: smooth; }
       title="Want to talk about what research could do for your team?"
       body={<a href="mailto:jesse@jesseleedespard.com">jesse@jesseleedespard.com</a>}
       cta={<Link to="/hiring" className="primary-cta-dark">Hiring? →</Link>}
-      style={{ marginTop: '72px' }}
     />
 
     <Footer />
