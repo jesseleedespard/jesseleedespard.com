@@ -242,57 +242,6 @@ html { scroll-behavior: smooth; }
   margin: 0;
 }
 
-.activity-stack {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  margin-top: 24px;
-}
-.activity-card {
-  border: 1px solid var(--light-gray);
-  border-radius: var(--radius-md);
-  overflow: hidden;
-  background: var(--white);
-}
-.activity-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 14px 18px;
-  background: var(--cream);
-  border-bottom: 1px solid var(--light-gray);
-}
-.activity-title {
-  font-family: var(--display);
-  font-weight: 700;
-  font-size: var(--font-size-sm);
-  color: var(--charcoal);
-}
-.activity-duration {
-  font-family: var(--display);
-  font-size: var(--font-size-xs);
-  color: var(--gray);
-  font-weight: 600;
-}
-.activity-body {
-  padding: 18px 20px;
-}
-.activity-prompt {
-  font-family: var(--display);
-  font-weight: 700;
-  font-size: var(--font-size-sm);
-  color: var(--teal-dark);
-  margin-bottom: 12px;
-}
-.activity-body ul {
-  margin: 0;
-  padding-left: 18px;
-  color: var(--dark-gray);
-  font-size: 14.5px;
-  line-height: 1.65;
-}
-.activity-body li { margin-bottom: 8px; }
-
 .pillars {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -314,13 +263,6 @@ html { scroll-behavior: smooth; }
   border-radius: 0 0 var(--radius-sm) var(--radius-sm);
   background: var(--white);
 }
-.pillar-body p {
-  font-size: 14.5px;
-  line-height: 1.7;
-  color: var(--dark-gray);
-  margin-bottom: 12px;
-}
-.pillar-body p:last-child { margin-bottom: 0; }
 .pillar-item { font-size: var(--font-size-sm); line-height: 1.65; color: var(--dark-gray); margin-bottom: 7px; padding: 6px 0 6px 20px; position: relative; }
 .pillar-item::before { content: '•'; position: absolute; left: 6px; color: var(--teal); font-weight: 700; }
 .pillar-item:last-child { margin-bottom: 0; }
@@ -334,27 +276,6 @@ html { scroll-behavior: smooth; }
   list-style-type: disc;
 }
 .impact-list li { margin-bottom: 14px; list-style-type: disc; }
-
-.reflection-box {
-  margin-top: 8px;
-  padding: 24px 28px;
-  background: var(--white);
-  border: 1px solid var(--light-gray);
-  border-radius: var(--radius-md);
-  border-left: 4px solid var(--teal);
-}
-.reflection-box h3 {
-  margin-top: 0;
-}
-.reflection-box p {
-  color: var(--dark-gray);
-  margin-bottom: 16px;
-}
-.handoff {
-  font-style: italic;
-  color: var(--gray);
-  font-size: 15px;
-}
 
 /* NDA NOTE */
 .nda-note { background: var(--cream); border-left: 3px solid var(--gold); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 13px 18px; margin-top: 18px; font-family: var(--display); font-size: var(--font-size-xs); color: var(--dark-gray); font-style: italic; }
@@ -412,13 +333,7 @@ html { scroll-behavior: smooth; }
   .work-before-tools-page .principle-note { text-align: left !important; }
 
   .work-before-tools-page .tension-box-body,
-  .work-before-tools-page .activity-body,
-  .work-before-tools-page .activity-body li,
-  .work-before-tools-page .activity-prompt,
   .work-before-tools-page .pillar-body,
-  .work-before-tools-page .pillar-body p,
-  .work-before-tools-page .reflection-box,
-  .work-before-tools-page .reflection-box p,
   .work-before-tools-page .impact-list,
   .work-before-tools-page .impact-list li { text-align: left !important; }
 
@@ -472,8 +387,6 @@ html { scroll-behavior: smooth; }
   .work-before-tools-page .notify-btn-outline { text-align: center !important; display: block !important; padding: 16px !important; }
   .work-before-tools-page .hinge-box { padding: 24px !important; text-align: center !important; }
   .work-before-tools-page .hinge-box p { text-align: center !important; }
-  .work-before-tools-page .reflection-box { padding: 24px !important; text-align: left !important; }
-  .work-before-tools-page .reflection-box p { text-align: left !important; }
   .work-before-tools-page .schedule-block { padding: 40px 24px !important; }
   .work-before-tools-page .about-box p { text-align: left !important; }
   .work-before-tools-page .medium-strip { flex-direction: column !important; gap: 16px !important; text-align: center !important; }
@@ -522,7 +435,6 @@ html { scroll-behavior: smooth; }
 
   .work-before-tools-page .podcast-card { padding: 24px 16px !important; }
   .work-before-tools-page .hinge-box { padding: 24px 16px !important; }
-  .work-before-tools-page .reflection-box { padding: 24px 16px !important; }
   .work-before-tools-page .pmf-callout { padding: 24px 16px !important; }
   .work-before-tools-page .notify-strip { padding: 24px 16px !important; }
   .work-before-tools-page .schedule-block { padding: 32px 16px !important; }
