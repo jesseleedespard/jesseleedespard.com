@@ -229,13 +229,15 @@ html { scroll-behavior: smooth; }
 
 .pull-quote {
   margin: 28px 0;
-  padding: 20px 24px;
-  border-left: 4px solid var(--gold);
-  background: rgba(212, 168, 67, 0.08);
+  padding: var(--page-padding);
+  background: var(--white);
+  border: 1px solid var(--light-gray);
+  border-left: 4px solid var(--teal-dark);
+  border-radius: var(--radius-md);
 }
 .pull-quote p {
   font-family: var(--body);
-  font-size: var(--font-size-lg);
+  font-size: var(--font-size-xl);
   font-style: italic;
   color: var(--charcoal);
   margin: 0;
@@ -409,8 +411,8 @@ html { scroll-behavior: smooth; }
   .work-before-tools-page .impact-list li { text-align: left !important; }
 
   /* PULL QUOTE */
-  .work-before-tools-page .pull-quote { padding: 24px !important; margin: 24px 0 !important; border-left: none !important; border-top: 4px solid var(--gold) !important; text-align: center !important; }
-  .work-before-tools-page .pull-quote p { font-size: 17px !important; text-align: center !important; }
+  .work-before-tools-page .pull-quote { padding: var(--page-padding) !important; margin: 24px 0 !important; background: var(--white) !important; border: 1px solid var(--light-gray) !important; border-left: 4px solid var(--teal-dark) !important; border-radius: var(--radius-md) !important; text-align: center !important; }
+  .work-before-tools-page .pull-quote p { font-size: var(--font-size-base) !important; font-style: italic !important; text-align: center !important; }
 
   /* CARD GRID */
   .work-before-tools-page .card-grid { padding: 32px 0 !important; gap: 16px !important; }
@@ -747,10 +749,10 @@ html { scroll-behavior: smooth; }
           <div className="section-label">Key Insight</div>
           <h2>Reassurance, not excitement</h2>
           <p>
-            One of the most clarifying moments of the workshop was a reframe that cut across all the activities. Families enrolling a child in school don't need to be excited by AI — by the time they reach enrollment, they've already made a difficult, unconventional decision. What they need is reassurance that they made the right one.
+            One of the most clarifying moments of the workshop was a reframe that came from holding the family perspective in the room. Families enrolling a child in school don't need to be excited by AI. By the time they reach enrollment, they've already made a difficult, unconventional decision. What they need is reassurance that they made the right one.
           </p>
           <p>
-            This shifted the entire conversation about what AI personalization was for. It wasn't about a compelling, algorithmically-driven marketing experience. It was about building the conditions for confident, informed decision-making — at scale.
+            This shifted the entire conversation about what AI personalization was for. It wasn't about a compelling, algorithmically-driven marketing experience. It was about building the conditions for confident, informed decision-making at scale.
           </p>
 
           <div className="pull-quote">
