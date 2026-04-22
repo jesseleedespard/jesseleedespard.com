@@ -75,7 +75,7 @@ html { scroll-behavior: smooth; }
 }
 .hero h1 {
   font-family: var(--display);
-  font-size: clamp(32px, 4.5vw, 48px);
+  font-size: clamp(var(--font-size-2xl), 4.5vw, var(--font-size-3xl));
   font-weight: 700;
   color: var(--white);
   line-height: 1.15;
@@ -145,7 +145,7 @@ html { scroll-behavior: smooth; }
 
 .section h2 {
   font-family: var(--display);
-  font-size: clamp(22px, 3vw, 30px);
+  font-size: clamp(var(--font-size-lg), 3vw, var(--font-size-xl));
   font-weight: 700;
   color: var(--charcoal);
   line-height: 1.25;
@@ -386,10 +386,10 @@ html { scroll-behavior: smooth; }
   .work-before-tools-page .hero { padding: 48px 24px 40px !important; text-align: center !important; }
   .work-before-tools-page .hero-inner { max-width: 100% !important; }
   .work-before-tools-page .hero-tag { font-size: var(--font-size-xs) !important; }
-  .work-before-tools-page .hero h1 { font-size: clamp(24px, 6vw, 30px) !important; line-height: 1.2 !important; text-align: center !important; }
+  .work-before-tools-page .hero h1 { font-size: clamp(var(--font-size-xl), 6vw, var(--font-size-2xl)) !important; line-height: 1.2 !important; text-align: center !important; }
   .work-before-tools-page .hero-sub { font-size: var(--font-size-sm) !important; text-align: center !important; max-width: 100% !important; margin-left: auto !important; margin-right: auto !important; }
   .work-before-tools-page .hero-cta { display: inline-block !important; }
-  .work-before-tools-page .show-title { font-size: clamp(24px, 6vw, 30px) !important; text-align: center !important; }
+  .work-before-tools-page .show-title { font-size: clamp(var(--font-size-xl), 6vw, var(--font-size-2xl)) !important; text-align: center !important; }
   .work-before-tools-page .show-tagline { text-align: center !important; }
 
   /* META STRIP */
@@ -402,7 +402,7 @@ html { scroll-behavior: smooth; }
 
   /* SECTIONS — centered text on mobile */
   .work-before-tools-page .section { padding: 48px 24px 0 !important; text-align: center !important; }
-  .work-before-tools-page .section h2 { font-size: clamp(20px, 5.5vw, 24px) !important; text-align: center !important; }
+  .work-before-tools-page .section h2 { font-size: clamp(var(--font-size-lg), 5.5vw, var(--font-size-xl)) !important; text-align: center !important; }
   .work-before-tools-page .section p { text-align: center !important; }
   .work-before-tools-page .section-label { text-align: center !important; }
   .work-before-tools-page .divider { margin: 40px 0 0 !important; }
@@ -504,7 +504,7 @@ html { scroll-behavior: smooth; }
 @media (max-width: 480px) {
 
   .work-before-tools-page .hero { padding: 40px 16px 32px !important; }
-  .work-before-tools-page .hero h1 { font-size: clamp(22px, 7vw, 26px) !important; }
+  .work-before-tools-page .hero h1 { font-size: clamp(var(--font-size-xl), 7vw, var(--font-size-2xl)) !important; }
   .work-before-tools-page .hero-sub { font-size: var(--font-size-sm) !important; }
 
   .work-before-tools-page .page-wrap { padding: 0 16px !important; }
