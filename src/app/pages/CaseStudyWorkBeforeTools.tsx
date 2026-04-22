@@ -35,7 +35,7 @@ html { scroll-behavior: smooth; }
   font-family: var(--body);
   background: var(--cream);
   color: var(--charcoal);
-  font-size: 17px;
+  font-size: var(--font-size-base);
   line-height: 1.75;
   -webkit-font-smoothing: antialiased;
   min-height: 100vh;
@@ -71,7 +71,7 @@ html { scroll-behavior: smooth; }
   margin-bottom: 24px;
   border: 1px solid rgba(212,168,67,0.4);
   padding: 8px 16px;
-  border-radius: 4px;
+  border-radius: var(--radius-sm);
 }
 .hero h1 {
   font-family: var(--display);
@@ -110,7 +110,7 @@ html { scroll-behavior: smooth; }
 .meta-item:last-child { border-right: none; margin-right: 0; }
 .meta-label {
   font-family: var(--display);
-  font-size: 10px;
+  font-size: var(--font-size-xs);
   letter-spacing: 1.5px;
   text-transform: uppercase;
   color: var(--gold);
@@ -207,7 +207,7 @@ html { scroll-behavior: smooth; }
 
 .img-block {
   margin: 24px 0 12px;
-  border-radius: 8px;
+  border-radius: var(--radius-md);
   overflow: hidden;
   border: 1px solid var(--light-gray);
   background: var(--white);
@@ -219,7 +219,7 @@ html { scroll-behavior: smooth; }
 }
 .img-caption {
   font-family: var(--display);
-  font-size: 13px;
+  font-size: var(--font-size-xs);
   color: var(--gray);
   font-style: italic;
   margin-bottom: 18px;
@@ -250,7 +250,7 @@ html { scroll-behavior: smooth; }
 }
 .activity-card {
   border: 1px solid var(--light-gray);
-  border-radius: 8px;
+  border-radius: var(--radius-md);
   overflow: hidden;
   background: var(--white);
 }
@@ -301,7 +301,7 @@ html { scroll-behavior: smooth; }
 }
 .pillar-head {
   font-family: var(--display);
-  font-size: 13px;
+  font-size: var(--font-size-sm);
   font-weight: 700;
   color: var(--white);
   padding: 12px 14px;
@@ -311,7 +311,7 @@ html { scroll-behavior: smooth; }
   padding: 16px;
   border: 1px solid var(--light-gray);
   border-top: none;
-  border-radius: 0 0 6px 6px;
+  border-radius: 0 0 var(--radius-sm) var(--radius-sm);
   background: var(--white);
 }
 .pillar-body p {
@@ -321,6 +321,9 @@ html { scroll-behavior: smooth; }
   margin-bottom: 12px;
 }
 .pillar-body p:last-child { margin-bottom: 0; }
+.pillar-item { font-size: var(--font-size-sm); line-height: 1.65; color: var(--dark-gray); margin-bottom: 7px; padding: 6px 0 6px 20px; position: relative; }
+.pillar-item::before { content: '•'; position: absolute; left: 6px; color: var(--teal); font-weight: 700; }
+.pillar-item:last-child { margin-bottom: 0; }
 
 .impact-list {
   margin: 20px 0 0;
@@ -337,7 +340,7 @@ html { scroll-behavior: smooth; }
   padding: 24px 28px;
   background: var(--white);
   border: 1px solid var(--light-gray);
-  border-radius: 8px;
+  border-radius: var(--radius-md);
   border-left: 4px solid var(--teal);
 }
 .reflection-box h3 {
@@ -382,9 +385,9 @@ html { scroll-behavior: smooth; }
   /* HERO — centered */
   .work-before-tools-page .hero { padding: 48px 24px 40px !important; text-align: center !important; }
   .work-before-tools-page .hero-inner { max-width: 100% !important; }
-  .work-before-tools-page .hero-tag { font-size: 10px !important; }
+  .work-before-tools-page .hero-tag { font-size: var(--font-size-xs) !important; }
   .work-before-tools-page .hero h1 { font-size: clamp(24px, 6vw, 30px) !important; line-height: 1.2 !important; text-align: center !important; }
-  .work-before-tools-page .hero-sub { font-size: 15px !important; text-align: center !important; max-width: 100% !important; margin-left: auto !important; margin-right: auto !important; }
+  .work-before-tools-page .hero-sub { font-size: var(--font-size-sm) !important; text-align: center !important; max-width: 100% !important; margin-left: auto !important; margin-right: auto !important; }
   .work-before-tools-page .hero-cta { display: inline-block !important; }
   .work-before-tools-page .show-title { font-size: clamp(24px, 6vw, 30px) !important; text-align: center !important; }
   .work-before-tools-page .show-tagline { text-align: center !important; }
@@ -506,7 +509,7 @@ html { scroll-behavior: smooth; }
 
   .work-before-tools-page .page-wrap { padding: 0 16px !important; }
   .work-before-tools-page .section { padding: 40px 16px 0 !important; }
-  .work-before-tools-page .section h2 { font-size: 20px !important; }
+  .work-before-tools-page .section h2 { font-size: var(--font-size-lg) !important; }
   .work-before-tools-page .card-grid { padding: 24px 0 !important; }
   .work-before-tools-page .lead-intro { padding: 24px 16px 0 !important; }
 
@@ -708,45 +711,31 @@ html { scroll-behavior: smooth; }
 
           <div className="pillars">
             <div className="pillar">
-              <div className="pillar-head" style={{ background: 'var(--terra)' }}>
+              <div className="pillar-head" style={{ background: 'var(--terra)', color: 'var(--charcoal)' }}>
                 Holistic Journey
               </div>
               <div className="pillar-body">
-                <p>
-                  Personalization is not a one-time touchpoint. <strong>It remembers who users are</strong> and meets them at every stage of the journey.
-                </p>
-                <p>
-                  Families should feel cared for and informed at all points. Personalization is a source of <strong>confident, informed decision-making</strong>.
-                </p>
+                <div className="pillar-item">Personalization is not a one-time touchpoint. <strong>It remembers who users are</strong> and meets them at every stage of the journey.</div>
+                <div className="pillar-item">Families should feel cared for and informed at all points. Personalization is a source of <strong>confident, informed decision-making</strong>.</div>
               </div>
             </div>
             <div className="pillar">
-              <div className="pillar-head" style={{ background: 'var(--teal)' }}>
+              <div className="pillar-head" style={{ background: 'var(--teal)', color: 'var(--white)' }}>
                 Dynamic Content Engine
               </div>
               <div className="pillar-body">
-                <p>
-                  Personalization <strong>adjusts the experience based on context</strong>, aware of who families are and what they need at each step.
-                </p>
-                <p>
-                  Leverages the content we have created to place the right amount of relevant information in the right context, helping users confidently progress to the next step.
-                </p>
-                <p>
-                  Small redirects guide families back on track <strong>wherever they drop off</strong> in the journey.
-                </p>
+                <div className="pillar-item">Personalization <strong>adjusts the experience based on context</strong>, aware of who families are and what they need at each step.</div>
+                <div className="pillar-item">Leverages the content we have created to place the right amount of relevant information in the right context, helping users confidently progress to the next step.</div>
+                <div className="pillar-item">Small redirects guide families back on track <strong>wherever they drop off</strong> in the journey.</div>
               </div>
             </div>
             <div className="pillar">
-              <div className="pillar-head" style={{ background: 'var(--charcoal)' }}>
+              <div className="pillar-head" style={{ background: 'var(--charcoal)', color: 'var(--gold)' }}>
                 Proactive Trust Building
               </div>
               <div className="pillar-body">
-                <p>
-                  <strong>Answer likely questions before families think to ask them</strong>, so they can trust themselves without needing perfect certainty.
-                </p>
-                <p>
-                  The emotionally appropriate experience, <strong>at the right level of detail, in the right moment</strong>, for their specific scenario.
-                </p>
+                <div className="pillar-item"><strong>Answer likely questions before families think to ask them</strong>, so they can trust themselves without needing perfect certainty.</div>
+                <div className="pillar-item">The emotionally appropriate experience, <strong>at the right level of detail, in the right moment</strong>, for their specific scenario.</div>
               </div>
             </div>
           </div>
