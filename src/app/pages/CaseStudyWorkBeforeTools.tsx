@@ -329,8 +329,9 @@ html { scroll-behavior: smooth; }
   color: var(--dark-gray);
   font-size: var(--font-size-base);
   line-height: 1.75;
+  list-style-type: disc;
 }
-.impact-list li { margin-bottom: 14px; }
+.impact-list li { margin-bottom: 14px; list-style-type: disc; }
 
 .reflection-box {
   margin-top: 8px;
@@ -352,6 +353,13 @@ html { scroll-behavior: smooth; }
   color: var(--gray);
   font-size: 15px;
 }
+
+/* NUMBERED CARDS */
+.theme-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-top: 24px; }
+.theme-card { background: var(--white); border: 1px solid var(--light-gray); border-radius: var(--radius-sm); padding: 16px 18px; display: flex; gap: 12px; align-items: flex-start; }
+.theme-num { font-family: var(--display); font-size: var(--font-size-lg); font-weight: 700; color: var(--teal); min-width: 32px; }
+.theme-content h3 { font-family: var(--display); font-size: var(--font-size-sm); font-weight: 700; color: var(--charcoal); margin-top: 0; margin-bottom: 4px; }
+.theme-content p { font-size: var(--font-size-sm); line-height: 1.7; color: var(--dark-gray); margin: 0; }
 
 /* PRINCIPLES CARDS */
 .principles-headline { font-family: var(--display); font-size: var(--font-size-sm); font-weight: 700; color: var(--charcoal); text-align: center; margin: 24px 0 16px; }
@@ -765,30 +773,49 @@ html { scroll-behavior: smooth; }
         <div className="divider" />
 
         <div className="section">
-          <div className="section-label">Impact</div>
+          <div className="section-label">Outcome and Impact</div>
           <h2>From misalignment to a shared north star</h2>
           <p>
-            The workshop moved the company from a high-level AI ambition to an actionable personalization philosophy — one that could now inform tool selection, roadmap prioritization, and cross-functional decision-making.
+            The workshop moved the company from a high-level AI ambition to an actionable personalization philosophy, one that could now inform tool selection, roadmap prioritization, and cross-functional decision-making.
           </p>
 
-          <div className="img-block">
-            <img src="/img_breakdown.png" alt="Workshop synthesis document" />
+          <div className="theme-grid">
+            <div className="theme-card">
+              <div className="theme-num">01</div>
+              <div className="theme-content">
+                <h3>Shared Framework</h3>
+                <p>A shared three-pillar personalization framework that aligned UX, Marketing, and Product on language and intent — <strong>before any AI tool was selected</strong>.</p>
+              </div>
+            </div>
+            <div className="theme-card">
+              <div className="theme-num">02</div>
+              <div className="theme-content">
+                <h3>Scoped First Version</h3>
+                <p>A clear distinction between first-version scope (personalization for known users) and longer-term vision (individualization for unknown users), preventing over-engineering before foundations were in place.</p>
+              </div>
+            </div>
+            <div className="theme-card">
+              <div className="theme-num">03</div>
+              <div className="theme-content">
+                <h3>Agreed Starting Point</h3>
+                <p>Retention and LTV for current users, beginning at portal and onboarding stages where data signals were strongest.</p>
+              </div>
+            </div>
+            <div className="theme-card">
+              <div className="theme-num">04</div>
+              <div className="theme-content">
+                <h3>Open Questions Documented</h3>
+                <p>A set of open questions surfaced and documented, creating a specific, bounded agenda for follow-on conversations with analytics and senior leadership.</p>
+              </div>
+            </div>
+            <div className="theme-card">
+              <div className="theme-num">05</div>
+              <div className="theme-content">
+                <h3>Cross-functional Buy-in</h3>
+                <p><strong>AI personalization is not a one-time feature</strong> — cross-functional buy-in to treat it as a holistic experience that must be designed before it's built.</p>
+              </div>
+            </div>
           </div>
-          <p className="img-caption">Workshop synthesis document — the output handed off to analytics, engineering, and senior leadership</p>
-
-          <ul className="impact-list">
-            <li>
-              A shared three-pillar personalization framework that aligned UX, Marketing, and Product on language and intent — <strong>before any AI tool was selected</strong>
-            </li>
-            <li>
-              A clear distinction between first-version scope (personalization for known users) and longer-term vision (individualization for unknown users) — preventing over-engineering before foundations were in place
-            </li>
-            <li>An agreed starting point: retention and LTV for current users, beginning at portal and onboarding stages where data signals were strongest</li>
-            <li>A set of open questions surfaced and documented — creating a specific, bounded agenda for follow-on conversations with analytics and senior leadership</li>
-            <li>
-              <strong>AI personalization is not a one-time feature</strong> — cross-functional buy-in to treat it as a holistic experience that must be designed before it's built
-            </li>
-          </ul>
         </div>
 
         <div className="divider" />
