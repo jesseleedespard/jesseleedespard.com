@@ -31,6 +31,9 @@ export function Footer() {
 
         <div className="site-footer__copy">© Jesse Lee Despard. All rights reserved.</div>
       </div>
+      <div className="site-footer__disclaimer">
+        Case studies summarize work completed under NDA. Company details are anonymized and artifacts are shown with permission.
+      </div>
     </footer>
   );
 }
