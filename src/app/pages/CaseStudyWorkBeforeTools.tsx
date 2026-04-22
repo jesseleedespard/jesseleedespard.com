@@ -39,6 +39,7 @@ html { scroll-behavior: smooth; }
   line-height: 1.75;
   -webkit-font-smoothing: antialiased;
   min-height: 100vh;
+  padding-bottom: var(--page-padding);
 }
 
 /* ── HERO ─────────────────────────────────────────────────── */
@@ -186,25 +187,23 @@ html { scroll-behavior: smooth; }
 .tension-box {
   background: var(--white);
   border: 1px solid var(--light-gray);
-  border-radius: 8px;
-  padding: 20px 22px;
-  text-align: left;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
 }
-.tension-box h4 {
+.tension-box-head {
+  background: var(--charcoal);
+  padding: 14px 18px;
   font-family: var(--display);
   font-size: var(--font-size-sm);
   font-weight: 700;
-  color: var(--charcoal);
-  margin-bottom: 12px;
+  color: var(--gold);
+  letter-spacing: 0.5px;
 }
-.tension-box ul {
-  margin: 0;
-  padding-left: 18px;
-  color: var(--dark-gray);
-  font-size: 14.5px;
-  line-height: 1.65;
+.tension-box-body {
+  padding: 16px 18px;
 }
-.tension-box li { margin-bottom: 8px; }
+.tension-box-body .principle-item { font-size: var(--font-size-sm); line-height: 1.65; color: var(--dark-gray); margin-bottom: 7px; padding: 6px 0 6px 20px; position: relative; }
+.tension-box-body .principle-item::before { content: '•'; position: absolute; left: 6px; color: var(--teal); font-weight: 700; }
 
 .img-block {
   margin: 24px 0 12px;
@@ -229,7 +228,7 @@ html { scroll-behavior: smooth; }
 
 .pull-quote {
   margin: 28px 0;
-  padding: var(--page-padding);
+  padding: calc(var(--page-padding) / 2) var(--page-padding);
   background: var(--white);
   border: 1px solid var(--light-gray);
   border-left: 4px solid var(--teal-dark);
@@ -354,6 +353,9 @@ html { scroll-behavior: smooth; }
   font-size: 15px;
 }
 
+/* NDA NOTE */
+.nda-note { background: var(--cream); border-left: 3px solid var(--gold); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 13px 18px; margin-top: 18px; font-family: var(--display); font-size: var(--font-size-xs); color: var(--dark-gray); font-style: italic; }
+
 /* NUMBERED CARDS */
 .theme-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-top: 24px; }
 .theme-card { background: var(--white); border: 1px solid var(--light-gray); border-radius: var(--radius-sm); padding: 16px 18px; display: flex; gap: 12px; align-items: flex-start; }
@@ -363,11 +365,11 @@ html { scroll-behavior: smooth; }
 
 /* PRINCIPLES CARDS */
 .principles-headline { font-family: var(--display); font-size: var(--font-size-sm); font-weight: 700; color: var(--charcoal); text-align: center; margin: 24px 0 16px; }
-.principles-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; }
-.principle-card { background: var(--white); border: 1px solid var(--light-gray); border-radius: var(--radius-sm); overflow: hidden; }
-.principle-head { padding: 14px 18px; }
-.principle-title { font-family: var(--display); font-size: var(--font-size-sm); font-weight: 700; color: var(--white); letter-spacing: 0.5px; }
-.principle-body { padding: 16px 18px; }
+.principles-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; margin-top: 24px; }
+.principle-card { }
+.principle-head { padding: 12px 14px; font-family: var(--display); font-size: var(--font-size-sm); font-weight: 700; color: var(--white); text-align: center; }
+.principle-title { font-family: var(--display); font-size: var(--font-size-sm); font-weight: 700; color: inherit; letter-spacing: 0.5px; }
+.principle-body { padding: 16px; border: 1px solid var(--light-gray); border-top: none; border-radius: 0 0 var(--radius-sm) var(--radius-sm); background: var(--white); }
 .principle-item { font-size: var(--font-size-sm); line-height: 1.65; color: var(--dark-gray); margin-bottom: 7px; padding: 6px 0 6px 20px; position: relative; }
 .principle-item::before { content: '•'; position: absolute; left: 6px; color: var(--teal); font-weight: 700; }
 .principle-note { font-family: var(--body); font-size: var(--font-size-sm); line-height: 1.65; color: var(--dark-gray); font-style: italic; margin-top: 12px; padding-top: 12px; border-top: 1px solid var(--light-gray); }
@@ -406,8 +408,7 @@ html { scroll-behavior: smooth; }
   .work-before-tools-page .principle-item,
   .work-before-tools-page .principle-note { text-align: left !important; }
 
-  .work-before-tools-page .tension-box,
-  .work-before-tools-page .tension-box li,
+  .work-before-tools-page .tension-box-body,
   .work-before-tools-page .activity-body,
   .work-before-tools-page .activity-body li,
   .work-before-tools-page .activity-prompt,
@@ -588,13 +589,13 @@ html { scroll-behavior: smooth; }
             </div>
             <div>
               <div className="tension-box">
-                <h4>Key tensions entering the room</h4>
-                <ul>
-                  <li>UX saw personalization as empathy at scale: meeting families where they are emotionally</li>
-                  <li>Marketing saw it as AI-driven lead segmentation and conversion optimization</li>
-                  <li>Product saw it as a data infrastructure and ML model challenge</li>
-                  <li>Leadership was using "single deep understanding" without a shared definition</li>
-                </ul>
+                <div className="tension-box-head">Key tensions entering the room</div>
+                <div className="tension-box-body">
+                  <div className="principle-item">UX saw personalization as empathy at scale: meeting families where they are emotionally</div>
+                  <div className="principle-item">Marketing saw it as AI-driven lead segmentation and conversion optimization</div>
+                  <div className="principle-item">Product saw it as a data infrastructure and ML model challenge</div>
+                  <div className="principle-item">Leadership was using "single deep understanding" without a shared definition</div>
+                </div>
               </div>
             </div>
           </div>
@@ -665,7 +666,7 @@ html { scroll-behavior: smooth; }
             </div>
             <div className="principle-card">
               <div className="principle-head" style={{ background: 'var(--terra)' }}>
-                <div className="principle-title">Personalization IS NOT</div>
+                <div className="principle-title" style={{ color: 'var(--charcoal)' }}>Personalization IS NOT</div>
               </div>
               <div className="principle-body">
                 <div className="principle-item">A persuasion or sales engine</div>
@@ -678,7 +679,7 @@ html { scroll-behavior: smooth; }
             </div>
             <div className="principle-card">
               <div className="principle-head" style={{ background: 'var(--charcoal)' }}>
-                <div className="principle-title">Families Should Feel</div>
+                <div className="principle-title" style={{ color: 'var(--gold)' }}>Families Should Feel</div>
               </div>
               <div className="principle-body">
                 <div className="principle-item">Seen and understood as individuals</div>
@@ -691,7 +692,7 @@ html { scroll-behavior: smooth; }
             </div>
           </div>
 
-          <p>
+          <p style={{ marginTop: 'var(--page-padding)' }}>
             Those three lists became the shared evaluation framework for every AI tool, channel, and roadmap decision that followed. They are also where a UX perspective was evangelized in the room: the commitment to build personalization as empathy at scale, not as lead segmentation.
           </p>
         </div>
@@ -822,17 +823,15 @@ html { scroll-behavior: smooth; }
 
         <div className="section">
           <div className="section-label">Reflection</div>
-          <div className="reflection-box">
-            <h3>What I'd do differently — and what the work left open</h3>
-            <p>
-              Knowing how we'd synthesize the output before walking in the room would have made the final artifact even stronger. Some tensions surfaced in the workshop — particularly around what "single deep understanding" meant to leadership — needed follow-up input we hadn't yet scheduled. Building that escalation path into the session design would have compressed the time between alignment and action.
-            </p>
-            <p>
-              The session also revealed that the UX team held a unique piece of the puzzle: foundational research that could surface users the company didn't already know. Making that research visible earlier would have given the AI personalization system a more complete scope from the start.
-            </p>
-            <p className="handoff">
-              The workshop concluded shortly before my departure from the company. The framework and synthesis artifacts were handed off to the team as the primary input document for next steps with analytics and engineering — a complete deliverable, even if I didn't see it implemented.
-            </p>
+          <h2>What I'd do differently, and what the work left open</h2>
+          <p>
+            Knowing how we'd synthesize the output before walking in the room would have made the final artifact even stronger. Some tensions surfaced in the workshop, particularly around what "single deep understanding" meant to leadership, and they needed follow-up input we hadn't yet scheduled. Building that follow-up into the schedule earlier would have compressed the time between alignment and action.
+          </p>
+          <p>
+            The session also revealed that the UX team held a unique piece of the puzzle: foundational research that could surface users the company didn't already know. Making that research visible earlier would have given the AI personalization system a more complete scope from the start.
+          </p>
+          <div className="nda-note">
+            The workshop concluded shortly before my departure from the company. The framework and synthesis artifacts were handed off to the team as the primary input document for next steps with analytics and engineering, a complete deliverable, even if I didn't see it implemented.
           </div>
         </div>
       </div>
