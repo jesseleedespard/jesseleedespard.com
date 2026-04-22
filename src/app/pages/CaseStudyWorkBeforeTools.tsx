@@ -5,7 +5,7 @@ import { MarketingCtaStrip } from '../components/MarketingCtaStrip';
 
 export default function CaseStudyWorkBeforeTools() {
   useEffect(() => {
-    document.title = 'The Work Before the Tools — Jesse Lee Despard';
+    document.title = 'The Work Before the Tools · Jesse Lee Despard';
   }, []);
 
   return (
@@ -131,7 +131,7 @@ html { scroll-behavior: smooth; }
   padding: 0 var(--page-padding);
 }
 
-.section { padding: 56px 0 0; }
+.section { padding: var(--page-padding) 0 0; }
 
 .section-label {
   font-family: var(--display);
