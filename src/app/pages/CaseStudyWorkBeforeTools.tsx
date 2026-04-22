@@ -102,8 +102,8 @@ html { scroll-behavior: smooth; }
   padding-top: 28px;
 }
 .meta-item {
-  padding-right: 32px;
-  margin-right: 32px;
+  padding-right: 24px;
+  margin-right: 24px;
   border-right: 1px solid rgba(255,255,255,0.1);
 }
 .meta-item:last-child { border-right: none; margin-right: 0; }
@@ -351,6 +351,17 @@ html { scroll-behavior: smooth; }
   font-size: 15px;
 }
 
+/* PRINCIPLES CARDS */
+.principles-headline { font-family: var(--display); font-size: var(--font-size-sm); font-weight: 700; color: var(--charcoal); text-align: center; margin: 24px 0 16px; }
+.principles-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; }
+.principle-card { background: var(--white); border: 1px solid var(--light-gray); border-radius: var(--radius-sm); overflow: hidden; }
+.principle-head { padding: 14px 18px; }
+.principle-title { font-family: var(--display); font-size: var(--font-size-sm); font-weight: 700; color: var(--white); letter-spacing: 0.5px; }
+.principle-body { padding: 16px 18px; }
+.principle-item { font-size: var(--font-size-sm); line-height: 1.65; color: var(--dark-gray); margin-bottom: 7px; padding: 6px 0 6px 20px; position: relative; }
+.principle-item::before { content: '•'; position: absolute; left: 6px; color: var(--teal); font-weight: 700; }
+.principle-note { font-family: var(--body); font-size: var(--font-size-sm); line-height: 1.65; color: var(--dark-gray); font-style: italic; margin-top: 12px; padding-top: 12px; border-top: 1px solid var(--light-gray); }
+
 /* ═══════════════════════════════════════════════════════════
    MOBILE — 375px target, 8pt grid, centered text
    ═══════════════════════════════════════════════════════════ */
@@ -380,6 +391,10 @@ html { scroll-behavior: smooth; }
   .work-before-tools-page .section p { text-align: center !important; }
   .work-before-tools-page .section-label { text-align: center !important; }
   .work-before-tools-page .divider { margin: 40px 0 0 !important; }
+
+  .work-before-tools-page .principles-grid { grid-template-columns: 1fr !important; }
+  .work-before-tools-page .principle-item,
+  .work-before-tools-page .principle-note { text-align: left !important; }
 
   .work-before-tools-page .tension-box,
   .work-before-tools-page .tension-box li,
@@ -504,12 +519,12 @@ html { scroll-behavior: smooth; }
 
       <header className="hero">
         <div className="hero-inner">
-          <span className="hero-tag">UX Research · Workshop Facilitation</span>
+          <span className="hero-tag">UX Leadership · Cross-functional Workshop</span>
           <h1>
             The Work Before the Tools: <em>Defining AI Personalization</em>
           </h1>
           <p className="hero-sub">
-            When a large EdTech company decided to invest in AI-powered personalization, the instinct was to start evaluating tools. I paused — and defined what personalization actually meant for families first.
+            When a large EdTech company decided to invest in AI-powered personalization, the instinct was to start evaluating tools. I paused and asked what personalization actually meant for users first, and whether that aligned with the business vision.
           </p>
           <div className="meta-strip">
             <div className="meta-item">
@@ -535,27 +550,27 @@ html { scroll-behavior: smooth; }
       <div className="page-wrap">
         <div className="section">
           <div className="section-label">Overview</div>
-          <h2>Before the AI tools — aligning on what personalization means for people</h2>
+          <h2>Before the AI tools: aligning on what personalization means for people</h2>
           <p>
-            A large EdTech company was preparing to invest in AI-powered personalization across its family enrollment experience. Leadership had a clear FY27 vision: one-to-one relationships with every family, from web to email to SMS. The market pressure was real — AI personalization tools were everywhere, and the temptation to start evaluating platforms was strong.
+            A large EdTech company was preparing to invest in AI-powered personalization across its family enrollment experience. Leadership had a clear 12-month goal: one-to-one relationships with every family, from web to email to SMS. The market pressure was real. AI personalization tools were everywhere, and the temptation to start evaluating platforms was strong.
           </p>
           <p>
-            But before any tools were shortlisted or roadmaps written, I made the case for a different first step. If we didn't know what we were trying to do for families — emotionally, not just functionally — we'd end up buying tools that optimized for the wrong things.
+            Before any tools were shortlisted or roadmaps written, I asked the question that reframed the conversation: what does personalization actually mean for families, and does that roll up to the business vision? If we didn't know what we were trying to do for families, emotionally and not just functionally, we'd end up buying tools that optimized for the wrong things.
           </p>
           <p>
-            I designed and facilitated a cross-functional workshop to answer that question first. The goal wasn't to solve <em>how</em> to personalize with AI. It was to build a shared <em>why</em>, surface where families were genuinely getting stuck, and land on a set of principles that could guide any tool decision that followed.
+            A PM colleague set up and facilitated a cross-functional workshop to answer that question. I came in as a participant, carrying the UX and user lens, making sure every proposed definition of personalization got tested against what it would actually mean for the people it was supposed to serve.
           </p>
         </div>
 
         <div className="divider" />
 
         <div className="section">
-          <div className="section-label">The Challenge</div>
+          <div className="section-label">The Problem</div>
           <h2>A business vision without a shared definition</h2>
           <div className="two-col">
             <div>
               <p>
-                The company's FY27 vision called for "one-to-one relationships" with families across all products. But across UX, Marketing, and Product, teams held fundamentally different assumptions about what that meant — and what AI should actually be doing.
+                The company's 12-month goal called for "one-to-one relationships" with families across all products. But across UX, Marketing, and Product, teams held fundamentally different assumptions about what that meant, and what AI should actually be doing.
               </p>
               <p>
                 Without alignment at the vision level, any AI personalization tool would get shaped by whichever team had the loudest voice. The result: a system optimized for internal processes, not family outcomes.
@@ -565,7 +580,7 @@ html { scroll-behavior: smooth; }
               <div className="tension-box">
                 <h4>Key tensions entering the room</h4>
                 <ul>
-                  <li>UX saw personalization as empathy at scale — meeting families where they are emotionally</li>
+                  <li>UX saw personalization as empathy at scale: meeting families where they are emotionally</li>
                   <li>Marketing saw it as AI-driven lead segmentation and conversion optimization</li>
                   <li>Product saw it as a data infrastructure and ML model challenge</li>
                   <li>Leadership was using "single deep understanding" without a shared definition</li>
@@ -581,16 +596,16 @@ html { scroll-behavior: smooth; }
           <div className="section-label">Context</div>
           <h2>What the data told us about where families were getting lost</h2>
           <p>
-            Before the workshop, marketing data surfaced a conversion gap that grounded the session in something concrete. With roughly 700,000 leads entering the funnel, a significant portion of RFI leads were converting to account creation within ten minutes — suggesting families weren't signaling their intent clearly, or that the funnel wasn't reading them accurately.
+            Before the workshop, marketing data surfaced a conversion gap that grounded the session in something concrete. With roughly 700,000 leads entering the funnel, a significant portion of RFI leads were converting to account creation within ten minutes. That suggested families weren't signaling their intent clearly, or that the funnel wasn't reading them accurately.
           </p>
           <p>
-            On top of that, 30–40% of families dropped off between seeing the sign-up page and actually creating an account. Users were clicking "Enroll Now" when they simply wanted more information — unaware they were initiating the application process.
+            On top of that, 30–40% of families dropped off between seeing the sign-up page and actually creating an account. Users were clicking "Enroll Now" when they simply wanted more information, unaware they were initiating the application process.
           </p>
 
           <div className="img-block">
             <img src="/img_funnel.png" alt="Enrollment funnel drop-off chart" />
           </div>
-          <p className="img-caption">Enrollment funnel drop-off — the data that anchored the workshop conversation</p>
+          <p className="img-caption">Enrollment funnel drop-off: the data that anchored the workshop conversation</p>
 
           <div className="pull-quote">
             <p>"Families weren't failing the funnel. The funnel was failing to read them."</p>
@@ -605,109 +620,70 @@ html { scroll-behavior: smooth; }
 
         <div className="section">
           <div className="section-label">My Role</div>
-          <h2>Workshop design, facilitation, and synthesis</h2>
+          <h2>Carrying the user perspective into a business vision workshop</h2>
           <p>
-            I designed the session from the ground up — the arc, the activities, the framing, and the synthesis artifacts. My job was to hold the room at the vision level while keeping the conversation grounded in real family experience, not internal process or tool preference.
+            My role in the workshop was not to run it. A PM colleague designed and facilitated the session. I was a participant, there as the UX manager, with a clear job: make sure every definition of personalization we landed on was tested against what it would actually mean for families, not just what it would mean for the business.
           </p>
           <p>
-            I wrote the participant brief, structured each activity to build on the last, and ensured the session produced something durable: a shared framework the team could use to evaluate any AI personalization tool or roadmap decision that followed.
+            That meant asking questions that slowed the conversation down when it rushed toward tools or business mechanics. It meant naming the risk that "one-to-one relationships" could get quietly reinterpreted as efficient lead segmentation if no one held space for the family experience. And it meant bringing that lens into the synthesis, so the document that was handed off to analytics, engineering, and senior leadership carried a user perspective, not just a business one.
           </p>
         </div>
 
         <div className="divider" />
 
         <div className="section">
-          <div className="section-label">Workshop Design</div>
-          <h2>How the session was structured</h2>
-          <p>The workshop moved through five deliberate phases — each one building shared understanding before asking the group to synthesize.</p>
+          <div className="section-label">The Workshop</div>
+          <h2>Defining what personalization should feel like</h2>
+          <p>
+            The PM's workshop moved through five phases, from framing to synthesis. The one where the UX lens could show up most fully was the definition of personalization principles. The team worked individually and then together to articulate three things: what personalization IS, what it IS NOT, and how families should FEEL when they experience it.
+          </p>
 
-          <div className="img-block">
-            <img src="/img_arc.png" alt="Workshop arc — five phases" />
-          </div>
-          <p className="img-caption">The five-part workshop arc — from framing through vision synthesis</p>
-
-          <div className="activity-stack">
-            <div className="activity-card">
-              <div className="activity-header">
-                <span className="activity-title">Participant Brief</span>
-                <span className="activity-duration">Pre-read</span>
+          <div className="principles-headline">Personalization Principles: What the Team Aligned On</div>
+          <div className="principles-grid">
+            <div className="principle-card">
+              <div className="principle-head" style={{ background: 'var(--teal)' }}>
+                <div className="principle-title">Personalization IS</div>
               </div>
-              <div className="activity-body">
-                <p className="activity-prompt">Frame the room before anyone walked in.</p>
-                <ul>
-                  <li>Established this as a vision and alignment session — not a tool evaluation or roadmap planning</li>
-                  <li>Set three ground rules: all ideas are valid, focus on family outcomes not internal processes, stay at vision level</li>
-                  <li>Seeded six questions to orient individual thinking before the session</li>
-                </ul>
+              <div className="principle-body">
+                <div className="principle-item">A holistic journey, not a one-time event</div>
+                <div className="principle-item">Empathy at scale: meeting families where they are emotionally</div>
+                <div className="principle-item">Helpful guidance, relevant at the right moment</div>
+                <div className="principle-item">Continuous: it remembers who you are across the journey</div>
+                <div className="principle-item">A source of confident, informed decision-making</div>
+                <div className="principle-note">Families should feel: seen, guided, in charge</div>
               </div>
             </div>
-
-            <div className="activity-card">
-              <div className="activity-header">
-                <span className="activity-title">Conversion Group Discussion</span>
-                <span className="activity-duration">5 min</span>
+            <div className="principle-card">
+              <div className="principle-head" style={{ background: 'var(--terra)' }}>
+                <div className="principle-title">Personalization IS NOT</div>
               </div>
-              <div className="activity-body">
-                <p className="activity-prompt">Where are families getting stuck or lost?</p>
-                <ul>
-                  <li>UX contributed qualitative insight on family emotional state and decision-making patterns</li>
-                  <li>Marketing contributed funnel data and channel context — including the 30–40% drop-off finding</li>
-                  <li>Product contributed technical constraints and what signals an AI system could realistically read</li>
-                  <li>Output: top 3 conversion gaps and top 3 friction points, agreed across functions</li>
-                </ul>
+              <div className="principle-body">
+                <div className="principle-item">A persuasion or sales engine</div>
+                <div className="principle-item">Creepy, assumptive, or one-size-fits-all</div>
+                <div className="principle-item">A one-time feature or campaign tactic</div>
+                <div className="principle-item">About creating excitement — it builds reassurance</div>
+                <div className="principle-item">Defined by demographic data alone</div>
+                <div className="principle-note">Families should NOT feel: pitched, overwhelmed, or tracked</div>
               </div>
             </div>
-
-            <div className="activity-card">
-              <div className="activity-header">
-                <span className="activity-title">Personalization Principles</span>
-                <span className="activity-duration">10 min</span>
+            <div className="principle-card">
+              <div className="principle-head" style={{ background: 'var(--charcoal)' }}>
+                <div className="principle-title">Families Should Feel</div>
               </div>
-              <div className="activity-body">
-                <p className="activity-prompt">How should families feel when they experience our personalization?</p>
-                <ul>
-                  <li>Individual: each participant completed three prompts — Personalization IS / IS NOT / Families should FEEL</li>
-                  <li>Group: themes surfaced and synthesized into shared principles</li>
-                  <li>Group collaboratively drafted: "We use personalization to [verb] so families can [outcome] without [friction we remove]."</li>
-                </ul>
-              </div>
-            </div>
-
-            <div className="img-block" style={{ marginTop: '16px' }}>
-              <img src="/img_principles.png" alt="Personalization principles — IS / IS NOT / FEEL" />
-            </div>
-            <p className="img-caption">Personalization principles — synthesized from individual responses into shared team commitments</p>
-
-            <div className="activity-card">
-              <div className="activity-header">
-                <span className="activity-title">Bluesky Visualization</span>
-                <span className="activity-duration">10 min</span>
-              </div>
-              <div className="activity-body">
-                <p className="activity-prompt">What are our guiding principles if we imagine the ideal AI-personalized state?</p>
-                <ul>
-                  <li>Individual: 3–5 guiding principles written without constraint</li>
-                  <li>Group themes: "Anticipate, don't ask repeatedly," "Guide, don't overwhelm," "Adapt in real-time"</li>
-                  <li>Established that AI personalization should be a holistic journey, not a one-time interaction</li>
-                </ul>
-              </div>
-            </div>
-
-            <div className="activity-card">
-              <div className="activity-header">
-                <span className="activity-title">Vision Alignment Bridge</span>
-                <span className="activity-duration">7 min</span>
-              </div>
-              <div className="activity-body">
-                <p className="activity-prompt">How does personalization connect to the business vision?</p>
-                <ul>
-                  <li>Groups completed a three-part bridge: Business Vision → How AI Personalization Enables It → Our Personalization Vision</li>
-                  <li>Produced: "Every family experiences a journey built for them — guided, confident, and supported from first click to first day"</li>
-                  <li>Surfaced open questions for leadership: what does "single deep understanding" mean in practice, what does a first version actually serve</li>
-                </ul>
+              <div className="principle-body">
+                <div className="principle-item">Seen and understood as individuals</div>
+                <div className="principle-item">Confident, not in need of perfect certainty</div>
+                <div className="principle-item">Guided, not overwhelmed</div>
+                <div className="principle-item">Supported at every stage of their journey</div>
+                <div className="principle-item">In charge of their own decision</div>
+                <div className="principle-note">Outcome: transferable trust and confidence</div>
               </div>
             </div>
           </div>
+
+          <p>
+            Those three lists became the shared evaluation framework for every AI tool, channel, and roadmap decision that followed. They are also where a UX perspective was evangelized in the room: the commitment to build personalization as empathy at scale, not as lead segmentation.
+          </p>
         </div>
 
         <div className="divider" />
@@ -716,13 +692,8 @@ html { scroll-behavior: smooth; }
           <div className="section-label">What Emerged</div>
           <h2>A shared framework with three pillars</h2>
           <p>
-            The workshop produced the Vision Connect framework — organizing the group's output into a three-pillar structure that connected the business goal to the user outcome, and gave the team a principled lens for evaluating any AI tool or feature that followed.
+            The workshop produced the Vision Connect framework: a three-pillar structure that connected the business goal to the user outcome, and gave the team a principled lens for evaluating any AI tool or feature that followed.
           </p>
-
-          <div className="img-block">
-            <img src="/img_vision.png" alt="Vision Connect Framework" />
-          </div>
-          <p className="img-caption">Vision Connect Framework — the synthesis artifact produced from workshop output</p>
 
           <div className="pillars">
             <div className="pillar">
@@ -731,7 +702,7 @@ html { scroll-behavior: smooth; }
               </div>
               <div className="pillar-body">
                 <p>
-                  Personalization is not a one-time touchpoint — <strong>it remembers who users are</strong> and meets them at every stage of the journey.
+                  Personalization is not a one-time touchpoint. <strong>It remembers who users are</strong> and meets them at every stage of the journey.
                 </p>
                 <p>
                   Families should feel cared for and informed at all points. Personalization is a source of <strong>confident, informed decision-making</strong>.
@@ -744,7 +715,10 @@ html { scroll-behavior: smooth; }
               </div>
               <div className="pillar-body">
                 <p>
-                  Personalization <strong>adjusts the experience based on context</strong> — aware of who families are and what they need at each step.
+                  Personalization <strong>adjusts the experience based on context</strong>, aware of who families are and what they need at each step.
+                </p>
+                <p>
+                  Leverages the content we have created to place the right amount of relevant information in the right context, helping users confidently progress to the next step.
                 </p>
                 <p>
                   Small redirects guide families back on track <strong>wherever they drop off</strong> in the journey.
@@ -757,10 +731,10 @@ html { scroll-behavior: smooth; }
               </div>
               <div className="pillar-body">
                 <p>
-                  <strong>Answer likely questions before families think to ask them</strong> — so they can trust themselves without needing perfect certainty.
+                  <strong>Answer likely questions before families think to ask them</strong>, so they can trust themselves without needing perfect certainty.
                 </p>
                 <p>
-                  The emotionally appropriate experience, <strong>at the right level of detail, in the right moment</strong>.
+                  The emotionally appropriate experience, <strong>at the right level of detail, in the right moment</strong>, for their specific scenario.
                 </p>
               </div>
             </div>
