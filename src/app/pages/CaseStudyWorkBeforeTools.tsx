@@ -277,8 +277,6 @@ html { scroll-behavior: smooth; }
 }
 .impact-list li { margin-bottom: 14px; list-style-type: disc; }
 
-/* NDA NOTE */
-.nda-note { background: var(--cream); border-left: 3px solid var(--gold); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 13px 18px; margin-top: 18px; font-family: var(--display); font-size: var(--font-size-xs); color: var(--dark-gray); font-style: italic; }
 
 /* NUMBERED CARDS */
 .theme-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-top: 24px; }

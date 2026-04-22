@@ -350,6 +350,21 @@
   }
 
   /**
+   * NDA / legal attribution callout used on case study pages below the hero meta strip.
+   */
+  .nda-note {
+    background: var(--cream);
+    border-left: 3px solid var(--gold);
+    border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+    padding: 13px 18px;
+    margin-top: 18px;
+    font-family: var(--display);
+    font-size: var(--font-size-sm);
+    color: var(--dark-gray);
+    font-style: italic;
+  }
+
+  /**
    * Home-style terra CTA strip: outer band, 1200px inner, DM Sans title + Lora body + dark pill button.
    */
   .home-cta-strip {

@@ -53,8 +53,6 @@ html { scroll-behavior: smooth; }
 .divider { height: 1px; background: var(--light-gray); margin: 48px 0 0; }
 
 /* NDA NOTE */
-.nda-note { background: var(--cream); border-left: 3px solid var(--gold); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 13px 18px; margin-top: 18px; font-family: var(--display); font-size: var(--font-size-sm); color: var(--dark-gray); font-style: italic; }
-
 /* GRID */
 .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 20px; }
 .grid3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; margin-top: 20px; }
