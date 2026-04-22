@@ -29,7 +29,7 @@ export function Footer() {
           </a>
         </nav>
 
-        <div className="site-footer__copy">© 2026 Jesse Lee Despard</div>
+        <div className="site-footer__copy">© 2026 Jesse Lee Despard. All rights reserved. Case studies summarize work completed under NDA; company details are anonymized and artifacts are shown with permission.</div>
       </div>
     </footer>
   );
