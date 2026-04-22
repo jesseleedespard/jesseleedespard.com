@@ -288,10 +288,10 @@ html { scroll-behavior: smooth; }
 /* PRINCIPLES CARDS */
 .principles-headline { font-family: var(--display); font-size: var(--font-size-sm); font-weight: 700; color: var(--charcoal); text-align: center; margin: 24px 0 16px; }
 .principles-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; margin-top: 24px; }
-.principle-card { }
+.principle-card { background: var(--white); border: 1px solid var(--light-gray); border-radius: var(--radius-sm); overflow: hidden; }
 .principle-head { padding: 12px 14px; font-family: var(--display); font-size: var(--font-size-sm); font-weight: 700; color: var(--white); text-align: center; }
 .principle-title { font-family: var(--display); font-size: var(--font-size-sm); font-weight: 700; color: inherit; letter-spacing: 0.5px; }
-.principle-body { padding: 16px; border: 1px solid var(--light-gray); border-top: none; border-radius: 0 0 var(--radius-sm) var(--radius-sm); background: var(--white); }
+.principle-body { padding: 16px 18px; }
 .principle-item { font-size: var(--font-size-sm); line-height: 1.65; color: var(--dark-gray); margin-bottom: 7px; padding: 6px 0 6px 20px; position: relative; }
 .principle-item::before { content: '•'; position: absolute; left: 6px; color: var(--teal); font-weight: 700; }
 .principle-note { font-family: var(--body); font-size: var(--font-size-sm); line-height: 1.65; color: var(--dark-gray); font-style: italic; margin-top: 12px; padding-top: 12px; border-top: 1px solid var(--light-gray); }
