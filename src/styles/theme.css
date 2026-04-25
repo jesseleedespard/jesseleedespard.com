@@ -280,6 +280,27 @@
   }
 
   /**
+   * Canonical pull quote — boxed, gold left accent, italic Lora body
+   */
+  .pull-quote {
+    margin: 28px 0;
+    padding: calc(var(--page-padding) / 2) var(--page-padding);
+    background: var(--white);
+    border: 1px solid var(--light-gray);
+    border-left: 4px solid var(--gold);
+    border-radius: var(--radius-md);
+  }
+
+  .pull-quote p {
+    font-family: var(--body);
+    font-size: var(--font-size-xl);
+    font-style: italic;
+    color: var(--charcoal);
+    line-height: 1.5;
+    margin: 0;
+  }
+
+  /**
    * Site footer — same width rhythm as Work / Home (1200px), stacks under 768px like work-cta-flex.
    */
   .site-footer {

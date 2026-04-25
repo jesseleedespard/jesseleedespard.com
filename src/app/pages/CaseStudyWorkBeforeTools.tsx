@@ -20,6 +20,7 @@ export default function CaseStudyWorkBeforeTools() {
   padding: 0;
   box-sizing: border-box;
 }
+.work-before-tools-page .pull-quote { margin: 28px 0; padding: calc(var(--page-padding) / 2) var(--page-padding); }
 
 .work-before-tools-page {
   --display: 'DM Sans', system-ui, sans-serif;
@@ -227,21 +228,6 @@ html { scroll-behavior: smooth; }
   text-align: center;
 }
 
-.pull-quote {
-  margin: 28px 0;
-  padding: calc(var(--page-padding) / 2) var(--page-padding);
-  background: var(--white);
-  border: 1px solid var(--light-gray);
-  border-left: 4px solid var(--teal-dark);
-  border-radius: var(--radius-md);
-}
-.pull-quote p {
-  font-family: var(--body);
-  font-size: var(--font-size-xl);
-  font-style: italic;
-  color: var(--charcoal);
-  margin: 0;
-}
 
 .pillars {
   display: grid;
@@ -339,9 +325,6 @@ html { scroll-behavior: smooth; }
   .work-before-tools-page .impact-list,
   .work-before-tools-page .impact-list li { text-align: left !important; }
 
-  /* PULL QUOTE */
-  .work-before-tools-page .pull-quote { padding: var(--page-padding) !important; margin: 24px 0 !important; background: var(--white) !important; border: 1px solid var(--light-gray) !important; border-left: 4px solid var(--teal-dark) !important; border-radius: var(--radius-md) !important; text-align: center !important; }
-  .work-before-tools-page .pull-quote p { font-size: var(--font-size-base) !important; font-style: italic !important; text-align: center !important; }
 
   /* CARD GRID */
   .work-before-tools-page .card-grid { padding: 32px 0 !important; gap: 16px !important; }

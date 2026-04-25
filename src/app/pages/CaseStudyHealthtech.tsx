@@ -14,6 +14,7 @@ export default function CaseStudyHealthtech() {
     <div className="healthtech-case-study-page">
       <style>{`
 .healthtech-case-study-page, .healthtech-case-study-page *, .healthtech-case-study-page *::before, .healthtech-case-study-page *::after { margin: 0; padding: 0; box-sizing: border-box; }
+.healthtech-case-study-page .pull-quote { margin: 28px 0; padding: calc(var(--page-padding) / 2) var(--page-padding); }
 .healthtech-case-study-page {
   --display: 'DM Sans', system-ui, sans-serif;
   --body:    'Lora', Georgia, serif;
@@ -111,9 +112,6 @@ html { scroll-behavior: smooth; }
   .section-label { text-align: center !important; }
   .divider { margin: 40px 0 0 !important; }
 
-  /* PULL QUOTE */
-  .pull-quote { padding: 24px !important; margin: 24px 0 !important; border-left: none !important; border-top: 4px solid var(--gold) !important; text-align: center !important; }
-  .pull-quote p { font-size: var(--font-size-base) !important; text-align: center !important; }
 
   /* CARD GRID */
   .card-grid { padding: 32px 0 !important; gap: 16px !important; }

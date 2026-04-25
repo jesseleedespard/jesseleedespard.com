@@ -13,6 +13,7 @@ export default function LeadershipResearchFunction() {
     <div className="leadership-research-function-page">
       <style>{`
 .leadership-research-function-page, .leadership-research-function-page *, .leadership-research-function-page *::before, .leadership-research-function-page *::after { margin: 0; padding: 0; box-sizing: border-box; }
+.leadership-research-function-page .pull-quote { margin: 28px 0; padding: calc(var(--page-padding) / 2) var(--page-padding); }
 
 .leadership-research-function-page {
   --display: 'DM Sans', system-ui, sans-serif;
@@ -76,9 +77,6 @@ html { scroll-behavior: smooth; }
   box-sizing: border-box;
 }
 
-/* PULL QUOTE */
-.pull-quote { margin: 32px 0; padding: 22px 28px; border-left: 4px solid var(--gold); background: var(--white); border-radius: 0 6px 6px 0; }
-.pull-quote p { font-family: var(--body); font-size: 20px; color: var(--charcoal); line-height: 1.5; font-style: italic; margin: 0 !important; }
 
 /* (body uses classes not in source <style>) */
 .act-cards { display: flex; flex-direction: column; gap: 16px; margin-top: 24px; }
@@ -294,8 +292,6 @@ html { scroll-behavior: smooth; }
   .leadership-research-function-page .highlight-box-body li,
   .leadership-research-function-page .stat-desc { text-align: left !important; }
 
-  .leadership-research-function-page .pull-quote { padding: 24px !important; margin: 24px 0 !important; border-left: none !important; border-top: 4px solid var(--gold) !important; text-align: center !important; }
-  .leadership-research-function-page .pull-quote p { font-size: 17px !important; text-align: center !important; }
 
   .leadership-research-function-page .card-grid { padding: 32px 0 !important; gap: 16px !important; }
   .leadership-research-function-page .cs-cards { grid-template-columns: 1fr !important; gap: 16px !important; }
@@ -647,7 +643,7 @@ html { scroll-behavior: smooth; }
           <p>
             I had also conducted confidential pre-acquisition research validating the strategic fit and informing the integration roadmap. By the time the acquisition closed, my work had already shaped the deal.
           </p>
-          <div className="pull-quote" style={{ marginTop: '32px' }}>
+          <div className="pull-quote">
             <p>"I didn't just survive the acquisition. I had already informed it."</p>
           </div>
         </div>

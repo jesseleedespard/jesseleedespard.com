@@ -13,6 +13,7 @@ export default function LeadershipWebStrategy() {
     <div className="leadership-web-strategy-page">
       <style>{`
 .leadership-web-strategy-page, .leadership-web-strategy-page *, .leadership-web-strategy-page *::before, .leadership-web-strategy-page *::after { margin: 0; padding: 0; box-sizing: border-box; }
+.leadership-web-strategy-page .pull-quote { margin: 28px 0; padding: calc(var(--page-padding) / 2) var(--page-padding); }
 
 .leadership-web-strategy-page {
   --display: 'DM Sans', system-ui, sans-serif;
@@ -184,8 +185,6 @@ html { scroll-behavior: smooth; }
 }
 .venn-block img { width: 100%; max-width: 820px; height: auto; display: block; margin: 0 auto; }
 
-.pull-quote { margin: 32px 0; padding: 22px 28px; border-left: 4px solid var(--gold); background: var(--white); border-radius: 0 6px 6px 0; }
-.pull-quote p { font-family: var(--body); font-size: 20px; color: var(--charcoal); line-height: 1.5; font-style: italic; margin: 0 !important; }
 
 .metrics-flow { display: flex; flex-direction: column; align-items: center; gap: 6px; margin-top: 24px; }
 .metrics-tier { border-radius: 8px; padding: 16px 20px; text-align: center; box-sizing: border-box; }
@@ -237,8 +236,6 @@ html { scroll-behavior: smooth; }
   .leadership-web-strategy-page .outcome-desc,
   .leadership-web-strategy-page .daio-desc-card-body ul { text-align: left !important; }
 
-  .leadership-web-strategy-page .pull-quote { padding: 24px !important; margin: 24px 0 !important; border-left: none !important; border-top: 4px solid var(--gold) !important; text-align: center !important; }
-  .leadership-web-strategy-page .pull-quote p { font-size: 17px !important; text-align: center !important; }
 
   .leadership-web-strategy-page .card-grid { padding: 32px 0 !important; gap: 16px !important; }
   .leadership-web-strategy-page .cs-cards { grid-template-columns: 1fr !important; gap: 16px !important; }
