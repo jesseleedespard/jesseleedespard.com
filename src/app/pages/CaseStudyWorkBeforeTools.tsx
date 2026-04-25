@@ -297,6 +297,9 @@ html { scroll-behavior: smooth; }
 .principle-item::before { content: '•'; position: absolute; left: 6px; color: var(--teal); font-weight: 700; }
 .principle-note { font-family: var(--body); font-size: var(--font-size-sm); line-height: 1.65; color: var(--dark-gray); font-style: italic; margin-top: 12px; padding-top: 12px; border-top: 1px solid var(--light-gray); }
 
+/* NDA NOTE — padding override (the * reset zeros out the @layer padding) */
+.nda-note { padding: 13px 18px 13px 24px; }
+
 /* ═══════════════════════════════════════════════════════════
    MOBILE — 375px target, 8pt grid, centered text
    ═══════════════════════════════════════════════════════════ */
