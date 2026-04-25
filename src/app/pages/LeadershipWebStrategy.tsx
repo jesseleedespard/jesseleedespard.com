@@ -28,7 +28,7 @@ html { scroll-behavior: smooth; }
   font-family: var(--body);
   background: var(--cream);
   color: var(--charcoal);
-  font-size: 17px;
+  font-size: var(--font-size-base);
   line-height: 1.75;
   -webkit-font-smoothing: antialiased;
   min-height: 100vh;
@@ -39,15 +39,15 @@ html { scroll-behavior: smooth; }
 .hero { background: var(--charcoal); padding: 80px 48px 72px; position: relative; overflow: hidden; }
 .hero::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 4px; background: linear-gradient(to right, var(--teal), var(--gold), transparent); }
 .hero-inner { max-width: var(--max); margin: 0 auto; }
-.hero-tag { font-family: var(--display); display: inline-block; font-size: var(--font-size-xs); font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); margin-bottom: 24px; border: 1px solid rgba(212,168,67,0.4); padding: 8px 16px; border-radius: 4px; }
-.hero h1 { font-family: var(--display); font-size: clamp(30px, 4.5vw, 46px); font-weight: 700; color: var(--white); line-height: 1.18; letter-spacing: -0.5px; margin-bottom: 8px; }
+.hero-tag { font-family: var(--display); display: inline-block; font-size: var(--font-size-xs); font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); margin-bottom: 24px; border: 1px solid rgba(212,168,67,0.4); padding: 8px 16px; border-radius: var(--radius-sm); }
+.hero h1 { font-family: var(--display); font-size: clamp(var(--font-size-2xl), 4.5vw, var(--font-size-3xl)); font-weight: 700; color: var(--white); line-height: 1.18; letter-spacing: -0.5px; margin-bottom: 8px; }
 .hero h1 em { color: var(--gold); font-style: normal; }
-.hero-sub { font-family: var(--body); font-size: 17px; color: rgba(255,255,255,0.6); line-height: 1.7; margin-bottom: 36px; font-style: italic; }
+.hero-sub { font-family: var(--body); font-size: var(--font-size-base); color: rgba(255,255,255,0.6); line-height: 1.7; margin-bottom: 36px; font-style: italic; }
 .meta-strip { display: flex; flex-wrap: wrap; gap: 0; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 24px; }
 .meta-item { padding-right: 28px; margin-right: 28px; border-right: 1px solid rgba(255,255,255,0.1); }
 .meta-item:last-child { border-right: none; margin-right: 0; }
-.meta-label { font-family: var(--display); font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); font-weight: 700; margin-bottom: 3px; }
-.meta-value { font-family: var(--display); font-size: 13px; color: rgba(255,255,255,0.82); font-weight: 500; }
+.meta-label { font-family: var(--display); font-size: var(--font-size-xs); letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); font-weight: 700; margin-bottom: 3px; }
+.meta-value { font-family: var(--display); font-size: var(--font-size-sm); color: rgba(255,255,255,0.82); font-weight: 500; }
 
 /* LAYOUT */
 .page-wrap { max-width: calc(var(--max) + (var(--page-padding) * 2)); margin: 0 auto; padding: 0 var(--page-padding); }
@@ -66,7 +66,7 @@ html { scroll-behavior: smooth; }
 .theme-card {
   background: var(--white);
   border: 1px solid var(--light-gray);
-  border-radius: 6px;
+  border-radius: var(--radius-sm);
   padding-block: 20px;
   padding-inline: 20px;
   display: flex;
@@ -83,7 +83,7 @@ html { scroll-behavior: smooth; }
   width: 100%;
   min-width: 0;
 }
-.theme-num { font-family: var(--display); font-size: 20px; font-weight: 700; color: var(--teal); min-width: 28px; flex-shrink: 0; line-height: 1.2; }
+.theme-num { font-family: var(--display); font-size: var(--font-size-lg); font-weight: 700; color: var(--teal); min-width: 28px; flex-shrink: 0; line-height: 1.2; }
 .theme-card-head h3 {
   margin: 0;
   flex: 1;
@@ -102,34 +102,13 @@ html { scroll-behavior: smooth; }
 .daio-donut-wrap img { width: 100%; height: auto; display: block; margin: 0 auto; }
 
 .listening-tour-label { font-family: var(--display); font-size: var(--font-size-xs); font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--teal-dark); margin: 24px 0 12px; }
-.listening-questions { list-style: none; padding-left: 0; margin: 0 0 16px; }
-.listening-questions li {
-  display: flex;
-  gap: 14px;
-  align-items: flex-start;
-  border-left: 3px solid var(--teal);
-  padding: 10px 16px;
-  margin-bottom: 8px;
-  background: var(--white);
-  border-radius: 0 4px 4px 0;
-  font-size: 15px;
-  color: var(--dark-gray);
-}
-.listening-q-num {
-  font-family: var(--display);
-  font-size: 20px;
-  font-weight: 700;
-  color: var(--teal);
-  min-width: 28px;
-  flex-shrink: 0;
-  line-height: 1.35;
-}
-.listening-q-text { flex: 1; min-width: 0; line-height: 1.65; }
+.body-list { list-style: disc; padding-left: 24px; margin: 12px 0 16px; }
+.body-list li { margin-bottom: 8px; line-height: 1.7; }
 
 .built-theme-stack { display: flex; flex-direction: column; gap: 24px; margin-top: 24px; }
 
 .daio-desc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 16px; }
-.daio-desc-card { border: 1px solid var(--light-gray); border-radius: 6px; overflow: hidden; background: var(--white); }
+.daio-desc-card { border: 1px solid var(--light-gray); border-radius: var(--radius-sm); overflow: hidden; background: var(--white); }
 .daio-desc-card-head {
   padding: 11px 20px;
   font-family: var(--display);
@@ -150,12 +129,12 @@ html { scroll-behavior: smooth; }
 .daio-desc-card-body li:last-child { margin-bottom: 0; }
 
 .funnel-three { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 16px; }
-.funnel-card { border: 1px solid var(--light-gray); border-radius: 6px; overflow: hidden; background: var(--white); }
+.funnel-card { border: 1px solid var(--light-gray); border-radius: var(--radius-sm); overflow: hidden; background: var(--white); }
 .funnel-card-head {
   padding: 12px 20px;
   font-family: var(--display);
   font-weight: 700;
-  font-size: 13px;
+  font-size: var(--font-size-sm);
   color: var(--white);
   text-align: center;
 }
@@ -187,16 +166,16 @@ html { scroll-behavior: smooth; }
 
 
 .metrics-flow { display: flex; flex-direction: column; align-items: center; gap: 6px; margin-top: 24px; }
-.metrics-tier { border-radius: 8px; padding: 16px 20px; text-align: center; box-sizing: border-box; }
+.metrics-tier { border-radius: var(--radius-md); padding: 16px 20px; text-align: center; box-sizing: border-box; }
 .metrics-tier h4 { font-family: var(--display); font-size: var(--font-size-sm); margin-bottom: 8px; }
-.metrics-tier p { font-size: 13px; margin: 0; line-height: 1.5; }
+.metrics-tier p { font-size: var(--font-size-sm); margin: 0; line-height: 1.5; }
 .tier-arrow { color: var(--gray); font-size: var(--font-size-lg); line-height: 1; padding: 2px 0; }
 
 .outcomes-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 20px; }
 .leadership-web-strategy-page .outcomes-grid + h2 { margin-top: 36px; }
-.outcome-card { background: var(--white); border: 1px solid var(--light-gray); border-top: 3px solid var(--teal); border-radius: 0 0 6px 6px; padding: 24px; text-align: center; }
-.outcome-number { font-family: var(--display); font-size: 36px; font-weight: 700; color: var(--teal); margin-bottom: 8px; line-height: 1.1; }
-.outcome-label { font-family: var(--display); font-size: 13px; font-weight: 700; color: var(--charcoal); margin-bottom: 8px; }
+.outcome-card { background: var(--white); border: 1px solid var(--light-gray); border-top: 3px solid var(--teal); border-radius: 0 0 var(--radius-sm) var(--radius-sm); padding: 24px; text-align: center; }
+.outcome-number { font-family: var(--display); font-size: var(--font-size-2xl); font-weight: 700; color: var(--teal); margin-bottom: 8px; line-height: 1.1; }
+.outcome-label { font-family: var(--display); font-size: var(--font-size-sm); font-weight: 700; color: var(--charcoal); margin-bottom: 8px; }
 .outcome-desc { font-size: var(--font-size-sm); color: var(--dark-gray); margin: 0; line-height: 1.65; text-align: left; }
 
 
@@ -205,9 +184,9 @@ html { scroll-behavior: smooth; }
 
   .leadership-web-strategy-page .hero { padding: 48px 24px 40px !important; text-align: center !important; }
   .leadership-web-strategy-page .hero-inner { max-width: 100% !important; }
-  .leadership-web-strategy-page .hero-tag { font-size: 10px !important; }
+  .leadership-web-strategy-page .hero-tag { font-size: var(--font-size-xs) !important; }
   .leadership-web-strategy-page .hero h1 { font-size: clamp(24px, 6vw, 30px) !important; line-height: 1.2 !important; text-align: center !important; }
-  .leadership-web-strategy-page .hero-sub { font-size: 15px !important; text-align: center !important; max-width: 100% !important; margin-left: auto !important; margin-right: auto !important; }
+  .leadership-web-strategy-page .hero-sub { font-size: var(--font-size-sm) !important; text-align: center !important; max-width: 100% !important; margin-left: auto !important; margin-right: auto !important; }
   .leadership-web-strategy-page .hero-cta { display: inline-block !important; }
   .leadership-web-strategy-page .show-title { font-size: clamp(24px, 6vw, 30px) !important; text-align: center !important; }
   .leadership-web-strategy-page .show-tagline { text-align: center !important; }
@@ -227,8 +206,6 @@ html { scroll-behavior: smooth; }
   .leadership-web-strategy-page .two-col h3,
   .leadership-web-strategy-page .two-col p,
   .leadership-web-strategy-page .theme-card-body p,
-  .leadership-web-strategy-page .listening-questions li,
-  .leadership-web-strategy-page .listening-q-text,
   .leadership-web-strategy-page .daio-desc-card,
   .leadership-web-strategy-page .daio-desc-card-head,
   .leadership-web-strategy-page .funnel-card-body li,
@@ -317,7 +294,7 @@ html { scroll-behavior: smooth; }
 
   .leadership-web-strategy-page .page-wrap { padding: 0 16px !important; }
   .leadership-web-strategy-page .section { padding: 40px 16px 0 !important; }
-  .leadership-web-strategy-page .section h2 { font-size: 20px !important; }
+  .leadership-web-strategy-page .section h2 { font-size: var(--font-size-lg) !important; }
   .leadership-web-strategy-page .card-grid { padding: 24px 0 !important; }
   .leadership-web-strategy-page .lead-intro { padding: 24px 16px 0 !important; }
 
@@ -343,14 +320,14 @@ html { scroll-behavior: smooth; }
       <header className="hero">
         <div className="hero-inner">
           <span className="hero-tag">Leadership · Team Building</span>
-          <h1>Three Disciplines, One Team</h1>
+          <h1>Three Disciplines, <span style={{ color: 'var(--gold)' }}>One Team</span></h1>
           <p className="hero-sub">
             Building a cross-functional team from the ground up. UX, SEO, and CRO needed a shared identity, operating model, and a north star.
           </p>
           <div className="meta-strip">
             <div className="meta-item">
               <div className="meta-label">Company</div>
-              <div className="meta-value">Large EdTech Company</div>
+              <div className="meta-value">EdTech Company</div>
             </div>
             <div className="meta-item">
               <div className="meta-label">My Role</div>
@@ -373,7 +350,7 @@ html { scroll-behavior: smooth; }
           <div className="section-label">Overview</div>
           <h2>A new team needed more than a mandate: it needed a shared philosophy</h2>
           <p>
-            When I joined a large EdTech company as Manager of UX, SEO, and CRO, I inherited an understaffed function of five where the majority of members had been at the company less than a year. Each discipline had its own priorities and metrics. There was no shared language, no unified operating model, and no clear picture of how UX, SEO, and CRO could work <em>together</em> rather than alongside each other.
+            When I joined an EdTech company as Manager of UX, SEO, and CRO, I inherited an understaffed function of five where the majority of members had been at the company less than a year. Each discipline had its own priorities and metrics. There was no shared language, no unified operating model, and no clear picture of how UX, SEO, and CRO could work <em>together</em> rather than alongside each other.
           </p>
           <p>
             Before I could lead the team toward any outcome, I had to do something more fundamental: listen, define, and align. This is the artifact of that work: a team vision I built from scratch to give three distinct disciplines a common identity, a shared principle, and a practical operating model for delivering results together.
@@ -386,12 +363,12 @@ html { scroll-behavior: smooth; }
           <div className="section-label">The Situation</div>
           <h2>Three disciplines. One funnel. No shared model.</h2>
           <p>
-            The company&apos;s growth depended on a complex enrollment funnel spanning awareness through to active student onboarding. UX, SEO, and CRO each touched this funnel from different research and design angles, with different toolsets, and often without visibility into what the other disciplines were doing.
+            The company&apos;s growth depended on a complex sign-up funnel spanning awareness through to active user onboarding. UX, SEO, and CRO each touched this funnel from different research and design angles, with different toolsets, and often without visibility into what the other disciplines were doing.
           </p>
           <p>
             Without alignment, each discipline would optimize for its own metrics in isolation. SEO would chase rankings. CRO would chase conversion rates. UX would chase usability scores. None of these are wrong, but optimizing them separately, without a shared user lens, was a path to fragmented decisions and missed growth opportunities.
           </p>
-          <div className="section-label" style={{ marginTop: '24px', marginBottom: '12px' }}>
+          <div className="listening-tour-label">
             What the listening tour revealed
           </div>
           <div className="theme-grid">
@@ -432,44 +409,28 @@ html { scroll-behavior: smooth; }
           <div className="listening-tour-label">
             Five questions asked to 20+ colleagues, stakeholders, and team members
           </div>
-          <ul className="listening-questions">
-            <li>
-              <span className="listening-q-num">01</span>
-              <span className="listening-q-text">What is working well?</span>
-            </li>
-            <li>
-              <span className="listening-q-num">02</span>
-              <span className="listening-q-text">What is not working?</span>
-            </li>
-            <li>
-              <span className="listening-q-num">03</span>
-              <span className="listening-q-text">What should we do that we are not doing today?</span>
-            </li>
-            <li>
-              <span className="listening-q-num">04</span>
-              <span className="listening-q-text">What would you do if you were in my shoes?</span>
-            </li>
-            <li>
-              <span className="listening-q-num">05</span>
-              <span className="listening-q-text">
-                What should I learn about this company and product that will be helpful to me in my role?
-              </span>
-            </li>
-          </ul>
+          <ol className="body-list">
+            <li>What is working well?</li>
+            <li>What is not working?</li>
+            <li>What should we do that we are not doing today?</li>
+            <li>What would you do if you were in my shoes?</li>
+            <li>What should I learn about this company and product that will be helpful to me in my role?</li>
+          </ol>
 
           <p>
             The Buckingham survey was also deployed. I wanted to understand my team&apos;s experience when they interact with others on the team, as well as their individual experience of work.
           </p>
 
           <p>
-            What I heard from that listening tour shaped everything after. The team questioned why they were not three different teams, divided up by discipline. This told me that the team did not need more process. They needed structure and to be unified as a single team. My job was to help unify them in that way.
+            What I heard from that listening tour shaped everything after. The team questioned why they were not three different teams, divided up by discipline. This told me that the team did not need more process. They needed structure and to be unified as a single team. My job was to help unify them in that way:
           </p>
 
-          <div className="pull-quote">
-            <p>
-              &quot;User value drives business value. SEO, UX, and CRO all enhance user value in their own unique way. A cohesive user experience leads to users engaging with our products and offerings more. These three disciplines just have different methods to answer what a cohesive user experience is.&quot;
-            </p>
-          </div>
+          <ul className="body-list">
+            <li>User value drives business value.</li>
+            <li>SEO, UX, and CRO all enhance user value in their own unique way.</li>
+            <li>A cohesive user experience leads to users engaging with our products and offerings more.</li>
+            <li>These three disciplines just have different methods to answer what a cohesive user experience is.</li>
+          </ul>
 
           <p>That became the founding principle of our team and the anchor for every framework, model, and operating decision that followed.</p>
 
@@ -583,7 +544,7 @@ html { scroll-behavior: smooth; }
               </div>
               <div className="theme-card-body">
                 <p>
-                  I repositioned UX not as a single lane in the funnel, but as the lens that encapsulated every stage. SEO brings families in. CRO converts them at the right moment. UX ensures the entire experience is cohesive, builds trust, and meets families where they are at each step.
+                  I repositioned UX not as a single lane in the funnel, but as the lens that encapsulated every stage. SEO brings users in. CRO converts them at the right moment. UX ensures the entire experience is cohesive, builds trust, and meets users where they are at each step.
                 </p>
                 <div className="funnel-three">
                   <div className="funnel-card">
@@ -644,18 +605,18 @@ html { scroll-behavior: smooth; }
                     <p style={{ color: 'var(--white)' }}>All people discovering the company across channels</p>
                   </div>
                   <div className="tier-arrow">↓</div>
-                  <div className="metrics-tier" style={{ background: 'var(--terra)', color: '#000000', width: '82%' }}>
-                    <h4 style={{ color: '#000000' }}>User Health Metrics (Leading Indicators)</h4>
-                    <p style={{ color: '#000000' }}>Combinable signals: e.g. SEO rankings + UX quality scores</p>
+                  <div className="metrics-tier" style={{ background: 'var(--terra)', color: 'var(--charcoal)', width: '82%' }}>
+                    <h4 style={{ color: 'var(--charcoal)' }}>User Health Metrics (Leading Indicators)</h4>
+                    <p style={{ color: 'var(--charcoal)' }}>Combinable signals: e.g. SEO rankings + UX quality scores</p>
                   </div>
                   <div className="tier-arrow">↓</div>
                   <div className="metrics-tier" style={{ background: 'var(--teal-dark)', color: 'var(--white)', width: '64%' }}>
                     <h4 style={{ color: 'var(--white)' }}>Conversion Rate Optimization</h4>
-                    <p style={{ color: 'var(--white)' }}>Rate of Applications · Rate of Enrollments</p>
+                    <p style={{ color: 'var(--white)' }}>Rate of Applications · Rate of Sign-ups</p>
                   </div>
                   <div className="tier-arrow">↓</div>
                   <div className="metrics-tier" style={{ background: 'var(--gold)', width: '48%' }}>
-                    <h4 style={{ color: 'var(--charcoal)', fontSize: '15px' }}>Growth</h4>
+                    <h4 style={{ color: 'var(--charcoal)', fontSize: 'var(--font-size-sm)' }}>Growth</h4>
                     <p style={{ color: 'var(--charcoal)' }}>The department&apos;s main objective</p>
                   </div>
                 </div>
