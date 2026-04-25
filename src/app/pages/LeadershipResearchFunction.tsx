@@ -28,7 +28,7 @@ html { scroll-behavior: smooth; }
   font-family: var(--body);
   background: var(--cream);
   color: var(--charcoal);
-  font-size: 17px;
+  font-size: var(--font-size-base);
   line-height: 1.75;
   -webkit-font-smoothing: antialiased;
   min-height: 100vh;
@@ -39,15 +39,15 @@ html { scroll-behavior: smooth; }
 .hero { background: var(--charcoal); padding: 80px 48px 72px; position: relative; overflow: hidden; }
 .hero::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 4px; background: linear-gradient(to right, var(--teal), var(--gold), transparent); }
 .hero-inner { max-width: var(--max); margin: 0 auto; }
-.hero-tag { font-family: var(--display); display: inline-block; font-size: var(--font-size-xs); font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); margin-bottom: 24px; border: 1px solid rgba(212,168,67,0.4); padding: 8px 16px; border-radius: 4px; }
-.hero h1 { font-family: var(--display); font-size: clamp(28px, 4vw, 44px); font-weight: 700; color: var(--white); line-height: 1.18; letter-spacing: -0.4px; margin-bottom: 8px; text-wrap: balance; }
+.hero-tag { font-family: var(--display); display: inline-block; font-size: var(--font-size-xs); font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); margin-bottom: 24px; border: 1px solid rgba(212,168,67,0.4); padding: 8px 16px; border-radius: var(--radius-sm); }
+.hero h1 { font-family: var(--display); font-size: clamp(var(--font-size-2xl), 4vw, var(--font-size-3xl)); font-weight: 700; color: var(--white); line-height: 1.18; letter-spacing: -0.4px; margin-bottom: 8px; text-wrap: balance; }
 .hero h1 em { color: var(--gold); font-style: normal; }
-.hero-sub { font-family: var(--body); font-size: 17px; color: rgba(255,255,255,0.6); line-height: 1.7; margin-bottom: 36px; font-style: italic; }
+.hero-sub { font-family: var(--body); font-size: var(--font-size-base); color: rgba(255,255,255,0.6); line-height: 1.7; margin-bottom: 36px; font-style: italic; }
 .meta-strip { display: flex; flex-wrap: wrap; gap: 0; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 24px; }
 .meta-item { padding-right: 28px; margin-right: 28px; border-right: 1px solid rgba(255,255,255,0.1); }
 .meta-item:last-child { border-right: none; margin-right: 0; }
-.meta-label { font-family: var(--display); font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); font-weight: 700; margin-bottom: 3px; }
-.meta-value { font-family: var(--display); font-size: 13px; color: rgba(255,255,255,0.82); font-weight: 500; }
+.meta-label { font-family: var(--display); font-size: var(--font-size-xs); letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); font-weight: 700; margin-bottom: 3px; }
+.meta-value { font-family: var(--display); font-size: var(--font-size-sm); color: rgba(255,255,255,0.82); font-weight: 500; }
 
 /* LAYOUT */
 .page-wrap { max-width: calc(var(--max) + (var(--page-padding) * 2)); margin: 0 auto; padding: 0 var(--page-padding); }
@@ -71,7 +71,7 @@ html { scroll-behavior: smooth; }
   line-height: 1.45;
   text-transform: uppercase;
   padding: 10px 18px;
-  border-radius: 4px;
+  border-radius: var(--radius-sm);
   background: var(--charcoal);
   color: var(--gold);
   box-sizing: border-box;
@@ -80,7 +80,7 @@ html { scroll-behavior: smooth; }
 
 /* (body uses classes not in source <style>) */
 .act-cards { display: flex; flex-direction: column; gap: 16px; margin-top: 24px; }
-.act-card { border: 1px solid var(--light-gray); border-radius: 8px; overflow: hidden; background: var(--white); }
+.act-card { border: 1px solid var(--light-gray); border-radius: var(--radius-md); overflow: hidden; background: var(--white); }
 .act-card-header { padding: 14px 18px; display: flex; flex-wrap: wrap; align-items: center; gap: 0.35em; }
 .act-card-phase {
   font-family: var(--display);
@@ -136,75 +136,15 @@ html { scroll-behavior: smooth; }
   list-style: disc;
   list-style-position: outside;
   color: var(--dark-gray);
-  font-size: 14.5px;
+  font-size: var(--font-size-sm);
   line-height: 1.65;
 }
 .act-card-body li { margin-bottom: 8px; }
 
-.leadership-research-function-page .built-theme-stack {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-  margin-top: 24px;
-}
-.leadership-research-function-page .theme-card {
-  background: var(--white);
-  border: 1px solid var(--light-gray);
-  border-radius: 6px;
-  padding-block: 20px;
-  padding-inline: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  gap: 12px;
-  box-sizing: border-box;
-}
-.leadership-research-function-page .theme-card-head {
-  display: flex;
-  flex-direction: row;
-  align-items: baseline;
-  gap: 16px;
-  width: 100%;
-  min-width: 0;
-}
-.leadership-research-function-page .theme-num {
-  font-family: var(--display);
-  font-size: 20px;
-  font-weight: 700;
-  color: var(--teal);
-  min-width: 28px;
-  flex-shrink: 0;
-  line-height: 1.2;
-}
-.leadership-research-function-page .theme-card-head h3 {
-  margin: 0;
-  flex: 1;
-  min-width: 0;
-  font-family: var(--display);
-  font-size: var(--font-size-base);
-  font-weight: 700;
-  color: var(--charcoal);
-  line-height: 1.3;
-}
-.leadership-research-function-page .theme-card-body {
-  width: 100%;
-  min-width: 0;
-  box-sizing: border-box;
-}
-.leadership-research-function-page .theme-card-body p {
-  margin: 0;
-  color: var(--dark-gray);
-  font-size: var(--font-size-base);
-  line-height: 1.75;
-}
-.leadership-research-function-page .theme-card-body p + p {
-  margin-top: 16px;
-}
-
-.highlight-box { margin-top: 24px; border: 1px solid var(--light-gray); border-radius: 8px; overflow: hidden; background: var(--white); }
+.highlight-box { margin-top: 24px; border: 1px solid var(--light-gray); border-radius: var(--radius-md); overflow: hidden; background: var(--white); }
 .highlight-box-head { font-family: var(--display); font-size: var(--font-size-sm); font-weight: 700; color: var(--charcoal); padding: 14px 18px; background: var(--cream); border-bottom: 1px solid var(--light-gray); }
 .highlight-box-body { padding: 18px 20px; }
-.highlight-box-body ul { margin: 0; padding-left: 18px; color: var(--dark-gray); font-size: 14.5px; line-height: 1.65; }
+.highlight-box-body ul { margin: 0; padding-left: 18px; color: var(--dark-gray); font-size: var(--font-size-sm); line-height: 1.65; }
 .highlight-box-body li { margin-bottom: 10px; }
 
 /* Matches act-card pattern: charcoal header + white text, white body + dark text */
@@ -244,10 +184,12 @@ html { scroll-behavior: smooth; }
 .stats-row { display: grid; gap: 16px; margin-top: 24px; }
 .stats-row.three { grid-template-columns: repeat(3, 1fr); }
 .stats-row.two { grid-template-columns: repeat(2, 1fr); }
-.stat-card { background: var(--white); border: 1px solid var(--light-gray); border-radius: 8px; padding: 24px; text-align: center; }
-.stat-number { font-family: var(--display); font-size: 36px; font-weight: 700; color: var(--teal); margin-bottom: 8px; line-height: 1.1; }
-.stat-label { font-family: var(--display); font-size: 13px; font-weight: 700; color: var(--charcoal); margin-bottom: 8px; }
+.stat-card { background: var(--white); border: 1px solid var(--light-gray); border-radius: var(--radius-md); padding: 24px; text-align: center; }
+.stat-number { font-family: var(--display); font-size: var(--font-size-2xl); font-weight: 700; color: var(--teal); margin-bottom: 8px; line-height: 1.1; }
+.stat-label { font-family: var(--display); font-size: var(--font-size-sm); font-weight: 700; color: var(--charcoal); margin-bottom: 8px; }
 .stat-desc { font-size: var(--font-size-sm); line-height: 1.6; color: var(--dark-gray); margin: 0; text-align: left; }
+.section-subheading { margin-top: 32px; }
+.closing-statement { margin-top: 24px; }
 
 
 /* ═══════════════════════════════════════════════════════════
@@ -257,7 +199,7 @@ html { scroll-behavior: smooth; }
 
   .leadership-research-function-page .hero { padding: 48px 24px 40px !important; text-align: center !important; }
   .leadership-research-function-page .hero-inner { max-width: 100% !important; }
-  .leadership-research-function-page .hero-tag { font-size: 10px !important; }
+  .leadership-research-function-page .hero-tag { font-size: var(--font-size-xs) !important; }
   .leadership-research-function-page .hero h1 { font-size: clamp(24px, 6vw, 30px) !important; line-height: 1.2 !important; text-align: center !important; }
   .leadership-research-function-page .hero-sub { font-size: 15px !important; text-align: center !important; max-width: 100% !important; margin-left: auto !important; margin-right: auto !important; }
   .leadership-research-function-page .hero-cta { display: inline-block !important; }
@@ -278,14 +220,6 @@ html { scroll-behavior: smooth; }
 
   .leadership-research-function-page .act-label { justify-content: center; flex-wrap: wrap; }
   .leadership-research-function-page .act-label-box { text-align: center !important; }
-  .leadership-research-function-page .theme-card { flex-direction: column !important; align-items: stretch !important; }
-  .leadership-research-function-page .theme-card-head {
-    align-items: baseline !important;
-    width: 100% !important;
-    text-align: left !important;
-  }
-  .leadership-research-function-page .theme-card-head h3 { text-align: left !important; }
-  .leadership-research-function-page .theme-card-body p { text-align: left !important; }
   .leadership-research-function-page .act-card-body,
   .leadership-research-function-page .act-card-body li,
   .leadership-research-function-page .highlight-box-body,
@@ -364,7 +298,7 @@ html { scroll-behavior: smooth; }
 
   .leadership-research-function-page .page-wrap { padding: 0 16px !important; }
   .leadership-research-function-page .section { padding: 40px 16px 0 !important; }
-  .leadership-research-function-page .section h2 { font-size: 20px !important; }
+  .leadership-research-function-page .section h2 { font-size: var(--font-size-lg) !important; }
   .leadership-research-function-page .card-grid { padding: 24px 0 !important; }
   .leadership-research-function-page .lead-intro { padding: 24px 16px 0 !important; }
 
@@ -468,7 +402,7 @@ html { scroll-behavior: smooth; }
               <div className="act-card-body">
                 <ul>
                   <li>Sourced, hired, and mentored 3 research interns, and all three converted to full-time roles (100% conversion rate)</li>
-                  <li>67% of those hires were retained post-acquisition, validating the caliber of who I recruited</li>
+                  <li>All three were retained post-acquisition, validating the caliber of who I recruited</li>
                   <li>Established scalable research operations: study templates, consent processes, participant recruitment pipelines</li>
                   <li>Built a systematic insights repository documenting methodologies, personas, and journey maps</li>
                 </ul>
@@ -526,57 +460,32 @@ html { scroll-behavior: smooth; }
             The 100% intern-to-hire conversion rate is the outcome. What produced it was a deliberate approach to how I identified, developed, and grew junior talent, one that started before the interns ever walked in the door.
           </p>
 
-          <div className="built-theme-stack">
-            <div className="theme-card">
-              <div className="theme-card-head">
-                <div className="theme-num">01</div>
-                <h3>Hiring for attitude, not credentials</h3>
-              </div>
-              <div className="theme-card-body">
-                <p>
-                  I vetted interns on two criteria: eagerness to grow, and attitude toward being mentored. Not prior experience, not portfolio quality. The premise was simple: the point of an internship is development. If someone isn't genuinely open to being coached, the technical skills don't matter.
-                </p>
-                <p>
-                  This meant asking interview questions that revealed how someone responded to feedback, how they thought about their own gaps, and whether they saw mentorship as a resource or a critique.
-                </p>
-              </div>
-            </div>
-            <div className="theme-card">
-              <div className="theme-card-head">
-                <div className="theme-num">02</div>
-                <h3>The T-model as the development framework</h3>
-              </div>
-              <div className="theme-card-body">
-                <p>
-                  Every intern worked from the same foundation: a broad base of UX competencies across design, qualitative research, quantitative research, microcopy, UX writing, information architecture, and visual design. I used the T-model explicitly: every UX professional needs breadth, but they tend to specialise in one or two areas.
-                </p>
-                <p>
-                  Weekly one-on-ones were anchored to where each person wanted to grow: not a uniform checklist, but an ongoing conversation about their goals and how the work could serve them.
-                </p>
-              </div>
-            </div>
-            <div className="theme-card">
-              <div className="theme-card-head">
-                <div className="theme-num">03</div>
-                <h3>Trust and psychological safety as the foundation</h3>
-              </div>
-              <div className="theme-card-body">
-                <p>
-                  None of the development work above functions without a foundation of trust. I built that trust individually, through integrity, consistent respect, and a genuine investment in each person's growth as a professional, not just as a contributor to the team's output.
-                </p>
-                <p>
-                  Psychological safety wasn't a policy. It was a practice. I created an environment where interns could be honest about what they found difficult, what excited them, and what they weren't sure about, without fear of those admissions being used against them. Weekly one-on-ones were built around curiosity, not evaluation. Gentle redirection, not correction.
-                </p>
-                <p>
-                  This mattered because honest self-knowledge is only possible when someone feels safe enough to be honest. An intern who feels watched or judged will tell you what they think you want to hear. An intern who trusts their manager will tell you what they actually think about the work, about their instincts, and about what felt right and what didn't. That's the information a good mentor actually needs.
-                </p>
-              </div>
-            </div>
-          </div>
+          <h3>Hiring for attitude, not credentials</h3>
+          <p>
+            I vetted interns on two criteria: eagerness to grow, and attitude toward being mentored. Not prior experience, not portfolio quality. The premise was simple: the point of an internship is development. If someone isn't genuinely open to being coached, the technical skills don't matter.
+          </p>
+          <p>
+            This meant asking interview questions that revealed how someone responded to feedback, how they thought about their own gaps, and whether they saw mentorship as a resource or a critique.
+          </p>
 
-          <div className="pull-quote">
-            <p>"They came to their own conclusions because they were treated with enough respect to reach them honestly."</p>
-          </div>
+          <h3>The T-model as the development framework</h3>
+          <p>
+            Every intern worked from the same foundation: a broad base of UX competencies across design, qualitative research, quantitative research, microcopy, UX writing, information architecture, and visual design. I used the T-model explicitly: every UX professional needs breadth, but they tend to specialize in one or two areas.
+          </p>
+          <p>
+            Weekly one-on-ones were anchored to where each person wanted to grow: not a uniform checklist, but an ongoing conversation about their goals and how the work could serve them.
+          </p>
+
+          <h3>Trust and psychological safety as the foundation</h3>
+          <p>
+            None of the development work above functions without a foundation of trust. I built that trust individually, through integrity, consistent respect, and a genuine investment in each person's growth as a professional, not just as a contributor to the team's output.
+          </p>
+          <p>
+            Psychological safety wasn't a policy. It was a practice. I created an environment where interns could be honest about what they found difficult, what excited them, and what they weren't sure about, without fear of those admissions being used against them. Weekly one-on-ones were built around curiosity, not evaluation. Gentle redirection, not correction.
+          </p>
+          <p>
+            This mattered because honest self-knowledge is only possible when someone feels safe enough to be honest. An intern who feels watched or judged will tell you what they think you want to hear. An intern who trusts their manager will tell you what they actually think about the work, about their instincts, and about what felt right and what didn't. That's the information a good mentor actually needs.
+          </p>
 
           <div className="highlight-box highlight-box--charcoal">
             <div className="highlight-box-head">How I exposed interns to the full UX spectrum</div>
@@ -594,7 +503,7 @@ html { scroll-behavior: smooth; }
             </div>
           </div>
 
-          <h3 style={{ marginTop: '32px' }}>What emerged from the breadth</h3>
+          <h3 className="section-subheading">What emerged from the breadth</h3>
           <p>
             I didn&apos;t assign the interns to specializations. Specialization surfaced through the work. One intern gravitated toward product thinking. I recognized this early through our regular one-on-ones and the T-model evaluation framework, and I pivoted their entire development path. I taught them what it means to balance stakeholders, understand technical constraints, read marketing signals, and distinguish between being a product manager and a project manager. They became a junior PM.
           </p>
@@ -604,10 +513,6 @@ html { scroll-behavior: smooth; }
 
           <div className="pull-quote">
             <p>"The goal wasn't to produce researchers. It was to produce people who understood their own strengths well enough to build a career on them."</p>
-          </div>
-
-          <div className="pull-quote">
-            <p>"I didn't gatekeep research. I made it visible, made myself vulnerable, and let people come to it on their own terms."</p>
           </div>
 
           <div className="stats-row three">
@@ -624,7 +529,7 @@ html { scroll-behavior: smooth; }
             <div className="stat-card">
               <div className="stat-number">100%</div>
               <div className="stat-label">Intern Conversion Rate</div>
-              <p className="stat-desc">All three interns hired full-time, 67% retained post-acquisition</p>
+              <p className="stat-desc">All three interns hired full-time and retained post-acquisition</p>
             </div>
           </div>
         </div>
@@ -641,11 +546,8 @@ html { scroll-behavior: smooth; }
             This didn't happen by accident. The insights repository, the documented methodologies, and the clearly articulated research strategy weren't just operational artifacts. They were the proof that the research function had real, portable value.
           </p>
           <p>
-            I had also conducted confidential pre-acquisition research validating the strategic fit and informing the integration roadmap. By the time the acquisition closed, my work had already shaped the deal.
+            I had also conducted confidential pre-acquisition research validating the strategic fit and informing the integration roadmap. By the time the acquisition closed, my work had already shaped the deal — and I'd already informed it.
           </p>
-          <div className="pull-quote">
-            <p>"I didn't just survive the acquisition. I had already informed it."</p>
-          </div>
         </div>
 
         <div className="divider" />
@@ -656,7 +558,7 @@ html { scroll-behavior: smooth; }
               Post Acquisition: Merging two different UX Research Teams
             </span>
           </div>
-          <h2>Leading the merged function through integration.</h2>
+          <h2>Leading the merged function through integration</h2>
           <p>
             Integrating two research practices is harder than building one from scratch. I now had to unify two teams with different tools, different methodologies, different stakeholder relationships, and different assumptions about what "good research" looked like, all while delivering research for a combined user base that had just gone through a major transition of their own.
           </p>
@@ -696,25 +598,12 @@ html { scroll-behavior: smooth; }
               <div className="act-card-body">
                 <ul>
                   <li>Reduced post-acquisition user churn by 16.7%</li>
-                  <li>Increased retention by 10% through research that identified and addressed post-merger friction</li>
                   <li>Demonstrated that a unified research practice could serve two formerly separate user bases without losing depth or rigor</li>
                 </ul>
               </div>
             </div>
           </div>
 
-          <div className="stats-row two">
-            <div className="stat-card">
-              <div className="stat-number">16.7%</div>
-              <div className="stat-label">Post-acquisition churn reduction</div>
-              <p className="stat-desc">Research that identified friction specific to the merged user base</p>
-            </div>
-            <div className="stat-card">
-              <div className="stat-number">10%</div>
-              <div className="stat-label">Retention increase post-acquisition</div>
-              <p className="stat-desc">Driven by a unified research practice serving two merged user bases</p>
-            </div>
-          </div>
         </div>
 
         <div className="divider" />
@@ -749,9 +638,13 @@ html { scroll-behavior: smooth; }
             </div>
           </div>
 
-          <p style={{ marginTop: '24px' }}>
+          <p className="closing-statement">
             The through-line across both chapters is the same: I build research functions that the rest of the organization can't imagine operating without. That's not a research skill. That's a leadership one.
           </p>
+
+          <div className="pull-quote">
+            <p>"I didn't gatekeep research. I made it visible, made myself vulnerable, and let people come to it on their own terms."</p>
+          </div>
         </div>
       </div>
 
