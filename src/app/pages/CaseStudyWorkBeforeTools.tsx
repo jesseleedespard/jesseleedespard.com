@@ -212,6 +212,7 @@ html { scroll-behavior: smooth; }
   border: 1px solid var(--light-gray);
   background: var(--white);
 }
+.img-block--transparent { border: none; background: transparent; }
 .img-block img {
   display: block;
   width: 100%;
@@ -287,7 +288,7 @@ html { scroll-behavior: smooth; }
 
 /* PRINCIPLES CARDS */
 .principles-headline { font-family: var(--display); font-size: var(--font-size-sm); font-weight: 700; color: var(--charcoal); text-align: center; margin: 24px 0 16px; }
-.principles-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; margin-top: 24px; }
+.principles-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; margin-top: 24px; align-items: start; }
 .principle-card { background: var(--white); border: 1px solid var(--light-gray); border-radius: var(--radius-sm); overflow: hidden; }
 .principle-head { padding: 12px 14px; font-family: var(--display); font-size: var(--font-size-sm); font-weight: 700; color: var(--white); text-align: center; }
 .principle-title { font-family: var(--display); font-size: var(--font-size-sm); font-weight: 700; color: inherit; letter-spacing: 0.5px; }
@@ -526,8 +527,8 @@ html { scroll-behavior: smooth; }
             On top of that, 30–40% of users dropped off between seeing the sign-up page and actually creating an account. Users were clicking "Sign Up Now" when they simply wanted more information, unaware they were initiating the application process.
           </p>
 
-          <div className="img-block">
-            <img src="/img_funnel.png" alt="Conversion funnel drop-off chart" />
+          <div className="img-block img-block--transparent">
+            <img src="/Lead_Funnel.svg" alt="Lead funnel drop-off visualization" />
           </div>
           <p className="img-caption">Conversion funnel drop-off: the data that anchored the workshop conversation</p>
 
@@ -649,6 +650,11 @@ html { scroll-behavior: smooth; }
               </div>
             </div>
           </div>
+
+          <div className="img-block img-block--transparent">
+            <img src="/Breakdown.svg" alt="Vision Connect framework breakdown" />
+          </div>
+          <p className="img-caption">Vision Connect: the synthesis framework handed off to analytics and engineering</p>
         </div>
 
         <div className="divider" />
