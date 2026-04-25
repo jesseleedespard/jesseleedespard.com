@@ -154,7 +154,7 @@ export default function Work() {
                   textAlign: 'center',
                 }}
               >
-                4
+                3
               </span>
             </button>
 
@@ -200,7 +200,7 @@ export default function Work() {
                   textAlign: 'center',
                 }}
               >
-                2
+                3
               </span>
             </button>
           </div>
@@ -358,80 +358,7 @@ export default function Work() {
                 </div>
               </div>
 
-              {/* Card 3 - AI Personalization */}
-              <div
-                style={{
-                  backgroundColor: '#FFFFFF',
-                  border: '1px solid #EEEEEE',
-                  borderRadius: '8px',
-                  overflow: 'hidden',
-                }}
-              >
-                {/* Teal Accent Bar */}
-                <div style={{ height: '4px', backgroundColor: '#2C6E7F' }} />
-
-                <div style={{ padding: '32px' }}>
-                  {/* Tag */}
-                  <div
-                    style={{
-                      fontFamily: 'DM Sans, sans-serif',
-                      fontWeight: 700,
-                      fontSize: 'var(--font-size-xs)',
-                      color: '#2C6E7F',
-                      letterSpacing: '1.5px',
-                      textTransform: 'uppercase',
-                      marginBottom: '16px',
-                    }}
-                  >
-                    CASE STUDY · EDTECH
-                  </div>
-
-                  {/* Title */}
-                  <h3
-                    style={{
-                      fontFamily: 'DM Sans, sans-serif',
-                      fontWeight: 700,
-                      fontSize: 'var(--font-size-xl)',
-                      color: '#1E1E1E',
-                      marginBottom: '12px',
-                    }}
-                  >
-                    The Work Before the Tools: Defining AI Personalization
-                  </h3>
-
-                  {/* Description */}
-                  <p
-                    style={{
-                      fontFamily: 'Lora, serif',
-                      fontSize: '15px',
-                      color: '#444444',
-                      lineHeight: '1.6',
-                      marginBottom: '24px',
-                    }}
-                  >
-                    Establishing ethical frameworks for personalized learning algorithms that served 2M+ students without perpetuating educational inequity.
-                  </p>
-
-                  {/* Link */}
-                  <div className="card-cta-row">
-                    <Link
-                      to="/case-studies/work-before-the-tools"
-                      style={{
-                        fontFamily: 'DM Sans, sans-serif',
-                        fontWeight: 700,
-                        fontSize: 'var(--font-size-sm)',
-                        color: '#2C6E7F',
-                        textDecoration: 'none',
-                        whiteSpace: 'nowrap',
-                      }}
-                    >
-                      Read Case Study →
-                    </Link>
-                  </div>
-                </div>
-              </div>
-
-              {/* Card 4 - Customer Onboarding */}
+              {/* Card 3 - Customer Onboarding */}
               <div
                 style={{
                   backgroundColor: '#FFFFFF',
@@ -645,6 +572,79 @@ export default function Work() {
                   <div className="card-cta-row">
                     <Link
                       to="/leadership/three-disciplines-one-team"
+                      style={{
+                        fontFamily: 'DM Sans, sans-serif',
+                        fontWeight: 700,
+                        fontSize: 'var(--font-size-sm)',
+                        color: '#C4622D',
+                        textDecoration: 'none',
+                        whiteSpace: 'nowrap',
+                      }}
+                    >
+                      Read Case Study →
+                    </Link>
+                  </div>
+                </div>
+              </div>
+
+              {/* Card 3 - AI Personalization */}
+              <div
+                style={{
+                  backgroundColor: '#FFFFFF',
+                  border: '1px solid #EEEEEE',
+                  borderRadius: '8px',
+                  overflow: 'hidden',
+                }}
+              >
+                {/* Terracotta Accent Bar */}
+                <div style={{ height: '4px', backgroundColor: '#C4622D' }} />
+
+                <div style={{ padding: '32px' }}>
+                  {/* Tag */}
+                  <div
+                    style={{
+                      fontFamily: 'DM Sans, sans-serif',
+                      fontWeight: 700,
+                      fontSize: 'var(--font-size-xs)',
+                      color: '#C4622D',
+                      letterSpacing: '1.5px',
+                      textTransform: 'uppercase',
+                      marginBottom: '16px',
+                    }}
+                  >
+                    LEADERSHIP · EDTECH
+                  </div>
+
+                  {/* Title */}
+                  <h3
+                    style={{
+                      fontFamily: 'DM Sans, sans-serif',
+                      fontWeight: 700,
+                      fontSize: 'var(--font-size-xl)',
+                      color: '#1E1E1E',
+                      marginBottom: '12px',
+                    }}
+                  >
+                    The Work Before the Tools: Defining AI Personalization
+                  </h3>
+
+                  {/* Description */}
+                  <p
+                    style={{
+                      fontFamily: 'Lora, serif',
+                      fontSize: '15px',
+                      color: '#444444',
+                      lineHeight: '1.6',
+                      marginBottom: '24px',
+                    }}
+                  >
+                    A cross-functional workshop that defined what AI personalization should mean for users — before a single tool was selected.
+                  </p>
+
+                  {/* Link */}
+                  <div className="card-cta-row">
+                    <Link
+                      to="/leadership/work-before-the-tools"
                       style={{
                         fontFamily: 'DM Sans, sans-serif',
                         fontWeight: 700,

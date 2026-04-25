@@ -1,4 +1,4 @@
-import { createBrowserRouter } from 'react-router';
+import { createBrowserRouter, redirect } from 'react-router';
 import Root from './pages/Root';
 import Home from './pages/Home';
 import About from './pages/About';
@@ -26,7 +26,8 @@ export const router = createBrowserRouter([
       { path: 'podcast', Component: Podcast },
       { path: 'case-studies/healthtech-onboarding', Component: CaseStudyHealthtech },
       { path: 'case-studies/proptech', Component: CaseStudyProptech },
-      { path: 'case-studies/work-before-the-tools', Component: CaseStudyWorkBeforeTools },
+      { path: 'leadership/work-before-the-tools', Component: CaseStudyWorkBeforeTools },
+      { path: 'case-studies/work-before-the-tools', loader: () => redirect('/leadership/work-before-the-tools') },
       { path: 'leadership/research-function', Component: LeadershipResearchFunction },
       { path: 'leadership/three-disciplines-one-team', Component: LeadershipWebStrategy },
       { path: 'design-system', Component: DesignSystem },
