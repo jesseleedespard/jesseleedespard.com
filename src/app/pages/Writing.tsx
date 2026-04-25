@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import type { CSSProperties } from 'react';
+import { Link } from 'react-router';
 import { Footer } from '../components/Footer';
+import { MarketingCtaStrip } from '../components/MarketingCtaStrip';
 
 type ArticleStatus = 'live' | 'coming-soon';
 
@@ -793,6 +795,11 @@ export default function Writing() {
         </section>
       )}
 
+      <MarketingCtaStrip
+        title="Want to talk about what research could do for your team?"
+        body={<a href="mailto:jesse@jesseleedespard.com">jesse@jesseleedespard.com</a>}
+        cta={<Link to="/hiring" className="primary-cta-dark">Hiring? →</Link>}
+      />
       <Footer />
     </div>
   );

@@ -1,4 +1,4 @@
-import { Fragment, useEffect } from 'react';
+import { useEffect, Fragment } from 'react';
 import { Link } from 'react-router';
 import { Footer } from '../components/Footer';
 import { MarketingCtaStrip } from '../components/MarketingCtaStrip';
@@ -10,16 +10,9 @@ export default function LeadershipWebStrategy() {
 
   return (
     <Fragment>
-      <div className="leadership-web-strategy-page">
-        <style>{`
-.leadership-web-strategy-page,
-.leadership-web-strategy-page *,
-.leadership-web-strategy-page *::before,
-.leadership-web-strategy-page *::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+    <div className="leadership-web-strategy-page">
+      <style>{`
+.leadership-web-strategy-page, .leadership-web-strategy-page *, .leadership-web-strategy-page *::before, .leadership-web-strategy-page *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
 .leadership-web-strategy-page {
   --display: 'DM Sans', system-ui, sans-serif;
@@ -38,6 +31,7 @@ html { scroll-behavior: smooth; }
   line-height: 1.75;
   -webkit-font-smoothing: antialiased;
   min-height: 100vh;
+  padding-bottom: var(--page-padding);
 }
 
 /* HERO */
@@ -206,6 +200,7 @@ html { scroll-behavior: smooth; }
 .outcome-label { font-family: var(--display); font-size: 13px; font-weight: 700; color: var(--charcoal); margin-bottom: 8px; }
 .outcome-desc { font-size: var(--font-size-sm); color: var(--dark-gray); margin: 0; line-height: 1.65; text-align: left; }
 
+
 /* MOBILE: 375px target, 8pt grid, centered text */
 @media (max-width: 768px) {
 
@@ -309,6 +304,7 @@ html { scroll-behavior: smooth; }
   .leadership-web-strategy-page .lead-intro { padding: 32px 24px 0 !important; text-align: center !important; }
   .leadership-web-strategy-page .lead-intro p { text-align: center !important; }
 
+
   .leadership-web-strategy-page .framing-strip { text-align: left !important; }
   .leadership-web-strategy-page .legend { justify-content: center !important; }
   .leadership-web-strategy-page .post-title { text-align: left !important; }
@@ -331,6 +327,7 @@ html { scroll-behavior: smooth; }
   .leadership-web-strategy-page .stats-row.three { grid-template-columns: 1fr !important; }
   .leadership-web-strategy-page .stats-row.two { grid-template-columns: 1fr !important; }
   .leadership-web-strategy-page .stat-row { grid-template-columns: 1fr !important; }
+
 
   .leadership-web-strategy-page .tabs-wrapper { padding: 0 !important; }
   .leadership-web-strategy-page .tab { padding: 16px 12px !important; font-size: var(--font-size-xs) !important; }
@@ -761,13 +758,13 @@ html { scroll-behavior: smooth; }
 
     </div>
 
-    <MarketingCtaStrip
-      title="Want to talk about what research could do for your team?"
-      body={<a href="mailto:jesse@jesseleedespard.com">jesse@jesseleedespard.com</a>}
-      cta={<Link to="/hiring" className="primary-cta-dark">Hiring? →</Link>}
-    />
+      <MarketingCtaStrip
+        title="Want to talk about what research could do for your team?"
+        body={<a href="mailto:jesse@jesseleedespard.com">jesse@jesseleedespard.com</a>}
+        cta={<Link to="/hiring" className="primary-cta-dark">Hiring? →</Link>}
+      />
 
-    <Footer />
+      <Footer />
     </Fragment>
   );
 }

@@ -1,4 +1,4 @@
-import { Fragment, useEffect } from 'react';
+import { useEffect, Fragment } from 'react';
 import { Link } from 'react-router';
 import { Footer } from '../components/Footer';
 import { MarketingCtaStrip } from '../components/MarketingCtaStrip';
@@ -10,16 +10,9 @@ export default function LeadershipResearchFunction() {
 
   return (
     <Fragment>
-      <div className="leadership-research-function-page">
-        <style>{`
-.leadership-research-function-page,
-.leadership-research-function-page *,
-.leadership-research-function-page *::before,
-.leadership-research-function-page *::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+    <div className="leadership-research-function-page">
+      <style>{`
+.leadership-research-function-page, .leadership-research-function-page *, .leadership-research-function-page *::before, .leadership-research-function-page *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
 .leadership-research-function-page {
   --display: 'DM Sans', system-ui, sans-serif;
@@ -38,6 +31,7 @@ html { scroll-behavior: smooth; }
   line-height: 1.75;
   -webkit-font-smoothing: antialiased;
   min-height: 100vh;
+  padding-bottom: var(--page-padding);
 }
 
 /* HERO */
@@ -257,6 +251,7 @@ html { scroll-behavior: smooth; }
 .stat-label { font-family: var(--display); font-size: 13px; font-weight: 700; color: var(--charcoal); margin-bottom: 8px; }
 .stat-desc { font-size: var(--font-size-sm); line-height: 1.6; color: var(--dark-gray); margin: 0; text-align: left; }
 
+
 /* ═══════════════════════════════════════════════════════════
    MOBILE: 375px target, 8pt grid, centered text
    ═══════════════════════════════════════════════════════════ */
@@ -357,6 +352,7 @@ html { scroll-behavior: smooth; }
   .leadership-research-function-page .lead-intro { padding: 32px 24px 0 !important; text-align: center !important; }
   .leadership-research-function-page .lead-intro p { text-align: center !important; }
 
+
   .leadership-research-function-page .framing-strip { text-align: left !important; }
   .leadership-research-function-page .legend { justify-content: center !important; }
   .leadership-research-function-page .post-title { text-align: left !important; }
@@ -379,6 +375,7 @@ html { scroll-behavior: smooth; }
   .leadership-research-function-page .stats-row.three { grid-template-columns: 1fr !important; }
   .leadership-research-function-page .stats-row.two { grid-template-columns: 1fr !important; }
   .leadership-research-function-page .stat-row { grid-template-columns: 1fr !important; }
+
 
   .leadership-research-function-page .tabs-wrapper { padding: 0 !important; }
   .leadership-research-function-page .tab { padding: 16px 12px !important; font-size: var(--font-size-xs) !important; }
@@ -764,14 +761,13 @@ html { scroll-behavior: smooth; }
 
     </div>
 
-    <MarketingCtaStrip
-      title="Want to talk about what research could do for your team?"
-      body={<a href="mailto:jesse@jesseleedespard.com">jesse@jesseleedespard.com</a>}
-      cta={<Link to="/hiring" className="primary-cta-dark">Hiring? →</Link>}
-      style={{ marginTop: 'clamp(48px, 7vw, 88px)' }}
-    />
+      <MarketingCtaStrip
+        title="Want to talk about what research could do for your team?"
+        body={<a href="mailto:jesse@jesseleedespard.com">jesse@jesseleedespard.com</a>}
+        cta={<Link to="/hiring" className="primary-cta-dark">Hiring? →</Link>}
+      />
 
-    <Footer />
+      <Footer />
     </Fragment>
   );
 }

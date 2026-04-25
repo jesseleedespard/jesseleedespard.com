@@ -1,4 +1,4 @@
-import { Fragment, useEffect } from 'react';
+import { useEffect, Fragment } from 'react';
 import { Link } from 'react-router';
 import { Footer } from '../components/Footer';
 import { MarketingCtaStrip } from '../components/MarketingCtaStrip';
@@ -11,17 +11,9 @@ export default function CaseStudyHealthtech() {
 
   return (
     <Fragment>
-      <div className="healthtech-case-study-page">
-        <style>{`
-/* Scoped reset only — a global * reset overrides @layer footer rules and breaks parity with Home. */
-.healthtech-case-study-page,
-.healthtech-case-study-page *,
-.healthtech-case-study-page *::before,
-.healthtech-case-study-page *::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+    <div className="healthtech-case-study-page">
+      <style>{`
+.healthtech-case-study-page, .healthtech-case-study-page *, .healthtech-case-study-page *::before, .healthtech-case-study-page *::after { margin: 0; padding: 0; box-sizing: border-box; }
 .healthtech-case-study-page {
   --display: 'DM Sans', system-ui, sans-serif;
   --body:    'Lora', Georgia, serif;
@@ -46,7 +38,7 @@ html { scroll-behavior: smooth; }
 
 /* LAYOUT */
 .page-wrap { max-width: calc(var(--max) + (var(--page-padding) * 2)); margin: 0 auto; padding: 0 var(--page-padding); }
-.section { padding: var(--page-padding) 0 0; }
+.section { padding: 52px 0 0; }
 .section-label { font-family: var(--display); font-size: var(--font-size-xs); font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--teal-dark); margin-bottom: 8px; }
 .section h2 { font-family: var(--display); font-size: clamp(var(--font-size-lg), 2.8vw, var(--font-size-xl)); font-weight: 700; color: var(--charcoal); line-height: 1.3; letter-spacing: -0.3px; margin-bottom: 16px; }
 .section p { color: var(--dark-gray); margin-bottom: 16px; }
@@ -89,6 +81,7 @@ html { scroll-behavior: smooth; }
 }
 .lesson-body { font-size: var(--font-size-sm); line-height: 1.7; color: var(--dark-gray); margin: 0; }
 .lesson-body strong { color: var(--charcoal); }
+
 
 /* MOBILE: 375px target, 8pt grid, centered text */
 @media (max-width: 768px) {
@@ -215,6 +208,7 @@ html { scroll-behavior: smooth; }
   .stat-row { grid-template-columns: 1fr !important; }
   .stats-grid { grid-template-columns: 1fr !important; }
 
+
   /* TABS */
   .tabs-wrapper { padding: 0 !important; }
   .tab { padding: 16px 12px !important; font-size: var(--font-size-xs) !important; }
@@ -231,7 +225,7 @@ html { scroll-behavior: smooth; }
 }
 `}</style>
 
-        <header className="hero">
+      <header className="hero">
         <div className="hero-inner">
           <span className="hero-tag">Case Study · HealthTech · UX Research</span>
           <h1>
@@ -681,13 +675,13 @@ html { scroll-behavior: smooth; }
 
     </div>
 
-    <MarketingCtaStrip
-      title="Want to talk about what research could do for your team?"
-      body={<a href="mailto:jesse@jesseleedespard.com">jesse@jesseleedespard.com</a>}
-      cta={<Link to="/hiring" className="primary-cta-dark">Hiring? →</Link>}
-    />
+      <MarketingCtaStrip
+        title="Want to talk about what research could do for your team?"
+        body={<a href="mailto:jesse@jesseleedespard.com">jesse@jesseleedespard.com</a>}
+        cta={<Link to="/hiring" className="primary-cta-dark">Hiring? →</Link>}
+      />
 
-    <Footer />
+      <Footer />
     </Fragment>
   );
 }
