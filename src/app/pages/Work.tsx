@@ -11,7 +11,7 @@ export default function Work() {
     <div className="min-h-screen bg-white">
       <style>{`
         .work-hero-section {
-          background-color: #1E1E1E;
+          background-color: var(--charcoal);
           padding: 100px 48px 60px;
         }
         
@@ -19,7 +19,7 @@ export default function Work() {
           font-family: 'DM Sans', sans-serif;
           font-weight: 700;
           font-size: 52px;
-          color: #FFFFFF;
+          color: var(--white);
           line-height: 1.15;
           margin-bottom: 24px;
         }
@@ -29,11 +29,12 @@ export default function Work() {
           font-size: var(--font-size-lg);
           color: rgba(255, 255, 255, 0.65);
           line-height: 1.6;
+          font-style: italic;
         }
         
         .work-tab-section {
-          background-color: #1E1E1E;
-          border-bottom: 1px solid #444444;
+          background-color: var(--charcoal);
+          border-bottom: 1px solid var(--dark-gray);
           padding: 0 48px;
         }
         
@@ -45,10 +46,6 @@ export default function Work() {
         
         .work-section-padding {
           padding: 80px 48px;
-        }
-        
-        .work-card-title {
-          font-size: 19px;
         }
         
         @media (max-width: 768px) {
@@ -77,9 +74,6 @@ export default function Work() {
             padding: 48px 24px;
           }
           
-          .work-card-title {
-            font-size: var(--font-size-lg);
-          }
         }
       `}</style>
 
@@ -92,7 +86,7 @@ export default function Work() {
               fontFamily: 'DM Sans, sans-serif',
               fontWeight: 700,
               fontSize: 'var(--font-size-xs)',
-              color: '#D4A843',
+              color: 'var(--gold)',
               marginBottom: '20px',
               letterSpacing: '1.5px',
             }}
@@ -102,12 +96,12 @@ export default function Work() {
 
           {/* Headline */}
           <h1 className="work-hero-title">
-            Work that changed something.
+            Work that <span style={{ color: 'var(--gold)' }}>changed something.</span>
           </h1>
 
           {/* Subheading */}
           <p className="work-hero-subtitle">
-            From building research practices from scratch to shipping products that served millions of users, here's a selection of work I'm proud of.
+            From building UX practices from scratch, democratizing research, to leading UX teams. My work influenced people, systems, and moved business metrics.
           </p>
         </div>
       </section>
@@ -122,11 +116,11 @@ export default function Work() {
               style={{
                 fontFamily: 'DM Sans, sans-serif',
                 fontWeight: activeTab === 'research' ? 700 : 500,
-                fontSize: '15px',
-                color: activeTab === 'research' ? '#FFFFFF' : 'rgba(255, 255, 255, 0.6)',
+                fontSize: 'var(--font-size-sm)',
+                color: activeTab === 'research' ? 'var(--white)' : 'rgba(255, 255, 255, 0.6)',
                 backgroundColor: 'transparent',
                 border: 'none',
-                borderBottom: activeTab === 'research' ? '3px solid #1F5364' : '3px solid transparent',
+                borderBottom: activeTab === 'research' ? '3px solid var(--teal-dark)' : '3px solid transparent',
                 padding: '16px 24px',
                 cursor: 'pointer',
                 display: 'flex',
@@ -146,9 +140,9 @@ export default function Work() {
                   fontFamily: 'DM Sans, sans-serif',
                   fontWeight: 700,
                   fontSize: 'var(--font-size-xs)',
-                  color: activeTab === 'research' ? '#FFFFFF' : '#1E1E1E',
-                  backgroundColor: activeTab === 'research' ? '#1F5364' : '#888888',
-                  borderRadius: '10px',
+                  color: activeTab === 'research' ? 'var(--white)' : 'var(--charcoal)',
+                  backgroundColor: activeTab === 'research' ? 'var(--teal-dark)' : 'var(--gray)',
+                  borderRadius: 'var(--radius-lg)',
                   padding: '2px 8px',
                   minWidth: '20px',
                   textAlign: 'center',
@@ -164,11 +158,11 @@ export default function Work() {
               style={{
                 fontFamily: 'DM Sans, sans-serif',
                 fontWeight: activeTab === 'leadership' ? 700 : 500,
-                fontSize: '15px',
-                color: activeTab === 'leadership' ? '#FFFFFF' : 'rgba(255, 255, 255, 0.6)',
+                fontSize: 'var(--font-size-sm)',
+                color: activeTab === 'leadership' ? 'var(--white)' : 'rgba(255, 255, 255, 0.6)',
                 backgroundColor: 'transparent',
                 border: 'none',
-                borderBottom: activeTab === 'leadership' ? '3px solid #1F5364' : '3px solid transparent',
+                borderBottom: activeTab === 'leadership' ? '3px solid var(--teal-dark)' : '3px solid transparent',
                 padding: '16px 24px',
                 cursor: 'pointer',
                 display: 'flex',
@@ -192,9 +186,9 @@ export default function Work() {
                   fontFamily: 'DM Sans, sans-serif',
                   fontWeight: 700,
                   fontSize: 'var(--font-size-xs)',
-                  color: activeTab === 'leadership' ? '#FFFFFF' : '#1E1E1E',
-                  backgroundColor: activeTab === 'leadership' ? '#1F5364' : '#888888',
-                  borderRadius: '10px',
+                  color: activeTab === 'leadership' ? 'var(--white)' : 'var(--charcoal)',
+                  backgroundColor: activeTab === 'leadership' ? 'var(--teal-dark)' : 'var(--gray)',
+                  borderRadius: 'var(--radius-lg)',
                   padding: '2px 8px',
                   minWidth: '20px',
                   textAlign: 'center',
@@ -209,22 +203,22 @@ export default function Work() {
 
       {/* UX Research Panel */}
       {activeTab === 'research' && (
-        <section className="work-section-padding" style={{ backgroundColor: '#FAF7F2' }}>
+        <section className="work-section-padding" style={{ backgroundColor: 'var(--cream)' }}>
           <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
             {/* 2x2 Card Grid */}
             <div className="work-card-grid">
               {/* Card 1 - Coming Soon */}
               <div
                 style={{
-                  backgroundColor: '#FFFFFF',
-                  border: '1px solid #EEEEEE',
-                  borderRadius: '8px',
+                  backgroundColor: 'var(--white)',
+                  border: '1px solid var(--light-gray)',
+                  borderRadius: 'var(--radius-md)',
                   overflow: 'hidden',
                   opacity: 0.5,
                 }}
               >
                 {/* Gray Accent Bar */}
-                <div style={{ height: '4px', backgroundColor: '#CCCCCC' }} />
+                <div style={{ height: '4px', backgroundColor: 'var(--mid-gray)' }} />
 
                 <div style={{ padding: '32px' }}>
                   {/* Tag */}
@@ -233,13 +227,13 @@ export default function Work() {
                       fontFamily: 'DM Sans, sans-serif',
                       fontWeight: 700,
                       fontSize: 'var(--font-size-xs)',
-                      color: '#888888',
+                      color: 'var(--gray)',
                       letterSpacing: '1.5px',
                       textTransform: 'uppercase',
                       marginBottom: '16px',
                     }}
                   >
-                    CASE STUDY · PROPTECH
+                    CASE STUDY · AI
                   </div>
 
                   {/* Title */}
@@ -248,7 +242,7 @@ export default function Work() {
                       fontFamily: 'DM Sans, sans-serif',
                       fontWeight: 700,
                       fontSize: 'var(--font-size-xl)',
-                      color: '#888888',
+                      color: 'var(--gray)',
                       marginBottom: '12px',
                     }}
                   >
@@ -259,13 +253,13 @@ export default function Work() {
                   <p
                     style={{
                       fontFamily: 'Lora, serif',
-                      fontSize: '15px',
-                      color: '#888888',
+                      fontSize: 'var(--font-size-sm)',
+                      color: 'var(--gray)',
                       lineHeight: '1.6',
                       marginBottom: '24px',
                     }}
                   >
-                    Building trust and safety frameworks for a rental marketplace serving vulnerable populations.
+                    Using AI as a collaborator to design and build this entire portfolio from scratch — a case study in research practice, craft, and what it means to work with emerging tools.
                   </p>
 
                   {/* Link Disabled */}
@@ -275,7 +269,7 @@ export default function Work() {
                         fontFamily: 'DM Sans, sans-serif',
                         fontWeight: 700,
                         fontSize: 'var(--font-size-sm)',
-                        color: '#CCCCCC',
+                        color: 'var(--mid-gray)',
                         whiteSpace: 'nowrap',
                       }}
                     >
@@ -288,14 +282,14 @@ export default function Work() {
               {/* Card 2 - AI Product */}
               <div
                 style={{
-                  backgroundColor: '#FFFFFF',
-                  border: '1px solid #EEEEEE',
-                  borderRadius: '8px',
+                  backgroundColor: 'var(--white)',
+                  border: '1px solid var(--light-gray)',
+                  borderRadius: 'var(--radius-md)',
                   overflow: 'hidden',
                 }}
               >
                 {/* Teal Accent Bar */}
-                <div style={{ height: '4px', backgroundColor: '#2C6E7F' }} />
+                <div style={{ height: '4px', backgroundColor: 'var(--teal)' }} />
 
                 <div style={{ padding: '32px' }}>
                   {/* Tag */}
@@ -304,7 +298,7 @@ export default function Work() {
                       fontFamily: 'DM Sans, sans-serif',
                       fontWeight: 700,
                       fontSize: 'var(--font-size-xs)',
-                      color: '#2C6E7F',
+                      color: 'var(--teal)',
                       letterSpacing: '1.5px',
                       textTransform: 'uppercase',
                       marginBottom: '16px',
@@ -319,7 +313,7 @@ export default function Work() {
                       fontFamily: 'DM Sans, sans-serif',
                       fontWeight: 700,
                       fontSize: 'var(--font-size-xl)',
-                      color: '#1E1E1E',
+                      color: 'var(--charcoal)',
                       marginBottom: '12px',
                     }}
                   >
@@ -330,8 +324,8 @@ export default function Work() {
                   <p
                     style={{
                       fontFamily: 'Lora, serif',
-                      fontSize: '15px',
-                      color: '#444444',
+                      fontSize: 'var(--font-size-sm)',
+                      color: 'var(--dark-gray)',
                       lineHeight: '1.6',
                       marginBottom: '24px',
                     }}
@@ -347,7 +341,7 @@ export default function Work() {
                         fontFamily: 'DM Sans, sans-serif',
                         fontWeight: 700,
                         fontSize: 'var(--font-size-sm)',
-                        color: '#2C6E7F',
+                        color: 'var(--teal)',
                         textDecoration: 'none',
                         whiteSpace: 'nowrap',
                       }}
@@ -361,14 +355,14 @@ export default function Work() {
               {/* Card 3 - Customer Onboarding */}
               <div
                 style={{
-                  backgroundColor: '#FFFFFF',
-                  border: '1px solid #EEEEEE',
-                  borderRadius: '8px',
+                  backgroundColor: 'var(--white)',
+                  border: '1px solid var(--light-gray)',
+                  borderRadius: 'var(--radius-md)',
                   overflow: 'hidden',
                 }}
               >
                 {/* Teal Accent Bar */}
-                <div style={{ height: '4px', backgroundColor: '#2C6E7F' }} />
+                <div style={{ height: '4px', backgroundColor: 'var(--teal)' }} />
 
                 <div style={{ padding: '32px' }}>
                   {/* Tag */}
@@ -377,7 +371,7 @@ export default function Work() {
                       fontFamily: 'DM Sans, sans-serif',
                       fontWeight: 700,
                       fontSize: 'var(--font-size-xs)',
-                      color: '#2C6E7F',
+                      color: 'var(--teal)',
                       letterSpacing: '1.5px',
                       textTransform: 'uppercase',
                       marginBottom: '16px',
@@ -392,7 +386,7 @@ export default function Work() {
                       fontFamily: 'DM Sans, sans-serif',
                       fontWeight: 700,
                       fontSize: 'var(--font-size-xl)',
-                      color: '#1E1E1E',
+                      color: 'var(--charcoal)',
                       marginBottom: '12px',
                     }}
                   >
@@ -403,8 +397,8 @@ export default function Work() {
                   <p
                     style={{
                       fontFamily: 'Lora, serif',
-                      fontSize: '15px',
-                      color: '#444444',
+                      fontSize: 'var(--font-size-sm)',
+                      color: 'var(--dark-gray)',
                       lineHeight: '1.6',
                       marginBottom: '24px',
                     }}
@@ -420,7 +414,7 @@ export default function Work() {
                         fontFamily: 'DM Sans, sans-serif',
                         fontWeight: 700,
                         fontSize: 'var(--font-size-sm)',
-                        color: '#2C6E7F',
+                        color: 'var(--teal)',
                         textDecoration: 'none',
                         whiteSpace: 'nowrap',
                       }}
@@ -437,21 +431,21 @@ export default function Work() {
 
       {/* Leadership Panel */}
       {activeTab === 'leadership' && (
-        <section className="work-section-padding" style={{ backgroundColor: '#FAF7F2' }}>
+        <section className="work-section-padding" style={{ backgroundColor: 'var(--cream)' }}>
           <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
             {/* 2 Cards Side by Side */}
             <div className="work-card-grid">
               {/* Card 1 */}
               <div
                 style={{
-                  backgroundColor: '#FFFFFF',
-                  border: '1px solid #EEEEEE',
-                  borderRadius: '8px',
+                  backgroundColor: 'var(--white)',
+                  border: '1px solid var(--light-gray)',
+                  borderRadius: 'var(--radius-md)',
                   overflow: 'hidden',
                 }}
               >
                 {/* Terracotta Accent Bar */}
-                <div style={{ height: '4px', backgroundColor: '#C4622D' }} />
+                <div style={{ height: '4px', backgroundColor: 'var(--terra)' }} />
 
                 <div style={{ padding: '32px' }}>
                   {/* Tag */}
@@ -460,7 +454,7 @@ export default function Work() {
                       fontFamily: 'DM Sans, sans-serif',
                       fontWeight: 700,
                       fontSize: 'var(--font-size-xs)',
-                      color: '#C4622D',
+                      color: 'var(--terra)',
                       letterSpacing: '1.5px',
                       textTransform: 'uppercase',
                       marginBottom: '16px',
@@ -475,7 +469,7 @@ export default function Work() {
                       fontFamily: 'DM Sans, sans-serif',
                       fontWeight: 700,
                       fontSize: 'var(--font-size-xl)',
-                      color: '#1E1E1E',
+                      color: 'var(--charcoal)',
                       marginBottom: '12px',
                     }}
                   >
@@ -486,8 +480,8 @@ export default function Work() {
                   <p
                     style={{
                       fontFamily: 'Lora, serif',
-                      fontSize: '15px',
-                      color: '#444444',
+                      fontSize: 'var(--font-size-sm)',
+                      color: 'var(--dark-gray)',
                       lineHeight: '1.6',
                       marginBottom: '24px',
                     }}
@@ -503,7 +497,7 @@ export default function Work() {
                         fontFamily: 'DM Sans, sans-serif',
                         fontWeight: 700,
                         fontSize: 'var(--font-size-sm)',
-                        color: '#C4622D',
+                        color: 'var(--terra)',
                         textDecoration: 'none',
                         whiteSpace: 'nowrap',
                       }}
@@ -517,14 +511,14 @@ export default function Work() {
               {/* Card 2 */}
               <div
                 style={{
-                  backgroundColor: '#FFFFFF',
-                  border: '1px solid #EEEEEE',
-                  borderRadius: '8px',
+                  backgroundColor: 'var(--white)',
+                  border: '1px solid var(--light-gray)',
+                  borderRadius: 'var(--radius-md)',
                   overflow: 'hidden',
                 }}
               >
                 {/* Terracotta Accent Bar */}
-                <div style={{ height: '4px', backgroundColor: '#C4622D' }} />
+                <div style={{ height: '4px', backgroundColor: 'var(--terra)' }} />
 
                 <div style={{ padding: '32px' }}>
                   {/* Tag */}
@@ -533,7 +527,7 @@ export default function Work() {
                       fontFamily: 'DM Sans, sans-serif',
                       fontWeight: 700,
                       fontSize: 'var(--font-size-xs)',
-                      color: '#C4622D',
+                      color: 'var(--terra)',
                       letterSpacing: '1.5px',
                       textTransform: 'uppercase',
                       marginBottom: '16px',
@@ -548,7 +542,7 @@ export default function Work() {
                       fontFamily: 'DM Sans, sans-serif',
                       fontWeight: 700,
                       fontSize: 'var(--font-size-xl)',
-                      color: '#1E1E1E',
+                      color: 'var(--charcoal)',
                       marginBottom: '12px',
                     }}
                   >
@@ -559,8 +553,8 @@ export default function Work() {
                   <p
                     style={{
                       fontFamily: 'Lora, serif',
-                      fontSize: '15px',
-                      color: '#444444',
+                      fontSize: 'var(--font-size-sm)',
+                      color: 'var(--dark-gray)',
                       lineHeight: '1.6',
                       marginBottom: '24px',
                     }}
@@ -576,7 +570,7 @@ export default function Work() {
                         fontFamily: 'DM Sans, sans-serif',
                         fontWeight: 700,
                         fontSize: 'var(--font-size-sm)',
-                        color: '#C4622D',
+                        color: 'var(--terra)',
                         textDecoration: 'none',
                         whiteSpace: 'nowrap',
                       }}
@@ -590,14 +584,14 @@ export default function Work() {
               {/* Card 3 - AI Personalization */}
               <div
                 style={{
-                  backgroundColor: '#FFFFFF',
-                  border: '1px solid #EEEEEE',
-                  borderRadius: '8px',
+                  backgroundColor: 'var(--white)',
+                  border: '1px solid var(--light-gray)',
+                  borderRadius: 'var(--radius-md)',
                   overflow: 'hidden',
                 }}
               >
                 {/* Terracotta Accent Bar */}
-                <div style={{ height: '4px', backgroundColor: '#C4622D' }} />
+                <div style={{ height: '4px', backgroundColor: 'var(--terra)' }} />
 
                 <div style={{ padding: '32px' }}>
                   {/* Tag */}
@@ -606,7 +600,7 @@ export default function Work() {
                       fontFamily: 'DM Sans, sans-serif',
                       fontWeight: 700,
                       fontSize: 'var(--font-size-xs)',
-                      color: '#C4622D',
+                      color: 'var(--terra)',
                       letterSpacing: '1.5px',
                       textTransform: 'uppercase',
                       marginBottom: '16px',
@@ -621,7 +615,7 @@ export default function Work() {
                       fontFamily: 'DM Sans, sans-serif',
                       fontWeight: 700,
                       fontSize: 'var(--font-size-xl)',
-                      color: '#1E1E1E',
+                      color: 'var(--charcoal)',
                       marginBottom: '12px',
                     }}
                   >
@@ -632,8 +626,8 @@ export default function Work() {
                   <p
                     style={{
                       fontFamily: 'Lora, serif',
-                      fontSize: '15px',
-                      color: '#444444',
+                      fontSize: 'var(--font-size-sm)',
+                      color: 'var(--dark-gray)',
                       lineHeight: '1.6',
                       marginBottom: '24px',
                     }}
@@ -649,7 +643,7 @@ export default function Work() {
                         fontFamily: 'DM Sans, sans-serif',
                         fontWeight: 700,
                         fontSize: 'var(--font-size-sm)',
-                        color: '#C4622D',
+                        color: 'var(--terra)',
                         textDecoration: 'none',
                         whiteSpace: 'nowrap',
                       }}
