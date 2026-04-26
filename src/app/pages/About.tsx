@@ -81,8 +81,7 @@ export default function About() {
           height: auto;
           display: block;
           object-fit: cover;
-          border-radius: var(--radius-md);
-          box-shadow: 0 24px 48px rgba(0, 0, 0, 0.35);
+          border-radius: var(--radius-xl);
         }
         
         .about-hero-title {
@@ -106,6 +105,7 @@ export default function About() {
           color: rgba(255, 255, 255, 0.65);
           max-width: 640px;
           line-height: 1.6;
+          font-style: italic;
         }
         
         .about-values-grid {
@@ -274,13 +274,13 @@ export default function About() {
 
             {/* Headline */}
             <h1 className="about-hero-title">
-              Most companies want research.{' '}
+              Most companies want AI and UX research.{' '}
               <span className="about-hero-title-gold">Few build the conditions for it to matter.</span>
             </h1>
 
             {/* Subheading */}
             <p className="about-hero-subtitle">
-              I build the UX practices, teams, and frameworks companies need to make better decisions — especially when AI is involved. I specialize in building frameworks that scale and are sustainable, all while addressing ethical challenges in AI. Now my UX practice focuses on the question that matters most: how do we make sure AI systems actually work for the people they're supposed to serve?
+              I build what most companies skip: the research practices, ethical frameworks, and team structures that make AI actually work for the people it's supposed to serve.
             </p>
           </div>
 
@@ -561,7 +561,7 @@ export default function About() {
                   marginBottom: '16px',
                 }}
               >
-                Unified a siloed and fractured team, increasing cross discipline collaboration and increased team trust.
+                Unified a siloed and fractured team, increasing cross-discipline collaboration and team trust.
               </p>
               <div
                 style={{
@@ -671,7 +671,7 @@ export default function About() {
                   marginBottom: '16px',
                 }}
               >
-                Led research that reduced onboarding time by 50%, from 90 minute CX calls to 45 minute CX calls.
+                Led research that reduced onboarding time by 50%, from 90-minute CX calls to 45-minute CX calls.
               </p>
               <div
                 style={{
