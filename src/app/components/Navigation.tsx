@@ -127,7 +127,7 @@ export function Navigation() {
               paddingBottom: '4px',
             }}
           >
-            About Jesse
+            About Me
           </Link>
           <Link
             to="/hiring"
@@ -266,7 +266,7 @@ export function Navigation() {
             }}
             role="menuitem"
           >
-            About Jesse
+            About Me
           </Link>
           <Link
             to="/hiring"

@@ -1,7 +1,55 @@
+import { useState, type ReactNode } from 'react';
 import { Navigation } from '../components/Navigation';
 import { Footer } from '../components/Footer';
 
+function TestimonialCard({
+  id,
+  name,
+  role,
+  isExpanded,
+  onToggle,
+  children,
+}: {
+  id: string;
+  name: string;
+  role: string;
+  isExpanded: boolean;
+  onToggle: (id: string) => void;
+  children: ReactNode;
+}) {
+  return (
+    <div className="about-testimonial-card">
+      <div className="about-testimonial-head">
+        <div className="about-testimonial-name">{name}</div>
+        <div className="about-testimonial-role">{role}</div>
+      </div>
+      <div
+        className={`about-testimonial-quote${isExpanded ? '' : ' about-testimonial-quote--clamped'}`}
+      >
+        {children}
+      </div>
+      <button
+        type="button"
+        className="about-testimonial-toggle"
+        aria-expanded={isExpanded}
+        onClick={() => onToggle(id)}
+      >
+        {isExpanded ? 'Read less' : 'Read more'}
+      </button>
+    </div>
+  );
+}
+
 export default function Hiring() {
+  const [expandedTestimonials, setExpandedTestimonials] = useState<Record<string, boolean>>({});
+
+  const handleTestimonialToggle = (id: string) => {
+    setExpandedTestimonials((prev) => ({
+      ...prev,
+      [id]: !prev[id],
+    }));
+  };
+
   return (
     <div className="min-h-screen" style={{ backgroundColor: 'var(--white)' }}>
       <style>{`
@@ -17,7 +65,6 @@ export default function Hiring() {
           color: var(--white);
           line-height: 1.15;
           margin-bottom: 24px;
-          max-width: 900px;
         }
         
         .hiring-hero-subtitle {
@@ -27,6 +74,7 @@ export default function Hiring() {
           color: color-mix(in srgb, var(--white) 65%, transparent);
           margin-bottom: 24px;
           line-height: 1.6;
+          font-style: italic;
         }
         
         .hiring-steps-grid {
@@ -106,6 +154,106 @@ export default function Hiring() {
           .hiring-who-grid {
             grid-template-columns: 1fr;
           }
+
+          .about-testimonials-grid {
+            grid-template-columns: 1fr;
+          }
+        }
+        
+        .about-testimonials-grid {
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr;
+          gap: 32px;
+          align-items: start;
+        }
+
+        .about-testimonial-card {
+          background-color: var(--white);
+          border: 1px solid var(--light-gray);
+          border-left: 4px solid var(--teal-dark);
+          border-radius: var(--radius-md);
+          padding: 32px;
+          display: flex;
+          flex-direction: column;
+          min-width: 0;
+        }
+
+        .about-testimonial-head {
+          margin-bottom: 20px;
+        }
+
+        .about-testimonial-name {
+          font-family: 'DM Sans', sans-serif;
+          font-size: var(--font-size-lg);
+          font-weight: 700;
+          color: var(--charcoal);
+          line-height: 1.3;
+        }
+
+        .about-testimonial-role {
+          font-family: 'DM Sans', sans-serif;
+          font-size: var(--font-size-sm);
+          color: var(--gray);
+          margin-top: 6px;
+          line-height: 1.45;
+        }
+
+        .about-testimonial-quote {
+          font-family: 'Lora', serif;
+          font-size: var(--font-size-base);
+          color: var(--dark-gray);
+          line-height: 1.65;
+          font-style: italic;
+        }
+
+        .about-testimonial-quote p {
+          margin: 0 0 1em 0;
+        }
+
+        .about-testimonial-quote p:last-child {
+          margin-bottom: 0;
+        }
+
+        .about-testimonial-quote--clamped {
+          max-height: calc(7 * 1lh);
+          overflow: hidden;
+          position: relative;
+        }
+
+        .about-testimonial-quote--clamped::after {
+          content: '';
+          position: absolute;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          height: calc(2.5 * 1lh);
+          pointer-events: none;
+          background: linear-gradient(to bottom, rgba(255, 255, 255, 0), var(--cream));
+        }
+
+        .about-testimonial-toggle {
+          margin-top: 18px;
+          align-self: flex-end;
+          font-family: 'DM Sans', sans-serif;
+          font-size: var(--font-size-sm);
+          font-weight: 700;
+          letter-spacing: 0.03em;
+          color: var(--brand-link);
+          background: none;
+          border: none;
+          padding: 4px 0;
+          cursor: pointer;
+          text-decoration: underline;
+          text-underline-offset: 3px;
+        }
+
+        .about-testimonial-toggle:hover {
+          color: var(--brand-link-hover);
+        }
+
+        .about-testimonial-toggle:focus-visible {
+          outline: 2px solid var(--brand-link-focus-ring);
+          outline-offset: 2px;
         }
       `}</style>
       {/* Hero Section */}
@@ -126,42 +274,15 @@ export default function Hiring() {
           </div>
 
           {/* Headline */}
-          <h1 className="hiring-hero-title">Let's figure out if we're a good fit for each other.</h1>
+          <h1 className="hiring-hero-title">Let's figure out if <span style={{ color: 'var(--gold)' }}>we're a good fit</span> for each other.</h1>
 
           {/* Subheading */}
           <p className="hiring-hero-subtitle">
-            I take on a small number of engagements at a time so I can do the work properly. If what you're dealing with sounds like something I can help with, let's talk.
+            I help companies build research practices that uncover bias, reduce risk, and put real people at the center of AI-powered products. If what you're dealing with sounds like something I can help with, let's talk.
           </p>
         </div>
       </section>
 
-      {/* Pull quote */}
-      <section className="hiring-section-padding" style={{ backgroundColor: 'var(--cream)' }}>
-        <div className="hiring-pull-quote-inner">
-          <div
-            style={{
-              backgroundColor: 'var(--white)',
-              border: '1px solid var(--light-gray)',
-              borderLeft: '4px solid var(--teal-dark)',
-              padding: '40px',
-              borderRadius: 'var(--radius-md)',
-            }}
-          >
-            <p
-              style={{
-                fontFamily: 'Lora, serif',
-                fontSize: 'var(--font-size-xl)',
-                color: 'var(--charcoal)',
-                lineHeight: '1.65',
-                fontStyle: 'italic',
-                margin: 0,
-              }}
-            >
-              "I help companies build research practices that uncover bias, reduce risk, and put real people at the center of AI-powered products."
-            </p>
-          </div>
-        </div>
-      </section>
 
       {/* How I Can Help */}
       <section className="hiring-section-padding" style={{ backgroundColor: 'var(--cream)' }}>
@@ -284,7 +405,7 @@ export default function Hiring() {
                     lineHeight: '1.6',
                   }}
                 >
-                  You're building with AI and you want to know where the risks are before your users find them. I'll audit how AI can be embedded as an internal process for the UX team, identify disparate impacts across demographic users, and help you build frameworks for ethical decision making.
+                  You're building with AI and you want to know where the risks are before your users find them. I'll audit how AI can be embedded as an internal process for the UX team, identify disparate impacts across demographic users, and help you build frameworks for ethical decision-making.
                 </p>
               </div>
             </div>
@@ -337,7 +458,7 @@ export default function Hiring() {
                     lineHeight: '1.6',
                   }}
                 >
-                  You have a UX practice. You need someone to lead them, elevate their work, and make sure it reaches the people who need to act on those insights. I build and lead diverse teams so that insights are representative of your real users to make a real impact.
+                  You have a UX practice. You need someone to lead the team, elevate their work, and make sure it reaches the people who need to act on those insights. I build and lead diverse teams so that insights are representative of your real users to make a real impact.
                 </p>
               </div>
             </div>
@@ -367,6 +488,7 @@ export default function Hiring() {
               style={{
                 backgroundColor: 'var(--white)',
                 border: '1px solid var(--light-gray)',
+                borderLeft: '4px solid var(--teal-dark)',
                 borderRadius: 'var(--radius-md)',
                 padding: '32px',
               }}
@@ -387,6 +509,7 @@ export default function Hiring() {
               style={{
                 backgroundColor: 'var(--white)',
                 border: '1px solid var(--light-gray)',
+                borderLeft: '4px solid var(--teal-dark)',
                 borderRadius: 'var(--radius-md)',
                 padding: '32px',
               }}
@@ -407,6 +530,7 @@ export default function Hiring() {
               style={{
                 backgroundColor: 'var(--white)',
                 border: '1px solid var(--light-gray)',
+                borderLeft: '4px solid var(--teal-dark)',
                 borderRadius: 'var(--radius-md)',
                 padding: '32px',
               }}
@@ -427,6 +551,7 @@ export default function Hiring() {
               style={{
                 backgroundColor: 'var(--white)',
                 border: '1px solid var(--light-gray)',
+                borderLeft: '4px solid var(--teal-dark)',
                 borderRadius: 'var(--radius-md)',
                 padding: '32px',
               }}
@@ -580,7 +705,7 @@ export default function Hiring() {
 
       {/* Testimonials Section */}
       <section className="hiring-section-padding" style={{ backgroundColor: 'var(--cream)' }}>
-        <div style={{ maxWidth: '900px', margin: '0 auto' }}>
+        <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
           {/* Eyebrow */}
           <div
             style={{
@@ -596,48 +721,36 @@ export default function Hiring() {
             TESTIMONIALS
           </div>
 
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '32px' }}>
-            <div
-              style={{
-                backgroundColor: 'var(--white)',
-                border: '1px solid var(--light-gray)',
-                borderLeft: '4px solid var(--teal-dark)',
-                borderRadius: 'var(--radius-md)',
-                padding: '40px',
-              }}
+          <div className="about-testimonials-grid">
+            <TestimonialCard
+              id="jules"
+              name="Jules Wood"
+              role="UX Strategist"
+              isExpanded={Boolean(expandedTestimonials.jules)}
+              onToggle={handleTestimonialToggle}
             >
-              <p
-                style={{
-                  fontFamily: 'Lora, serif',
-                  fontSize: 'var(--font-size-base)',
-                  color: 'var(--dark-gray)',
-                  lineHeight: '1.6',
-                  marginBottom: '24px',
-                  fontStyle: 'italic',
-                }}
-              >
-                "As her manager, I can only sing her praises. Jesse is a delight to work with not only because she's kind and intellectually generous, but because she's extremely direct and laser focused on the 'why' behind not only her work, but the mission of the entire company. She understands the friction between business and user needs and delivers both the science and the candor that leadership needs to make decisions at the highest level for the brand and company. Even before she took on her role as Lead, she generously mentored members of the UX team and organized user discovery coaching across all of Product Management. She's always brushing up on the latest from leaders in her space and beyond. Her academic background never fails to come in handy when lofty ideas or risky decisions warrant closer inspection through research. I could trust Jesse with any project, any feedback, and any of the hard truths that come with directing UX in a revenue focused business."
-              </p>
-              <div
-                style={{
-                  fontFamily: 'DM Sans, sans-serif',
-                  fontSize: 'var(--font-size-sm)',
-                  color: 'var(--charcoal)',
-                  fontWeight: 700,
-                }}
-              >
-                Jules Wood
-              </div>
-              <div
-                style={{
-                  fontFamily: 'DM Sans, sans-serif',
-                  fontSize: 'var(--font-size-xs)',
-                  color: 'var(--gray)',
-                }}
-              >
-                UX Strategist
-              </div>
-            </div>
+              <p>"As her manager, I can only sing her praises. Jesse is a delight to work with not only because she&apos;s kind and intellectually generous, but because she&apos;s extremely direct and laser focused on the &apos;why&apos; behind not only her work, but the mission of the entire company. She understands the friction between business and user needs and delivers both the science and the candor that leadership needs to make decisions at the highest level for the brand and company. Even before she took on her role as Lead, she generously mentored members of the UX team and organized user discovery coaching across all of Product Management. She&apos;s always brushing up on the latest from leaders in her space and beyond. Her academic background never fails to come in handy when lofty ideas or risky decisions warrant closer inspection through research. I could trust Jesse with any project, any feedback, and any of the hard truths that come with directing UX in a revenue focused business."</p>
+            </TestimonialCard>
+
+            <TestimonialCard
+              id="esther"
+              name="Esther Yang"
+              role="Senior Product Designer"
+              isExpanded={Boolean(expandedTestimonials.esther)}
+              onToggle={handleTestimonialToggle}
+            >
+              <p>"Jesse has a deep understanding of how UXR can effectively drive tangible business outcomes. Not only did she establish UXR practices into our organization from scratch, but was its champion, regularly collaborating with other departments and socializing actionable insights that drove successful product development and initiatives across the organization. Jesse is thorough, impactful, and approachable, and she was constantly finding new ways to level up her skills and mobilize insights throughout the company. I learned a lot from her and any organization would be lucky to have her on their team!"</p>
+            </TestimonialCard>
+
+            <TestimonialCard
+              id="anar"
+              name="Anar Salayev"
+              role="Product at Articulate | Executive Director at BikeSD"
+              isExpanded={Boolean(expandedTestimonials.anar)}
+              onToggle={handleTestimonialToggle}
+            >
+              <p>"Jesse joined the team and quickly developed a holistic understanding of the product, different teams, and the company overall. She is a strong advocate of getting designs in front of users early. Even when given an aggressive deadline, she was able to quickly meet with users to ensure that we had properly identified their needs and built a solution that appropriately addressed them. When presenting findings to stakeholders, she is clear and concise — she highlights what is necessary and has the foresight to include information about questions that may come up. I highly recommend Jesse to any employer that is looking to further mature their research operations."</p>
+            </TestimonialCard>
           </div>
         </div>
       </section>
@@ -656,7 +769,7 @@ export default function Hiring() {
               marginBottom: '48px',
             }}
           >
-            Want to chat?
+            Let's Chat
           </div>
           <div className="hiring-bottom-grid">
             <div
@@ -701,7 +814,7 @@ export default function Hiring() {
                     color: 'var(--charcoal)',
                     backgroundColor: 'var(--gold)',
                     padding: '14px 32px',
-                    borderRadius: 'var(--radius-sm)',
+                    borderRadius: 'var(--radius-md)',
                     textDecoration: 'none',
                     whiteSpace: 'nowrap',
                   }}

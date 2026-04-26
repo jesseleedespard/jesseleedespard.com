@@ -269,7 +269,7 @@ export default function About() {
                 letterSpacing: '1.5px',
               }}
             >
-              ABOUT JESSE
+              ABOUT ME
             </div>
 
             {/* Headline */}
