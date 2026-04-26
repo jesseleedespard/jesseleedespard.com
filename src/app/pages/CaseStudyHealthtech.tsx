@@ -35,7 +35,9 @@ html { scroll-behavior: smooth; }
 .meta-item { padding-right: 24px; margin-right: 24px; border-right: 1px solid rgba(255,255,255,0.1); }
 .meta-item:last-child { border-right: none; margin-right: 0; }
 .meta-label { font-family: var(--display); font-size: var(--font-size-xs); letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); font-weight: 700; margin-bottom: 3px; }
-.meta-value { font-family: var(--display); font-size: var(--font-size-xs); color: rgba(255,255,255,0.82); font-weight: 500; }
+.meta-value { font-family: var(--display); font-size: var(--font-size-sm); color: rgba(255,255,255,0.82); font-weight: 500; }
+.img-caption { font-family: var(--display); font-size: var(--font-size-xs); color: var(--gray); font-style: italic; margin-top: 8px; text-align: center; }
+.redesign-label { font-family: var(--display); font-size: var(--font-size-xs); font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--teal); margin-bottom: 16px; margin-top: 32px; }
 
 /* LAYOUT */
 .page-wrap { max-width: calc(var(--max) + (var(--page-padding) * 2)); margin: 0 auto; padding: 0 var(--page-padding); }
@@ -303,16 +305,7 @@ html { scroll-behavior: smooth; }
                 }}
               />
             </div>
-            <p
-              style={{
-                fontFamily: 'var(--display)',
-                fontSize: 'var(--font-size-xs)',
-                color: 'var(--gray)',
-                fontStyle: 'italic',
-                marginTop: '8px',
-                textAlign: 'center',
-              }}
-            >
+            <p className="img-caption">
               Early storyboard sketched to frame the problem, with customers racing to complete a 37-question form before a 90-minute call they were not ready for.
             </p>
           </div>
@@ -411,16 +404,7 @@ html { scroll-behavior: smooth; }
                 alt="Before card sort, with all 37 questions spread across the whiteboard"
                 style={{ width: '100%', borderRadius: 'var(--radius-sm)', border: '1px solid var(--light-gray)' }}
               />
-              <p
-                style={{
-                  fontFamily: 'var(--display)',
-                  fontSize: 'var(--font-size-xs)',
-                  color: 'var(--gray)',
-                  fontStyle: 'italic',
-                  marginTop: '8px',
-                  textAlign: 'center',
-                }}
-              >
+              <p className="img-caption">
                 Before: all 37 questions on the board, with colored stickers showing participant priority ratings.
               </p>
             </div>
@@ -430,16 +414,7 @@ html { scroll-behavior: smooth; }
                 alt="After card sort, with questions reorganized and removed questions separated"
                 style={{ width: '100%', borderRadius: 'var(--radius-sm)', border: '1px solid var(--light-gray)' }}
               />
-              <p
-                style={{
-                  fontFamily: 'var(--display)',
-                  fontSize: 'var(--font-size-xs)',
-                  color: 'var(--gray)',
-                  fontStyle: 'italic',
-                  marginTop: '8px',
-                  textAlign: 'center',
-                }}
-              >
+              <p className="img-caption">
                 After: questions reorganized by participants, with a clear "questions we should not have" section emerging.
               </p>
             </div>
@@ -451,16 +426,7 @@ html { scroll-behavior: smooth; }
               alt="Handwritten research notes documenting participant feedback on each question"
               style={{ width: '100%', borderRadius: 'var(--radius-sm)', border: '1px solid var(--light-gray)' }}
             />
-            <p
-              style={{
-                fontFamily: 'var(--display)',
-                fontSize: 'var(--font-size-xs)',
-                color: 'var(--gray)',
-                fontStyle: 'italic',
-                marginTop: '8px',
-                textAlign: 'center',
-              }}
-            >
+            <p className="img-caption">
               Field notes captured during sessions that documented participant-by-participant feedback on each question's clarity, necessity, and placement.
             </p>
           </div>
@@ -549,18 +515,8 @@ html { scroll-behavior: smooth; }
             </div>
           </div>
 
-          <div style={{ marginTop: '32px' }}>
-            <p
-              style={{
-                fontFamily: 'var(--display)',
-                fontSize: 'var(--font-size-xs)',
-                fontWeight: 700,
-                letterSpacing: '2px',
-                textTransform: 'uppercase',
-                color: 'var(--teal)',
-                marginBottom: '16px',
-              }}
-            >
+          <div>
+            <p className="redesign-label">
               REDESIGN MOCKUPS
             </p>
             <div
@@ -570,65 +526,23 @@ html { scroll-behavior: smooth; }
                 gap: '16px',
               }}
             >
-              <div style={{ position: 'relative', marginBottom: '8px' }}>
+              <div style={{ marginBottom: '8px' }}>
                 <img
                   src="/healthtech_mockup1.png"
                   alt="Wireframe mockup showing merged questions with checkbox interface"
                   style={{ width: '100%', borderRadius: 'var(--radius-sm)', border: '1px solid var(--light-gray)', display: 'block' }}
                 />
-                <div
-                  style={{
-                    position: 'absolute',
-                    top: '0px',
-                    right: '0px',
-                    left: 'auto',
-                    width: '520px',
-                    height: '64px',
-                    backgroundColor: 'var(--white)',
-                    zIndex: 10,
-                  }}
-                />
-                <p
-                  style={{
-                    fontFamily: 'var(--display)',
-                    fontSize: 'var(--font-size-xs)',
-                    color: 'var(--gray)',
-                    fontStyle: 'italic',
-                    marginTop: '8px',
-                    textAlign: 'center',
-                  }}
-                >
+                <p className="img-caption">
                   Mockup 1: merging overlapping questions into a single checkbox interface so that three questions become one.
                 </p>
               </div>
-              <div style={{ position: 'relative', marginBottom: '8px' }}>
+              <div style={{ marginBottom: '8px' }}>
                 <img
                   src="/healthtech_mockup2.png"
                   alt="Wireframe mockup showing redesigned insurance question with clearer structure"
                   style={{ width: '100%', borderRadius: 'var(--radius-sm)', border: '1px solid var(--light-gray)', display: 'block' }}
                 />
-                <div
-                  style={{
-                    position: 'absolute',
-                    top: '4px',
-                    right: '10px',
-                    left: 'auto',
-                    width: '360px',
-                    height: '30px',
-                    backgroundColor: 'var(--white)',
-                    zIndex: 10,
-                  }}
-                />
-                <p
-                  style={{
-                    fontFamily: 'var(--display)',
-                    fontSize: 'var(--font-size-xs)',
-                    color: 'var(--gray)',
-                    fontStyle: 'italic',
-                    marginTop: '8px',
-                    textAlign: 'center',
-                  }}
-                >
+                <p className="img-caption">
                   Mockup 2: redesigning the insurance question to reduce open-text burden and align it with how Customer Success actually uses the data.
                 </p>
               </div>
