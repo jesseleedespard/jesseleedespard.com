@@ -8,7 +8,7 @@ export default function Home() {
     <div className="min-h-screen bg-white">
       <style>{`
         .home-hero-section {
-          background-color: #1E1E1E;
+          background-color: var(--charcoal);
           padding: 100px 48px;
         }
         
@@ -16,7 +16,7 @@ export default function Home() {
           font-family: 'DM Sans', sans-serif;
           font-weight: 700;
           font-size: 52px;
-          color: #FFFFFF;
+          color: var(--white);
           line-height: 1.15;
           margin-bottom: 24px;
           max-width: 900px;
@@ -29,6 +29,7 @@ export default function Home() {
           color: rgba(255, 255, 255, 0.65);
           margin-bottom: 40px;
           line-height: 1.6;
+          font-style: italic;
         }
         
         .home-case-studies-grid {
@@ -36,6 +37,14 @@ export default function Home() {
           grid-template-columns: 1fr 1fr;
           gap: 32px;
           margin-bottom: 32px;
+        }
+        
+        .home-hero-inner {
+          display: flex;
+          align-items: center;
+          gap: 64px;
+          max-width: 1200px;
+          margin: 0 auto;
         }
         
         .home-section-padding {
@@ -47,7 +56,7 @@ export default function Home() {
         }
         
         .home-card-title {
-          font-size: 19px;
+          font-size: var(--font-size-lg);
         }
         
         .home-featured-title {
@@ -63,17 +72,26 @@ export default function Home() {
         }
         
         .primary-cta-gold:hover {
-          background-color: #C49A3A;
+          background-color: var(--gold-dark);
         }
         
         .primary-cta-gold:focus {
           outline: none;
-          box-shadow: 0 0 0 3px #2C6E7F;
+          box-shadow: 0 0 0 3px var(--teal);
         }
         
         @media (max-width: 768px) {
           .home-hero-section {
             padding: 56px 24px;
+          }
+          
+          .home-hero-inner {
+            flex-direction: column;
+          }
+          
+          .home-hero-inner img {
+            width: 100%;
+            height: 260px;
           }
           
           .home-hero-title {
@@ -113,56 +131,74 @@ export default function Home() {
       `}</style>
       {/* Hero Section */}
       <section className="home-hero-section">
-        <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
-          {/* Eyebrow */}
-          <div
-            style={{
-              fontFamily: 'DM Sans, sans-serif',
-              fontWeight: 700,
-              fontSize: 'var(--font-size-xs)',
-              color: '#D4A843',
-              marginBottom: '24px',
-              letterSpacing: '1.5px',
-            }}
-          >
-            UX RESEARCH LEADER
+        <div className="home-hero-inner">
+          {/* Left column */}
+          <div style={{ flex: 1 }}>
+            {/* Eyebrow */}
+            <div
+              style={{
+                fontFamily: 'DM Sans, sans-serif',
+                fontWeight: 700,
+                fontSize: 'var(--font-size-xs)',
+                color: 'var(--gold)',
+                marginBottom: '24px',
+                letterSpacing: '1.5px',
+              }}
+            >
+              AI x UX RESEARCH LEADER
+            </div>
+
+            {/* Headline */}
+            <h1 className="home-hero-title">
+              Hey! <span style={{ color: 'var(--gold)' }}>I'm Jesse.</span>
+            </h1>
+
+            {/* Subheading */}
+            <p className="home-hero-subtitle">
+              I build research practices, teams, and frameworks that help companies understand people, and make better decisions because of it.
+            </p>
+
+            {/* CTA Button */}
+            <Link
+              to="/hiring"
+              className="primary-cta-gold"
+              style={{
+                fontFamily: 'DM Sans, sans-serif',
+                fontWeight: 700,
+                fontSize: 'var(--font-size-sm)',
+                color: 'var(--charcoal)',
+                backgroundColor: 'var(--gold)',
+                padding: '16px 32px',
+                borderRadius: 'var(--radius-md)',
+                border: 'none',
+                cursor: 'pointer',
+                textDecoration: 'none',
+                display: 'inline-block',
+              }}
+            >
+              Hiring? →
+            </Link>
           </div>
 
-          {/* Headline */}
-          <h1 className="home-hero-title">
-            I've spent a decade studying people so products can serve them better.
-          </h1>
-
-          {/* Subheading */}
-          <p className="home-hero-subtitle">
-            I build the research practices, teams, and frameworks that help companies make better decisions.
-          </p>
-
-          {/* CTA Button */}
-          <Link
-            to="/hiring"
-            className="primary-cta-gold"
-            style={{
-              fontFamily: 'DM Sans, sans-serif',
-              fontWeight: 700,
-              fontSize: '15px',
-              color: '#1E1E1E',
-              backgroundColor: '#D4A843',
-              padding: '16px 32px',
-              borderRadius: '8px',
-              border: 'none',
-              cursor: 'pointer',
-              textDecoration: 'none',
-              display: 'inline-block',
-            }}
-          >
-            Hiring? →
-          </Link>
+          {/* Right column — photo */}
+          <div style={{ flexShrink: 0 }}>
+            <img
+              src="/jesse_hero.jpg"
+              alt="Jesse and their dog in a park"
+              style={{
+                width: '380px',
+                height: '380px',
+                objectFit: 'cover',
+                borderRadius: 'var(--radius-xl)',
+                display: 'block',
+              }}
+            />
+          </div>
         </div>
       </section>
 
       {/* Case Study Teasers */}
-      <section className="home-section-padding" style={{ backgroundColor: '#FAF7F2' }}>
+      <section className="home-section-padding" style={{ backgroundColor: 'var(--cream)' }}>
         <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
           {/* Eyebrow */}
           <div
@@ -170,7 +206,7 @@ export default function Home() {
               fontFamily: 'DM Sans, sans-serif',
               fontWeight: 700,
               fontSize: 'var(--font-size-xs)',
-              color: '#1F5364',
+              color: 'var(--teal-dark)',
               letterSpacing: '1.5px',
               textTransform: 'uppercase',
               marginBottom: '16px',
@@ -185,7 +221,7 @@ export default function Home() {
             style={{
               fontFamily: 'DM Sans, sans-serif',
               fontWeight: 700,
-              color: '#1E1E1E',
+              color: 'var(--charcoal)',
               marginBottom: '48px',
             }}
           >
@@ -197,28 +233,17 @@ export default function Home() {
             {/* Card 1 */}
             <div
               style={{
-                backgroundColor: '#FFFFFF',
-                border: '1px solid #EEEEEE',
-                borderRadius: '8px',
+                backgroundColor: 'var(--white)',
+                border: '1px solid var(--light-gray)',
+                borderRadius: 'var(--radius-md)',
                 overflow: 'hidden',
               }}
             >
-              {/* Placeholder Image */}
-              <div
-                style={{
-                  width: '100%',
-                  height: '240px',
-                  backgroundColor: '#CCCCCC',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  color: '#888888',
-                  fontFamily: 'DM Sans, sans-serif',
-                  fontSize: 'var(--font-size-sm)',
-                }}
-              >
-                [Image Placeholder]
-              </div>
+              <img
+                src="/healthtech_cardsort_after.jpg"
+                alt="Card sort results after HealthTech onboarding redesign"
+                style={{ width: '100%', height: '240px', objectFit: 'cover', display: 'block', objectPosition: 'center 30%' }}
+              />
 
               {/* Card Content */}
               <div style={{ padding: '32px' }}>
@@ -227,7 +252,7 @@ export default function Home() {
                     fontFamily: 'DM Sans, sans-serif',
                     fontWeight: 700,
                     fontSize: 'var(--font-size-xs)',
-                    color: '#1F5364',
+                    color: 'var(--teal-dark)',
                     letterSpacing: '1.5px',
                     textTransform: 'uppercase',
                     marginBottom: '16px',
@@ -240,7 +265,7 @@ export default function Home() {
                   style={{
                     fontFamily: 'DM Sans, sans-serif',
                     fontWeight: 700,
-                    color: '#1E1E1E',
+                    color: 'var(--charcoal)',
                     marginBottom: '16px',
                   }}
                 >
@@ -250,7 +275,7 @@ export default function Home() {
                   style={{
                     fontFamily: 'Lora, serif',
                     fontSize: 'var(--font-size-base)',
-                    color: '#444444',
+                    color: 'var(--dark-gray)',
                     lineHeight: '1.6',
                     marginBottom: '24px',
                   }}
@@ -264,7 +289,7 @@ export default function Home() {
                       fontFamily: 'DM Sans, sans-serif',
                       fontWeight: 700,
                       fontSize: 'var(--font-size-sm)',
-                      color: '#1F5364',
+                      color: 'var(--teal-dark)',
                       textDecoration: 'none',
                       whiteSpace: 'nowrap',
                     }}
@@ -278,27 +303,31 @@ export default function Home() {
             {/* Card 2 */}
             <div
               style={{
-                backgroundColor: '#FFFFFF',
-                border: '1px solid #EEEEEE',
-                borderRadius: '8px',
+                backgroundColor: 'var(--white)',
+                border: '1px solid var(--light-gray)',
+                borderRadius: 'var(--radius-md)',
                 overflow: 'hidden',
               }}
             >
-              {/* Placeholder Image */}
               <div
                 style={{
                   width: '100%',
                   height: '240px',
-                  backgroundColor: '#CCCCCC',
+                  backgroundColor: 'var(--charcoal)',
+                  borderLeft: '4px solid var(--gold)',
                   display: 'flex',
-                  alignItems: 'center',
+                  flexDirection: 'column',
                   justifyContent: 'center',
-                  color: '#888888',
-                  fontFamily: 'DM Sans, sans-serif',
-                  fontSize: 'var(--font-size-sm)',
+                  padding: '32px',
+                  boxSizing: 'border-box',
                 }}
               >
-                [Image Placeholder]
+                <p style={{ fontFamily: 'Lora, serif', fontSize: 'var(--font-size-base)', color: 'var(--white)', fontStyle: 'italic', lineHeight: 1.6, margin: '0 0 12px' }}>
+                  &ldquo;I didn&apos;t gatekeep research. I made it visible, made myself vulnerable, and let people come to it on their own terms.&rdquo;
+                </p>
+                <p style={{ fontFamily: 'DM Sans, sans-serif', fontSize: 'var(--font-size-xs)', color: 'var(--gold)', margin: 0 }}>
+                  — Jesse Lee Despard
+                </p>
               </div>
 
               {/* Card Content */}
@@ -308,7 +337,7 @@ export default function Home() {
                     fontFamily: 'DM Sans, sans-serif',
                     fontWeight: 700,
                     fontSize: 'var(--font-size-xs)',
-                    color: '#C4622D',
+                    color: 'var(--terra)',
                     letterSpacing: '1.5px',
                     textTransform: 'uppercase',
                     marginBottom: '16px',
@@ -321,7 +350,7 @@ export default function Home() {
                   style={{
                     fontFamily: 'DM Sans, sans-serif',
                     fontWeight: 700,
-                    color: '#1E1E1E',
+                    color: 'var(--charcoal)',
                     marginBottom: '16px',
                   }}
                 >
@@ -331,7 +360,7 @@ export default function Home() {
                   style={{
                     fontFamily: 'Lora, serif',
                     fontSize: 'var(--font-size-base)',
-                    color: '#444444',
+                    color: 'var(--dark-gray)',
                     lineHeight: '1.6',
                     marginBottom: '24px',
                   }}
@@ -345,7 +374,7 @@ export default function Home() {
                       fontFamily: 'DM Sans, sans-serif',
                       fontWeight: 700,
                       fontSize: 'var(--font-size-sm)',
-                      color: '#C4622D',
+                      color: 'var(--terra)',
                       textDecoration: 'none',
                       whiteSpace: 'nowrap',
                     }}
@@ -365,7 +394,7 @@ export default function Home() {
                 fontFamily: 'DM Sans, sans-serif',
                 fontWeight: 700,
                 fontSize: 'var(--font-size-sm)',
-                color: '#1F5364',
+                color: 'var(--teal-dark)',
                 textDecoration: 'none',
                 whiteSpace: 'nowrap',
               }}
@@ -377,10 +406,10 @@ export default function Home() {
       </section>
 
       {/* Divider */}
-      <div style={{ height: '1px', backgroundColor: '#EEEEEE', maxWidth: '1200px', margin: '0 auto' }} />
+      <div style={{ height: '1px', backgroundColor: 'var(--light-gray)', maxWidth: '1200px', margin: '0 auto' }} />
 
       {/* Writing Teaser */}
-      <section className="home-section-padding" style={{ backgroundColor: '#FAF7F2' }}>
+      <section className="home-section-padding" style={{ backgroundColor: 'var(--cream)' }}>
         <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
           {/* Eyebrow */}
           <div
@@ -388,7 +417,7 @@ export default function Home() {
               fontFamily: 'DM Sans, sans-serif',
               fontWeight: 700,
               fontSize: 'var(--font-size-xs)',
-              color: '#1F5364',
+              color: 'var(--teal-dark)',
               letterSpacing: '1.5px',
               textTransform: 'uppercase',
               marginBottom: '32px',
@@ -400,10 +429,10 @@ export default function Home() {
           {/* Featured Post Card */}
           <div
             style={{
-              backgroundColor: '#FFFFFF',
-              border: '1px solid #EEEEEE',
-              borderLeft: '4px solid #D4A843',
-              borderRadius: '8px',
+              backgroundColor: 'var(--white)',
+              border: '1px solid var(--light-gray)',
+              borderLeft: '4px solid var(--gold)',
+              borderRadius: 'var(--radius-md)',
               padding: '40px',
             }}
           >
@@ -412,7 +441,7 @@ export default function Home() {
               style={{
                 fontFamily: 'DM Sans, sans-serif',
                 fontWeight: 700,
-                color: '#1E1E1E',
+                color: 'var(--charcoal)',
                 marginBottom: '12px',
               }}
             >
@@ -421,20 +450,20 @@ export default function Home() {
             <p
               style={{
                 fontFamily: 'Lora, serif',
-                fontSize: '17px',
+                fontSize: 'var(--font-size-base)',
                 fontStyle: 'italic',
-                color: '#555555',
+                color: 'var(--dark-gray)',
                 lineHeight: '1.55',
                 marginBottom: '20px',
               }}
             >
-              Why ethical management shows up in the quiet places — not the policies
+              Why ethical management shows up in the quiet places — not the policies.
             </p>
             <p
               style={{
                 fontFamily: 'Lora, serif',
-                fontSize: '17px',
-                color: '#444444',
+                fontSize: 'var(--font-size-base)',
+                color: 'var(--dark-gray)',
                 lineHeight: '1.6',
                 marginBottom: '24px',
               }}
@@ -448,7 +477,7 @@ export default function Home() {
                   fontFamily: 'DM Sans, sans-serif',
                   fontWeight: 700,
                   fontSize: 'var(--font-size-sm)',
-                  color: '#1F5364',
+                  color: 'var(--teal-dark)',
                   textDecoration: 'none',
                   whiteSpace: 'nowrap',
                 }}
@@ -461,10 +490,10 @@ export default function Home() {
       </section>
 
       {/* Divider */}
-      <div style={{ height: '1px', backgroundColor: '#EEEEEE', maxWidth: '1200px', margin: '0 auto' }} />
+      <div style={{ height: '1px', backgroundColor: 'var(--light-gray)', maxWidth: '1200px', margin: '0 auto' }} />
 
       {/* Podcast Teaser */}
-      <section className="home-section-padding" style={{ backgroundColor: '#FAF7F2' }}>
+      <section className="home-section-padding" style={{ backgroundColor: 'var(--cream)' }}>
         <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
           {/* Eyebrow */}
           <div
@@ -472,7 +501,7 @@ export default function Home() {
               fontFamily: 'DM Sans, sans-serif',
               fontWeight: 700,
               fontSize: 'var(--font-size-xs)',
-              color: '#1F5364',
+              color: 'var(--teal-dark)',
               letterSpacing: '1.5px',
               textTransform: 'uppercase',
               marginBottom: '32px',
@@ -484,8 +513,8 @@ export default function Home() {
           {/* Dark Card */}
           <div
             style={{
-              backgroundColor: '#1E1E1E',
-              borderRadius: '8px',
+              backgroundColor: 'var(--charcoal)',
+              borderRadius: 'var(--radius-md)',
               padding: '48px',
             }}
           >
@@ -494,42 +523,46 @@ export default function Home() {
               style={{
                 fontFamily: 'DM Sans, sans-serif',
                 fontWeight: 700,
-                color: '#FFFFFF',
+                color: 'var(--white)',
                 marginBottom: '16px',
               }}
             >
-              Research & Bias: Conversations on UX Ethics
+              <span style={{ color: 'var(--gold)' }}>Ethics</span> <span style={{ color: 'var(--terra)' }}>&#123;</span><span style={{ color: 'var(--white)' }}>A</span><span style={{ color: 'var(--terra)' }}>&#125;</span> <span style={{ color: 'var(--teal)' }}>Side</span>
             </h3>
-            <p
-              style={{
-                fontFamily: 'Lora, serif',
-                fontSize: '17px',
-                color: 'rgba(255, 255, 255, 0.7)',
-                lineHeight: '1.6',
-                marginBottom: '32px',
-                maxWidth: '700px',
-              }}
-            >
-              Bi-weekly conversations with UX researchers, product leaders, and ethicists about building inclusive research practices and addressing algorithmic bias.
-            </p>
-            <div className="card-cta-row">
-              <button
-                type="button"
+            <div style={{ display: 'flex', alignItems: 'center', gap: '32px', flexWrap: 'wrap' }}>
+              <p
+                style={{
+                  fontFamily: 'Lora, serif',
+                  fontSize: 'var(--font-size-base)',
+                  color: 'rgba(255, 255, 255, 0.7)',
+                  lineHeight: '1.6',
+                  margin: 0,
+                  flex: 1,
+                  minWidth: '200px',
+                }}
+              >
+                Conversations with UX and product leaders about what being an ethical leader means, and how companies can be ethical.
+              </p>
+              <Link
+                to="/podcast"
                 style={{
                   fontFamily: 'DM Sans, sans-serif',
                   fontWeight: 700,
                   fontSize: 'var(--font-size-sm)',
-                  color: '#1E1E1E',
-                  backgroundColor: '#D4A843',
+                  color: 'var(--charcoal)',
+                  backgroundColor: 'var(--gold)',
                   padding: '16px 32px',
-                  borderRadius: '8px',
+                  borderRadius: 'var(--radius-md)',
                   border: 'none',
                   cursor: 'pointer',
                   whiteSpace: 'nowrap',
+                  textDecoration: 'none',
+                  display: 'inline-block',
+                  flexShrink: 0,
                 }}
               >
                 Listen Now →
-              </button>
+              </Link>
             </div>
           </div>
         </div>
