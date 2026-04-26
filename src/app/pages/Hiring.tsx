@@ -268,9 +268,10 @@ export default function Hiring() {
               color: 'var(--gold)',
               marginBottom: '20px',
               letterSpacing: '1.5px',
+              textTransform: 'uppercase',
             }}
           >
-            Hiring?
+            HIRING?
           </div>
 
           {/* Headline */}

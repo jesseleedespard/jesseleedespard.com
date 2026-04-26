@@ -39,9 +39,9 @@ export function Navigation() {
       style={{
         position: 'sticky',
         top: 0,
-        backgroundColor: '#FAF7F2',
+        backgroundColor: 'var(--cream)',
         padding: '20px 48px',
-        borderBottom: '1px solid #EEEEEE',
+        borderBottom: '1px solid var(--light-gray)',
         zIndex: 1000,
       }}
       role="navigation"
@@ -54,8 +54,8 @@ export function Navigation() {
           style={{
             fontFamily: 'DM Sans, sans-serif',
             fontWeight: 700,
-            fontSize: '15px',
-            color: '#1E1E1E',
+            fontSize: 'var(--font-size-sm)',
+            color: 'var(--charcoal)',
             letterSpacing: '1px',
             textDecoration: 'none',
           }}
@@ -78,10 +78,10 @@ export function Navigation() {
             style={{
               fontFamily: 'DM Sans, sans-serif',
               fontWeight: 500,
-              fontSize: '14px',
-              color: '#444444',
+              fontSize: 'var(--font-size-sm)',
+              color: 'var(--dark-gray)',
               textDecoration: 'none',
-              borderBottom: isActive('/work') ? '2px solid #1F5364' : '2px solid transparent',
+              borderBottom: isActive('/work') ? '2px solid var(--teal-dark)' : '2px solid transparent',
               paddingBottom: '4px',
             }}
           >
@@ -92,10 +92,10 @@ export function Navigation() {
             style={{
               fontFamily: 'DM Sans, sans-serif',
               fontWeight: 500,
-              fontSize: '14px',
-              color: '#444444',
+              fontSize: 'var(--font-size-sm)',
+              color: 'var(--dark-gray)',
               textDecoration: 'none',
-              borderBottom: isActive('/writing') ? '2px solid #1F5364' : '2px solid transparent',
+              borderBottom: isActive('/writing') ? '2px solid var(--teal-dark)' : '2px solid transparent',
               paddingBottom: '4px',
             }}
           >
@@ -106,10 +106,10 @@ export function Navigation() {
             style={{
               fontFamily: 'DM Sans, sans-serif',
               fontWeight: 500,
-              fontSize: '14px',
-              color: '#444444',
+              fontSize: 'var(--font-size-sm)',
+              color: 'var(--dark-gray)',
               textDecoration: 'none',
-              borderBottom: isActive('/podcast') ? '2px solid #1F5364' : '2px solid transparent',
+              borderBottom: isActive('/podcast') ? '2px solid var(--teal-dark)' : '2px solid transparent',
               paddingBottom: '4px',
             }}
           >
@@ -120,10 +120,10 @@ export function Navigation() {
             style={{
               fontFamily: 'DM Sans, sans-serif',
               fontWeight: 500,
-              fontSize: '14px',
-              color: '#444444',
+              fontSize: 'var(--font-size-sm)',
+              color: 'var(--dark-gray)',
               textDecoration: 'none',
-              borderBottom: isActive('/about') ? '2px solid #1F5364' : '2px solid transparent',
+              borderBottom: isActive('/about') ? '2px solid var(--teal-dark)' : '2px solid transparent',
               paddingBottom: '4px',
             }}
           >
@@ -134,11 +134,11 @@ export function Navigation() {
             style={{
               fontFamily: 'DM Sans, sans-serif',
               fontWeight: 700,
-              fontSize: '14px',
-              color: '#1E1E1E',
-              backgroundColor: '#D4A843',
+              fontSize: 'var(--font-size-sm)',
+              color: 'var(--charcoal)',
+              backgroundColor: 'var(--gold)',
               padding: '8px 18px',
-              borderRadius: '6px',
+              borderRadius: 'var(--radius-sm)',
               textDecoration: 'none',
               border: 'none',
             }}
@@ -156,7 +156,7 @@ export function Navigation() {
             border: 'none',
             cursor: 'pointer',
             padding: '8px',
-            color: '#1E1E1E',
+            color: 'var(--charcoal)',
           }}
           className="mobile-menu-button"
           aria-label={isMobileMenuOpen ? 'Close menu' : 'Open menu'}
@@ -189,12 +189,12 @@ export function Navigation() {
             left: 0,
             right: 0,
             bottom: 0,
-            backgroundColor: '#FAF7F2',
+            backgroundColor: 'var(--cream)',
             padding: '24px 48px',
             display: 'none',
             flexDirection: 'column',
             gap: '8px',
-            borderTop: '1px solid #EEEEEE',
+            borderTop: '1px solid var(--light-gray)',
           }}
           className="mobile-menu"
           id="mobile-menu"
@@ -205,12 +205,12 @@ export function Navigation() {
             style={{
               fontFamily: 'DM Sans, sans-serif',
               fontWeight: 500,
-              fontSize: '16px',
-              color: '#444444',
+              fontSize: 'var(--font-size-base)',
+              color: 'var(--dark-gray)',
               textDecoration: 'none',
               padding: '16px 0',
-              borderBottom: '1px solid #EEEEEE',
-              borderLeft: isActive('/work') ? '3px solid #1F5364' : '3px solid transparent',
+              borderBottom: '1px solid var(--light-gray)',
+              borderLeft: isActive('/work') ? '3px solid var(--teal-dark)' : '3px solid transparent',
               paddingLeft: '16px',
             }}
             role="menuitem"
@@ -222,12 +222,12 @@ export function Navigation() {
             style={{
               fontFamily: 'DM Sans, sans-serif',
               fontWeight: 500,
-              fontSize: '16px',
-              color: '#444444',
+              fontSize: 'var(--font-size-base)',
+              color: 'var(--dark-gray)',
               textDecoration: 'none',
               padding: '16px 0',
-              borderBottom: '1px solid #EEEEEE',
-              borderLeft: isActive('/writing') ? '3px solid #1F5364' : '3px solid transparent',
+              borderBottom: '1px solid var(--light-gray)',
+              borderLeft: isActive('/writing') ? '3px solid var(--teal-dark)' : '3px solid transparent',
               paddingLeft: '16px',
             }}
             role="menuitem"
@@ -239,12 +239,12 @@ export function Navigation() {
             style={{
               fontFamily: 'DM Sans, sans-serif',
               fontWeight: 500,
-              fontSize: '16px',
-              color: '#444444',
+              fontSize: 'var(--font-size-base)',
+              color: 'var(--dark-gray)',
               textDecoration: 'none',
               padding: '16px 0',
-              borderBottom: '1px solid #EEEEEE',
-              borderLeft: isActive('/podcast') ? '3px solid #1F5364' : '3px solid transparent',
+              borderBottom: '1px solid var(--light-gray)',
+              borderLeft: isActive('/podcast') ? '3px solid var(--teal-dark)' : '3px solid transparent',
               paddingLeft: '16px',
             }}
             role="menuitem"
@@ -256,12 +256,12 @@ export function Navigation() {
             style={{
               fontFamily: 'DM Sans, sans-serif',
               fontWeight: 500,
-              fontSize: '16px',
-              color: '#444444',
+              fontSize: 'var(--font-size-base)',
+              color: 'var(--dark-gray)',
               textDecoration: 'none',
               padding: '16px 0',
-              borderBottom: '1px solid #EEEEEE',
-              borderLeft: isActive('/about') ? '3px solid #1F5364' : '3px solid transparent',
+              borderBottom: '1px solid var(--light-gray)',
+              borderLeft: isActive('/about') ? '3px solid var(--teal-dark)' : '3px solid transparent',
               paddingLeft: '16px',
             }}
             role="menuitem"
@@ -273,11 +273,11 @@ export function Navigation() {
             style={{
               fontFamily: 'DM Sans, sans-serif',
               fontWeight: 700,
-              fontSize: '16px',
-              color: '#1E1E1E',
-              backgroundColor: '#D4A843',
+              fontSize: 'var(--font-size-base)',
+              color: 'var(--charcoal)',
+              backgroundColor: 'var(--gold)',
               padding: '16px 24px',
-              borderRadius: '6px',
+              borderRadius: 'var(--radius-sm)',
               textDecoration: 'none',
               border: 'none',
               marginTop: '16px',
@@ -325,10 +325,10 @@ export function Navigation() {
         /* Hover states for desktop */
         @media (min-width: 769px) {
           .desktop-nav a:hover {
-            color: #1E1E1E;
+            color: var(--charcoal);
           }
           .desktop-nav a:focus {
-            outline: 2px solid #1F5364;
+            outline: 2px solid var(--teal-dark);
             outline-offset: 4px;
             border-radius: 4px;
           }
@@ -340,14 +340,14 @@ export function Navigation() {
             background-color: rgba(31, 83, 100, 0.05);
           }
           .mobile-menu a:focus {
-            outline: 2px solid #1F5364;
+            outline: 2px solid var(--teal-dark);
             outline-offset: 2px;
           }
         }
 
         /* Hamburger button focus state */
         .mobile-menu-button:focus {
-          outline: 2px solid #1F5364;
+          outline: 2px solid var(--teal-dark);
           outline-offset: 4px;
           border-radius: 4px;
         }
