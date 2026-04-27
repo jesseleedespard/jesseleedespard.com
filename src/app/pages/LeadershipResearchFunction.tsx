@@ -2,6 +2,7 @@ import { useEffect, Fragment } from 'react';
 import { Link } from 'react-router';
 import { Footer } from '../components/Footer';
 import { MarketingCtaStrip } from '../components/MarketingCtaStrip';
+import { PullQuote } from '../components/PullQuote';
 
 export default function LeadershipResearchFunction() {
   useEffect(() => {
@@ -13,7 +14,9 @@ export default function LeadershipResearchFunction() {
     <div className="leadership-research-function-page">
       <style>{`
 .leadership-research-function-page, .leadership-research-function-page *, .leadership-research-function-page *::before, .leadership-research-function-page *::after { margin: 0; padding: 0; box-sizing: border-box; }
-.leadership-research-function-page .pull-quote { margin: 28px 0; padding: calc(var(--page-padding) / 2) var(--page-padding); }
+
+/* PULL QUOTE — padding override (the * reset zeros out the @layer padding) */
+.leadership-research-function-page .pull-quote { padding: var(--space-card) var(--space-page-side); }
 
 .leadership-research-function-page {
   --display: 'DM Sans', system-ui, sans-serif;
@@ -32,7 +35,7 @@ html { scroll-behavior: smooth; }
   line-height: 1.75;
   -webkit-font-smoothing: antialiased;
   min-height: 100vh;
-  padding-bottom: var(--page-padding);
+  padding-bottom: var(--space-page-side);
 }
 
 /* HERO */
@@ -50,7 +53,7 @@ html { scroll-behavior: smooth; }
 .meta-value { font-family: var(--display); font-size: var(--font-size-sm); color: rgba(255,255,255,0.82); font-weight: 500; }
 
 /* LAYOUT */
-.page-wrap { max-width: calc(var(--max) + (var(--page-padding) * 2)); margin: 0 auto; padding: 0 var(--page-padding); }
+.page-wrap { max-width: calc(var(--max) + (var(--space-page-side) * 2)); margin: 0 auto; padding: 0 var(--space-page-side); }
 .section { padding: 52px 0 0; }
 .section-label { font-family: var(--display); font-size: var(--font-size-xs); font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--teal-dark); margin-bottom: 8px; }
 .section h2 { font-family: var(--display); font-size: clamp(22px, 3vw, 28px); font-weight: 700; color: var(--charcoal); line-height: 1.25; letter-spacing: -0.3px; margin-bottom: 18px; }
@@ -197,25 +200,22 @@ html { scroll-behavior: smooth; }
    ═══════════════════════════════════════════════════════════ */
 @media (max-width: 768px) {
 
-  .leadership-research-function-page .hero { padding: 48px 24px 40px !important; text-align: center !important; }
+  .leadership-research-function-page .hero { padding: 48px 24px 40px !important; }
   .leadership-research-function-page .hero-inner { max-width: 100% !important; }
   .leadership-research-function-page .hero-tag { font-size: var(--font-size-xs) !important; }
-  .leadership-research-function-page .hero h1 { font-size: clamp(24px, 6vw, 30px) !important; line-height: 1.2 !important; text-align: center !important; }
-  .leadership-research-function-page .hero-sub { font-size: 15px !important; text-align: center !important; max-width: 100% !important; margin-left: auto !important; margin-right: auto !important; }
+  .leadership-research-function-page .hero h1 { font-size: clamp(24px, 6vw, 30px) !important; line-height: 1.2 !important; }
+  .leadership-research-function-page .hero-sub { font-size: 15px !important; max-width: 100% !important; }
   .leadership-research-function-page .hero-cta { display: inline-block !important; }
-  .leadership-research-function-page .show-title { font-size: clamp(24px, 6vw, 30px) !important; text-align: center !important; }
-  .leadership-research-function-page .show-tagline { text-align: center !important; }
+  .leadership-research-function-page .show-title { font-size: clamp(24px, 6vw, 30px) !important; }
 
-  .leadership-research-function-page .meta-strip { flex-direction: column !important; align-items: center !important; gap: 16px !important; padding-top: 24px !important; border-top: 1px solid rgba(255,255,255,0.12) !important; }
-  .leadership-research-function-page .meta-item { border-right: none !important; border-bottom: 1px solid rgba(255,255,255,0.1) !important; padding: 0 0 16px 0 !important; margin: 0 !important; text-align: center !important; width: 100% !important; }
-  .leadership-research-function-page .meta-item:last-child { border-bottom: none !important; padding-bottom: 0 !important; }
+  .leadership-research-function-page .meta-strip { flex-direction: column !important; flex-wrap: nowrap !important; align-items: stretch !important; gap: 0 !important; padding-top: 24px !important; border-top: 1px solid rgba(255,255,255,0.12) !important; }
+  .leadership-research-function-page .meta-item { display: block !important; border-right: none !important; border-bottom: 1px solid rgba(255,255,255,0.1) !important; padding: 0 0 16px 0 !important; margin: 0 0 16px 0 !important; width: 100% !important; text-align: center !important; }
+  .leadership-research-function-page .meta-item:last-child { border-bottom: none !important; padding-bottom: 0 !important; margin-bottom: 0 !important; }
 
   .leadership-research-function-page .page-wrap { padding: 0 24px !important; }
 
-  .leadership-research-function-page .section { padding: 48px 24px 0 !important; text-align: center !important; }
-  .leadership-research-function-page .section h2 { font-size: clamp(20px, 5.5vw, 24px) !important; text-align: center !important; }
-  .leadership-research-function-page .section p { text-align: center !important; }
-  .leadership-research-function-page .section-label { text-align: center !important; }
+  .leadership-research-function-page .section { padding: 48px 24px 0 !important; }
+  .leadership-research-function-page .section h2 { font-size: clamp(20px, 5.5vw, 24px) !important; }
   .leadership-research-function-page .divider { margin: 40px 0 0 !important; }
 
   .leadership-research-function-page .act-label { justify-content: center; flex-wrap: wrap; }
@@ -317,6 +317,8 @@ html { scroll-behavior: smooth; }
   .leadership-research-function-page .schedule-block { padding: 32px 16px !important; }
   .leadership-research-function-page .service-card { flex-direction: column !important; }
   .leadership-research-function-page .service-num { padding: 16px !important; min-width: unset !important; }
+
+  .leadership-research-function-page img { max-width: 100%; height: auto; }
 }
 `}</style>
 
@@ -356,9 +358,9 @@ html { scroll-behavior: smooth; }
           <p>
             When the company was acquired, I wasn't just retained. I was asked to lead the merged research function for the combined organization. That outcome wasn't accidental. It was the result of deliberate choices about how to build something that would hold up under pressure.
           </p>
-          <div className="pull-quote">
+          <PullQuote>
             <p>"The best research function is one that the rest of the organization can't imagine operating without."</p>
-          </div>
+          </PullQuote>
         </div>
 
         <div className="divider" />
@@ -511,9 +513,9 @@ html { scroll-behavior: smooth; }
             Of the two who became UX professionals, one gravitated toward design and the other toward research, not because I directed them there, but because hands-on exposure across a wide variety of projects revealed where each person's instincts naturally landed. All three were retained through the acquisition.
           </p>
 
-          <div className="pull-quote">
+          <PullQuote>
             <p>"The goal wasn't to produce researchers. It was to produce people who understood their own strengths well enough to build a career on them."</p>
-          </div>
+          </PullQuote>
 
           <div className="stats-row three">
             <div className="stat-card">
@@ -642,9 +644,9 @@ html { scroll-behavior: smooth; }
             The through-line across both chapters is the same: I build research functions that the rest of the organization can't imagine operating without. That's not a research skill. That's a leadership one.
           </p>
 
-          <div className="pull-quote">
+          <PullQuote>
             <p>"I didn't gatekeep research. I made it visible, made myself vulnerable, and let people come to it on their own terms."</p>
-          </div>
+          </PullQuote>
         </div>
       </div>
 

@@ -100,6 +100,10 @@ export default function Hiring() {
           margin: 0 auto;
         }
 
+        .hiring-bottom-grid > div {
+          min-width: 0;
+        }
+
         .hiring-who-grid {
           display: grid;
           grid-template-columns: 1fr 1fr;
@@ -114,6 +118,7 @@ export default function Hiring() {
           text-decoration: none;
           cursor: pointer;
           transition: color 0.2s ease;
+          word-break: break-all;
         }
 
         .hiring-contact-email:hover {
@@ -123,6 +128,13 @@ export default function Hiring() {
         .hiring-contact-email:focus-visible {
           outline: 2px solid var(--cream);
           outline-offset: 2px;
+        }
+
+        .about-testimonials-grid {
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr;
+          gap: 32px;
+          align-items: start;
         }
 
         @media (max-width: 768px) {
@@ -166,13 +178,6 @@ export default function Hiring() {
           }
         }
         
-        .about-testimonials-grid {
-          display: grid;
-          grid-template-columns: 1fr 1fr 1fr;
-          gap: 32px;
-          align-items: start;
-        }
-
         .about-testimonial-card {
           background-color: var(--white);
           border: 1px solid var(--light-gray);

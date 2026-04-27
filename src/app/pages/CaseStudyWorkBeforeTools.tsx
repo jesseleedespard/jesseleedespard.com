@@ -2,6 +2,7 @@ import { Fragment, useEffect } from 'react';
 import { Link } from 'react-router';
 import { Footer } from '../components/Footer';
 import { MarketingCtaStrip } from '../components/MarketingCtaStrip';
+import { PullQuote } from '../components/PullQuote';
 
 export default function CaseStudyWorkBeforeTools() {
   useEffect(() => {
@@ -20,7 +21,6 @@ export default function CaseStudyWorkBeforeTools() {
   padding: 0;
   box-sizing: border-box;
 }
-.work-before-tools-page .pull-quote { margin: 28px 0; padding: calc(var(--page-padding) / 2) var(--page-padding); }
 
 .work-before-tools-page {
   --display: 'DM Sans', system-ui, sans-serif;
@@ -40,7 +40,7 @@ html { scroll-behavior: smooth; }
   line-height: 1.75;
   -webkit-font-smoothing: antialiased;
   min-height: 100vh;
-  padding-bottom: var(--page-padding);
+  padding-bottom: var(--space-page-side);
 }
 
 /* ── HERO ─────────────────────────────────────────────────── */
@@ -127,12 +127,12 @@ html { scroll-behavior: smooth; }
 
 /* ── LAYOUT ───────────────────────────────────────────────── */
 .page-wrap {
-  max-width: calc(var(--max) + (var(--page-padding) * 2));
+  max-width: calc(var(--max) + (var(--space-page-side) * 2));
   margin: 0 auto;
-  padding: 0 var(--page-padding);
+  padding: 0 var(--space-page-side);
 }
 
-.section { padding: var(--page-padding) 0 0; }
+.section { padding: var(--space-page-side) 0 0; }
 
 .section-label {
   font-family: var(--display);
@@ -286,34 +286,34 @@ html { scroll-behavior: smooth; }
 /* NDA NOTE — padding override (the * reset zeros out the @layer padding) */
 .nda-note { padding: 13px 18px 13px 24px; }
 
+/* PULL QUOTE — padding override (the * reset zeros out the @layer padding) */
+.work-before-tools-page .pull-quote { padding: var(--space-card) var(--space-page-side); }
+
 /* ═══════════════════════════════════════════════════════════
    MOBILE — 375px target, 8pt grid, centered text
    ═══════════════════════════════════════════════════════════ */
 @media (max-width: 768px) {
 
-  /* HERO — centered */
-  .work-before-tools-page .hero { padding: 48px 24px 40px !important; text-align: center !important; }
+  /* HERO */
+  .work-before-tools-page .hero { padding: 48px 24px 40px !important; }
   .work-before-tools-page .hero-inner { max-width: 100% !important; }
   .work-before-tools-page .hero-tag { font-size: var(--font-size-xs) !important; }
-  .work-before-tools-page .hero h1 { font-size: clamp(var(--font-size-xl), 6vw, var(--font-size-2xl)) !important; line-height: 1.2 !important; text-align: center !important; }
-  .work-before-tools-page .hero-sub { font-size: var(--font-size-sm) !important; text-align: center !important; max-width: 100% !important; margin-left: auto !important; margin-right: auto !important; }
+  .work-before-tools-page .hero h1 { font-size: clamp(var(--font-size-xl), 6vw, var(--font-size-2xl)) !important; line-height: 1.2 !important; }
+  .work-before-tools-page .hero-sub { font-size: var(--font-size-sm) !important; max-width: 100% !important; }
   .work-before-tools-page .hero-cta { display: inline-block !important; }
-  .work-before-tools-page .show-title { font-size: clamp(var(--font-size-xl), 6vw, var(--font-size-2xl)) !important; text-align: center !important; }
-  .work-before-tools-page .show-tagline { text-align: center !important; }
+  .work-before-tools-page .show-title { font-size: clamp(var(--font-size-xl), 6vw, var(--font-size-2xl)) !important; }
 
   /* META STRIP */
-  .work-before-tools-page .meta-strip { flex-direction: column !important; align-items: center !important; gap: 16px !important; padding-top: 24px !important; border-top: 1px solid rgba(255,255,255,0.12) !important; }
-  .work-before-tools-page .meta-item { border-right: none !important; border-bottom: 1px solid rgba(255,255,255,0.1) !important; padding: 0 0 16px 0 !important; margin: 0 !important; text-align: center !important; width: 100% !important; }
-  .work-before-tools-page .meta-item:last-child { border-bottom: none !important; padding-bottom: 0 !important; }
+  .work-before-tools-page .meta-strip { flex-direction: column !important; flex-wrap: nowrap !important; align-items: stretch !important; gap: 0 !important; padding-top: 24px !important; border-top: 1px solid rgba(255,255,255,0.12) !important; }
+  .work-before-tools-page .meta-item { display: block !important; border-right: none !important; border-bottom: 1px solid rgba(255,255,255,0.1) !important; padding: 0 0 16px 0 !important; margin: 0 0 16px 0 !important; width: 100% !important; text-align: center !important; }
+  .work-before-tools-page .meta-item:last-child { border-bottom: none !important; padding-bottom: 0 !important; margin-bottom: 0 !important; }
 
   /* PAGE WRAP */
   .work-before-tools-page .page-wrap { padding: 0 24px !important; }
 
-  /* SECTIONS — centered text on mobile */
-  .work-before-tools-page .section { padding: 48px 24px 0 !important; text-align: center !important; }
-  .work-before-tools-page .section h2 { font-size: clamp(var(--font-size-lg), 5.5vw, var(--font-size-xl)) !important; text-align: center !important; }
-  .work-before-tools-page .section p { text-align: center !important; }
-  .work-before-tools-page .section-label { text-align: center !important; }
+  /* SECTIONS */
+  .work-before-tools-page .section { padding: 48px 24px 0 !important; }
+  .work-before-tools-page .section h2 { font-size: clamp(var(--font-size-lg), 5.5vw, var(--font-size-xl)) !important; }
   .work-before-tools-page .divider { margin: 40px 0 0 !important; }
 
   .work-before-tools-page .principles-grid { grid-template-columns: 1fr !important; }
@@ -425,6 +425,8 @@ html { scroll-behavior: smooth; }
   .work-before-tools-page .schedule-block { padding: 32px 16px !important; }
   .work-before-tools-page .service-card { flex-direction: column !important; }
   .work-before-tools-page .service-num { padding: 16px !important; min-width: unset !important; }
+
+  .work-before-tools-page img { max-width: 100%; height: auto; }
 }
 `}</style>
 
@@ -518,9 +520,9 @@ html { scroll-behavior: smooth; }
           </div>
           <p className="img-caption">Conversion funnel drop-off: the data that anchored the workshop conversation</p>
 
-          <div className="pull-quote">
+          <PullQuote>
             <p>"Users weren't failing the funnel. The funnel was failing to read them."</p>
-          </div>
+          </PullQuote>
 
           <p>
             This gave the workshop a sharp anchor: AI personalization wasn't a luxury feature. It was a direct response to a system that was treating all users identically, regardless of where they were emotionally or practically in their decision.
@@ -592,7 +594,7 @@ html { scroll-behavior: smooth; }
             </div>
           </div>
 
-          <p style={{ marginTop: 'var(--page-padding)' }}>
+          <p style={{ marginTop: 'var(--space-page-side)' }}>
             Those three lists became the shared evaluation framework for every AI tool, channel, and roadmap decision that followed. They are also where a UX perspective was evangelized in the room: the commitment to build personalization as empathy at scale, not as lead segmentation.
           </p>
         </div>
@@ -655,9 +657,9 @@ html { scroll-behavior: smooth; }
             This shifted the entire conversation about what AI personalization was for. It wasn't about a compelling, algorithmically-driven marketing experience. It was about building the conditions for confident, informed decision-making at scale.
           </p>
 
-          <div className="pull-quote">
+          <PullQuote>
             <p>"The best sale is the one that feels like you were given exactly what you needed. The customer doesn't feel pitched. It was natural."</p>
-          </div>
+          </PullQuote>
 
           <p>This became the emotional north star for the framework: AI personalization as a supportive presence, not a persuasion engine.</p>
         </div>

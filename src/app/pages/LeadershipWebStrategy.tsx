@@ -2,6 +2,7 @@ import { useEffect, Fragment } from 'react';
 import { Link } from 'react-router';
 import { Footer } from '../components/Footer';
 import { MarketingCtaStrip } from '../components/MarketingCtaStrip';
+import { PullQuote } from '../components/PullQuote';
 
 export default function LeadershipWebStrategy() {
   useEffect(() => {
@@ -13,7 +14,9 @@ export default function LeadershipWebStrategy() {
     <div className="leadership-web-strategy-page">
       <style>{`
 .leadership-web-strategy-page, .leadership-web-strategy-page *, .leadership-web-strategy-page *::before, .leadership-web-strategy-page *::after { margin: 0; padding: 0; box-sizing: border-box; }
-.leadership-web-strategy-page .pull-quote { margin: 28px 0; padding: calc(var(--page-padding) / 2) var(--page-padding); }
+
+/* PULL QUOTE — padding override (the * reset zeros out the @layer padding) */
+.leadership-web-strategy-page .pull-quote { padding: var(--space-card) var(--space-page-side); }
 
 .leadership-web-strategy-page {
   --display: 'DM Sans', system-ui, sans-serif;
@@ -32,7 +35,7 @@ html { scroll-behavior: smooth; }
   line-height: 1.75;
   -webkit-font-smoothing: antialiased;
   min-height: 100vh;
-  padding-bottom: var(--page-padding);
+  padding-bottom: var(--space-page-side);
 }
 
 /* HERO */
@@ -50,7 +53,7 @@ html { scroll-behavior: smooth; }
 .meta-value { font-family: var(--display); font-size: var(--font-size-sm); color: rgba(255,255,255,0.82); font-weight: 500; }
 
 /* LAYOUT */
-.page-wrap { max-width: calc(var(--max) + (var(--page-padding) * 2)); margin: 0 auto; padding: 0 var(--page-padding); }
+.page-wrap { max-width: calc(var(--max) + (var(--space-page-side) * 2)); margin: 0 auto; padding: 0 var(--space-page-side); }
 .section { padding: 52px 0 0; }
 .section-label { font-family: var(--display); font-size: var(--font-size-xs); font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--teal-dark); margin-bottom: 8px; }
 .section h2 { font-family: var(--display); font-size: clamp(22px, 3vw, 28px); font-weight: 700; color: var(--charcoal); line-height: 1.25; letter-spacing: -0.3px; margin-bottom: 18px; }
@@ -182,25 +185,22 @@ html { scroll-behavior: smooth; }
 /* MOBILE: 375px target, 8pt grid, centered text */
 @media (max-width: 768px) {
 
-  .leadership-web-strategy-page .hero { padding: 48px 24px 40px !important; text-align: center !important; }
+  .leadership-web-strategy-page .hero { padding: 48px 24px 40px !important; }
   .leadership-web-strategy-page .hero-inner { max-width: 100% !important; }
   .leadership-web-strategy-page .hero-tag { font-size: var(--font-size-xs) !important; }
-  .leadership-web-strategy-page .hero h1 { font-size: clamp(24px, 6vw, 30px) !important; line-height: 1.2 !important; text-align: center !important; }
-  .leadership-web-strategy-page .hero-sub { font-size: var(--font-size-sm) !important; text-align: center !important; max-width: 100% !important; margin-left: auto !important; margin-right: auto !important; }
+  .leadership-web-strategy-page .hero h1 { font-size: clamp(24px, 6vw, 30px) !important; line-height: 1.2 !important; }
+  .leadership-web-strategy-page .hero-sub { font-size: var(--font-size-sm) !important; max-width: 100% !important; }
   .leadership-web-strategy-page .hero-cta { display: inline-block !important; }
-  .leadership-web-strategy-page .show-title { font-size: clamp(24px, 6vw, 30px) !important; text-align: center !important; }
-  .leadership-web-strategy-page .show-tagline { text-align: center !important; }
+  .leadership-web-strategy-page .show-title { font-size: clamp(24px, 6vw, 30px) !important; }
 
-  .leadership-web-strategy-page .meta-strip { flex-direction: column !important; align-items: center !important; gap: 16px !important; padding-top: 24px !important; border-top: 1px solid rgba(255,255,255,0.12) !important; }
-  .leadership-web-strategy-page .meta-item { border-right: none !important; border-bottom: 1px solid rgba(255,255,255,0.1) !important; padding: 0 0 16px 0 !important; margin: 0 !important; text-align: center !important; width: 100% !important; }
-  .leadership-web-strategy-page .meta-item:last-child { border-bottom: none !important; padding-bottom: 0 !important; }
+  .leadership-web-strategy-page .meta-strip { flex-direction: column !important; flex-wrap: nowrap !important; align-items: stretch !important; gap: 0 !important; padding-top: 24px !important; border-top: 1px solid rgba(255,255,255,0.12) !important; }
+  .leadership-web-strategy-page .meta-item { display: block !important; border-right: none !important; border-bottom: 1px solid rgba(255,255,255,0.1) !important; padding: 0 0 16px 0 !important; margin: 0 0 16px 0 !important; width: 100% !important; text-align: center !important; }
+  .leadership-web-strategy-page .meta-item:last-child { border-bottom: none !important; padding-bottom: 0 !important; margin-bottom: 0 !important; }
 
   .leadership-web-strategy-page .page-wrap { padding: 0 24px !important; }
 
-  .leadership-web-strategy-page .section { padding: 48px 24px 0 !important; text-align: center !important; }
-  .leadership-web-strategy-page .section h2 { font-size: clamp(20px, 5.5vw, 24px) !important; text-align: center !important; }
-  .leadership-web-strategy-page .section p { text-align: center !important; }
-  .leadership-web-strategy-page .section-label { text-align: center !important; }
+  .leadership-web-strategy-page .section { padding: 48px 24px 0 !important; }
+  .leadership-web-strategy-page .section h2 { font-size: clamp(20px, 5.5vw, 24px) !important; }
   .leadership-web-strategy-page .divider { margin: 40px 0 0 !important; }
 
   .leadership-web-strategy-page .two-col h3,
@@ -314,6 +314,8 @@ html { scroll-behavior: smooth; }
   .leadership-web-strategy-page .schedule-block { padding: 32px 16px !important; }
   .leadership-web-strategy-page .service-card { flex-direction: column !important; }
   .leadership-web-strategy-page .service-num { padding: 16px !important; min-width: unset !important; }
+
+  .leadership-web-strategy-page img { max-width: 100%; height: auto; }
 }
 `}</style>
 
@@ -442,11 +444,11 @@ html { scroll-behavior: smooth; }
             The idea of an iterative cycle (running research, learning, adapting, and going again in a smaller cycle) was genuinely new to how decisions were made. It was a different way of thinking about work entirely.
           </p>
 
-          <div className="pull-quote">
+          <PullQuote>
             <p>
               &quot;I didn&apos;t just introduce a new process. I changed how the team understood its own work.&quot;
             </p>
-          </div>
+          </PullQuote>
         </div>
 
         <div className="divider" />
@@ -708,9 +710,9 @@ html { scroll-behavior: smooth; }
             The work here reflects a specific leadership philosophy: before you ask a team to move fast, you have to make sure they&apos;re pointing in the same direction. The listening tour, the shared principle, the DAIO model, and the metrics architecture were not bureaucratic artifacts. They were the conditions that made genuine cross-functional collaboration possible.
           </p>
 
-          <div className="pull-quote">
+          <PullQuote>
             <p>"Most companies want teams to collaborate. Few build the conditions for it to actually work."</p>
-          </div>
+          </PullQuote>
         </div>
       </div>
 

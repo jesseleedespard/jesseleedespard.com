@@ -22,7 +22,18 @@
   --font-size-xl: 24px;
   --font-size-2xl: 32px;
   --font-size-3xl: 48px;
-  --page-padding: 48px;
+  /* Spacing system */
+  --space-hero: 100px;
+  --space-hero-mobile: 56px;
+  --space-section: 80px;
+  --space-section-mobile: 48px;
+  --space-page-side: 48px;
+  --space-page-side-mobile: 24px;
+  --space-card: 32px;
+  --space-card-mobile: 24px;
+  --space-gap: 32px;
+  --space-gap-mobile: 24px;
+
   /**
    * Brand links — contrast targets from AccessibilityAuditReport.tsx (Figma Make).
    * - Light surfaces (white / cream): Teal Dark for links & focus ring (~6.8:1 AA). Gold on cream is advisory-only (~3.9:1); do not use as default link color on light backgrounds.
@@ -286,7 +297,7 @@
    */
   .pull-quote {
     margin: 28px 0;
-    padding: calc(var(--page-padding) / 2) var(--page-padding);
+    padding: var(--space-card) var(--space-page-side);
     background: var(--white);
     border: 1px solid var(--light-gray);
     border-left: 4px solid var(--gold);
@@ -309,8 +320,7 @@
     width: 100%;
     box-sizing: border-box;
     background-color: var(--cream);
-    padding: var(--page-padding);
-    padding-bottom: calc(var(--page-padding) / 2);
+    padding: var(--space-section-mobile) var(--space-page-side);
     border-top: 1px solid var(--light-gray);
   }
 
@@ -392,7 +402,7 @@
    */
   .home-cta-strip {
     background-color: var(--terra);
-    padding: var(--page-padding);
+    padding: var(--space-section-mobile) var(--space-page-side);
     box-sizing: border-box;
   }
 
@@ -474,9 +484,17 @@
       text-align: center;
     }
 
+    .pull-quote {
+      padding: var(--space-card-mobile) var(--space-page-side-mobile);
+    }
+
+    .site-footer {
+      padding: var(--space-section-mobile) var(--space-page-side-mobile);
+    }
+
     .site-footer__disclaimer {
-      padding-left: 24px;
-      padding-right: 24px;
+      padding-left: var(--space-page-side-mobile);
+      padding-right: var(--space-page-side-mobile);
     }
 
     .home-cta-strip__inner {
@@ -499,8 +517,5 @@
       font-size: var(--font-size-lg);
     }
 
-    .card-cta-row {
-      justify-content: flex-start;
-    }
   }
 }

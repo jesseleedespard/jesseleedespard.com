@@ -14,7 +14,6 @@ export default function CaseStudyHealthtech() {
     <div className="healthtech-case-study-page">
       <style>{`
 .healthtech-case-study-page, .healthtech-case-study-page *, .healthtech-case-study-page *::before, .healthtech-case-study-page *::after { margin: 0; padding: 0; box-sizing: border-box; }
-.healthtech-case-study-page .pull-quote { margin: 28px 0; padding: calc(var(--page-padding) / 2) var(--page-padding); }
 .healthtech-case-study-page {
   --display: 'DM Sans', system-ui, sans-serif;
   --body:    'Lora', Georgia, serif;
@@ -22,7 +21,7 @@ export default function CaseStudyHealthtech() {
   --max:  860px;
 }
 html { scroll-behavior: smooth; }
-.healthtech-case-study-page { font-family: var(--body); background: var(--cream); color: var(--charcoal); font-size: var(--font-size-base); line-height: 1.75; -webkit-font-smoothing: antialiased; min-height: 100vh; padding-bottom: var(--page-padding); }
+.healthtech-case-study-page { font-family: var(--body); background: var(--cream); color: var(--charcoal); font-size: var(--font-size-base); line-height: 1.75; -webkit-font-smoothing: antialiased; min-height: 100vh; padding-bottom: var(--space-page-side); }
 
 /* HERO */
 .hero { background: var(--charcoal); padding: 80px 48px 72px; position: relative; overflow: hidden; }
@@ -40,7 +39,7 @@ html { scroll-behavior: smooth; }
 .redesign-label { font-family: var(--display); font-size: var(--font-size-xs); font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--teal); margin-bottom: 16px; margin-top: 32px; }
 
 /* LAYOUT */
-.page-wrap { max-width: calc(var(--max) + (var(--page-padding) * 2)); margin: 0 auto; padding: 0 var(--page-padding); }
+.page-wrap { max-width: calc(var(--max) + (var(--space-page-side) * 2)); margin: 0 auto; padding: 0 var(--space-page-side); }
 .section { padding: 52px 0 0; }
 .section-label { font-family: var(--display); font-size: var(--font-size-xs); font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--teal-dark); margin-bottom: 8px; }
 .section h2 { font-family: var(--display); font-size: clamp(var(--font-size-lg), 2.8vw, var(--font-size-xl)); font-weight: 700; color: var(--charcoal); line-height: 1.3; letter-spacing: -0.3px; margin-bottom: 16px; }
@@ -68,7 +67,7 @@ html { scroll-behavior: smooth; }
   background: var(--white);
   border: 1px solid var(--light-gray);
   border-radius: var(--radius-sm);
-  padding: calc(var(--page-padding) / 2) 24px;
+  padding: var(--space-page-side-mobile) 24px;
   display: flex;
   gap: 16px;
   align-items: flex-start;
@@ -89,29 +88,26 @@ html { scroll-behavior: smooth; }
 /* MOBILE: 375px target, 8pt grid, centered text */
 @media (max-width: 768px) {
 
-  /* HERO: centered */
-  .hero { padding: 48px 24px 40px !important; text-align: center !important; }
+  /* HERO */
+  .hero { padding: 48px 24px 40px !important; }
   .hero-inner { max-width: 100% !important; }
   .hero-tag { font-size: var(--font-size-xs) !important; }
-  .hero h1 { font-size: clamp(var(--font-size-xl), 6vw, var(--font-size-2xl)) !important; line-height: 1.2 !important; text-align: center !important; }
-  .hero-sub { font-size: var(--font-size-sm) !important; text-align: center !important; max-width: 100% !important; margin-left: auto !important; margin-right: auto !important; }
+  .hero h1 { font-size: clamp(var(--font-size-xl), 6vw, var(--font-size-2xl)) !important; line-height: 1.2 !important; }
+  .hero-sub { font-size: var(--font-size-sm) !important; max-width: 100% !important; }
   .hero-cta { display: inline-block !important; }
-  .show-title { font-size: clamp(var(--font-size-xl), 6vw, var(--font-size-2xl)) !important; text-align: center !important; }
-  .show-tagline { text-align: center !important; }
+  .show-title { font-size: clamp(var(--font-size-xl), 6vw, var(--font-size-2xl)) !important; }
 
   /* META STRIP */
-  .meta-strip { flex-direction: column !important; align-items: center !important; gap: 16px !important; padding-top: 24px !important; border-top: 1px solid rgba(255,255,255,0.12) !important; }
-  .meta-item { border-right: none !important; border-bottom: 1px solid rgba(255,255,255,0.1) !important; padding: 0 0 16px 0 !important; margin: 0 !important; text-align: center !important; width: 100% !important; }
-  .meta-item:last-child { border-bottom: none !important; padding-bottom: 0 !important; }
+  .meta-strip { flex-direction: column !important; flex-wrap: nowrap !important; align-items: stretch !important; gap: 0 !important; padding-top: 24px !important; border-top: 1px solid rgba(255,255,255,0.12) !important; }
+  .meta-item { display: block !important; border-right: none !important; border-bottom: 1px solid rgba(255,255,255,0.1) !important; padding: 0 0 16px 0 !important; margin: 0 0 16px 0 !important; width: 100% !important; text-align: center !important; }
+  .meta-item:last-child { border-bottom: none !important; padding-bottom: 0 !important; margin-bottom: 0 !important; }
 
   /* PAGE WRAP */
   .page-wrap { padding: 0 24px !important; }
 
-  /* SECTIONS: centered text on mobile */
-  .section { padding: 48px 24px 0 !important; text-align: center !important; }
-  .section h2 { font-size: clamp(var(--font-size-lg), 5.5vw, var(--font-size-xl)) !important; text-align: center !important; }
-  .section p { text-align: center !important; }
-  .section-label { text-align: center !important; }
+  /* SECTIONS */
+  .section { padding: 48px 24px 0 !important; }
+  .section h2 { font-size: clamp(var(--font-size-lg), 5.5vw, var(--font-size-xl)) !important; }
   .divider { margin: 40px 0 0 !important; }
 
 
@@ -141,7 +137,9 @@ html { scroll-behavior: smooth; }
   .stats-row.three { grid-template-columns: 1fr 1fr !important; }
   .stats-row.two { grid-template-columns: 1fr 1fr !important; }
   .stat-row { grid-template-columns: 1fr 1fr !important; }
-  .stats-grid { grid-template-columns: 1fr 1fr !important; }
+  .stats-grid { grid-template-columns: 1fr !important; }
+  .healthtech-case-study-page .stat-item { padding: 20px 24px !important; border-right: none !important; border-bottom: 1px solid rgba(255,255,255,0.12) !important; }
+  .healthtech-case-study-page .stat-item:last-child { border-bottom: none !important; }
   .platforms-grid { grid-template-columns: 1fr !important; }
   .discipline-grid { grid-template-columns: 1fr !important; }
   .daio-grid { grid-template-columns: 1fr !important; }
@@ -222,6 +220,10 @@ html { scroll-behavior: smooth; }
   .schedule-block { padding: 32px 16px !important; }
   .service-card { flex-direction: column !important; }
   .service-num { padding: 16px !important; min-width: unset !important; }
+
+  .healthtech-case-study-page img { max-width: 100%; height: auto; }
+  .storyboard-container { overflow: hidden !important; height: 280px !important; }
+  .storyboard-container img { height: calc(100vw - 48px) !important; }
 }
 `}</style>
 
@@ -281,6 +283,7 @@ html { scroll-behavior: smooth; }
             }}
           >
             <div
+              className="storyboard-container"
               style={{
                 position: 'relative',
                 width: '100%',

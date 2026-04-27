@@ -28,7 +28,7 @@ export default function CaseStudyProptech() {
   --max:  860px;
 }
 html { scroll-behavior: smooth; }
-.proptech-case-study-page { font-family: var(--body); background: var(--cream); color: var(--charcoal); font-size: var(--font-size-base); line-height: 1.75; -webkit-font-smoothing: antialiased; min-height: 100vh; padding-bottom: var(--page-padding); }
+.proptech-case-study-page { font-family: var(--body); background: var(--cream); color: var(--charcoal); font-size: var(--font-size-base); line-height: 1.75; -webkit-font-smoothing: antialiased; min-height: 100vh; padding-bottom: var(--space-page-side); }
 
 /* HERO */
 .hero { background: var(--charcoal); padding: 80px 48px 72px; position: relative; overflow: hidden; }
@@ -44,14 +44,16 @@ html { scroll-behavior: smooth; }
 .meta-value { font-family: var(--display); font-size: var(--font-size-sm); color: rgba(255,255,255,0.82); font-weight: 500; }
 
 /* LAYOUT */
-.page-wrap { max-width: calc(var(--max) + (var(--page-padding) * 2)); margin: 0 auto; padding: 0 var(--page-padding); }
-.section { padding: var(--page-padding) 0 0; }
+.page-wrap { max-width: calc(var(--max) + (var(--space-page-side) * 2)); margin: 0 auto; padding: 0 var(--space-page-side); }
+.section { padding: var(--space-page-side) 0 0; }
 .section-label { font-family: var(--display); font-size: var(--font-size-xs); font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--teal-dark); margin-bottom: 10px; }
-.nda-note { font-size: var(--font-size-xs); color: var(--dark-gray); font-style: italic; border: 1px solid var(--light-gray); border-radius: var(--radius-sm); padding: 12px 16px; margin-top: 20px; }
 .section h2 { font-family: var(--display); font-size: clamp(var(--font-size-lg), 2.8vw, var(--font-size-xl)); font-weight: 700; color: var(--charcoal); line-height: 1.3; letter-spacing: -0.3px; margin-bottom: 16px; }
 .section p { color: var(--dark-gray); margin-bottom: 16px; }
 .section p:last-child { margin-bottom: 0; }
 .divider { height: 1px; background: var(--light-gray); margin: 48px 0 0; }
+
+/* NDA NOTE — padding override (the * reset zeros out the @layer padding) */
+.nda-note { padding: 13px 18px 13px 24px; }
 
 /* NDA NOTE */
 /* GRID */
@@ -133,6 +135,12 @@ html { scroll-behavior: smooth; }
 /* PDF LINK */
 .pdf-link { display: inline-flex; align-items: center; gap: 8px; font-family: var(--display); font-size: var(--font-size-sm); font-weight: 700; color: var(--teal); text-decoration: none; border: 1px solid var(--teal); padding: 10px 20px; border-radius: var(--radius-sm); margin-top: 28px; transition: background 0.2s; }
 .pdf-link:hover { background: var(--teal); color: var(--white); }
+
+@media (max-width: 768px) {
+  .proptech-case-study-page .meta-strip { flex-direction: column !important; flex-wrap: nowrap !important; align-items: stretch !important; gap: 0 !important; padding-top: 24px !important; border-top: 1px solid rgba(255,255,255,0.12) !important; }
+  .proptech-case-study-page .meta-item { display: block !important; border-right: none !important; border-bottom: 1px solid rgba(255,255,255,0.1) !important; padding: 0 0 16px 0 !important; margin: 0 0 16px 0 !important; width: 100% !important; text-align: center !important; }
+  .proptech-case-study-page .meta-item:last-child { border-bottom: none !important; padding-bottom: 0 !important; margin-bottom: 0 !important; }
+}
 
 @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
 .proptech-case-study-page .hero-inner > * { animation: fadeUp 0.55s ease both; }

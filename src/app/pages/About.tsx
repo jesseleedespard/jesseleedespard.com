@@ -213,6 +213,12 @@ export default function About() {
           outline: 2px solid var(--brand-link-focus-ring);
           outline-offset: 2px;
         }
+
+        .about-experience-grid {
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr;
+          gap: 32px;
+        }
         
         @media (max-width: 768px) {
           .about-hero-section {
@@ -250,6 +256,10 @@ export default function About() {
           
           .about-section-padding {
             padding: 48px 24px;
+          }
+
+          .about-experience-grid {
+            grid-template-columns: 1fr;
           }
           
         }
@@ -518,7 +528,7 @@ export default function About() {
           </div>
 
           {/* Three Cards */}
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '32px' }}>
+          <div className="about-experience-grid">
             {/* EdTech Card */}
             <div
               style={{

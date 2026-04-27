@@ -9,7 +9,7 @@ export default function Podcast() {
     <div className="min-h-screen bg-white">
       <style>{`
         .podcast-hero-section {
-          background-color: #1E1E1E;
+          background-color: var(--charcoal);
           padding: 100px 48px;
         }
         
@@ -23,8 +23,8 @@ export default function Podcast() {
         .podcast-hero-title {
           font-family: 'DM Sans', sans-serif;
           font-weight: 700;
-          font-size: 52px;
-          color: #FFFFFF;
+          font-size: var(--font-size-3xl);
+          color: var(--white);
           line-height: 1.15;
           margin-bottom: 16px;
         }
@@ -44,14 +44,14 @@ export default function Podcast() {
         }
         
         .podcast-subscribe-btn:hover {
-          background-color: #2C6E7F;
-          border-color: #2C6E7F;
-          color: #FFFFFF;
+          background-color: var(--teal);
+          border-color: var(--teal);
+          color: var(--white);
         }
         
         .podcast-subscribe-btn:focus {
           outline: none;
-          box-shadow: 0 0 0 3px #2C6E7F;
+          box-shadow: 0 0 0 3px var(--teal);
         }
         
         .primary-cta-gold {
@@ -59,12 +59,12 @@ export default function Podcast() {
         }
         
         .primary-cta-gold:hover {
-          background-color: #C49A3A;
+          background-color: var(--gold-dark);
         }
         
         .primary-cta-gold:focus {
           outline: none;
-          box-shadow: 0 0 0 3px #2C6E7F;
+          box-shadow: 0 0 0 3px var(--teal);
         }
         
         @media (max-width: 768px) {
@@ -101,14 +101,14 @@ export default function Podcast() {
               style={{
                 width: '300px',
                 height: '300px',
-                backgroundColor: '#444444',
+                backgroundColor: 'var(--dark-gray)',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
-                color: '#888888',
+                color: 'var(--gray)',
                 fontFamily: 'DM Sans, sans-serif',
                 fontSize: 'var(--font-size-sm)',
-                borderRadius: '8px',
+                borderRadius: 'var(--radius-md)',
               }}
             >
               [Show Art Placeholder]
@@ -122,7 +122,7 @@ export default function Podcast() {
                   fontFamily: 'DM Sans, sans-serif',
                   fontWeight: 700,
                   fontSize: 'var(--font-size-xs)',
-                  color: '#D4A843',
+                  color: 'var(--gold)',
                   marginBottom: '20px',
                   letterSpacing: '1.5px',
                 }}
@@ -132,7 +132,7 @@ export default function Podcast() {
 
               {/* Show Title */}
               <h1 className="podcast-hero-title">
-                Ethics A-side
+                Ethics {'{'}A{'}'}Side
               </h1>
 
               {/* Tagline */}
@@ -156,22 +156,13 @@ export default function Podcast() {
       </section>
 
       {/* About Section */}
-      <section className="podcast-section-padding" style={{ backgroundColor: '#FAF7F2' }}>
+      <section className="podcast-section-padding" style={{ backgroundColor: 'var(--cream)' }}>
         <div style={{ maxWidth: '900px', margin: '0 auto' }}>
-          <div
-            style={{
-              backgroundColor: '#FFFFFF',
-              border: '1px solid #EEEEEE',
-              borderLeft: '4px solid #1F5364',
-              borderRadius: '8px',
-              padding: '40px',
-            }}
-          >
             <p
               style={{
                 fontFamily: 'Lora, serif',
-                fontSize: '17px',
-                color: '#444444',
+                fontSize: 'var(--font-size-base)',
+                color: 'var(--dark-gray)',
                 lineHeight: '1.7',
                 marginBottom: '20px',
               }}
@@ -181,8 +172,8 @@ export default function Podcast() {
             <p
               style={{
                 fontFamily: 'Lora, serif',
-                fontSize: '17px',
-                color: '#444444',
+                fontSize: 'var(--font-size-base)',
+                color: 'var(--dark-gray)',
                 lineHeight: '1.7',
                 marginBottom: '20px',
               }}
@@ -192,24 +183,23 @@ export default function Podcast() {
             <p
               style={{
                 fontFamily: 'Lora, serif',
-                fontSize: '17px',
-                color: '#444444',
+                fontSize: 'var(--font-size-base)',
+                color: 'var(--dark-gray)',
                 lineHeight: '1.7',
               }}
             >
               The show launches in April 2026. Subscribe below to get notified when the first episode drops.
             </p>
-          </div>
         </div>
       </section>
 
       {/* Stay in the Loop */}
-      <section className="podcast-section-padding" style={{ backgroundColor: '#FFFFFF' }}>
+      <section className="podcast-section-padding" style={{ backgroundColor: 'var(--white)' }}>
         <div style={{ maxWidth: '900px', margin: '0 auto' }}>
           <div
             style={{
-              backgroundColor: '#1E1E1E',
-              borderRadius: '8px',
+              backgroundColor: 'var(--charcoal)',
+              borderRadius: 'var(--radius-md)',
               padding: '56px 48px',
               textAlign: 'center',
             }}
@@ -219,7 +209,7 @@ export default function Podcast() {
                 fontFamily: 'DM Sans, sans-serif',
                 fontWeight: 700,
                 fontSize: 'var(--font-size-2xl)',
-                color: '#FFFFFF',
+                color: 'var(--white)',
                 marginBottom: '16px',
               }}
             >
@@ -228,7 +218,7 @@ export default function Podcast() {
             <p
               style={{
                 fontFamily: 'Lora, serif',
-                fontSize: '17px',
+                fontSize: 'var(--font-size-base)',
                 color: 'rgba(255, 255, 255, 0.7)',
                 lineHeight: '1.6',
                 marginBottom: '32px',
@@ -244,11 +234,11 @@ export default function Podcast() {
                 style={{
                   fontFamily: 'DM Sans, sans-serif',
                   fontWeight: 700,
-                  fontSize: '15px',
-                  color: '#1E1E1E',
-                  backgroundColor: '#D4A843',
+                  fontSize: 'var(--font-size-sm)',
+                  color: 'var(--charcoal)',
+                  backgroundColor: 'var(--gold)',
                   padding: '14px 32px',
-                  borderRadius: '6px',
+                  borderRadius: 'var(--radius-sm)',
                   border: 'none',
                   cursor: 'pointer',
                 }}
@@ -259,12 +249,12 @@ export default function Podcast() {
                 style={{
                   fontFamily: 'DM Sans, sans-serif',
                   fontWeight: 700,
-                  fontSize: '15px',
-                  color: '#FFFFFF',
+                  fontSize: 'var(--font-size-sm)',
+                  color: 'var(--white)',
                   backgroundColor: 'transparent',
                   padding: '14px 32px',
-                  borderRadius: '6px',
-                  border: '2px solid #FFFFFF',
+                  borderRadius: 'var(--radius-sm)',
+                  border: '2px solid var(--white)',
                   cursor: 'pointer',
                 }}
               >
@@ -276,14 +266,14 @@ export default function Podcast() {
       </section>
 
       {/* Episodes Section */}
-      <section className="podcast-section-padding" style={{ backgroundColor: '#FAF7F2' }}>
+      <section className="podcast-section-padding" style={{ backgroundColor: 'var(--cream)' }}>
         <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
           <h2
             style={{
               fontFamily: 'DM Sans, sans-serif',
               fontWeight: 700,
               fontSize: 'var(--font-size-2xl)',
-              color: '#1E1E1E',
+              color: 'var(--charcoal)',
               marginBottom: '48px',
             }}
           >
@@ -295,9 +285,9 @@ export default function Podcast() {
             {/* Episode 1 */}
             <div
               style={{
-                backgroundColor: '#FFFFFF',
-                border: '1px solid #EEEEEE',
-                borderRadius: '8px',
+                backgroundColor: 'var(--white)',
+                border: '1px solid var(--light-gray)',
+                borderRadius: 'var(--radius-md)',
                 padding: '32px',
               }}
             >
@@ -308,12 +298,12 @@ export default function Podcast() {
                     width: '64px',
                     height: '64px',
                     flexShrink: 0,
-                    backgroundColor: '#FAF7F2',
-                    borderRadius: '8px',
+                    backgroundColor: 'var(--cream)',
+                    borderRadius: 'var(--radius-md)',
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
-                    border: '1px solid #EEEEEE',
+                    border: '1px solid var(--light-gray)',
                   }}
                 >
                   <span
@@ -321,7 +311,7 @@ export default function Podcast() {
                       fontFamily: 'DM Sans, sans-serif',
                       fontWeight: 700,
                       fontSize: 'var(--font-size-xl)',
-                      color: '#1E1E1E',
+                      color: 'var(--charcoal)',
                     }}
                   >
                     01
@@ -334,8 +324,8 @@ export default function Podcast() {
                     style={{
                       fontFamily: 'DM Sans, sans-serif',
                       fontWeight: 700,
-                      fontSize: '20px',
-                      color: '#1E1E1E',
+                      fontSize: 'var(--font-size-lg)',
+                      color: 'var(--charcoal)',
                       marginBottom: '12px',
                     }}
                   >
@@ -345,7 +335,7 @@ export default function Podcast() {
                     style={{
                       fontFamily: 'Lora, serif',
                       fontSize: 'var(--font-size-base)',
-                      color: '#444444',
+                      color: 'var(--dark-gray)',
                       lineHeight: '1.6',
                       marginBottom: '16px',
                     }}
@@ -357,9 +347,9 @@ export default function Podcast() {
                       style={{
                         fontFamily: 'DM Sans, sans-serif',
                         fontSize: 'var(--font-size-xs)',
-                        color: '#1F5364',
-                        backgroundColor: '#FAF7F2',
-                        border: '1px solid #EEEEEE',
+                        color: 'var(--teal-dark)',
+                        backgroundColor: 'var(--cream)',
+                        border: '1px solid var(--light-gray)',
                         borderRadius: '20px',
                         padding: '4px 12px',
                       }}
@@ -370,9 +360,9 @@ export default function Podcast() {
                       style={{
                         fontFamily: 'DM Sans, sans-serif',
                         fontSize: 'var(--font-size-xs)',
-                        color: '#1F5364',
-                        backgroundColor: '#FAF7F2',
-                        border: '1px solid #EEEEEE',
+                        color: 'var(--teal-dark)',
+                        backgroundColor: 'var(--cream)',
+                        border: '1px solid var(--light-gray)',
                         borderRadius: '20px',
                         padding: '4px 12px',
                       }}
@@ -383,9 +373,9 @@ export default function Podcast() {
                       style={{
                         fontFamily: 'DM Sans, sans-serif',
                         fontSize: 'var(--font-size-xs)',
-                        color: '#1F5364',
-                        backgroundColor: '#FAF7F2',
-                        border: '1px solid #EEEEEE',
+                        color: 'var(--teal-dark)',
+                        backgroundColor: 'var(--cream)',
+                        border: '1px solid var(--light-gray)',
                         borderRadius: '20px',
                         padding: '4px 12px',
                       }}
@@ -400,9 +390,9 @@ export default function Podcast() {
             {/* Episode 2 */}
             <div
               style={{
-                backgroundColor: '#FFFFFF',
-                border: '1px solid #EEEEEE',
-                borderRadius: '8px',
+                backgroundColor: 'var(--white)',
+                border: '1px solid var(--light-gray)',
+                borderRadius: 'var(--radius-md)',
                 padding: '32px',
               }}
             >
@@ -413,12 +403,12 @@ export default function Podcast() {
                     width: '64px',
                     height: '64px',
                     flexShrink: 0,
-                    backgroundColor: '#FAF7F2',
-                    borderRadius: '8px',
+                    backgroundColor: 'var(--cream)',
+                    borderRadius: 'var(--radius-md)',
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
-                    border: '1px solid #EEEEEE',
+                    border: '1px solid var(--light-gray)',
                   }}
                 >
                   <span
@@ -426,7 +416,7 @@ export default function Podcast() {
                       fontFamily: 'DM Sans, sans-serif',
                       fontWeight: 700,
                       fontSize: 'var(--font-size-xl)',
-                      color: '#1E1E1E',
+                      color: 'var(--charcoal)',
                     }}
                   >
                     02
@@ -439,8 +429,8 @@ export default function Podcast() {
                     style={{
                       fontFamily: 'DM Sans, sans-serif',
                       fontWeight: 700,
-                      fontSize: '20px',
-                      color: '#1E1E1E',
+                      fontSize: 'var(--font-size-lg)',
+                      color: 'var(--charcoal)',
                       marginBottom: '12px',
                     }}
                   >
@@ -450,7 +440,7 @@ export default function Podcast() {
                     style={{
                       fontFamily: 'Lora, serif',
                       fontSize: 'var(--font-size-base)',
-                      color: '#444444',
+                      color: 'var(--dark-gray)',
                       lineHeight: '1.6',
                       marginBottom: '16px',
                     }}
@@ -462,9 +452,9 @@ export default function Podcast() {
                       style={{
                         fontFamily: 'DM Sans, sans-serif',
                         fontSize: 'var(--font-size-xs)',
-                        color: '#C4622D',
+                        color: 'var(--terra)',
                         backgroundColor: '#FEF3EE',
-                        border: '1px solid #EEEEEE',
+                        border: '1px solid var(--light-gray)',
                         borderRadius: '20px',
                         padding: '4px 12px',
                       }}
@@ -475,9 +465,9 @@ export default function Podcast() {
                       style={{
                         fontFamily: 'DM Sans, sans-serif',
                         fontSize: 'var(--font-size-xs)',
-                        color: '#C4622D',
+                        color: 'var(--terra)',
                         backgroundColor: '#FEF3EE',
-                        border: '1px solid #EEEEEE',
+                        border: '1px solid var(--light-gray)',
                         borderRadius: '20px',
                         padding: '4px 12px',
                       }}
@@ -488,9 +478,9 @@ export default function Podcast() {
                       style={{
                         fontFamily: 'DM Sans, sans-serif',
                         fontSize: 'var(--font-size-xs)',
-                        color: '#C4622D',
+                        color: 'var(--terra)',
                         backgroundColor: '#FEF3EE',
-                        border: '1px solid #EEEEEE',
+                        border: '1px solid var(--light-gray)',
                         borderRadius: '20px',
                         padding: '4px 12px',
                       }}
@@ -505,9 +495,9 @@ export default function Podcast() {
             {/* Episode 3 */}
             <div
               style={{
-                backgroundColor: '#FFFFFF',
-                border: '1px solid #EEEEEE',
-                borderRadius: '8px',
+                backgroundColor: 'var(--white)',
+                border: '1px solid var(--light-gray)',
+                borderRadius: 'var(--radius-md)',
                 padding: '32px',
               }}
             >
@@ -518,12 +508,12 @@ export default function Podcast() {
                     width: '64px',
                     height: '64px',
                     flexShrink: 0,
-                    backgroundColor: '#FAF7F2',
-                    borderRadius: '8px',
+                    backgroundColor: 'var(--cream)',
+                    borderRadius: 'var(--radius-md)',
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
-                    border: '1px solid #EEEEEE',
+                    border: '1px solid var(--light-gray)',
                   }}
                 >
                   <span
@@ -531,7 +521,7 @@ export default function Podcast() {
                       fontFamily: 'DM Sans, sans-serif',
                       fontWeight: 700,
                       fontSize: 'var(--font-size-xl)',
-                      color: '#1E1E1E',
+                      color: 'var(--charcoal)',
                     }}
                   >
                     03
@@ -544,8 +534,8 @@ export default function Podcast() {
                     style={{
                       fontFamily: 'DM Sans, sans-serif',
                       fontWeight: 700,
-                      fontSize: '20px',
-                      color: '#1E1E1E',
+                      fontSize: 'var(--font-size-lg)',
+                      color: 'var(--charcoal)',
                       marginBottom: '12px',
                     }}
                   >
@@ -555,7 +545,7 @@ export default function Podcast() {
                     style={{
                       fontFamily: 'Lora, serif',
                       fontSize: 'var(--font-size-base)',
-                      color: '#444444',
+                      color: 'var(--dark-gray)',
                       lineHeight: '1.6',
                       marginBottom: '16px',
                     }}
@@ -567,9 +557,9 @@ export default function Podcast() {
                       style={{
                         fontFamily: 'DM Sans, sans-serif',
                         fontSize: 'var(--font-size-xs)',
-                        color: '#1F5364',
-                        backgroundColor: '#FAF7F2',
-                        border: '1px solid #EEEEEE',
+                        color: 'var(--teal-dark)',
+                        backgroundColor: 'var(--cream)',
+                        border: '1px solid var(--light-gray)',
                         borderRadius: '20px',
                         padding: '4px 12px',
                       }}
@@ -580,9 +570,9 @@ export default function Podcast() {
                       style={{
                         fontFamily: 'DM Sans, sans-serif',
                         fontSize: 'var(--font-size-xs)',
-                        color: '#1F5364',
-                        backgroundColor: '#FAF7F2',
-                        border: '1px solid #EEEEEE',
+                        color: 'var(--teal-dark)',
+                        backgroundColor: 'var(--cream)',
+                        border: '1px solid var(--light-gray)',
                         borderRadius: '20px',
                         padding: '4px 12px',
                       }}
@@ -593,9 +583,9 @@ export default function Podcast() {
                       style={{
                         fontFamily: 'DM Sans, sans-serif',
                         fontSize: 'var(--font-size-xs)',
-                        color: '#1F5364',
-                        backgroundColor: '#FAF7F2',
-                        border: '1px solid #EEEEEE',
+                        color: 'var(--teal-dark)',
+                        backgroundColor: 'var(--cream)',
+                        border: '1px solid var(--light-gray)',
                         borderRadius: '20px',
                         padding: '4px 12px',
                       }}
@@ -611,14 +601,14 @@ export default function Podcast() {
       </section>
 
       {/* Platforms Section */}
-      <section className="podcast-section-padding" style={{ backgroundColor: '#FFFFFF' }}>
+      <section className="podcast-section-padding" style={{ backgroundColor: 'var(--white)' }}>
         <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
           <h2
             style={{
               fontFamily: 'DM Sans, sans-serif',
               fontWeight: 700,
               fontSize: 'var(--font-size-2xl)',
-              color: '#1E1E1E',
+              color: 'var(--charcoal)',
               marginBottom: '16px',
             }}
           >
@@ -627,8 +617,8 @@ export default function Podcast() {
           <p
             style={{
               fontFamily: 'Lora, serif',
-              fontSize: '17px',
-              color: '#444444',
+              fontSize: 'var(--font-size-base)',
+              color: 'var(--dark-gray)',
               marginBottom: '48px',
             }}
           >
@@ -640,9 +630,9 @@ export default function Podcast() {
             {/* Apple Podcasts */}
             <div
               style={{
-                backgroundColor: '#FAF7F2',
-                border: '1px solid #EEEEEE',
-                borderRadius: '8px',
+                backgroundColor: 'var(--cream)',
+                border: '1px solid var(--light-gray)',
+                borderRadius: 'var(--radius-md)',
                 padding: '32px',
                 textAlign: 'center',
               }}
@@ -651,13 +641,13 @@ export default function Podcast() {
                 style={{
                   width: '80px',
                   height: '80px',
-                  backgroundColor: '#D4A843',
+                  backgroundColor: 'var(--gold)',
                   borderRadius: '16px',
                   margin: '0 auto 20px',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
-                  color: '#1E1E1E',
+                  color: 'var(--charcoal)',
                   fontFamily: 'DM Sans, sans-serif',
                   fontWeight: 700,
                   fontSize: 'var(--font-size-2xl)',
@@ -669,8 +659,8 @@ export default function Podcast() {
                 style={{
                   fontFamily: 'DM Sans, sans-serif',
                   fontWeight: 700,
-                  fontSize: '19px',
-                  color: '#1E1E1E',
+                  fontSize: 'var(--font-size-lg)',
+                  color: 'var(--charcoal)',
                   marginBottom: '12px',
                 }}
               >
@@ -682,11 +672,11 @@ export default function Podcast() {
                   fontFamily: 'DM Sans, sans-serif',
                   fontWeight: 700,
                   fontSize: 'var(--font-size-sm)',
-                  color: '#1F5364',
+                  color: 'var(--teal-dark)',
                   backgroundColor: 'transparent',
                   padding: '10px 24px',
-                  borderRadius: '6px',
-                  border: '2px solid #1F5364',
+                  borderRadius: 'var(--radius-sm)',
+                  border: '2px solid var(--teal-dark)',
                   cursor: 'pointer',
                 }}
               >
@@ -697,9 +687,9 @@ export default function Podcast() {
             {/* Spotify */}
             <div
               style={{
-                backgroundColor: '#FAF7F2',
-                border: '1px solid #EEEEEE',
-                borderRadius: '8px',
+                backgroundColor: 'var(--cream)',
+                border: '1px solid var(--light-gray)',
+                borderRadius: 'var(--radius-md)',
                 padding: '32px',
                 textAlign: 'center',
               }}
@@ -708,13 +698,13 @@ export default function Podcast() {
                 style={{
                   width: '80px',
                   height: '80px',
-                  backgroundColor: '#1F5364',
+                  backgroundColor: 'var(--teal-dark)',
                   borderRadius: '16px',
                   margin: '0 auto 20px',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
-                  color: '#FFFFFF',
+                  color: 'var(--white)',
                   fontFamily: 'DM Sans, sans-serif',
                   fontWeight: 700,
                   fontSize: 'var(--font-size-2xl)',
@@ -726,8 +716,8 @@ export default function Podcast() {
                 style={{
                   fontFamily: 'DM Sans, sans-serif',
                   fontWeight: 700,
-                  fontSize: '19px',
-                  color: '#1E1E1E',
+                  fontSize: 'var(--font-size-lg)',
+                  color: 'var(--charcoal)',
                   marginBottom: '12px',
                 }}
               >
@@ -739,11 +729,11 @@ export default function Podcast() {
                   fontFamily: 'DM Sans, sans-serif',
                   fontWeight: 700,
                   fontSize: 'var(--font-size-sm)',
-                  color: '#1F5364',
+                  color: 'var(--teal-dark)',
                   backgroundColor: 'transparent',
                   padding: '10px 24px',
-                  borderRadius: '6px',
-                  border: '2px solid #1F5364',
+                  borderRadius: 'var(--radius-sm)',
+                  border: '2px solid var(--teal-dark)',
                   cursor: 'pointer',
                 }}
               >
@@ -754,9 +744,9 @@ export default function Podcast() {
             {/* YouTube */}
             <div
               style={{
-                backgroundColor: '#FAF7F2',
-                border: '1px solid #EEEEEE',
-                borderRadius: '8px',
+                backgroundColor: 'var(--cream)',
+                border: '1px solid var(--light-gray)',
+                borderRadius: 'var(--radius-md)',
                 padding: '32px',
                 textAlign: 'center',
               }}
@@ -765,7 +755,7 @@ export default function Podcast() {
                 style={{
                   width: '80px',
                   height: '80px',
-                  backgroundColor: '#1F5364',
+                  backgroundColor: 'var(--teal-dark)',
                   borderRadius: '16px',
                   margin: '0 auto 20px',
                   display: 'flex',
@@ -779,8 +769,8 @@ export default function Podcast() {
                 style={{
                   fontFamily: 'DM Sans, sans-serif',
                   fontWeight: 700,
-                  fontSize: '19px',
-                  color: '#1E1E1E',
+                  fontSize: 'var(--font-size-lg)',
+                  color: 'var(--charcoal)',
                   marginBottom: '12px',
                 }}
               >
@@ -792,11 +782,11 @@ export default function Podcast() {
                   fontFamily: 'DM Sans, sans-serif',
                   fontWeight: 700,
                   fontSize: 'var(--font-size-sm)',
-                  color: '#1F5364',
+                  color: 'var(--teal-dark)',
                   backgroundColor: 'transparent',
                   padding: '10px 24px',
-                  borderRadius: '6px',
-                  border: '2px solid #1F5364',
+                  borderRadius: 'var(--radius-sm)',
+                  border: '2px solid var(--teal-dark)',
                   cursor: 'pointer',
                 }}
               >
