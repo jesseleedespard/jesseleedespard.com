@@ -126,6 +126,12 @@ export default function Home() {
           .home-podcast-title {
             font-size: var(--font-size-lg);
           }
+
+          .primary-cta-gold {
+            width: 100%;
+            text-align: center;
+            box-sizing: border-box;
+          }
           
         }
       `}</style>
@@ -176,7 +182,7 @@ export default function Home() {
                 display: 'inline-block',
               }}
             >
-              Hiring? →
+              Hiring?
             </Link>
           </div>
 
