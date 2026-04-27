@@ -132,6 +132,12 @@ export default function Home() {
             text-align: center;
             box-sizing: border-box;
           }
+
+          .podcast-listen-btn {
+            width: 100%;
+            text-align: center;
+            box-sizing: border-box;
+          }
           
         }
       `}</style>
@@ -551,6 +557,7 @@ export default function Home() {
               </p>
               <Link
                 to="/podcast"
+                className="podcast-listen-btn"
                 style={{
                   fontFamily: 'DM Sans, sans-serif',
                   fontWeight: 700,

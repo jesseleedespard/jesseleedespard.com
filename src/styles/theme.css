@@ -498,5 +498,9 @@
     .home-cta-strip__title {
       font-size: var(--font-size-lg);
     }
+
+    .card-cta-row {
+      justify-content: flex-start;
+    }
   }
 }

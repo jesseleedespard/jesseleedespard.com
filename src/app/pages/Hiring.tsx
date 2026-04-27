@@ -158,6 +158,12 @@ export default function Hiring() {
           .about-testimonials-grid {
             grid-template-columns: 1fr;
           }
+
+          .hiring-book-call-btn {
+            width: 100%;
+            text-align: center;
+            box-sizing: border-box;
+          }
         }
         
         .about-testimonials-grid {
@@ -807,6 +813,7 @@ export default function Hiring() {
                   href="https://calendly.com/jesseleedespard/chat-with-jesse"
                   target="_blank"
                   rel="noopener noreferrer"
+                  className="hiring-book-call-btn"
                   style={{
                     display: 'inline-block',
                     fontFamily: 'DM Sans, sans-serif',
