@@ -462,7 +462,21 @@
   @media (max-width: 768px) {
     .site-footer__inner {
       flex-direction: column;
-      align-items: flex-start;
+      align-items: center;
+      text-align: center;
+    }
+
+    .site-footer__nav {
+      justify-content: center;
+    }
+
+    .site-footer__copy {
+      text-align: center;
+    }
+
+    .site-footer__disclaimer {
+      padding-left: 24px;
+      padding-right: 24px;
     }
 
     .home-cta-strip__inner {
