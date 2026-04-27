@@ -484,6 +484,17 @@
       align-items: flex-start;
     }
 
+    .home-cta-strip__copy {
+      width: 100%;
+    }
+
+    .home-cta-strip__inner > a,
+    .home-cta-strip__inner > button {
+      width: 100%;
+      text-align: center;
+      box-sizing: border-box;
+    }
+
     .home-cta-strip__title {
       font-size: var(--font-size-lg);
     }
