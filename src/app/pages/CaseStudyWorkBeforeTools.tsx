@@ -46,7 +46,7 @@ html { scroll-behavior: smooth; }
 /* ── HERO ─────────────────────────────────────────────────── */
 .hero {
   background: var(--charcoal);
-  padding: 72px 48px 64px;
+  padding: var(--space-hero) var(--space-page-side) 64px;
   position: relative;
   overflow: hidden;
 }
@@ -91,8 +91,8 @@ html { scroll-behavior: smooth; }
 .hero-sub {
   font-family: var(--body);
   font-size: var(--font-size-lg);
-  color: rgba(255,255,255,0.6);
-  line-height: 1.7;
+  color: var(--hero-subtitle-color);
+  line-height: 1.6;
   margin-bottom: 40px;
   font-style: italic;
 }
@@ -295,11 +295,11 @@ html { scroll-behavior: smooth; }
 @media (max-width: 768px) {
 
   /* HERO */
-  .work-before-tools-page .hero { padding: 48px 24px 40px !important; }
+  .work-before-tools-page .hero { padding: var(--space-hero-mobile) var(--space-page-side-mobile) 40px !important; }
   .work-before-tools-page .hero-inner { max-width: 100% !important; }
   .work-before-tools-page .hero-tag { font-size: var(--font-size-xs) !important; }
   .work-before-tools-page .hero h1 { font-size: clamp(var(--font-size-xl), 6vw, var(--font-size-2xl)) !important; line-height: 1.2 !important; }
-  .work-before-tools-page .hero-sub { font-size: var(--font-size-sm) !important; max-width: 100% !important; }
+  .work-before-tools-page .hero-sub { font-size: var(--font-size-base) !important; max-width: 100% !important; }
   .work-before-tools-page .hero-cta { display: inline-block !important; }
   .work-before-tools-page .show-title { font-size: clamp(var(--font-size-xl), 6vw, var(--font-size-2xl)) !important; }
 
