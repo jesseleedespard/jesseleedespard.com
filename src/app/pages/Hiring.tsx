@@ -61,7 +61,7 @@ export default function Hiring() {
         .hiring-hero-title {
           font-family: 'DM Sans', sans-serif;
           font-weight: 700;
-          font-size: var(--font-size-3xl);
+          font-size: clamp(var(--font-size-2xl), 4.5vw, var(--font-size-3xl));
           color: var(--white);
           line-height: 1.15;
           margin-bottom: 24px;
@@ -142,9 +142,6 @@ export default function Hiring() {
             padding: var(--space-hero-mobile) var(--space-page-side-mobile);
           }
           
-          .hiring-hero-title {
-            font-size: var(--font-size-2xl);
-          }
           
           .hiring-hero-subtitle {
             font-size: var(--font-size-base);

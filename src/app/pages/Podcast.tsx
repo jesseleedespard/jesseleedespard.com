@@ -23,7 +23,7 @@ export default function Podcast() {
         .podcast-hero-title {
           font-family: 'DM Sans', sans-serif;
           font-weight: 700;
-          font-size: var(--font-size-3xl);
+          font-size: clamp(var(--font-size-2xl), 4.5vw, var(--font-size-3xl));
           color: var(--white);
           line-height: 1.15;
           margin-bottom: 16px;
@@ -75,10 +75,6 @@ export default function Podcast() {
           .podcast-hero-grid {
             grid-template-columns: 1fr;
             gap: 32px;
-          }
-          
-          .podcast-hero-title {
-            font-size: var(--font-size-2xl);
           }
           
           .podcast-platform-grid {

@@ -179,7 +179,7 @@ export default function Writing() {
         .writing-hero-title {
           font-family: 'DM Sans', sans-serif;
           font-weight: 700;
-          font-size: var(--font-size-3xl);
+          font-size: clamp(var(--font-size-2xl), 4.5vw, var(--font-size-3xl));
           color: var(--white);
           line-height: 1.15;
           margin-bottom: 24px;
@@ -425,10 +425,6 @@ export default function Writing() {
         @media (max-width: 768px) {
           .writing-hero-section {
             padding: var(--space-hero-mobile) var(--space-page-side-mobile) 0;
-          }
-
-          .writing-hero-title {
-            font-size: var(--font-size-2xl);
           }
 
           .writing-hero-subtitle {
