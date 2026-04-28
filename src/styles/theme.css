@@ -25,6 +25,9 @@
   --font-size-xl: 24px;
   --font-size-2xl: 32px;
   --font-size-3xl: 48px;
+  /* Typography fonts */
+  --display: 'DM Sans', system-ui, sans-serif;
+  --body: 'Lora', Georgia, serif;
   /* Spacing system */
   --space-hero: 96px;
   --space-hero-mobile: 56px;
