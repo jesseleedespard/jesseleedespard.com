@@ -544,7 +544,7 @@ export function AccessibilityAuditReport() {
         </div>
 
         {failures.length > 0 && (
-          <div className="mt-4 p-4" style={{ backgroundColor: '#FEF3EE', borderRadius: '6px', border: '1px solid #EEEEEE' }}>
+          <div className="mt-4 p-4" style={{ backgroundColor: 'var(--terra-tint)', borderRadius: '6px', border: '1px solid #EEEEEE' }}>
             <p style={{ color: '#1E1E1E', marginBottom: '8px', fontWeight: 700 }}>
               <strong>⚠️ Advisory Note:</strong>
             </p>
@@ -634,7 +634,7 @@ export function AccessibilityAuditReport() {
           <div style={{ overflowX: 'auto' }}>
             <table style={{ width: '100%', borderCollapse: 'collapse', backgroundColor: '#FFFFFF' }}>
               <thead>
-                <tr style={{ backgroundColor: '#FEF3EE', borderBottom: '2px solid #EEEEEE' }}>
+                <tr style={{ backgroundColor: 'var(--terra-tint)', borderBottom: '2px solid #EEEEEE' }}>
                   <th className="text-left p-3" style={{ fontFamily: 'DM Sans, sans-serif', fontWeight: 700, fontSize: '13px', color: '#1E1E1E' }}>Component</th>
                   <th className="text-left p-3" style={{ fontFamily: 'DM Sans, sans-serif', fontWeight: 700, fontSize: '13px', color: '#1E1E1E' }}>Element</th>
                   <th className="text-left p-3" style={{ fontFamily: 'DM Sans, sans-serif', fontWeight: 700, fontSize: '13px', color: '#1E1E1E' }}>Colors</th>

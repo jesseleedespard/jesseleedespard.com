@@ -8,6 +8,7 @@
   --teal: #2c6e7f;
   --teal-dark: #1f5364;
   --terra: #c4622d;
+  --terra-tint: #FEF3EE;
   --gold: #d4a843;
   --gold-dark: #c49a3a;
   --gray: #888888;
@@ -431,7 +432,7 @@
   .home-cta-strip__title {
     font-family: 'DM Sans', system-ui, sans-serif;
     font-weight: 700;
-    font-size: 21px;
+    font-size: var(--font-size-xl);
     color: var(--charcoal);
     margin-bottom: 8px;
   }
@@ -453,11 +454,11 @@
   .primary-cta-dark {
     font-family: 'DM Sans', system-ui, sans-serif;
     font-weight: 700;
-    font-size: 15px;
+    font-size: var(--font-size-sm);
     color: var(--white);
     background-color: var(--charcoal);
     padding: 16px 32px;
-    border-radius: 8px;
+    border-radius: var(--radius-md);
     border: none;
     cursor: pointer;
     white-space: nowrap;
@@ -467,12 +468,12 @@
   }
 
   .primary-cta-dark:hover {
-    background-color: #333333;
+    background-color: var(--dark-gray);
   }
 
   .primary-cta-dark:focus {
-    outline: none;
-    box-shadow: 0 0 0 3px var(--teal);
+    outline: 3px solid var(--teal);
+    outline-offset: 2px;
   }
 
   @media (max-width: 768px) {
