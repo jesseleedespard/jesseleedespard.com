@@ -11,6 +11,7 @@
   --terra-tint: #FEF3EE;
   --gold: #d4a843;
   --gold-dark: #c49a3a;
+  --gold-hover: color-mix(in srgb, var(--gold) 88%, var(--white));
   --gray: #888888;
   --light-gray: #eeeeee;
   --mid-gray: #cccccc;
@@ -286,6 +287,18 @@
     font-family: 'DM Sans', system-ui, sans-serif;
     font-size: 14px;
     font-weight: 700;
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .brand-link--cta:hover {
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+
+  .brand-link--cta:focus-visible {
+    outline: 3px solid currentColor;
+    outline-offset: 2px;
   }
 
   /**
