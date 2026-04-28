@@ -56,7 +56,7 @@ export default function About() {
       <style>{`
         .about-hero-section {
           background-color: var(--charcoal);
-          padding: 100px 48px;
+          padding: var(--space-hero) var(--space-page-side);
         }
 
         .about-hero-inner {
@@ -102,7 +102,7 @@ export default function About() {
           font-family: 'Lora', serif;
           font-weight: 400;
           font-size: var(--font-size-lg);
-          color: rgba(255, 255, 255, 0.65);
+          color: var(--hero-subtitle-color);
           max-width: 640px;
           line-height: 1.6;
           font-style: italic;
@@ -222,7 +222,7 @@ export default function About() {
         
         @media (max-width: 768px) {
           .about-hero-section {
-            padding: 56px 24px;
+            padding: var(--space-hero-mobile) var(--space-page-side-mobile);
           }
 
           .about-hero-inner {

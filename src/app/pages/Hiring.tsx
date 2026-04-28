@@ -55,7 +55,7 @@ export default function Hiring() {
       <style>{`
         .hiring-hero-section {
           background-color: var(--charcoal);
-          padding: 100px 48px;
+          padding: var(--space-hero) var(--space-page-side);
         }
         
         .hiring-hero-title {
@@ -71,7 +71,7 @@ export default function Hiring() {
           font-family: 'Lora', serif;
           font-weight: 400;
           font-size: var(--font-size-lg);
-          color: color-mix(in srgb, var(--white) 65%, transparent);
+          color: var(--hero-subtitle-color);
           margin-bottom: 24px;
           line-height: 1.6;
           font-style: italic;
@@ -139,7 +139,7 @@ export default function Hiring() {
 
         @media (max-width: 768px) {
           .hiring-hero-section {
-            padding: 56px 24px;
+            padding: var(--space-hero-mobile) var(--space-page-side-mobile);
           }
           
           .hiring-hero-title {

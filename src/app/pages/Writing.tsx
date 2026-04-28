@@ -173,13 +173,13 @@ export default function Writing() {
 
         .writing-hero-section {
           background-color: var(--charcoal);
-          padding: 100px 48px 0;
+          padding: var(--space-hero) var(--space-page-side) 0;
         }
 
         .writing-hero-title {
           font-family: 'DM Sans', sans-serif;
           font-weight: 700;
-          font-size: 52px;
+          font-size: var(--font-size-3xl);
           color: var(--white);
           line-height: 1.15;
           margin-bottom: 24px;
@@ -190,7 +190,7 @@ export default function Writing() {
           font-weight: 400;
           font-style: italic;
           font-size: var(--font-size-lg);
-          color: color-mix(in srgb, var(--white) 65%, transparent);
+          color: var(--hero-subtitle-color);
           line-height: 1.6;
           padding-bottom: 60px;
         }
@@ -424,7 +424,7 @@ export default function Writing() {
 
         @media (max-width: 768px) {
           .writing-hero-section {
-            padding: 56px 24px 0;
+            padding: var(--space-hero-mobile) var(--space-page-side-mobile) 0;
           }
 
           .writing-hero-title {

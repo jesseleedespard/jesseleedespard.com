@@ -9,13 +9,13 @@ export default function Home() {
       <style>{`
         .home-hero-section {
           background-color: var(--charcoal);
-          padding: 100px 48px;
+          padding: var(--space-hero) var(--space-page-side);
         }
         
         .home-hero-title {
           font-family: 'DM Sans', sans-serif;
           font-weight: 700;
-          font-size: 52px;
+          font-size: var(--font-size-3xl);
           color: var(--white);
           line-height: 1.15;
           margin-bottom: 24px;
@@ -26,7 +26,7 @@ export default function Home() {
           font-family: 'Lora', serif;
           font-weight: 400;
           font-size: var(--font-size-lg);
-          color: rgba(255, 255, 255, 0.65);
+          color: var(--hero-subtitle-color);
           margin-bottom: 40px;
           line-height: 1.6;
           font-style: italic;
@@ -82,7 +82,7 @@ export default function Home() {
         
         @media (max-width: 768px) {
           .home-hero-section {
-            padding: 56px 24px;
+            padding: var(--space-hero-mobile) var(--space-page-side-mobile);
           }
           
           .home-hero-inner {

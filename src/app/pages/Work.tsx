@@ -12,13 +12,13 @@ export default function Work() {
       <style>{`
         .work-hero-section {
           background-color: var(--charcoal);
-          padding: 100px 48px 60px;
+          padding: var(--space-hero) var(--space-page-side) 60px;
         }
         
         .work-hero-title {
           font-family: 'DM Sans', sans-serif;
           font-weight: 700;
-          font-size: 52px;
+          font-size: var(--font-size-3xl);
           color: var(--white);
           line-height: 1.15;
           margin-bottom: 24px;
@@ -27,7 +27,7 @@ export default function Work() {
         .work-hero-subtitle {
           font-family: 'Lora', serif;
           font-size: var(--font-size-lg);
-          color: rgba(255, 255, 255, 0.65);
+          color: var(--hero-subtitle-color);
           line-height: 1.6;
           font-style: italic;
         }
@@ -50,7 +50,7 @@ export default function Work() {
         
         @media (max-width: 768px) {
           .work-hero-section {
-            padding: 56px 24px 40px;
+            padding: var(--space-hero-mobile) var(--space-page-side-mobile) 40px;
           }
           
           .work-hero-title {

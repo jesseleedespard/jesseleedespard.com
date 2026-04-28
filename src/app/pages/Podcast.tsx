@@ -10,7 +10,7 @@ export default function Podcast() {
       <style>{`
         .podcast-hero-section {
           background-color: var(--charcoal);
-          padding: 100px 48px;
+          padding: var(--space-hero) var(--space-page-side);
         }
         
         .podcast-hero-grid {
@@ -69,7 +69,7 @@ export default function Podcast() {
         
         @media (max-width: 768px) {
           .podcast-hero-section {
-            padding: 56px 24px;
+            padding: var(--space-hero-mobile) var(--space-page-side-mobile);
           }
           
           .podcast-hero-grid {
@@ -140,7 +140,8 @@ export default function Podcast() {
                 style={{
                   fontFamily: 'Lora, serif',
                   fontSize: 'var(--font-size-lg)',
-                  color: 'rgba(255, 255, 255, 0.7)',
+                  color: 'var(--hero-subtitle-color)',
+                  fontStyle: 'italic',
                   marginBottom: '24px',
                   lineHeight: '1.6',
                 }}
