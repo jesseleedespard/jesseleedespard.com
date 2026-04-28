@@ -55,16 +55,17 @@ export default function Podcast() {
         }
         
         .primary-cta-gold {
-          transition: all 0.2s ease;
+          background-color: var(--gold);
+          transition: background-color 0.2s ease;
         }
-        
+
         .primary-cta-gold:hover {
-          background-color: var(--gold-dark);
+          background-color: var(--gold-hover);
         }
-        
+
         .primary-cta-gold:focus {
-          outline: none;
-          box-shadow: 0 0 0 3px var(--teal);
+          outline: 3px solid var(--teal);
+          outline-offset: 2px;
         }
         
         @media (max-width: 768px) {
@@ -233,8 +234,7 @@ export default function Podcast() {
                   fontWeight: 700,
                   fontSize: 'var(--font-size-sm)',
                   color: 'var(--charcoal)',
-                  backgroundColor: 'var(--gold)',
-                  padding: '14px 32px',
+                  padding: 'var(--space-sm) var(--space-card)',
                   borderRadius: 'var(--radius-sm)',
                   border: 'none',
                   cursor: 'pointer',

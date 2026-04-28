@@ -137,6 +137,20 @@ export default function Hiring() {
           align-items: start;
         }
 
+        .hiring-book-call-btn {
+          background-color: var(--gold);
+          transition: background-color 0.2s ease;
+        }
+
+        .hiring-book-call-btn:hover {
+          background-color: var(--gold-hover);
+        }
+
+        .hiring-book-call-btn:focus {
+          outline: 3px solid var(--teal);
+          outline-offset: 2px;
+        }
+
         @media (max-width: 768px) {
           .hiring-hero-section {
             padding: var(--space-hero-mobile) var(--space-page-side-mobile);
@@ -822,8 +836,7 @@ export default function Hiring() {
                     fontWeight: 700,
                     fontSize: 'var(--font-size-sm)',
                     color: 'var(--charcoal)',
-                    backgroundColor: 'var(--gold)',
-                    padding: '14px 32px',
+                    padding: 'var(--space-sm) var(--space-card)',
                     borderRadius: 'var(--radius-md)',
                     textDecoration: 'none',
                     whiteSpace: 'nowrap',

@@ -456,7 +456,7 @@ export default function Writing() {
           >
             WRITING
           </div>
-          <h1 className="writing-hero-title">Papers. Parables. Systems.</h1>
+          <h1 className="writing-hero-title">Papers. <span style={{ color: 'var(--gold)' }}>Parables.</span> Systems.</h1>
           <p className="writing-hero-subtitle">
             Writing has been an influential part of my life. Being able to put my thoughts into different writing styles has
             helped me get clarity throughout my career.

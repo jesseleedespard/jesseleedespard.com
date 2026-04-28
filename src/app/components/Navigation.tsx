@@ -131,12 +131,12 @@ export function Navigation() {
           </Link>
           <Link
             to="/hiring"
+            className="nav-cta-gold"
             style={{
               fontFamily: 'DM Sans, sans-serif',
               fontWeight: 700,
               fontSize: 'var(--font-size-sm)',
               color: 'var(--charcoal)',
-              backgroundColor: 'var(--gold)',
               padding: '8px 18px',
               borderRadius: 'var(--radius-sm)',
               textDecoration: 'none',
@@ -270,12 +270,12 @@ export function Navigation() {
           </Link>
           <Link
             to="/hiring"
+            className="nav-cta-gold"
             style={{
               fontFamily: 'DM Sans, sans-serif',
               fontWeight: 700,
               fontSize: 'var(--font-size-base)',
               color: 'var(--charcoal)',
-              backgroundColor: 'var(--gold)',
               padding: '16px 24px',
               borderRadius: 'var(--radius-sm)',
               textDecoration: 'none',
@@ -324,8 +324,11 @@ export function Navigation() {
 
         /* Hover states for desktop */
         @media (min-width: 769px) {
-          .desktop-nav a:hover {
+          .desktop-nav a:not(.nav-cta-gold):hover {
             color: var(--charcoal);
+            text-decoration: underline !important;
+            text-decoration-color: var(--teal-dark);
+            text-underline-offset: 3px;
           }
           .desktop-nav a:focus {
             outline: 2px solid var(--teal-dark);
@@ -350,6 +353,21 @@ export function Navigation() {
           outline: 2px solid var(--teal-dark);
           outline-offset: 4px;
           border-radius: 4px;
+        }
+
+        /* Gold CTA — Hiring? button (desktop + mobile) */
+        .nav-cta-gold {
+          background-color: var(--gold);
+          transition: background-color 0.2s ease;
+        }
+
+        .nav-cta-gold:hover {
+          background-color: var(--gold-hover);
+        }
+
+        .nav-cta-gold:focus {
+          outline: 3px solid var(--teal);
+          outline-offset: 2px;
         }
       `}</style>
     </nav>

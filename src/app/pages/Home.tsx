@@ -68,16 +68,31 @@ export default function Home() {
         }
         
         .primary-cta-gold {
-          transition: all 0.2s ease;
+          background-color: var(--gold);
+          transition: background-color 0.2s ease;
         }
         
         .primary-cta-gold:hover {
-          background-color: var(--gold-dark);
+          background-color: var(--gold-hover);
         }
         
         .primary-cta-gold:focus {
-          outline: none;
-          box-shadow: 0 0 0 3px var(--teal);
+          outline: 3px solid var(--teal);
+          outline-offset: 2px;
+        }
+
+        .podcast-listen-btn {
+          background-color: var(--gold);
+          transition: background-color 0.2s ease;
+        }
+
+        .podcast-listen-btn:hover {
+          background-color: var(--gold-hover);
+        }
+
+        .podcast-listen-btn:focus {
+          outline: 3px solid var(--teal);
+          outline-offset: 2px;
         }
         
         @media (max-width: 768px) {
@@ -175,8 +190,7 @@ export default function Home() {
                 fontWeight: 700,
                 fontSize: 'var(--font-size-sm)',
                 color: 'var(--charcoal)',
-                backgroundColor: 'var(--gold)',
-                padding: '16px 32px',
+                padding: 'var(--space-sm) var(--space-card)',
                 borderRadius: 'var(--radius-md)',
                 border: 'none',
                 cursor: 'pointer',
@@ -547,8 +561,7 @@ export default function Home() {
                   fontWeight: 700,
                   fontSize: 'var(--font-size-sm)',
                   color: 'var(--charcoal)',
-                  backgroundColor: 'var(--gold)',
-                  padding: '16px 32px',
+                  padding: 'var(--space-sm) var(--space-card)',
                   borderRadius: 'var(--radius-md)',
                   border: 'none',
                   cursor: 'pointer',
