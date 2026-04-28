@@ -91,7 +91,7 @@ export default function Podcast() {
 
       {/* Hero Section */}
       <section className="podcast-hero-section">
-        <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
+        <div style={{ maxWidth: 'var(--max-width-layout)', margin: '0 auto' }}>
           <div className="podcast-hero-grid">
             {/* Show Art Placeholder */}
             <div
@@ -264,7 +264,7 @@ export default function Podcast() {
 
       {/* Episodes Section */}
       <section className="podcast-section-padding" style={{ backgroundColor: 'var(--cream)' }}>
-        <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
+        <div style={{ maxWidth: 'var(--max-width-layout)', margin: '0 auto' }}>
           <h2
             style={{
               fontFamily: 'DM Sans, sans-serif',
@@ -599,7 +599,7 @@ export default function Podcast() {
 
       {/* Platforms Section */}
       <section className="podcast-section-padding" style={{ backgroundColor: 'var(--white)' }}>
-        <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
+        <div style={{ maxWidth: 'var(--max-width-layout)', margin: '0 auto' }}>
           <h2
             style={{
               fontFamily: 'DM Sans, sans-serif',

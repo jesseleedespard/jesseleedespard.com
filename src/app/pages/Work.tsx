@@ -75,7 +75,7 @@ export default function Work() {
 
       {/* Hero Section */}
       <section className="work-hero-section">
-        <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
+        <div style={{ maxWidth: 'var(--max-width-layout)', margin: '0 auto' }}>
           {/* Eyebrow */}
           <div
             style={{
@@ -104,7 +104,7 @@ export default function Work() {
 
       {/* Tab Bar */}
       <section className="work-tab-section">
-        <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
+        <div style={{ maxWidth: 'var(--max-width-layout)', margin: '0 auto' }}>
           <div style={{ display: 'flex', gap: '0', justifyContent: 'center' }}>
             {/* UX Research Tab */}
             <button
@@ -200,7 +200,7 @@ export default function Work() {
       {/* UX Research Panel */}
       {activeTab === 'research' && (
         <section className="work-section-padding" style={{ backgroundColor: 'var(--cream)' }}>
-          <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
+          <div style={{ maxWidth: 'var(--max-width-layout)', margin: '0 auto' }}>
             {/* 2x2 Card Grid */}
             <div className="work-card-grid">
               {/* Card 1 - Coming Soon */}
@@ -422,7 +422,7 @@ export default function Work() {
       {/* Leadership Panel */}
       {activeTab === 'leadership' && (
         <section className="work-section-padding" style={{ backgroundColor: 'var(--cream)' }}>
-          <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
+          <div style={{ maxWidth: 'var(--max-width-layout)', margin: '0 auto' }}>
             {/* 2 Cards Side by Side */}
             <div className="work-card-grid">
               {/* Card 1 */}

@@ -60,7 +60,7 @@ export default function About() {
         }
 
         .about-hero-inner {
-          max-width: 1200px;
+          max-width: var(--max-width-layout);
           margin: 0 auto;
           display: grid;
           grid-template-columns: minmax(0, 1fr) minmax(240px, 340px);
@@ -301,7 +301,7 @@ export default function About() {
 
       {/* Story Section */}
       <section className="about-section-padding" style={{ backgroundColor: 'var(--white)' }}>
-        <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
+        <div style={{ maxWidth: 'var(--max-width-layout)', margin: '0 auto' }}>
           {/* Eyebrow */}
           <div
             style={{
@@ -379,7 +379,7 @@ export default function About() {
 
       {/* Values Section */}
       <section className="about-section-padding" style={{ backgroundColor: 'var(--cream)' }}>
-        <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
+        <div style={{ maxWidth: 'var(--max-width-layout)', margin: '0 auto' }}>
           {/* Eyebrow */}
           <div
             style={{
@@ -510,7 +510,7 @@ export default function About() {
 
       {/* Experience Section */}
       <section className="about-section-padding" style={{ backgroundColor: 'var(--white)' }}>
-        <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
+        <div style={{ maxWidth: 'var(--max-width-layout)', margin: '0 auto' }}>
           {/* Eyebrow */}
           <div
             style={{
@@ -698,7 +698,7 @@ export default function About() {
 
       {/* Testimonials Section */}
       <section className="about-section-padding" style={{ backgroundColor: 'var(--cream)' }}>
-        <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
+        <div style={{ maxWidth: 'var(--max-width-layout)', margin: '0 auto' }}>
           {/* Eyebrow */}
           <div
             style={{

@@ -43,7 +43,7 @@ export default function Home() {
           display: flex;
           align-items: center;
           gap: 64px;
-          max-width: 1200px;
+          max-width: var(--max-width-layout);
           margin: 0 auto;
         }
         
@@ -221,7 +221,7 @@ export default function Home() {
 
       {/* Case Study Teasers */}
       <section className="home-section-padding" style={{ backgroundColor: 'var(--cream)' }}>
-        <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
+        <div style={{ maxWidth: 'var(--max-width-layout)', margin: '0 auto' }}>
           {/* Eyebrow */}
           <div
             style={{
@@ -419,11 +419,11 @@ export default function Home() {
       </section>
 
       {/* Divider */}
-      <div style={{ height: '1px', backgroundColor: 'var(--light-gray)', maxWidth: '1200px', margin: '0 auto' }} />
+      <div style={{ height: '1px', backgroundColor: 'var(--light-gray)', maxWidth: 'var(--max-width-layout)', margin: '0 auto' }} />
 
       {/* Writing Teaser */}
       <section className="home-section-padding" style={{ backgroundColor: 'var(--cream)' }}>
-        <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
+        <div style={{ maxWidth: 'var(--max-width-layout)', margin: '0 auto' }}>
           {/* Eyebrow */}
           <div
             style={{
@@ -500,11 +500,11 @@ export default function Home() {
       </section>
 
       {/* Divider */}
-      <div style={{ height: '1px', backgroundColor: 'var(--light-gray)', maxWidth: '1200px', margin: '0 auto' }} />
+      <div style={{ height: '1px', backgroundColor: 'var(--light-gray)', maxWidth: 'var(--max-width-layout)', margin: '0 auto' }} />
 
       {/* Podcast Teaser */}
       <section className="home-section-padding" style={{ backgroundColor: 'var(--cream)' }}>
-        <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
+        <div style={{ maxWidth: 'var(--max-width-layout)', margin: '0 auto' }}>
           {/* Eyebrow */}
           <div
             style={{

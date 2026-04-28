@@ -96,7 +96,7 @@ export default function Hiring() {
           display: grid;
           grid-template-columns: 1fr 1fr;
           gap: 32px;
-          max-width: 1200px;
+          max-width: var(--max-width-layout);
           margin: 0 auto;
         }
 
@@ -280,7 +280,7 @@ export default function Hiring() {
       `}</style>
       {/* Hero Section */}
       <section className="hiring-hero-section">
-        <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
+        <div style={{ maxWidth: 'var(--max-width-layout)', margin: '0 auto' }}>
           {/* Eyebrow */}
           <div
             style={{
@@ -309,7 +309,7 @@ export default function Hiring() {
 
       {/* How I Can Help */}
       <section className="hiring-section-padding" style={{ backgroundColor: 'var(--cream)' }}>
-        <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
+        <div style={{ maxWidth: 'var(--max-width-layout)', margin: '0 auto' }}>
           {/* Eyebrow */}
           <div
             style={{
@@ -491,7 +491,7 @@ export default function Hiring() {
 
       {/* Who I Work With */}
       <section className="hiring-section-padding" style={{ backgroundColor: 'var(--white)' }}>
-        <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
+        <div style={{ maxWidth: 'var(--max-width-layout)', margin: '0 auto' }}>
           <div
             style={{
               fontFamily: 'DM Sans, sans-serif',
@@ -597,7 +597,7 @@ export default function Hiring() {
 
       {/* Process Section */}
       <section className="hiring-section-padding" style={{ backgroundColor: 'var(--charcoal)' }}>
-        <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
+        <div style={{ maxWidth: 'var(--max-width-layout)', margin: '0 auto' }}>
           {/* Eyebrow */}
           <div
             style={{
@@ -728,7 +728,7 @@ export default function Hiring() {
 
       {/* Testimonials Section */}
       <section className="hiring-section-padding" style={{ backgroundColor: 'var(--cream)' }}>
-        <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
+        <div style={{ maxWidth: 'var(--max-width-layout)', margin: '0 auto' }}>
           {/* Eyebrow */}
           <div
             style={{
@@ -780,7 +780,7 @@ export default function Hiring() {
 
       {/* Bottom: book + email */}
       <section className="hiring-section-padding" style={{ backgroundColor: 'var(--white)' }}>
-        <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
+        <div style={{ maxWidth: 'var(--max-width-layout)', margin: '0 auto' }}>
           <div
             style={{
               fontFamily: 'DM Sans, sans-serif',

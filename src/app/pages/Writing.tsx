@@ -443,7 +443,7 @@ export default function Writing() {
       `}</style>
 
       <section className="writing-hero-section">
-        <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
+        <div style={{ maxWidth: 'var(--max-width-layout)', margin: '0 auto' }}>
           <div
             style={{
               fontFamily: 'DM Sans, sans-serif',
@@ -465,7 +465,7 @@ export default function Writing() {
       </section>
 
       <section className="writing-tab-section">
-        <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
+        <div style={{ maxWidth: 'var(--max-width-layout)', margin: '0 auto' }}>
           <div style={{ display: 'flex', gap: 0, justifyContent: 'center' }}>
             <button
               type="button"
@@ -543,7 +543,7 @@ export default function Writing() {
 
       {activeTab === 'academic' && (
         <section className="writing-section-padding" style={{ backgroundColor: 'var(--cream)' }}>
-          <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
+          <div style={{ maxWidth: 'var(--max-width-layout)', margin: '0 auto' }}>
             <div className="writing-section-label-teal">Publications</div>
             <div className="writing-pub-grid" style={{ marginBottom: '56px' }}>
               {PUBLICATIONS.map((pub) => (
@@ -657,7 +657,7 @@ export default function Writing() {
 
       {activeTab === 'ethics' && (
         <section className="writing-section-padding" style={{ backgroundColor: 'var(--cream)' }}>
-          <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
+          <div style={{ maxWidth: 'var(--max-width-layout)', margin: '0 auto' }}>
             <p className="writing-ethics-series-intro">
               All posts are published on Medium. The narrative parables and systemic analyses are written as companions —
               scenes that tell the story, followed by analysis that names the structure underneath it. Scene 1 combines both in
