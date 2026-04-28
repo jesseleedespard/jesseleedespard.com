@@ -333,12 +333,9 @@ export default function Work() {
                   <div className="card-cta-row">
                     <Link
                       to="/case-studies/proptech"
+                      className="brand-link--cta"
                       style={{
-                        fontFamily: 'DM Sans, sans-serif',
-                        fontWeight: 700,
-                        fontSize: 'var(--font-size-sm)',
                         color: 'var(--teal)',
-                        textDecoration: 'none',
                         whiteSpace: 'nowrap',
                       }}
                     >
@@ -406,12 +403,9 @@ export default function Work() {
                   <div className="card-cta-row">
                     <Link
                       to="/case-studies/healthtech-onboarding"
+                      className="brand-link--cta"
                       style={{
-                        fontFamily: 'DM Sans, sans-serif',
-                        fontWeight: 700,
-                        fontSize: 'var(--font-size-sm)',
                         color: 'var(--teal)',
-                        textDecoration: 'none',
                         whiteSpace: 'nowrap',
                       }}
                     >
@@ -489,12 +483,9 @@ export default function Work() {
                   <div className="card-cta-row">
                     <Link
                       to="/leadership/research-function"
+                      className="brand-link--cta"
                       style={{
-                        fontFamily: 'DM Sans, sans-serif',
-                        fontWeight: 700,
-                        fontSize: 'var(--font-size-sm)',
                         color: 'var(--terra)',
-                        textDecoration: 'none',
                         whiteSpace: 'nowrap',
                       }}
                     >
@@ -562,12 +553,9 @@ export default function Work() {
                   <div className="card-cta-row">
                     <Link
                       to="/leadership/three-disciplines-one-team"
+                      className="brand-link--cta"
                       style={{
-                        fontFamily: 'DM Sans, sans-serif',
-                        fontWeight: 700,
-                        fontSize: 'var(--font-size-sm)',
                         color: 'var(--terra)',
-                        textDecoration: 'none',
                         whiteSpace: 'nowrap',
                       }}
                     >
@@ -635,12 +623,9 @@ export default function Work() {
                   <div className="card-cta-row">
                     <Link
                       to="/leadership/work-before-the-tools"
+                      className="brand-link--cta"
                       style={{
-                        fontFamily: 'DM Sans, sans-serif',
-                        fontWeight: 700,
-                        fontSize: 'var(--font-size-sm)',
                         color: 'var(--terra)',
-                        textDecoration: 'none',
                         whiteSpace: 'nowrap',
                       }}
                     >

@@ -293,12 +293,9 @@ export default function Home() {
                 <div className="card-cta-row">
                   <Link
                     to="/case-studies/healthtech-onboarding"
+                    className="brand-link--cta"
                     style={{
-                      fontFamily: 'DM Sans, sans-serif',
-                      fontWeight: 700,
-                      fontSize: 'var(--font-size-sm)',
                       color: 'var(--teal-dark)',
-                      textDecoration: 'none',
                       whiteSpace: 'nowrap',
                     }}
                   >
@@ -378,12 +375,9 @@ export default function Home() {
                 <div className="card-cta-row">
                   <Link
                     to="/leadership/research-function"
+                    className="brand-link--cta"
                     style={{
-                      fontFamily: 'DM Sans, sans-serif',
-                      fontWeight: 700,
-                      fontSize: 'var(--font-size-sm)',
                       color: 'var(--terra)',
-                      textDecoration: 'none',
                       whiteSpace: 'nowrap',
                     }}
                   >
@@ -398,12 +392,9 @@ export default function Home() {
           <div className="card-cta-row">
             <Link
               to="/work"
+              className="brand-link--cta"
               style={{
-                fontFamily: 'DM Sans, sans-serif',
-                fontWeight: 700,
-                fontSize: 'var(--font-size-sm)',
                 color: 'var(--teal-dark)',
-                textDecoration: 'none',
                 whiteSpace: 'nowrap',
               }}
             >
@@ -481,12 +472,9 @@ export default function Home() {
             <div className="card-cta-row">
               <Link
                 to="/writing"
+                className="brand-link--cta"
                 style={{
-                  fontFamily: 'DM Sans, sans-serif',
-                  fontWeight: 700,
-                  fontSize: 'var(--font-size-sm)',
                   color: 'var(--teal-dark)',
-                  textDecoration: 'none',
                   whiteSpace: 'nowrap',
                 }}
               >
