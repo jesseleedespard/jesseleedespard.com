@@ -15,6 +15,7 @@
   --mid-gray: #cccccc;
   --dark-gray: #444444;
   --white: #ffffff;
+  --hero-subtitle-color: rgba(255, 255, 255, 0.65);
   --font-size-xs: 12px;
   --font-size-sm: 14px;
   --font-size-base: 16px;
@@ -33,6 +34,10 @@
   --space-card-mobile: 24px;
   --space-gap: 32px;
   --space-gap-mobile: 24px;
+  --space-xs: 8px;
+  --space-sm: 16px;
+  /* Layout */
+  --max-width-layout: 1200px;
 
   /**
    * Brand links — contrast targets from AccessibilityAuditReport.tsx (Figma Make).
@@ -155,6 +160,7 @@
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
+  --radius-pill: 20px;
   --color-sidebar: var(--sidebar);
   --color-sidebar-foreground: var(--sidebar-foreground);
   --color-sidebar-primary: var(--sidebar-primary);
