@@ -39,7 +39,7 @@ export function CaseStudyCard({
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
-          color: 'var(--gray)',
+          color: 'var(--charcoal)',
           fontFamily: 'var(--display)',
           fontSize: 'var(--font-size-sm)',
         }}

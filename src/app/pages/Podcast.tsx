@@ -102,7 +102,7 @@ export default function Podcast() {
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
-                color: 'var(--gray)',
+                color: 'var(--white)',
                 fontFamily: 'var(--display)',
                 fontSize: 'var(--font-size-sm)',
                 borderRadius: 'var(--radius-md)',
