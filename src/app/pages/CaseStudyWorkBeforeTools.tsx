@@ -222,7 +222,7 @@ html { scroll-behavior: smooth; }
 .img-caption {
   font-family: var(--display);
   font-size: var(--font-size-xs);
-  color: var(--gray);
+  color: var(--dark-gray);
   font-style: italic;
   margin-bottom: 18px;
   text-align: center;

@@ -215,7 +215,7 @@ export default function Hiring() {
         .about-testimonial-role {
           font-family: var(--display);
           font-size: var(--font-size-sm);
-          color: var(--gray);
+          color: var(--dark-gray);
           margin-top: 6px;
           line-height: 1.45;
         }

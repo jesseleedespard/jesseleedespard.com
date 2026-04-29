@@ -400,7 +400,7 @@
   .site-footer__copy {
     font-family: 'DM Sans', system-ui, sans-serif;
     font-size: var(--font-size-sm);
-    color: var(--gray);
+    color: var(--dark-gray);
   }
 
   .site-footer__disclaimer {
@@ -410,7 +410,7 @@
     box-sizing: border-box;
     font-family: 'DM Sans', system-ui, sans-serif;
     font-size: var(--font-size-xs);
-    color: var(--gray);
+    color: var(--dark-gray);
     font-style: italic;
     text-align: center;
   }

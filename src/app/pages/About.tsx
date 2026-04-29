@@ -151,7 +151,7 @@ export default function About() {
         .about-testimonial-role {
           font-family: var(--display);
           font-size: var(--font-size-sm);
-          color: var(--gray);
+          color: var(--dark-gray);
           margin-top: 6px;
           line-height: 1.45;
         }
@@ -576,7 +576,7 @@ export default function About() {
                 style={{
                   fontFamily: 'var(--display)',
                   fontSize: 'var(--font-size-xs)',
-                  color: 'var(--gray)',
+                  color: 'var(--dark-gray)',
                 }}
               >
                 2025 – 2026
@@ -631,7 +631,7 @@ export default function About() {
                 style={{
                   fontFamily: 'var(--display)',
                   fontSize: 'var(--font-size-xs)',
-                  color: 'var(--gray)',
+                  color: 'var(--dark-gray)',
                 }}
               >
                 2020 – 2023
@@ -686,7 +686,7 @@ export default function About() {
                 style={{
                   fontFamily: 'var(--display)',
                   fontSize: 'var(--font-size-xs)',
-                  color: 'var(--gray)',
+                  color: 'var(--dark-gray)',
                 }}
               >
                 2018 – 2020

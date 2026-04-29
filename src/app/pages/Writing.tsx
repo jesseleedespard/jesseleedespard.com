@@ -263,7 +263,7 @@ export default function Writing() {
         .writing-intro-muted {
           font-family: var(--display);
           font-size: var(--font-size-sm);
-          color: var(--gray);
+          color: var(--dark-gray);
           line-height: 1.5;
           margin-bottom: var(--space-card-mobile);
         }
@@ -696,7 +696,7 @@ export default function Writing() {
                             style={{
                               fontFamily: 'var(--display)',
                               fontSize: '13px',
-                              color: 'var(--gray)',
+                              color: 'var(--dark-gray)',
                             }}
                           >
                             {article.scene}
@@ -744,7 +744,7 @@ export default function Writing() {
                           style={{
                             fontFamily: 'var(--display)',
                             fontSize: '13px',
-                            color: 'var(--gray)',
+                            color: 'var(--dark-gray)',
                             alignSelf: 'flex-start',
                           }}
                         >

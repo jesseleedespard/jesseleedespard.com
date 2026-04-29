@@ -172,7 +172,7 @@ html { scroll-behavior: smooth; }
 .metrics-tier { border-radius: var(--radius-md); padding: 16px 20px; text-align: center; box-sizing: border-box; }
 .metrics-tier h4 { font-family: var(--display); font-size: var(--font-size-sm); margin-bottom: 8px; }
 .metrics-tier p { font-size: var(--font-size-sm); margin: 0; line-height: 1.5; }
-.tier-arrow { color: var(--gray); font-size: var(--font-size-lg); line-height: 1; padding: 2px 0; }
+.tier-arrow { color: var(--dark-gray); font-size: var(--font-size-lg); line-height: 1; padding: 2px 0; }
 
 .outcomes-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 20px; }
 .leadership-web-strategy-page .outcomes-grid + h2 { margin-top: 36px; }
