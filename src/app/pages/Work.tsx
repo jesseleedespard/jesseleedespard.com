@@ -117,11 +117,11 @@ export default function Work() {
                 backgroundColor: 'transparent',
                 border: 'none',
                 borderBottom: activeTab === 'research' ? '3px solid var(--teal-dark)' : '3px solid transparent',
-                padding: '16px 24px',
+                padding: 'var(--space-sm) var(--space-card-mobile)',
                 cursor: 'pointer',
                 display: 'flex',
                 alignItems: 'center',
-                gap: '8px',
+                gap: 'var(--space-xs)',
               }}
             >
               {/* Search Icon */}
@@ -159,11 +159,11 @@ export default function Work() {
                 backgroundColor: 'transparent',
                 border: 'none',
                 borderBottom: activeTab === 'leadership' ? '3px solid var(--teal-dark)' : '3px solid transparent',
-                padding: '16px 24px',
+                padding: 'var(--space-sm) var(--space-card-mobile)',
                 cursor: 'pointer',
                 display: 'flex',
                 alignItems: 'center',
-                gap: '8px',
+                gap: 'var(--space-xs)',
               }}
             >
               {/* Star Icon */}
@@ -216,7 +216,7 @@ export default function Work() {
                 {/* Gray Accent Bar */}
                 <div style={{ height: '4px', backgroundColor: 'var(--mid-gray)' }} />
 
-                <div style={{ padding: '32px' }}>
+                <div style={{ padding: 'var(--space-card)' }}>
                   {/* Tag */}
                   <div
                     style={{
@@ -226,7 +226,7 @@ export default function Work() {
                       color: 'var(--gray)',
                       letterSpacing: '1.5px',
                       textTransform: 'uppercase',
-                      marginBottom: '16px',
+                      marginBottom: 'var(--space-sm)',
                     }}
                   >
                     CASE STUDY · AI
@@ -252,7 +252,7 @@ export default function Work() {
                       fontSize: 'var(--font-size-sm)',
                       color: 'var(--gray)',
                       lineHeight: '1.6',
-                      marginBottom: '24px',
+                      marginBottom: 'var(--space-card-mobile)',
                     }}
                   >
                     Using AI as a collaborator to design and build this entire portfolio from scratch — a case study in research practice, craft, and what it means to work with emerging tools.
@@ -287,7 +287,7 @@ export default function Work() {
                 {/* Teal Accent Bar */}
                 <div style={{ height: '4px', backgroundColor: 'var(--teal)' }} />
 
-                <div style={{ padding: '32px' }}>
+                <div style={{ padding: 'var(--space-card)' }}>
                   {/* Tag */}
                   <div
                     style={{
@@ -297,7 +297,7 @@ export default function Work() {
                       color: 'var(--teal)',
                       letterSpacing: '1.5px',
                       textTransform: 'uppercase',
-                      marginBottom: '16px',
+                      marginBottom: 'var(--space-sm)',
                     }}
                   >
                     CASE STUDY · PROPTECH
@@ -323,7 +323,7 @@ export default function Work() {
                       fontSize: 'var(--font-size-sm)',
                       color: 'var(--dark-gray)',
                       lineHeight: '1.6',
-                      marginBottom: '24px',
+                      marginBottom: 'var(--space-card-mobile)',
                     }}
                   >
                     Helping a PropTech startup navigate ethical AI challenges when building predictive pricing models that impact housing access.
@@ -357,7 +357,7 @@ export default function Work() {
                 {/* Teal Accent Bar */}
                 <div style={{ height: '4px', backgroundColor: 'var(--teal)' }} />
 
-                <div style={{ padding: '32px' }}>
+                <div style={{ padding: 'var(--space-card)' }}>
                   {/* Tag */}
                   <div
                     style={{
@@ -367,7 +367,7 @@ export default function Work() {
                       color: 'var(--teal)',
                       letterSpacing: '1.5px',
                       textTransform: 'uppercase',
-                      marginBottom: '16px',
+                      marginBottom: 'var(--space-sm)',
                     }}
                   >
                     CASE STUDY · HEALTHTECH
@@ -393,7 +393,7 @@ export default function Work() {
                       fontSize: 'var(--font-size-sm)',
                       color: 'var(--dark-gray)',
                       lineHeight: '1.6',
-                      marginBottom: '24px',
+                      marginBottom: 'var(--space-card-mobile)',
                     }}
                   >
                     A 37-question onboarding form reduced by 20% — cutting onboarding call time by 50% via A/B test.
@@ -437,7 +437,7 @@ export default function Work() {
                 {/* Terracotta Accent Bar */}
                 <div style={{ height: '4px', backgroundColor: 'var(--terra)' }} />
 
-                <div style={{ padding: '32px' }}>
+                <div style={{ padding: 'var(--space-card)' }}>
                   {/* Tag */}
                   <div
                     style={{
@@ -447,7 +447,7 @@ export default function Work() {
                       color: 'var(--terra)',
                       letterSpacing: '1.5px',
                       textTransform: 'uppercase',
-                      marginBottom: '16px',
+                      marginBottom: 'var(--space-sm)',
                     }}
                   >
                     LEADERSHIP · REAL ESTATE TECH
@@ -473,7 +473,7 @@ export default function Work() {
                       fontSize: 'var(--font-size-sm)',
                       color: 'var(--dark-gray)',
                       lineHeight: '1.6',
-                      marginBottom: '24px',
+                      marginBottom: 'var(--space-card-mobile)',
                     }}
                   >
                     Built a research practice from scratch, led it through an acquisition, and merged two separate research teams into one cohesive function.
@@ -507,7 +507,7 @@ export default function Work() {
                 {/* Terracotta Accent Bar */}
                 <div style={{ height: '4px', backgroundColor: 'var(--terra)' }} />
 
-                <div style={{ padding: '32px' }}>
+                <div style={{ padding: 'var(--space-card)' }}>
                   {/* Tag */}
                   <div
                     style={{
@@ -517,7 +517,7 @@ export default function Work() {
                       color: 'var(--terra)',
                       letterSpacing: '1.5px',
                       textTransform: 'uppercase',
-                      marginBottom: '16px',
+                      marginBottom: 'var(--space-sm)',
                     }}
                   >
                     LEADERSHIP · EDTECH
@@ -543,7 +543,7 @@ export default function Work() {
                       fontSize: 'var(--font-size-sm)',
                       color: 'var(--dark-gray)',
                       lineHeight: '1.6',
-                      marginBottom: '24px',
+                      marginBottom: 'var(--space-card-mobile)',
                     }}
                   >
                     Built the conditions for three product disciplines to trust each other and move faster — 30% velocity increase, 25% collaboration lift, and a team that kept operating the same way after I left.
@@ -577,7 +577,7 @@ export default function Work() {
                 {/* Terracotta Accent Bar */}
                 <div style={{ height: '4px', backgroundColor: 'var(--terra)' }} />
 
-                <div style={{ padding: '32px' }}>
+                <div style={{ padding: 'var(--space-card)' }}>
                   {/* Tag */}
                   <div
                     style={{
@@ -587,7 +587,7 @@ export default function Work() {
                       color: 'var(--terra)',
                       letterSpacing: '1.5px',
                       textTransform: 'uppercase',
-                      marginBottom: '16px',
+                      marginBottom: 'var(--space-sm)',
                     }}
                   >
                     LEADERSHIP · EDTECH
@@ -613,7 +613,7 @@ export default function Work() {
                       fontSize: 'var(--font-size-sm)',
                       color: 'var(--dark-gray)',
                       lineHeight: '1.6',
-                      marginBottom: '24px',
+                      marginBottom: 'var(--space-card-mobile)',
                     }}
                   >
                     A cross-functional workshop that defined what AI personalization should mean for users — before a single tool was selected.

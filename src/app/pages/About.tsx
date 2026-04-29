@@ -311,7 +311,7 @@ export default function About() {
               color: 'var(--teal-dark)',
               letterSpacing: '1.5px',
               textTransform: 'uppercase',
-              marginBottom: '24px',
+              marginBottom: 'var(--space-card-mobile)',
             }}
           >
             My Background
@@ -326,43 +326,43 @@ export default function About() {
               lineHeight: '1.7',
             }}
           >
-            <p style={{ marginBottom: '24px' }}>I came to UX by accident.</p>
-            <p style={{ marginBottom: '24px' }}>
+            <p style={{ marginBottom: 'var(--space-card-mobile)' }}>I came to UX by accident.</p>
+            <p style={{ marginBottom: 'var(--space-card-mobile)' }}>
               I wasn&apos;t sure what I wanted to major in college. I changed my major several times, but nothing grabbed my
               attention until I started a Psychology 101 course.
             </p>
-            <p style={{ marginBottom: '24px' }}>
+            <p style={{ marginBottom: 'var(--space-card-mobile)' }}>
               What caught my interest was how people interacted with each other. I eventually found a niche field of Human
               Factors: an applied science that focuses on fitting the task, tool, or environment to the user, rather than
               forcing the user to adapt to the system.
             </p>
-            <p style={{ marginBottom: '24px' }}>
+            <p style={{ marginBottom: 'var(--space-card-mobile)' }}>
               I thought about systems, and realized that much of the time it is on the human to adapt to it instead of the
               system adapting to the user. It seemed imbalanced to me.
             </p>
-            <p style={{ marginBottom: '24px' }}>
+            <p style={{ marginBottom: 'var(--space-card-mobile)' }}>
               From there, I earned my Master&apos;s in Human Computer Interaction (HCI). I thought I would get my doctorate and
               make a career in academia, but it wasn&apos;t in the cards for me. So out into the workforce I went, and it turned
               out that&apos;s where the real problems were anyway!
             </p>
-            <p style={{ marginBottom: '24px' }}>
+            <p style={{ marginBottom: 'var(--space-card-mobile)' }}>
               In the workforce, I started as a UX researcher and spent the next several years building research practices for
               companies that hadn&apos;t had one before: writing the playbooks, hiring the teams, earning the trust of
               stakeholders who weren&apos;t sure they needed a researcher until they saw what one could do.
             </p>
-            <p style={{ marginBottom: '24px' }}>
+            <p style={{ marginBottom: 'var(--space-card-mobile)' }}>
               I learned that what products delivered was almost always a research and design optimization gap — not a product
               gap.
             </p>
-            <p style={{ marginBottom: '24px' }}>
+            <p style={{ marginBottom: 'var(--space-card-mobile)' }}>
               That insight followed me through HealthTech, EdTech, and PropTech, and across every industry the pattern held: the
               products that failed, failed because someone skipped the part where you actually talk to the people, and got their
               real thoughts on their actual problems. Not the problem the business thinks they need to solve.
             </p>
-            <p style={{ marginBottom: '24px' }}>
+            <p style={{ marginBottom: 'var(--space-card-mobile)' }}>
               Then AI changed everything. Not because the research questions got harder, but because the stakes got higher.
             </p>
-            <p style={{ marginBottom: '24px' }}>
+            <p style={{ marginBottom: 'var(--space-card-mobile)' }}>
               An algorithm that does not consider nuances across demographic groups isn&apos;t just an algorithm problem.
               It&apos;s an equity and ethical problem. A model trained on biased data doesn&apos;t just make worse predictions — it
               amplifies those predictions at a scale no one has ever had to reckon with before.
@@ -389,7 +389,7 @@ export default function About() {
               color: 'var(--teal-dark)',
               letterSpacing: '1.5px',
               textTransform: 'uppercase',
-              marginBottom: '24px',
+              marginBottom: 'var(--space-card-mobile)',
             }}
           >
             HOW I WORK
@@ -405,7 +405,7 @@ export default function About() {
                   fontWeight: 700,
                   fontSize: 'var(--font-size-3xl)',
                   color: 'var(--gold)',
-                  marginBottom: '16px',
+                  marginBottom: 'var(--space-sm)',
                 }}
               >
                 01
@@ -441,7 +441,7 @@ export default function About() {
                   fontWeight: 700,
                   fontSize: 'var(--font-size-3xl)',
                   color: 'var(--gold)',
-                  marginBottom: '16px',
+                  marginBottom: 'var(--space-sm)',
                 }}
               >
                 02
@@ -477,7 +477,7 @@ export default function About() {
                   fontWeight: 700,
                   fontSize: 'var(--font-size-3xl)',
                   color: 'var(--gold)',
-                  marginBottom: '16px',
+                  marginBottom: 'var(--space-sm)',
                 }}
               >
                 03
@@ -520,7 +520,7 @@ export default function About() {
               color: 'var(--teal-dark)',
               letterSpacing: '1.5px',
               textTransform: 'uppercase',
-              marginBottom: '48px',
+              marginBottom: 'var(--space-page-side)',
             }}
           >
             EXPERIENCE
@@ -534,7 +534,7 @@ export default function About() {
                 backgroundColor: 'var(--cream)',
                 border: '1px solid var(--light-gray)',
                 borderRadius: 'var(--radius-md)',
-                padding: '32px',
+                padding: 'var(--space-card)',
               }}
             >
               <div
@@ -545,7 +545,7 @@ export default function About() {
                   color: 'var(--terra)',
                   letterSpacing: '1.5px',
                   textTransform: 'uppercase',
-                  marginBottom: '16px',
+                  marginBottom: 'var(--space-sm)',
                 }}
               >
                 EDTECH
@@ -567,7 +567,7 @@ export default function About() {
                   fontSize: 'var(--font-size-sm)',
                   color: 'var(--dark-gray)',
                   lineHeight: '1.6',
-                  marginBottom: '16px',
+                  marginBottom: 'var(--space-sm)',
                 }}
               >
                 Unified a siloed and fractured team, increasing cross-discipline collaboration and team trust.
@@ -589,7 +589,7 @@ export default function About() {
                 backgroundColor: 'var(--cream)',
                 border: '1px solid var(--light-gray)',
                 borderRadius: 'var(--radius-md)',
-                padding: '32px',
+                padding: 'var(--space-card)',
               }}
             >
               <div
@@ -600,7 +600,7 @@ export default function About() {
                   color: 'var(--gold)',
                   letterSpacing: '1.5px',
                   textTransform: 'uppercase',
-                  marginBottom: '16px',
+                  marginBottom: 'var(--space-sm)',
                 }}
               >
                 PROPTECH
@@ -622,7 +622,7 @@ export default function About() {
                   fontSize: 'var(--font-size-sm)',
                   color: 'var(--dark-gray)',
                   lineHeight: '1.6',
-                  marginBottom: '16px',
+                  marginBottom: 'var(--space-sm)',
                 }}
               >
                 Conducted foundational research that doubled PMF, democratized research, and led to an acquisition.
@@ -644,7 +644,7 @@ export default function About() {
                 backgroundColor: 'var(--cream)',
                 border: '1px solid var(--light-gray)',
                 borderRadius: 'var(--radius-md)',
-                padding: '32px',
+                padding: 'var(--space-card)',
               }}
             >
               <div
@@ -655,7 +655,7 @@ export default function About() {
                   color: 'var(--teal-dark)',
                   letterSpacing: '1.5px',
                   textTransform: 'uppercase',
-                  marginBottom: '16px',
+                  marginBottom: 'var(--space-sm)',
                 }}
               >
                 HEALTHTECH
@@ -677,7 +677,7 @@ export default function About() {
                   fontSize: 'var(--font-size-sm)',
                   color: 'var(--dark-gray)',
                   lineHeight: '1.6',
-                  marginBottom: '16px',
+                  marginBottom: 'var(--space-sm)',
                 }}
               >
                 Led research that reduced onboarding time by 50%, from 90-minute CX calls to 45-minute CX calls.
@@ -708,7 +708,7 @@ export default function About() {
               color: 'var(--teal-dark)',
               letterSpacing: '1.5px',
               textTransform: 'uppercase',
-              marginBottom: '48px',
+              marginBottom: 'var(--space-page-side)',
             }}
           >
             TESTIMONIALS

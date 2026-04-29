@@ -139,7 +139,7 @@ export default function Podcast() {
                   fontSize: 'var(--font-size-lg)',
                   color: 'var(--hero-subtitle-color)',
                   fontStyle: 'italic',
-                  marginBottom: '24px',
+                  marginBottom: 'var(--space-card-mobile)',
                   lineHeight: '1.6',
                 }}
               >
@@ -208,7 +208,7 @@ export default function Podcast() {
                 fontWeight: 700,
                 fontSize: 'var(--font-size-2xl)',
                 color: 'var(--white)',
-                marginBottom: '16px',
+                marginBottom: 'var(--space-sm)',
               }}
             >
               Stay in the loop
@@ -219,14 +219,14 @@ export default function Podcast() {
                 fontSize: 'var(--font-size-base)',
                 color: 'var(--hero-subtitle-color-soft)',
                 lineHeight: '1.6',
-                marginBottom: '32px',
+                marginBottom: 'var(--space-card)',
               }}
             >
               Get notified when new episodes drop, plus exclusive behind-the-scenes content.
             </p>
 
             {/* Buttons */}
-            <div style={{ display: 'flex', gap: '16px', justifyContent: 'center', flexWrap: 'wrap' }}>
+            <div style={{ display: 'flex', gap: 'var(--space-sm)', justifyContent: 'center', flexWrap: 'wrap' }}>
               <button
                 className="primary-cta-gold"
                 style={{
@@ -271,24 +271,24 @@ export default function Podcast() {
               fontWeight: 700,
               fontSize: 'var(--font-size-2xl)',
               color: 'var(--charcoal)',
-              marginBottom: '48px',
+              marginBottom: 'var(--space-page-side)',
             }}
           >
             Preview Episodes
           </h2>
 
           {/* Episode Cards */}
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-gap-mobile)' }}>
             {/* Episode 1 */}
             <div
               style={{
                 backgroundColor: 'var(--white)',
                 border: '1px solid var(--light-gray)',
                 borderRadius: 'var(--radius-md)',
-                padding: '32px',
+                padding: 'var(--space-card)',
               }}
             >
-              <div style={{ display: 'flex', gap: '24px', alignItems: 'flex-start' }}>
+              <div style={{ display: 'flex', gap: 'var(--space-gap-mobile)', alignItems: 'flex-start' }}>
                 {/* Episode Number */}
                 <div
                   style={{
@@ -334,12 +334,12 @@ export default function Podcast() {
                       fontSize: 'var(--font-size-base)',
                       color: 'var(--dark-gray)',
                       lineHeight: '1.6',
-                      marginBottom: '16px',
+                      marginBottom: 'var(--space-sm)',
                     }}
                   >
                     My guest share the story of refusing to run a research study that would have violated user trust — and what happened next. We explore when to push back, how to build ethical frameworks, and the cost of saying no.
                   </p>
-                  <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
+                  <div style={{ display: 'flex', gap: 'var(--space-xs)', flexWrap: 'wrap' }}>
                     <span
                       style={{
                         fontFamily: 'var(--display)',
@@ -390,10 +390,10 @@ export default function Podcast() {
                 backgroundColor: 'var(--white)',
                 border: '1px solid var(--light-gray)',
                 borderRadius: 'var(--radius-md)',
-                padding: '32px',
+                padding: 'var(--space-card)',
               }}
             >
-              <div style={{ display: 'flex', gap: '24px', alignItems: 'flex-start' }}>
+              <div style={{ display: 'flex', gap: 'var(--space-gap-mobile)', alignItems: 'flex-start' }}>
                 {/* Episode Number */}
                 <div
                   style={{
@@ -439,12 +439,12 @@ export default function Podcast() {
                       fontSize: 'var(--font-size-base)',
                       color: 'var(--dark-gray)',
                       lineHeight: '1.6',
-                      marginBottom: '16px',
+                      marginBottom: 'var(--space-sm)',
                     }}
                   >
                     A conversation about hiring for diversity, creating inclusive team cultures, and why homogeneous research teams produce biased insights. My guest shares their framework for building teams that bring different lived experiences to the work.
                   </p>
-                  <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
+                  <div style={{ display: 'flex', gap: 'var(--space-xs)', flexWrap: 'wrap' }}>
                     <span
                       style={{
                         fontFamily: 'var(--display)',
@@ -495,10 +495,10 @@ export default function Podcast() {
                 backgroundColor: 'var(--white)',
                 border: '1px solid var(--light-gray)',
                 borderRadius: 'var(--radius-md)',
-                padding: '32px',
+                padding: 'var(--space-card)',
               }}
             >
-              <div style={{ display: 'flex', gap: '24px', alignItems: 'flex-start' }}>
+              <div style={{ display: 'flex', gap: 'var(--space-gap-mobile)', alignItems: 'flex-start' }}>
                 {/* Episode Number */}
                 <div
                   style={{
@@ -544,12 +544,12 @@ export default function Podcast() {
                       fontSize: 'var(--font-size-base)',
                       color: 'var(--dark-gray)',
                       lineHeight: '1.6',
-                      marginBottom: '16px',
+                      marginBottom: 'var(--space-sm)',
                     }}
                   >
                     An AI ethicist walks us through real bias audits they've conducted — from hiring algorithms that discriminated against women to recommendation systems that amplified harmful content. We discuss what meaningful bias testing looks like.
                   </p>
-                  <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
+                  <div style={{ display: 'flex', gap: 'var(--space-xs)', flexWrap: 'wrap' }}>
                     <span
                       style={{
                         fontFamily: 'var(--display)',
@@ -606,7 +606,7 @@ export default function Podcast() {
               fontWeight: 700,
               fontSize: 'var(--font-size-2xl)',
               color: 'var(--charcoal)',
-              marginBottom: '16px',
+              marginBottom: 'var(--space-sm)',
             }}
           >
             Listen on your favorite platform
@@ -616,7 +616,7 @@ export default function Podcast() {
               fontFamily: 'var(--body)',
               fontSize: 'var(--font-size-base)',
               color: 'var(--dark-gray)',
-              marginBottom: '48px',
+              marginBottom: 'var(--space-page-side)',
             }}
           >
             Subscribe now so you don't miss the premiere in April 2026.
@@ -630,7 +630,7 @@ export default function Podcast() {
                 backgroundColor: 'var(--cream)',
                 border: '1px solid var(--light-gray)',
                 borderRadius: 'var(--radius-md)',
-                padding: '32px',
+                padding: 'var(--space-card)',
                 textAlign: 'center',
               }}
             >
@@ -687,7 +687,7 @@ export default function Podcast() {
                 backgroundColor: 'var(--cream)',
                 border: '1px solid var(--light-gray)',
                 borderRadius: 'var(--radius-md)',
-                padding: '32px',
+                padding: 'var(--space-card)',
                 textAlign: 'center',
               }}
             >
@@ -744,7 +744,7 @@ export default function Podcast() {
                 backgroundColor: 'var(--cream)',
                 border: '1px solid var(--light-gray)',
                 borderRadius: 'var(--radius-md)',
-                padding: '32px',
+                padding: 'var(--space-card)',
                 textAlign: 'center',
               }}
             >

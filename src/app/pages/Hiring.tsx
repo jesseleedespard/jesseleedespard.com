@@ -319,16 +319,16 @@ export default function Hiring() {
               color: 'var(--teal-dark)',
               letterSpacing: '1.5px',
               textTransform: 'uppercase',
-              marginBottom: '48px',
+              marginBottom: 'var(--space-page-side)',
             }}
           >
             HOW I CAN HELP
           </div>
 
           {/* Service Cards */}
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '32px' }}>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-gap)' }}>
             {/* Service 1 */}
-            <div style={{ display: 'flex', gap: '32px' }}>
+            <div style={{ display: 'flex', gap: 'var(--space-gap)' }}>
               {/* Number Column */}
               <div
                 style={{
@@ -339,7 +339,7 @@ export default function Hiring() {
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
-                  padding: '24px',
+                  padding: 'var(--space-card-mobile)',
                 }}
               >
                 <div
@@ -381,7 +381,7 @@ export default function Hiring() {
             </div>
 
             {/* Service 2 */}
-            <div style={{ display: 'flex', gap: '32px' }}>
+            <div style={{ display: 'flex', gap: 'var(--space-gap)' }}>
               {/* Number Column */}
               <div
                 style={{
@@ -392,7 +392,7 @@ export default function Hiring() {
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
-                  padding: '24px',
+                  padding: 'var(--space-card-mobile)',
                 }}
               >
                 <div
@@ -434,7 +434,7 @@ export default function Hiring() {
             </div>
 
             {/* Service 3 */}
-            <div style={{ display: 'flex', gap: '32px' }}>
+            <div style={{ display: 'flex', gap: 'var(--space-gap)' }}>
               {/* Number Column */}
               <div
                 style={{
@@ -445,7 +445,7 @@ export default function Hiring() {
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
-                  padding: '24px',
+                  padding: 'var(--space-card-mobile)',
                 }}
               >
                 <div
@@ -500,7 +500,7 @@ export default function Hiring() {
               color: 'var(--teal-dark)',
               letterSpacing: '1.5px',
               textTransform: 'uppercase',
-              marginBottom: '48px',
+              marginBottom: 'var(--space-page-side)',
             }}
           >
             WHO I WORK WITH
@@ -513,7 +513,7 @@ export default function Hiring() {
                 border: '1px solid var(--light-gray)',
                 borderLeft: '4px solid var(--teal-dark)',
                 borderRadius: 'var(--radius-md)',
-                padding: '32px',
+                padding: 'var(--space-card)',
               }}
             >
               <p
@@ -534,7 +534,7 @@ export default function Hiring() {
                 border: '1px solid var(--light-gray)',
                 borderLeft: '4px solid var(--teal-dark)',
                 borderRadius: 'var(--radius-md)',
-                padding: '32px',
+                padding: 'var(--space-card)',
               }}
             >
               <p
@@ -555,7 +555,7 @@ export default function Hiring() {
                 border: '1px solid var(--light-gray)',
                 borderLeft: '4px solid var(--teal-dark)',
                 borderRadius: 'var(--radius-md)',
-                padding: '32px',
+                padding: 'var(--space-card)',
               }}
             >
               <p
@@ -576,7 +576,7 @@ export default function Hiring() {
                 border: '1px solid var(--light-gray)',
                 borderLeft: '4px solid var(--teal-dark)',
                 borderRadius: 'var(--radius-md)',
-                padding: '32px',
+                padding: 'var(--space-card)',
               }}
             >
               <p
@@ -607,7 +607,7 @@ export default function Hiring() {
               color: 'var(--gold)',
               letterSpacing: '1.5px',
               textTransform: 'uppercase',
-              marginBottom: '48px',
+              marginBottom: 'var(--space-page-side)',
             }}
           >
             THE PROCESS
@@ -738,7 +738,7 @@ export default function Hiring() {
               color: 'var(--teal-dark)',
               letterSpacing: '1.5px',
               textTransform: 'uppercase',
-              marginBottom: '48px',
+              marginBottom: 'var(--space-page-side)',
             }}
           >
             TESTIMONIALS
@@ -789,7 +789,7 @@ export default function Hiring() {
               color: 'var(--teal-dark)',
               letterSpacing: '1.5px',
               textTransform: 'uppercase',
-              marginBottom: '48px',
+              marginBottom: 'var(--space-page-side)',
             }}
           >
             Let's Chat
@@ -808,7 +808,7 @@ export default function Hiring() {
                   fontWeight: 700,
                   fontSize: 'var(--font-size-xl)',
                   color: 'var(--white)',
-                  marginBottom: '16px',
+                  marginBottom: 'var(--space-sm)',
                 }}
               >
                 Book a 30-minute chat.
@@ -860,7 +860,7 @@ export default function Hiring() {
                   fontWeight: 700,
                   fontSize: 'var(--font-size-xl)',
                   color: 'var(--white)',
-                  marginBottom: '16px',
+                  marginBottom: 'var(--space-sm)',
                 }}
               >
                 Prefer email?
@@ -871,7 +871,7 @@ export default function Hiring() {
                   fontSize: 'var(--font-size-base)',
                   color: 'var(--white)',
                   lineHeight: '1.6',
-                  marginBottom: '16px',
+                  marginBottom: 'var(--space-sm)',
                 }}
               >
                 That works too.

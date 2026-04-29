@@ -164,7 +164,7 @@ export default function Home() {
                 fontWeight: 700,
                 fontSize: 'var(--font-size-xs)',
                 color: 'var(--gold)',
-                marginBottom: '24px',
+                marginBottom: 'var(--space-card-mobile)',
                 letterSpacing: '1.5px',
               }}
             >
@@ -231,7 +231,7 @@ export default function Home() {
               color: 'var(--teal-dark)',
               letterSpacing: '1.5px',
               textTransform: 'uppercase',
-              marginBottom: '16px',
+              marginBottom: 'var(--space-sm)',
             }}
           >
             CASE STUDIES
@@ -244,7 +244,7 @@ export default function Home() {
               fontFamily: 'var(--display)',
               fontWeight: 700,
               color: 'var(--charcoal)',
-              marginBottom: '48px',
+              marginBottom: 'var(--space-page-side)',
             }}
           >
             Recent Work
@@ -268,7 +268,7 @@ export default function Home() {
               />
 
               {/* Card Content */}
-              <div style={{ padding: '32px' }}>
+              <div style={{ padding: 'var(--space-card)' }}>
                 <div
                   style={{
                     fontFamily: 'var(--display)',
@@ -277,7 +277,7 @@ export default function Home() {
                     color: 'var(--teal-dark)',
                     letterSpacing: '1.5px',
                     textTransform: 'uppercase',
-                    marginBottom: '16px',
+                    marginBottom: 'var(--space-sm)',
                   }}
                 >
                   CASE STUDY · HEALTHTECH
@@ -288,7 +288,7 @@ export default function Home() {
                     fontFamily: 'var(--display)',
                     fontWeight: 700,
                     color: 'var(--charcoal)',
-                    marginBottom: '16px',
+                    marginBottom: 'var(--space-sm)',
                   }}
                 >
                   From 90 Minutes to 45: Redesigning a Broken Onboarding Flow
@@ -299,7 +299,7 @@ export default function Home() {
                     fontSize: 'var(--font-size-base)',
                     color: 'var(--dark-gray)',
                     lineHeight: '1.6',
-                    marginBottom: '24px',
+                    marginBottom: 'var(--space-card-mobile)',
                   }}
                 >
                   A 37-question form reduced by 20% — cutting onboarding call time by 50% via A/B test.
@@ -337,7 +337,7 @@ export default function Home() {
                   display: 'flex',
                   flexDirection: 'column',
                   justifyContent: 'center',
-                  padding: '32px',
+                  padding: 'var(--space-card)',
                   boxSizing: 'border-box',
                 }}
               >
@@ -350,7 +350,7 @@ export default function Home() {
               </div>
 
               {/* Card Content */}
-              <div style={{ padding: '32px' }}>
+              <div style={{ padding: 'var(--space-card)' }}>
                 <div
                   style={{
                     fontFamily: 'var(--display)',
@@ -359,7 +359,7 @@ export default function Home() {
                     color: 'var(--terra)',
                     letterSpacing: '1.5px',
                     textTransform: 'uppercase',
-                    marginBottom: '16px',
+                    marginBottom: 'var(--space-sm)',
                   }}
                 >
                   LEADERSHIP · REAL ESTATE TECH
@@ -370,7 +370,7 @@ export default function Home() {
                     fontFamily: 'var(--display)',
                     fontWeight: 700,
                     color: 'var(--charcoal)',
-                    marginBottom: '16px',
+                    marginBottom: 'var(--space-sm)',
                   }}
                 >
                   Building a Research Function from the Ground Up, and Through an Acquisition
@@ -381,7 +381,7 @@ export default function Home() {
                     fontSize: 'var(--font-size-base)',
                     color: 'var(--dark-gray)',
                     lineHeight: '1.6',
-                    marginBottom: '24px',
+                    marginBottom: 'var(--space-card-mobile)',
                   }}
                 >
                   Built a research practice from scratch, survived an acquisition, and turned research from a gatekept discipline into something the whole org could see and use.
@@ -433,7 +433,7 @@ export default function Home() {
               color: 'var(--teal-dark)',
               letterSpacing: '1.5px',
               textTransform: 'uppercase',
-              marginBottom: '32px',
+              marginBottom: 'var(--space-card)',
             }}
           >
             LATEST WRITING
@@ -478,7 +478,7 @@ export default function Home() {
                 fontSize: 'var(--font-size-base)',
                 color: 'var(--dark-gray)',
                 lineHeight: '1.6',
-                marginBottom: '24px',
+                marginBottom: 'var(--space-card-mobile)',
               }}
             >
               Ethical management isn’t about being nice. It isn’t about having the right values written on a website. It shows up when someone on your team says something feels off, and you decide whether curiosity or defensiveness comes first.
@@ -514,7 +514,7 @@ export default function Home() {
               color: 'var(--teal-dark)',
               letterSpacing: '1.5px',
               textTransform: 'uppercase',
-              marginBottom: '32px',
+              marginBottom: 'var(--space-card)',
             }}
           >
             PODCAST
@@ -525,7 +525,7 @@ export default function Home() {
             style={{
               backgroundColor: 'var(--charcoal)',
               borderRadius: 'var(--radius-md)',
-              padding: '48px',
+              padding: 'var(--space-page-side)',
             }}
           >
             <h3
@@ -534,12 +534,12 @@ export default function Home() {
                 fontFamily: 'var(--display)',
                 fontWeight: 700,
                 color: 'var(--white)',
-                marginBottom: '16px',
+                marginBottom: 'var(--space-sm)',
               }}
             >
               <span style={{ color: 'var(--gold)' }}>Ethics</span> <span style={{ color: 'var(--terra)' }}>&#123;</span><span style={{ color: 'var(--white)' }}>A</span><span style={{ color: 'var(--terra)' }}>&#125;</span> <span style={{ color: 'var(--teal)' }}>Side</span>
             </h3>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '32px', flexWrap: 'wrap' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: 'var(--space-gap)', flexWrap: 'wrap' }}>
               <p
                 style={{
                   fontFamily: 'var(--body)',

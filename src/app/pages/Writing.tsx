@@ -478,11 +478,11 @@ export default function Writing() {
                 backgroundColor: 'transparent',
                 border: 'none',
                 borderBottom: activeTab === 'academic' ? '3px solid var(--teal-dark)' : '3px solid transparent',
-                padding: '16px 24px',
+                padding: 'var(--space-sm) var(--space-card-mobile)',
                 cursor: 'pointer',
                 display: 'flex',
                 alignItems: 'center',
-                gap: '8px',
+                gap: 'var(--space-xs)',
               }}
             >
               Academic Work
@@ -513,11 +513,11 @@ export default function Writing() {
                 backgroundColor: 'transparent',
                 border: 'none',
                 borderBottom: activeTab === 'ethics' ? '3px solid var(--teal-dark)' : '3px solid transparent',
-                padding: '16px 24px',
+                padding: 'var(--space-sm) var(--space-card-mobile)',
                 cursor: 'pointer',
                 display: 'flex',
                 alignItems: 'center',
-                gap: '8px',
+                gap: 'var(--space-xs)',
               }}
             >
               Ethics Arc
@@ -554,7 +554,7 @@ export default function Writing() {
                       fontWeight: 700,
                       fontSize: '19px',
                       color: 'var(--charcoal)',
-                      marginBottom: '16px',
+                      marginBottom: 'var(--space-sm)',
                       lineHeight: 1.3,
                     }}
                   >
@@ -566,7 +566,7 @@ export default function Writing() {
                       fontSize: 'var(--font-size-base)',
                       color: 'var(--dark-gray)',
                       lineHeight: 1.65,
-                      marginBottom: '16px',
+                      marginBottom: 'var(--space-sm)',
                     }}
                   >
                     {pub.abstract}
@@ -609,7 +609,7 @@ export default function Writing() {
                       fontWeight: 700,
                       fontSize: '19px',
                       color: 'var(--charcoal)',
-                      marginBottom: '16px',
+                      marginBottom: 'var(--space-sm)',
                       lineHeight: 1.3,
                     }}
                   >
@@ -622,7 +622,7 @@ export default function Writing() {
                       fontSize: 'var(--font-size-base)',
                       color: 'var(--dark-gray)',
                       lineHeight: 1.65,
-                      marginBottom: '16px',
+                      marginBottom: 'var(--space-sm)',
                     }}
                   >
                     {pub.abstract}
@@ -679,7 +679,7 @@ export default function Writing() {
               </div>
             </div>
 
-            <div className="writing-articles-stack" style={{ marginTop: '32px' }}>
+            <div className="writing-articles-stack" style={{ marginTop: 'var(--space-card)' }}>
               {ARTICLES.map((article) => {
                 const isSoon = article.status === 'coming-soon';
                 return (
@@ -688,8 +688,8 @@ export default function Writing() {
                     className={`writing-article-card ${isSoon ? 'writing-article-card--soon' : 'writing-article-card--live'}`}
                   >
                     <div className="writing-article-accent" style={{ backgroundColor: article.accentColor }} />
-                    <div style={{ padding: '32px' }}>
-                      <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: '12px', marginBottom: '16px' }}>
+                    <div style={{ padding: 'var(--space-card)' }}>
+                      <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: '12px', marginBottom: 'var(--space-sm)' }}>
                         <span style={ethicsBadgePillStyle(article.badge)}>{article.badge}</span>
                         {article.scene && (
                           <span
@@ -709,7 +709,7 @@ export default function Writing() {
                           fontWeight: 700,
                           fontSize: 'var(--font-size-xl)',
                           color: 'var(--charcoal)',
-                          marginBottom: '8px',
+                          marginBottom: 'var(--space-xs)',
                           lineHeight: 1.25,
                         }}
                       >
@@ -721,7 +721,7 @@ export default function Writing() {
                             fontFamily: 'var(--display)',
                             fontSize: '15px',
                             color: 'var(--teal-dark)',
-                            marginBottom: '16px',
+                            marginBottom: 'var(--space-sm)',
                             lineHeight: 1.45,
                           }}
                         >
@@ -734,7 +734,7 @@ export default function Writing() {
                           fontSize: 'var(--font-size-base)',
                           color: 'var(--dark-gray)',
                           lineHeight: 1.65,
-                          marginBottom: '24px',
+                          marginBottom: 'var(--space-card-mobile)',
                         }}
                       >
                         {article.excerpt}
