@@ -16,7 +16,7 @@ export default function Work() {
         }
         
         .work-hero-title {
-          font-family: 'DM Sans', sans-serif;
+          font-family: var(--display);
           font-weight: 700;
           font-size: clamp(var(--font-size-2xl), 4.5vw, var(--font-size-3xl));
           color: var(--white);
@@ -25,7 +25,7 @@ export default function Work() {
         }
         
         .work-hero-subtitle {
-          font-family: 'Lora', serif;
+          font-family: var(--body);
           font-size: var(--font-size-lg);
           color: var(--hero-subtitle-color);
           line-height: 1.6;
@@ -79,7 +79,7 @@ export default function Work() {
           {/* Eyebrow */}
           <div
             style={{
-              fontFamily: 'DM Sans, sans-serif',
+              fontFamily: 'var(--display)',
               fontWeight: 700,
               fontSize: 'var(--font-size-xs)',
               color: 'var(--gold)',
@@ -110,10 +110,10 @@ export default function Work() {
             <button
               onClick={() => setActiveTab('research')}
               style={{
-                fontFamily: 'DM Sans, sans-serif',
+                fontFamily: 'var(--display)',
                 fontWeight: activeTab === 'research' ? 700 : 500,
                 fontSize: 'var(--font-size-sm)',
-                color: activeTab === 'research' ? 'var(--white)' : 'rgba(255, 255, 255, 0.6)',
+                color: activeTab === 'research' ? 'var(--white)' : 'var(--hero-subtitle-color-soft)',
                 backgroundColor: 'transparent',
                 border: 'none',
                 borderBottom: activeTab === 'research' ? '3px solid var(--teal-dark)' : '3px solid transparent',
@@ -133,7 +133,7 @@ export default function Work() {
               {/* Count Badge */}
               <span
                 style={{
-                  fontFamily: 'DM Sans, sans-serif',
+                  fontFamily: 'var(--display)',
                   fontWeight: 700,
                   fontSize: 'var(--font-size-xs)',
                   color: activeTab === 'research' ? 'var(--white)' : 'var(--charcoal)',
@@ -152,10 +152,10 @@ export default function Work() {
             <button
               onClick={() => setActiveTab('leadership')}
               style={{
-                fontFamily: 'DM Sans, sans-serif',
+                fontFamily: 'var(--display)',
                 fontWeight: activeTab === 'leadership' ? 700 : 500,
                 fontSize: 'var(--font-size-sm)',
-                color: activeTab === 'leadership' ? 'var(--white)' : 'rgba(255, 255, 255, 0.6)',
+                color: activeTab === 'leadership' ? 'var(--white)' : 'var(--hero-subtitle-color-soft)',
                 backgroundColor: 'transparent',
                 border: 'none',
                 borderBottom: activeTab === 'leadership' ? '3px solid var(--teal-dark)' : '3px solid transparent',
@@ -179,7 +179,7 @@ export default function Work() {
               {/* Count Badge */}
               <span
                 style={{
-                  fontFamily: 'DM Sans, sans-serif',
+                  fontFamily: 'var(--display)',
                   fontWeight: 700,
                   fontSize: 'var(--font-size-xs)',
                   color: activeTab === 'leadership' ? 'var(--white)' : 'var(--charcoal)',
@@ -220,7 +220,7 @@ export default function Work() {
                   {/* Tag */}
                   <div
                     style={{
-                      fontFamily: 'DM Sans, sans-serif',
+                      fontFamily: 'var(--display)',
                       fontWeight: 700,
                       fontSize: 'var(--font-size-xs)',
                       color: 'var(--gray)',
@@ -235,7 +235,7 @@ export default function Work() {
                   {/* Title */}
                   <h3
                     style={{
-                      fontFamily: 'DM Sans, sans-serif',
+                      fontFamily: 'var(--display)',
                       fontWeight: 700,
                       fontSize: 'var(--font-size-xl)',
                       color: 'var(--gray)',
@@ -248,7 +248,7 @@ export default function Work() {
                   {/* Description */}
                   <p
                     style={{
-                      fontFamily: 'Lora, serif',
+                      fontFamily: 'var(--body)',
                       fontSize: 'var(--font-size-sm)',
                       color: 'var(--gray)',
                       lineHeight: '1.6',
@@ -262,7 +262,7 @@ export default function Work() {
                   <div className="card-cta-row">
                     <div
                       style={{
-                        fontFamily: 'DM Sans, sans-serif',
+                        fontFamily: 'var(--display)',
                         fontWeight: 700,
                         fontSize: 'var(--font-size-sm)',
                         color: 'var(--mid-gray)',
@@ -291,7 +291,7 @@ export default function Work() {
                   {/* Tag */}
                   <div
                     style={{
-                      fontFamily: 'DM Sans, sans-serif',
+                      fontFamily: 'var(--display)',
                       fontWeight: 700,
                       fontSize: 'var(--font-size-xs)',
                       color: 'var(--teal)',
@@ -306,7 +306,7 @@ export default function Work() {
                   {/* Title */}
                   <h3
                     style={{
-                      fontFamily: 'DM Sans, sans-serif',
+                      fontFamily: 'var(--display)',
                       fontWeight: 700,
                       fontSize: 'var(--font-size-xl)',
                       color: 'var(--charcoal)',
@@ -319,7 +319,7 @@ export default function Work() {
                   {/* Description */}
                   <p
                     style={{
-                      fontFamily: 'Lora, serif',
+                      fontFamily: 'var(--body)',
                       fontSize: 'var(--font-size-sm)',
                       color: 'var(--dark-gray)',
                       lineHeight: '1.6',
@@ -361,7 +361,7 @@ export default function Work() {
                   {/* Tag */}
                   <div
                     style={{
-                      fontFamily: 'DM Sans, sans-serif',
+                      fontFamily: 'var(--display)',
                       fontWeight: 700,
                       fontSize: 'var(--font-size-xs)',
                       color: 'var(--teal)',
@@ -376,7 +376,7 @@ export default function Work() {
                   {/* Title */}
                   <h3
                     style={{
-                      fontFamily: 'DM Sans, sans-serif',
+                      fontFamily: 'var(--display)',
                       fontWeight: 700,
                       fontSize: 'var(--font-size-xl)',
                       color: 'var(--charcoal)',
@@ -389,7 +389,7 @@ export default function Work() {
                   {/* Description */}
                   <p
                     style={{
-                      fontFamily: 'Lora, serif',
+                      fontFamily: 'var(--body)',
                       fontSize: 'var(--font-size-sm)',
                       color: 'var(--dark-gray)',
                       lineHeight: '1.6',
@@ -441,7 +441,7 @@ export default function Work() {
                   {/* Tag */}
                   <div
                     style={{
-                      fontFamily: 'DM Sans, sans-serif',
+                      fontFamily: 'var(--display)',
                       fontWeight: 700,
                       fontSize: 'var(--font-size-xs)',
                       color: 'var(--terra)',
@@ -456,7 +456,7 @@ export default function Work() {
                   {/* Title */}
                   <h3
                     style={{
-                      fontFamily: 'DM Sans, sans-serif',
+                      fontFamily: 'var(--display)',
                       fontWeight: 700,
                       fontSize: 'var(--font-size-xl)',
                       color: 'var(--charcoal)',
@@ -469,7 +469,7 @@ export default function Work() {
                   {/* Description */}
                   <p
                     style={{
-                      fontFamily: 'Lora, serif',
+                      fontFamily: 'var(--body)',
                       fontSize: 'var(--font-size-sm)',
                       color: 'var(--dark-gray)',
                       lineHeight: '1.6',
@@ -511,7 +511,7 @@ export default function Work() {
                   {/* Tag */}
                   <div
                     style={{
-                      fontFamily: 'DM Sans, sans-serif',
+                      fontFamily: 'var(--display)',
                       fontWeight: 700,
                       fontSize: 'var(--font-size-xs)',
                       color: 'var(--terra)',
@@ -526,7 +526,7 @@ export default function Work() {
                   {/* Title */}
                   <h3
                     style={{
-                      fontFamily: 'DM Sans, sans-serif',
+                      fontFamily: 'var(--display)',
                       fontWeight: 700,
                       fontSize: 'var(--font-size-xl)',
                       color: 'var(--charcoal)',
@@ -539,7 +539,7 @@ export default function Work() {
                   {/* Description */}
                   <p
                     style={{
-                      fontFamily: 'Lora, serif',
+                      fontFamily: 'var(--body)',
                       fontSize: 'var(--font-size-sm)',
                       color: 'var(--dark-gray)',
                       lineHeight: '1.6',
@@ -581,7 +581,7 @@ export default function Work() {
                   {/* Tag */}
                   <div
                     style={{
-                      fontFamily: 'DM Sans, sans-serif',
+                      fontFamily: 'var(--display)',
                       fontWeight: 700,
                       fontSize: 'var(--font-size-xs)',
                       color: 'var(--terra)',
@@ -596,7 +596,7 @@ export default function Work() {
                   {/* Title */}
                   <h3
                     style={{
-                      fontFamily: 'DM Sans, sans-serif',
+                      fontFamily: 'var(--display)',
                       fontWeight: 700,
                       fontSize: 'var(--font-size-xl)',
                       color: 'var(--charcoal)',
@@ -609,7 +609,7 @@ export default function Work() {
                   {/* Description */}
                   <p
                     style={{
-                      fontFamily: 'Lora, serif',
+                      fontFamily: 'var(--body)',
                       fontSize: 'var(--font-size-sm)',
                       color: 'var(--dark-gray)',
                       lineHeight: '1.6',

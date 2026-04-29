@@ -52,7 +52,7 @@ export function Navigation() {
         <Link
           to="/"
           style={{
-            fontFamily: 'DM Sans, sans-serif',
+            fontFamily: 'var(--display)',
             fontWeight: 700,
             fontSize: 'var(--font-size-sm)',
             color: 'var(--charcoal)',
@@ -76,7 +76,7 @@ export function Navigation() {
           <Link
             to="/work"
             style={{
-              fontFamily: 'DM Sans, sans-serif',
+              fontFamily: 'var(--display)',
               fontWeight: 500,
               fontSize: 'var(--font-size-sm)',
               color: 'var(--dark-gray)',
@@ -90,7 +90,7 @@ export function Navigation() {
           <Link
             to="/writing"
             style={{
-              fontFamily: 'DM Sans, sans-serif',
+              fontFamily: 'var(--display)',
               fontWeight: 500,
               fontSize: 'var(--font-size-sm)',
               color: 'var(--dark-gray)',
@@ -104,7 +104,7 @@ export function Navigation() {
           <Link
             to="/podcast"
             style={{
-              fontFamily: 'DM Sans, sans-serif',
+              fontFamily: 'var(--display)',
               fontWeight: 500,
               fontSize: 'var(--font-size-sm)',
               color: 'var(--dark-gray)',
@@ -118,7 +118,7 @@ export function Navigation() {
           <Link
             to="/about"
             style={{
-              fontFamily: 'DM Sans, sans-serif',
+              fontFamily: 'var(--display)',
               fontWeight: 500,
               fontSize: 'var(--font-size-sm)',
               color: 'var(--dark-gray)',
@@ -133,7 +133,7 @@ export function Navigation() {
             to="/hiring"
             className="nav-cta-gold"
             style={{
-              fontFamily: 'DM Sans, sans-serif',
+              fontFamily: 'var(--display)',
               fontWeight: 700,
               fontSize: 'var(--font-size-sm)',
               color: 'var(--charcoal)',
@@ -203,7 +203,7 @@ export function Navigation() {
           <Link
             to="/work"
             style={{
-              fontFamily: 'DM Sans, sans-serif',
+              fontFamily: 'var(--display)',
               fontWeight: 500,
               fontSize: 'var(--font-size-base)',
               color: 'var(--dark-gray)',
@@ -220,7 +220,7 @@ export function Navigation() {
           <Link
             to="/writing"
             style={{
-              fontFamily: 'DM Sans, sans-serif',
+              fontFamily: 'var(--display)',
               fontWeight: 500,
               fontSize: 'var(--font-size-base)',
               color: 'var(--dark-gray)',
@@ -237,7 +237,7 @@ export function Navigation() {
           <Link
             to="/podcast"
             style={{
-              fontFamily: 'DM Sans, sans-serif',
+              fontFamily: 'var(--display)',
               fontWeight: 500,
               fontSize: 'var(--font-size-base)',
               color: 'var(--dark-gray)',
@@ -254,7 +254,7 @@ export function Navigation() {
           <Link
             to="/about"
             style={{
-              fontFamily: 'DM Sans, sans-serif',
+              fontFamily: 'var(--display)',
               fontWeight: 500,
               fontSize: 'var(--font-size-base)',
               color: 'var(--dark-gray)',
@@ -272,7 +272,7 @@ export function Navigation() {
             to="/hiring"
             className="nav-cta-gold"
             style={{
-              fontFamily: 'DM Sans, sans-serif',
+              fontFamily: 'var(--display)',
               fontWeight: 700,
               fontSize: 'var(--font-size-base)',
               color: 'var(--charcoal)',
@@ -340,7 +340,7 @@ export function Navigation() {
         /* Hover states for mobile */
         @media (max-width: 768px) {
           .mobile-menu a:hover {
-            background-color: rgba(31, 83, 100, 0.05);
+            background-color: color-mix(in srgb, var(--teal-dark) 5%, transparent);
           }
           .mobile-menu a:focus {
             outline: 2px solid var(--teal-dark);

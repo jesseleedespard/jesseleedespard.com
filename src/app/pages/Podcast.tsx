@@ -21,7 +21,7 @@ export default function Podcast() {
         }
         
         .podcast-hero-title {
-          font-family: 'DM Sans', sans-serif;
+          font-family: var(--display);
           font-weight: 700;
           font-size: clamp(var(--font-size-2xl), 4.5vw, var(--font-size-3xl));
           color: var(--white);
@@ -103,7 +103,7 @@ export default function Podcast() {
                 alignItems: 'center',
                 justifyContent: 'center',
                 color: 'var(--gray)',
-                fontFamily: 'DM Sans, sans-serif',
+                fontFamily: 'var(--display)',
                 fontSize: 'var(--font-size-sm)',
                 borderRadius: 'var(--radius-md)',
               }}
@@ -116,7 +116,7 @@ export default function Podcast() {
               {/* Eyebrow */}
               <div
                 style={{
-                  fontFamily: 'DM Sans, sans-serif',
+                  fontFamily: 'var(--display)',
                   fontWeight: 700,
                   fontSize: 'var(--font-size-xs)',
                   color: 'var(--gold)',
@@ -135,7 +135,7 @@ export default function Podcast() {
               {/* Tagline */}
               <p
                 style={{
-                  fontFamily: 'Lora, serif',
+                  fontFamily: 'var(--body)',
                   fontSize: 'var(--font-size-lg)',
                   color: 'var(--hero-subtitle-color)',
                   fontStyle: 'italic',
@@ -158,7 +158,7 @@ export default function Podcast() {
         <div style={{ maxWidth: '900px', margin: '0 auto' }}>
             <p
               style={{
-                fontFamily: 'Lora, serif',
+                fontFamily: 'var(--body)',
                 fontSize: 'var(--font-size-base)',
                 color: 'var(--dark-gray)',
                 lineHeight: '1.7',
@@ -169,7 +169,7 @@ export default function Podcast() {
             </p>
             <p
               style={{
-                fontFamily: 'Lora, serif',
+                fontFamily: 'var(--body)',
                 fontSize: 'var(--font-size-base)',
                 color: 'var(--dark-gray)',
                 lineHeight: '1.7',
@@ -180,7 +180,7 @@ export default function Podcast() {
             </p>
             <p
               style={{
-                fontFamily: 'Lora, serif',
+                fontFamily: 'var(--body)',
                 fontSize: 'var(--font-size-base)',
                 color: 'var(--dark-gray)',
                 lineHeight: '1.7',
@@ -204,7 +204,7 @@ export default function Podcast() {
           >
             <h2
               style={{
-                fontFamily: 'DM Sans, sans-serif',
+                fontFamily: 'var(--display)',
                 fontWeight: 700,
                 fontSize: 'var(--font-size-2xl)',
                 color: 'var(--white)',
@@ -215,9 +215,9 @@ export default function Podcast() {
             </h2>
             <p
               style={{
-                fontFamily: 'Lora, serif',
+                fontFamily: 'var(--body)',
                 fontSize: 'var(--font-size-base)',
-                color: 'rgba(255, 255, 255, 0.7)',
+                color: 'var(--hero-subtitle-color-soft)',
                 lineHeight: '1.6',
                 marginBottom: '32px',
               }}
@@ -230,7 +230,7 @@ export default function Podcast() {
               <button
                 className="primary-cta-gold"
                 style={{
-                  fontFamily: 'DM Sans, sans-serif',
+                  fontFamily: 'var(--display)',
                   fontWeight: 700,
                   fontSize: 'var(--font-size-sm)',
                   color: 'var(--charcoal)',
@@ -244,7 +244,7 @@ export default function Podcast() {
               </button>
               <button
                 style={{
-                  fontFamily: 'DM Sans, sans-serif',
+                  fontFamily: 'var(--display)',
                   fontWeight: 700,
                   fontSize: 'var(--font-size-sm)',
                   color: 'var(--white)',
@@ -267,7 +267,7 @@ export default function Podcast() {
         <div style={{ maxWidth: 'var(--max-width-layout)', margin: '0 auto' }}>
           <h2
             style={{
-              fontFamily: 'DM Sans, sans-serif',
+              fontFamily: 'var(--display)',
               fontWeight: 700,
               fontSize: 'var(--font-size-2xl)',
               color: 'var(--charcoal)',
@@ -305,7 +305,7 @@ export default function Podcast() {
                 >
                   <span
                     style={{
-                      fontFamily: 'DM Sans, sans-serif',
+                      fontFamily: 'var(--display)',
                       fontWeight: 700,
                       fontSize: 'var(--font-size-xl)',
                       color: 'var(--charcoal)',
@@ -319,7 +319,7 @@ export default function Podcast() {
                 <div style={{ flex: 1 }}>
                   <h3
                     style={{
-                      fontFamily: 'DM Sans, sans-serif',
+                      fontFamily: 'var(--display)',
                       fontWeight: 700,
                       fontSize: 'var(--font-size-lg)',
                       color: 'var(--charcoal)',
@@ -330,7 +330,7 @@ export default function Podcast() {
                   </h3>
                   <p
                     style={{
-                      fontFamily: 'Lora, serif',
+                      fontFamily: 'var(--body)',
                       fontSize: 'var(--font-size-base)',
                       color: 'var(--dark-gray)',
                       lineHeight: '1.6',
@@ -342,7 +342,7 @@ export default function Podcast() {
                   <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
                     <span
                       style={{
-                        fontFamily: 'DM Sans, sans-serif',
+                        fontFamily: 'var(--display)',
                         fontSize: 'var(--font-size-xs)',
                         color: 'var(--teal-dark)',
                         backgroundColor: 'var(--cream)',
@@ -355,7 +355,7 @@ export default function Podcast() {
                     </span>
                     <span
                       style={{
-                        fontFamily: 'DM Sans, sans-serif',
+                        fontFamily: 'var(--display)',
                         fontSize: 'var(--font-size-xs)',
                         color: 'var(--teal-dark)',
                         backgroundColor: 'var(--cream)',
@@ -368,7 +368,7 @@ export default function Podcast() {
                     </span>
                     <span
                       style={{
-                        fontFamily: 'DM Sans, sans-serif',
+                        fontFamily: 'var(--display)',
                         fontSize: 'var(--font-size-xs)',
                         color: 'var(--teal-dark)',
                         backgroundColor: 'var(--cream)',
@@ -410,7 +410,7 @@ export default function Podcast() {
                 >
                   <span
                     style={{
-                      fontFamily: 'DM Sans, sans-serif',
+                      fontFamily: 'var(--display)',
                       fontWeight: 700,
                       fontSize: 'var(--font-size-xl)',
                       color: 'var(--charcoal)',
@@ -424,7 +424,7 @@ export default function Podcast() {
                 <div style={{ flex: 1 }}>
                   <h3
                     style={{
-                      fontFamily: 'DM Sans, sans-serif',
+                      fontFamily: 'var(--display)',
                       fontWeight: 700,
                       fontSize: 'var(--font-size-lg)',
                       color: 'var(--charcoal)',
@@ -435,7 +435,7 @@ export default function Podcast() {
                   </h3>
                   <p
                     style={{
-                      fontFamily: 'Lora, serif',
+                      fontFamily: 'var(--body)',
                       fontSize: 'var(--font-size-base)',
                       color: 'var(--dark-gray)',
                       lineHeight: '1.6',
@@ -447,7 +447,7 @@ export default function Podcast() {
                   <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
                     <span
                       style={{
-                        fontFamily: 'DM Sans, sans-serif',
+                        fontFamily: 'var(--display)',
                         fontSize: 'var(--font-size-xs)',
                         color: 'var(--terra)',
                         backgroundColor: 'var(--terra-tint)',
@@ -460,7 +460,7 @@ export default function Podcast() {
                     </span>
                     <span
                       style={{
-                        fontFamily: 'DM Sans, sans-serif',
+                        fontFamily: 'var(--display)',
                         fontSize: 'var(--font-size-xs)',
                         color: 'var(--terra)',
                         backgroundColor: 'var(--terra-tint)',
@@ -473,7 +473,7 @@ export default function Podcast() {
                     </span>
                     <span
                       style={{
-                        fontFamily: 'DM Sans, sans-serif',
+                        fontFamily: 'var(--display)',
                         fontSize: 'var(--font-size-xs)',
                         color: 'var(--terra)',
                         backgroundColor: 'var(--terra-tint)',
@@ -515,7 +515,7 @@ export default function Podcast() {
                 >
                   <span
                     style={{
-                      fontFamily: 'DM Sans, sans-serif',
+                      fontFamily: 'var(--display)',
                       fontWeight: 700,
                       fontSize: 'var(--font-size-xl)',
                       color: 'var(--charcoal)',
@@ -529,7 +529,7 @@ export default function Podcast() {
                 <div style={{ flex: 1 }}>
                   <h3
                     style={{
-                      fontFamily: 'DM Sans, sans-serif',
+                      fontFamily: 'var(--display)',
                       fontWeight: 700,
                       fontSize: 'var(--font-size-lg)',
                       color: 'var(--charcoal)',
@@ -540,7 +540,7 @@ export default function Podcast() {
                   </h3>
                   <p
                     style={{
-                      fontFamily: 'Lora, serif',
+                      fontFamily: 'var(--body)',
                       fontSize: 'var(--font-size-base)',
                       color: 'var(--dark-gray)',
                       lineHeight: '1.6',
@@ -552,7 +552,7 @@ export default function Podcast() {
                   <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
                     <span
                       style={{
-                        fontFamily: 'DM Sans, sans-serif',
+                        fontFamily: 'var(--display)',
                         fontSize: 'var(--font-size-xs)',
                         color: 'var(--teal-dark)',
                         backgroundColor: 'var(--cream)',
@@ -565,7 +565,7 @@ export default function Podcast() {
                     </span>
                     <span
                       style={{
-                        fontFamily: 'DM Sans, sans-serif',
+                        fontFamily: 'var(--display)',
                         fontSize: 'var(--font-size-xs)',
                         color: 'var(--teal-dark)',
                         backgroundColor: 'var(--cream)',
@@ -578,7 +578,7 @@ export default function Podcast() {
                     </span>
                     <span
                       style={{
-                        fontFamily: 'DM Sans, sans-serif',
+                        fontFamily: 'var(--display)',
                         fontSize: 'var(--font-size-xs)',
                         color: 'var(--teal-dark)',
                         backgroundColor: 'var(--cream)',
@@ -602,7 +602,7 @@ export default function Podcast() {
         <div style={{ maxWidth: 'var(--max-width-layout)', margin: '0 auto' }}>
           <h2
             style={{
-              fontFamily: 'DM Sans, sans-serif',
+              fontFamily: 'var(--display)',
               fontWeight: 700,
               fontSize: 'var(--font-size-2xl)',
               color: 'var(--charcoal)',
@@ -613,7 +613,7 @@ export default function Podcast() {
           </h2>
           <p
             style={{
-              fontFamily: 'Lora, serif',
+              fontFamily: 'var(--body)',
               fontSize: 'var(--font-size-base)',
               color: 'var(--dark-gray)',
               marginBottom: '48px',
@@ -645,7 +645,7 @@ export default function Podcast() {
                   alignItems: 'center',
                   justifyContent: 'center',
                   color: 'var(--charcoal)',
-                  fontFamily: 'DM Sans, sans-serif',
+                  fontFamily: 'var(--display)',
                   fontWeight: 700,
                   fontSize: 'var(--font-size-2xl)',
                 }}
@@ -654,7 +654,7 @@ export default function Podcast() {
               </div>
               <h3
                 style={{
-                  fontFamily: 'DM Sans, sans-serif',
+                  fontFamily: 'var(--display)',
                   fontWeight: 700,
                   fontSize: 'var(--font-size-lg)',
                   color: 'var(--charcoal)',
@@ -666,7 +666,7 @@ export default function Podcast() {
               <button
                 className="podcast-subscribe-btn"
                 style={{
-                  fontFamily: 'DM Sans, sans-serif',
+                  fontFamily: 'var(--display)',
                   fontWeight: 700,
                   fontSize: 'var(--font-size-sm)',
                   color: 'var(--teal-dark)',
@@ -702,7 +702,7 @@ export default function Podcast() {
                   alignItems: 'center',
                   justifyContent: 'center',
                   color: 'var(--white)',
-                  fontFamily: 'DM Sans, sans-serif',
+                  fontFamily: 'var(--display)',
                   fontWeight: 700,
                   fontSize: 'var(--font-size-2xl)',
                 }}
@@ -711,7 +711,7 @@ export default function Podcast() {
               </div>
               <h3
                 style={{
-                  fontFamily: 'DM Sans, sans-serif',
+                  fontFamily: 'var(--display)',
                   fontWeight: 700,
                   fontSize: 'var(--font-size-lg)',
                   color: 'var(--charcoal)',
@@ -723,7 +723,7 @@ export default function Podcast() {
               <button
                 className="podcast-subscribe-btn"
                 style={{
-                  fontFamily: 'DM Sans, sans-serif',
+                  fontFamily: 'var(--display)',
                   fontWeight: 700,
                   fontSize: 'var(--font-size-sm)',
                   color: 'var(--teal-dark)',
@@ -764,7 +764,7 @@ export default function Podcast() {
               </div>
               <h3
                 style={{
-                  fontFamily: 'DM Sans, sans-serif',
+                  fontFamily: 'var(--display)',
                   fontWeight: 700,
                   fontSize: 'var(--font-size-lg)',
                   color: 'var(--charcoal)',
@@ -776,7 +776,7 @@ export default function Podcast() {
               <button
                 className="podcast-subscribe-btn"
                 style={{
-                  fontFamily: 'DM Sans, sans-serif',
+                  fontFamily: 'var(--display)',
                   fontWeight: 700,
                   fontSize: 'var(--font-size-sm)',
                   color: 'var(--teal-dark)',

@@ -13,7 +13,7 @@ export default function Home() {
         }
         
         .home-hero-title {
-          font-family: 'DM Sans', sans-serif;
+          font-family: var(--display);
           font-weight: 700;
           font-size: clamp(var(--font-size-2xl), 4.5vw, var(--font-size-3xl));
           color: var(--white);
@@ -23,7 +23,7 @@ export default function Home() {
         }
         
         .home-hero-subtitle {
-          font-family: 'Lora', serif;
+          font-family: var(--body);
           font-weight: 400;
           font-size: var(--font-size-lg);
           color: var(--hero-subtitle-color);
@@ -160,7 +160,7 @@ export default function Home() {
             {/* Eyebrow */}
             <div
               style={{
-                fontFamily: 'DM Sans, sans-serif',
+                fontFamily: 'var(--display)',
                 fontWeight: 700,
                 fontSize: 'var(--font-size-xs)',
                 color: 'var(--gold)',
@@ -186,7 +186,7 @@ export default function Home() {
               to="/hiring"
               className="primary-cta-gold"
               style={{
-                fontFamily: 'DM Sans, sans-serif',
+                fontFamily: 'var(--display)',
                 fontWeight: 700,
                 fontSize: 'var(--font-size-sm)',
                 color: 'var(--charcoal)',
@@ -225,7 +225,7 @@ export default function Home() {
           {/* Eyebrow */}
           <div
             style={{
-              fontFamily: 'DM Sans, sans-serif',
+              fontFamily: 'var(--display)',
               fontWeight: 700,
               fontSize: 'var(--font-size-xs)',
               color: 'var(--teal-dark)',
@@ -241,7 +241,7 @@ export default function Home() {
           <h2
             className="home-section-title"
             style={{
-              fontFamily: 'DM Sans, sans-serif',
+              fontFamily: 'var(--display)',
               fontWeight: 700,
               color: 'var(--charcoal)',
               marginBottom: '48px',
@@ -271,7 +271,7 @@ export default function Home() {
               <div style={{ padding: '32px' }}>
                 <div
                   style={{
-                    fontFamily: 'DM Sans, sans-serif',
+                    fontFamily: 'var(--display)',
                     fontWeight: 700,
                     fontSize: 'var(--font-size-xs)',
                     color: 'var(--teal-dark)',
@@ -285,7 +285,7 @@ export default function Home() {
                 <h3
                   className="home-card-title"
                   style={{
-                    fontFamily: 'DM Sans, sans-serif',
+                    fontFamily: 'var(--display)',
                     fontWeight: 700,
                     color: 'var(--charcoal)',
                     marginBottom: '16px',
@@ -295,7 +295,7 @@ export default function Home() {
                 </h3>
                 <p
                   style={{
-                    fontFamily: 'Lora, serif',
+                    fontFamily: 'var(--body)',
                     fontSize: 'var(--font-size-base)',
                     color: 'var(--dark-gray)',
                     lineHeight: '1.6',
@@ -341,10 +341,10 @@ export default function Home() {
                   boxSizing: 'border-box',
                 }}
               >
-                <p style={{ fontFamily: 'Lora, serif', fontSize: 'var(--font-size-base)', color: 'var(--white)', fontStyle: 'italic', lineHeight: 1.6, margin: '0 0 12px' }}>
+                <p style={{ fontFamily: 'var(--body)', fontSize: 'var(--font-size-base)', color: 'var(--white)', fontStyle: 'italic', lineHeight: 1.6, margin: '0 0 12px' }}>
                   &ldquo;I didn&apos;t gatekeep research. I made it visible, made myself vulnerable, and let people come to it on their own terms.&rdquo;
                 </p>
-                <p style={{ fontFamily: 'DM Sans, sans-serif', fontSize: 'var(--font-size-xs)', color: 'var(--gold)', margin: 0 }}>
+                <p style={{ fontFamily: 'var(--display)', fontSize: 'var(--font-size-xs)', color: 'var(--gold)', margin: 0 }}>
                   — Jesse Lee Despard
                 </p>
               </div>
@@ -353,7 +353,7 @@ export default function Home() {
               <div style={{ padding: '32px' }}>
                 <div
                   style={{
-                    fontFamily: 'DM Sans, sans-serif',
+                    fontFamily: 'var(--display)',
                     fontWeight: 700,
                     fontSize: 'var(--font-size-xs)',
                     color: 'var(--terra)',
@@ -367,7 +367,7 @@ export default function Home() {
                 <h3
                   className="home-card-title"
                   style={{
-                    fontFamily: 'DM Sans, sans-serif',
+                    fontFamily: 'var(--display)',
                     fontWeight: 700,
                     color: 'var(--charcoal)',
                     marginBottom: '16px',
@@ -377,7 +377,7 @@ export default function Home() {
                 </h3>
                 <p
                   style={{
-                    fontFamily: 'Lora, serif',
+                    fontFamily: 'var(--body)',
                     fontSize: 'var(--font-size-base)',
                     color: 'var(--dark-gray)',
                     lineHeight: '1.6',
@@ -427,7 +427,7 @@ export default function Home() {
           {/* Eyebrow */}
           <div
             style={{
-              fontFamily: 'DM Sans, sans-serif',
+              fontFamily: 'var(--display)',
               fontWeight: 700,
               fontSize: 'var(--font-size-xs)',
               color: 'var(--teal-dark)',
@@ -452,7 +452,7 @@ export default function Home() {
             <h3
               className="home-featured-title"
               style={{
-                fontFamily: 'DM Sans, sans-serif',
+                fontFamily: 'var(--display)',
                 fontWeight: 700,
                 color: 'var(--charcoal)',
                 marginBottom: '12px',
@@ -462,7 +462,7 @@ export default function Home() {
             </h3>
             <p
               style={{
-                fontFamily: 'Lora, serif',
+                fontFamily: 'var(--body)',
                 fontSize: 'var(--font-size-base)',
                 fontStyle: 'italic',
                 color: 'var(--dark-gray)',
@@ -474,7 +474,7 @@ export default function Home() {
             </p>
             <p
               style={{
-                fontFamily: 'Lora, serif',
+                fontFamily: 'var(--body)',
                 fontSize: 'var(--font-size-base)',
                 color: 'var(--dark-gray)',
                 lineHeight: '1.6',
@@ -508,7 +508,7 @@ export default function Home() {
           {/* Eyebrow */}
           <div
             style={{
-              fontFamily: 'DM Sans, sans-serif',
+              fontFamily: 'var(--display)',
               fontWeight: 700,
               fontSize: 'var(--font-size-xs)',
               color: 'var(--teal-dark)',
@@ -531,7 +531,7 @@ export default function Home() {
             <h3
               className="home-podcast-title"
               style={{
-                fontFamily: 'DM Sans, sans-serif',
+                fontFamily: 'var(--display)',
                 fontWeight: 700,
                 color: 'var(--white)',
                 marginBottom: '16px',
@@ -542,9 +542,9 @@ export default function Home() {
             <div style={{ display: 'flex', alignItems: 'center', gap: '32px', flexWrap: 'wrap' }}>
               <p
                 style={{
-                  fontFamily: 'Lora, serif',
+                  fontFamily: 'var(--body)',
                   fontSize: 'var(--font-size-base)',
-                  color: 'rgba(255, 255, 255, 0.7)',
+                  color: 'var(--hero-subtitle-color-soft)',
                   lineHeight: '1.6',
                   margin: 0,
                   flex: 1,
@@ -557,7 +557,7 @@ export default function Home() {
                 to="/podcast"
                 className="podcast-listen-btn"
                 style={{
-                  fontFamily: 'DM Sans, sans-serif',
+                  fontFamily: 'var(--display)',
                   fontWeight: 700,
                   fontSize: 'var(--font-size-sm)',
                   color: 'var(--charcoal)',
