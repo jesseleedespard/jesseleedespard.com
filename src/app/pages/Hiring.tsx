@@ -311,7 +311,7 @@ export default function Hiring() {
       <section className="hiring-section-padding" style={{ backgroundColor: 'var(--cream)' }}>
         <div style={{ maxWidth: 'var(--max-width-layout)', margin: '0 auto' }}>
           {/* Eyebrow */}
-          <div
+          <h2
             style={{
               fontFamily: 'var(--display)',
               fontWeight: 700,
@@ -323,7 +323,7 @@ export default function Hiring() {
             }}
           >
             HOW I CAN HELP
-          </div>
+          </h2>
 
           {/* Service Cards */}
           <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-gap)' }}>
@@ -492,7 +492,7 @@ export default function Hiring() {
       {/* Who I Work With */}
       <section className="hiring-section-padding" style={{ backgroundColor: 'var(--white)' }}>
         <div style={{ maxWidth: 'var(--max-width-layout)', margin: '0 auto' }}>
-          <div
+          <h2
             style={{
               fontFamily: 'var(--display)',
               fontWeight: 700,
@@ -504,7 +504,7 @@ export default function Hiring() {
             }}
           >
             WHO I WORK WITH
-          </div>
+          </h2>
 
           <div className="hiring-who-grid">
             <div
@@ -599,7 +599,7 @@ export default function Hiring() {
       <section className="hiring-section-padding" style={{ backgroundColor: 'var(--charcoal)' }}>
         <div style={{ maxWidth: 'var(--max-width-layout)', margin: '0 auto' }}>
           {/* Eyebrow */}
-          <div
+          <h2
             style={{
               fontFamily: 'var(--display)',
               fontWeight: 700,
@@ -611,7 +611,7 @@ export default function Hiring() {
             }}
           >
             THE PROCESS
-          </div>
+          </h2>
 
           {/* Three Numbered Steps */}
           <div className="hiring-steps-grid">
@@ -730,7 +730,7 @@ export default function Hiring() {
       <section className="hiring-section-padding" style={{ backgroundColor: 'var(--cream)' }}>
         <div style={{ maxWidth: 'var(--max-width-layout)', margin: '0 auto' }}>
           {/* Eyebrow */}
-          <div
+          <h2
             style={{
               fontFamily: 'var(--display)',
               fontWeight: 700,
@@ -742,7 +742,7 @@ export default function Hiring() {
             }}
           >
             TESTIMONIALS
-          </div>
+          </h2>
 
           <div className="about-testimonials-grid">
             <TestimonialCard
@@ -781,7 +781,7 @@ export default function Hiring() {
       {/* Bottom: book + email */}
       <section className="hiring-section-padding" style={{ backgroundColor: 'var(--white)' }}>
         <div style={{ maxWidth: 'var(--max-width-layout)', margin: '0 auto' }}>
-          <div
+          <h2
             style={{
               fontFamily: 'var(--display)',
               fontWeight: 700,
@@ -793,7 +793,7 @@ export default function Hiring() {
             }}
           >
             Let's Chat
-          </div>
+          </h2>
           <div className="hiring-bottom-grid">
             <div
               style={{
