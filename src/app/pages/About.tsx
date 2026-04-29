@@ -303,7 +303,7 @@ export default function About() {
       <section className="about-section-padding" style={{ backgroundColor: 'var(--white)' }}>
         <div style={{ maxWidth: 'var(--max-width-layout)', margin: '0 auto' }}>
           {/* Eyebrow */}
-          <div
+          <h2
             style={{
               fontFamily: 'var(--display)',
               fontWeight: 700,
@@ -315,7 +315,7 @@ export default function About() {
             }}
           >
             My Background
-          </div>
+          </h2>
 
           {/* Long Body Text */}
           <div
@@ -381,7 +381,7 @@ export default function About() {
       <section className="about-section-padding" style={{ backgroundColor: 'var(--cream)' }}>
         <div style={{ maxWidth: 'var(--max-width-layout)', margin: '0 auto' }}>
           {/* Eyebrow */}
-          <div
+          <h2
             style={{
               fontFamily: 'var(--display)',
               fontWeight: 700,
@@ -393,7 +393,7 @@ export default function About() {
             }}
           >
             HOW I WORK
-          </div>
+          </h2>
 
           {/* Three Numbered Items */}
           <div className="about-values-grid">
@@ -512,7 +512,7 @@ export default function About() {
       <section className="about-section-padding" style={{ backgroundColor: 'var(--white)' }}>
         <div style={{ maxWidth: 'var(--max-width-layout)', margin: '0 auto' }}>
           {/* Eyebrow */}
-          <div
+          <h2
             style={{
               fontFamily: 'var(--display)',
               fontWeight: 700,
@@ -524,7 +524,7 @@ export default function About() {
             }}
           >
             EXPERIENCE
-          </div>
+          </h2>
 
           {/* Three Cards */}
           <div className="about-experience-grid">
@@ -700,7 +700,7 @@ export default function About() {
       <section className="about-section-padding" style={{ backgroundColor: 'var(--cream)' }}>
         <div style={{ maxWidth: 'var(--max-width-layout)', margin: '0 auto' }}>
           {/* Eyebrow */}
-          <div
+          <h2
             style={{
               fontFamily: 'var(--display)',
               fontWeight: 700,
@@ -712,7 +712,7 @@ export default function About() {
             }}
           >
             TESTIMONIALS
-          </div>
+          </h2>
 
           <div className="about-testimonials-grid">
             <TestimonialCard
