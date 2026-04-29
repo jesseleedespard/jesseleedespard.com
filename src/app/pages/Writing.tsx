@@ -288,7 +288,7 @@ export default function Writing() {
         .writing-legend {
           display: flex;
           flex-wrap: wrap;
-          gap: 24px 32px;
+          gap: var(--space-gap-mobile) var(--space-gap);
           align-items: center;
           margin-top: 0;
         }
@@ -296,7 +296,7 @@ export default function Writing() {
         .writing-legend-item {
           display: flex;
           align-items: center;
-          gap: 8px;
+          gap: var(--space-xs);
         }
 
         .writing-legend-dot {

@@ -80,7 +80,7 @@ export default function Hiring() {
         .hiring-steps-grid {
           display: grid;
           grid-template-columns: 1fr 1fr 1fr;
-          gap: 48px;
+          gap: var(--space-page-side);
         }
         
         .hiring-section-padding {
