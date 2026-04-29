@@ -107,6 +107,8 @@ export default function Work() {
         </div>
       </section>
 
+      <h2 className="visually-hidden">Recent Work</h2>
+
       {/* Tab Bar */}
       <section className="work-tab-section">
         <div style={{ maxWidth: 'var(--max-width-layout)', margin: '0 auto' }}>
