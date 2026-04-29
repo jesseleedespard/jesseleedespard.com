@@ -17,7 +17,6 @@ import { TabButton } from '../components/TabButton';
 import { ComingSoonBadge } from '../components/ComingSoonBadge';
 import { CTAStrip } from '../components/CTAStrip';
 import { Divider } from '../components/Divider';
-import { Hero } from '../components/Hero';
 import { Section } from '../components/Section';
 import { Navigation } from '../components/Navigation';
 import { Footer } from '../components/Footer';
@@ -1601,12 +1600,18 @@ export default function DesignSystem() {
               <div className="text-sm mb-4" style={{ fontFamily: 'var(--display)', fontWeight: 700, color: '#444444' }}>
                 Hero Component
               </div>
-              <Hero
-                eyebrow="UX RESEARCH LEADER"
-                headline="I've spent a decade studying people so products can serve them better."
-                subheading="I build the research practices, teams, and frameworks that help companies make better decisions."
-                cta={<Button variant="primary">Hiring? →</Button>}
-              />
+              <section style={{ backgroundColor: 'var(--charcoal)', padding: 'var(--space-hero) var(--space-page-side)' }}>
+                <div style={{ maxWidth: 'var(--max-width-layout)', margin: '0 auto' }}>
+                  <Eyebrow>UX RESEARCH LEADER</Eyebrow>
+                  <h1 style={{ fontFamily: 'var(--display)', fontWeight: 700, fontSize: 'clamp(var(--font-size-2xl), 4.5vw, var(--font-size-3xl))', color: 'var(--white)', lineHeight: '1.15', marginBottom: '24px', maxWidth: '900px' }}>
+                    I've spent a decade studying people so products can serve them better.
+                  </h1>
+                  <p style={{ fontFamily: 'var(--body)', fontWeight: 400, fontSize: 'var(--font-size-lg)', color: 'var(--hero-subtitle-color)', lineHeight: '1.6', marginBottom: '36px', maxWidth: '700px', fontStyle: 'italic' }}>
+                    I build the research practices, teams, and frameworks that help companies make better decisions.
+                  </p>
+                  <Button variant="primary">Hiring? →</Button>
+                </div>
+              </section>
             </div>
 
             {/* Navigation Component */}
