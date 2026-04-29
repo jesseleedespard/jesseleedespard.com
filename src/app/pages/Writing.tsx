@@ -125,7 +125,7 @@ const ARTICLES: WritingArticle[] = [
 
 function ethicsBadgePillStyle(badge: string): CSSProperties {
   const base: CSSProperties = {
-    fontFamily: 'DM Sans, sans-serif',
+    fontFamily: 'var(--display)',
     fontWeight: 700,
     fontSize: 'var(--font-size-xs)',
     letterSpacing: '0.02em',
@@ -177,7 +177,7 @@ export default function Writing() {
         }
 
         .writing-hero-title {
-          font-family: 'DM Sans', sans-serif;
+          font-family: var(--display);
           font-weight: 700;
           font-size: clamp(var(--font-size-2xl), 4.5vw, var(--font-size-3xl));
           color: var(--white);
@@ -186,7 +186,7 @@ export default function Writing() {
         }
 
         .writing-hero-subtitle {
-          font-family: 'Lora', serif;
+          font-family: var(--body);
           font-weight: 400;
           font-style: italic;
           font-size: var(--font-size-lg);
@@ -206,7 +206,7 @@ export default function Writing() {
         }
 
         .writing-section-label-teal {
-          font-family: 'DM Sans', sans-serif;
+          font-family: var(--display);
           font-weight: 700;
           font-size: var(--font-size-xs);
           letter-spacing: 1.5px;
@@ -231,7 +231,7 @@ export default function Writing() {
         }
 
         .writing-pdf-btn {
-          font-family: 'DM Sans', sans-serif;
+          font-family: var(--display);
           font-weight: 700;
           font-size: var(--font-size-xs);
           color: var(--teal-dark);
@@ -261,7 +261,7 @@ export default function Writing() {
         }
 
         .writing-intro-muted {
-          font-family: 'DM Sans', sans-serif;
+          font-family: var(--display);
           font-size: var(--font-size-sm);
           color: var(--gray);
           line-height: 1.5;
@@ -269,7 +269,7 @@ export default function Writing() {
         }
 
         .writing-contrib-note {
-          font-family: 'DM Sans', sans-serif;
+          font-family: var(--display);
           font-size: 13px;
           font-style: italic;
           color: var(--terra);
@@ -278,7 +278,7 @@ export default function Writing() {
 
         /* Ethics tab: series framing copy as body prose (not a card). */
         .writing-ethics-series-intro {
-          font-family: 'Lora', serif;
+          font-family: var(--body);
           font-size: 17px;
           color: var(--dark-gray);
           line-height: 1.65;
@@ -307,7 +307,7 @@ export default function Writing() {
         }
 
         .writing-legend-label {
-          font-family: 'DM Sans', sans-serif;
+          font-family: var(--display);
           font-size: 13px;
           font-weight: 500;
           color: var(--dark-gray);
@@ -358,7 +358,7 @@ export default function Writing() {
         }
 
         .writing-medium-strip p {
-          font-family: 'Lora', serif;
+          font-family: var(--body);
           font-size: var(--font-size-base);
           color: var(--dark-gray);
           margin: 0;
@@ -366,7 +366,7 @@ export default function Writing() {
         }
 
         .writing-medium-follow {
-          font-family: 'DM Sans', sans-serif;
+          font-family: var(--display);
           font-weight: 700;
           font-size: var(--font-size-sm);
           color: var(--teal);
@@ -385,7 +385,7 @@ export default function Writing() {
         }
 
         .writing-card-link {
-          font-family: 'DM Sans', sans-serif;
+          font-family: var(--display);
           font-weight: 700;
           font-size: var(--font-size-sm);
           color: var(--teal-dark);
@@ -446,7 +446,7 @@ export default function Writing() {
         <div style={{ maxWidth: 'var(--max-width-layout)', margin: '0 auto' }}>
           <div
             style={{
-              fontFamily: 'DM Sans, sans-serif',
+              fontFamily: 'var(--display)',
               fontWeight: 700,
               fontSize: 'var(--font-size-xs)',
               color: 'var(--gold)',
@@ -471,7 +471,7 @@ export default function Writing() {
               type="button"
               onClick={() => setActiveTab('academic')}
               style={{
-                fontFamily: 'DM Sans, sans-serif',
+                fontFamily: 'var(--display)',
                 fontWeight: activeTab === 'academic' ? 700 : 500,
                 fontSize: '15px',
                 color: activeTab === 'academic' ? 'var(--white)' : 'var(--writing-tab-inactive)',
@@ -488,7 +488,7 @@ export default function Writing() {
               Academic Work
               <span
                 style={{
-                  fontFamily: 'DM Sans, sans-serif',
+                  fontFamily: 'var(--display)',
                   fontWeight: 700,
                   fontSize: 'var(--font-size-xs)',
                   color: activeTab === 'academic' ? 'var(--white)' : 'var(--charcoal)',
@@ -506,7 +506,7 @@ export default function Writing() {
               type="button"
               onClick={() => setActiveTab('ethics')}
               style={{
-                fontFamily: 'DM Sans, sans-serif',
+                fontFamily: 'var(--display)',
                 fontWeight: activeTab === 'ethics' ? 700 : 500,
                 fontSize: '15px',
                 color: activeTab === 'ethics' ? 'var(--white)' : 'var(--writing-tab-inactive)',
@@ -523,7 +523,7 @@ export default function Writing() {
               Ethics Arc
               <span
                 style={{
-                  fontFamily: 'DM Sans, sans-serif',
+                  fontFamily: 'var(--display)',
                   fontWeight: 700,
                   fontSize: 'var(--font-size-xs)',
                   color: activeTab === 'ethics' ? 'var(--white)' : 'var(--charcoal)',
@@ -550,7 +550,7 @@ export default function Writing() {
                 <article key={pub.id} className="writing-pub-card">
                   <h2
                     style={{
-                      fontFamily: 'DM Sans, sans-serif',
+                      fontFamily: 'var(--display)',
                       fontWeight: 700,
                       fontSize: '19px',
                       color: 'var(--charcoal)',
@@ -562,7 +562,7 @@ export default function Writing() {
                   </h2>
                   <p
                     style={{
-                      fontFamily: 'Lora, serif',
+                      fontFamily: 'var(--body)',
                       fontSize: 'var(--font-size-base)',
                       color: 'var(--dark-gray)',
                       lineHeight: 1.65,
@@ -573,7 +573,7 @@ export default function Writing() {
                   </p>
                   <p
                     style={{
-                      fontFamily: 'Lora, serif',
+                      fontFamily: 'var(--body)',
                       fontSize: 'var(--font-size-sm)',
                       color: 'var(--dark-gray)',
                       lineHeight: 1.6,
@@ -605,7 +605,7 @@ export default function Writing() {
                 <article key={pub.id} className="writing-pub-card writing-pub-card--contribution">
                   <h2
                     style={{
-                      fontFamily: 'DM Sans, sans-serif',
+                      fontFamily: 'var(--display)',
                       fontWeight: 700,
                       fontSize: '19px',
                       color: 'var(--charcoal)',
@@ -618,7 +618,7 @@ export default function Writing() {
                   {pub.contributionNote && <p className="writing-contrib-note">{pub.contributionNote}</p>}
                   <p
                     style={{
-                      fontFamily: 'Lora, serif',
+                      fontFamily: 'var(--body)',
                       fontSize: 'var(--font-size-base)',
                       color: 'var(--dark-gray)',
                       lineHeight: 1.65,
@@ -629,7 +629,7 @@ export default function Writing() {
                   </p>
                   <p
                     style={{
-                      fontFamily: 'Lora, serif',
+                      fontFamily: 'var(--body)',
                       fontSize: 'var(--font-size-sm)',
                       color: 'var(--dark-gray)',
                       lineHeight: 1.6,
@@ -694,7 +694,7 @@ export default function Writing() {
                         {article.scene && (
                           <span
                             style={{
-                              fontFamily: 'DM Sans, sans-serif',
+                              fontFamily: 'var(--display)',
                               fontSize: '13px',
                               color: 'var(--gray)',
                             }}
@@ -705,7 +705,7 @@ export default function Writing() {
                       </div>
                       <h2
                         style={{
-                          fontFamily: 'DM Sans, sans-serif',
+                          fontFamily: 'var(--display)',
                           fontWeight: 700,
                           fontSize: 'var(--font-size-xl)',
                           color: 'var(--charcoal)',
@@ -718,7 +718,7 @@ export default function Writing() {
                       {article.subtitle && (
                         <p
                           style={{
-                            fontFamily: 'DM Sans, sans-serif',
+                            fontFamily: 'var(--display)',
                             fontSize: '15px',
                             color: 'var(--teal-dark)',
                             marginBottom: '16px',
@@ -730,7 +730,7 @@ export default function Writing() {
                       )}
                       <p
                         style={{
-                          fontFamily: 'Lora, serif',
+                          fontFamily: 'var(--body)',
                           fontSize: 'var(--font-size-base)',
                           color: 'var(--dark-gray)',
                           lineHeight: 1.65,
@@ -742,7 +742,7 @@ export default function Writing() {
                       <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', alignItems: 'stretch' }}>
                         <span
                           style={{
-                            fontFamily: 'DM Sans, sans-serif',
+                            fontFamily: 'var(--display)',
                             fontSize: '13px',
                             color: 'var(--gray)',
                             alignSelf: 'flex-start',

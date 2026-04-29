@@ -40,7 +40,7 @@ export function CaseStudyCard({
           alignItems: 'center',
           justifyContent: 'center',
           color: 'var(--gray)',
-          fontFamily: 'DM Sans, sans-serif',
+          fontFamily: 'var(--display)',
           fontSize: 'var(--font-size-sm)',
         }}
       >
@@ -51,7 +51,7 @@ export function CaseStudyCard({
       <div style={{ padding: 'var(--space-card)' }}>
         <div
           style={{
-            fontFamily: 'DM Sans, sans-serif',
+            fontFamily: 'var(--display)',
             fontWeight: 700,
             fontSize: 'var(--font-size-xs)',
             color: tagColor,
@@ -64,7 +64,7 @@ export function CaseStudyCard({
         </div>
         <h3
           style={{
-            fontFamily: 'DM Sans, sans-serif',
+            fontFamily: 'var(--display)',
             fontWeight: 700,
             fontSize: 'var(--font-size-lg)',
             color: 'var(--charcoal)',
@@ -75,7 +75,7 @@ export function CaseStudyCard({
         </h3>
         <p
           style={{
-            fontFamily: 'Lora, serif',
+            fontFamily: 'var(--body)',
             fontSize: 'var(--font-size-base)',
             color: 'var(--dark-gray)',
             lineHeight: '1.6',
@@ -88,7 +88,7 @@ export function CaseStudyCard({
           <Link
             to={linkTo}
             style={{
-              fontFamily: 'DM Sans, sans-serif',
+              fontFamily: 'var(--display)',
               fontWeight: 700,
               fontSize: 'var(--font-size-sm)',
               color: ctaColor,

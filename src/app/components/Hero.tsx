@@ -27,7 +27,7 @@ export function Hero({
 
         <h1
           style={{
-            fontFamily: 'DM Sans, sans-serif',
+            fontFamily: 'var(--display)',
             fontWeight: 700,
             fontSize: '52px',
             color: '#FFFFFF',
@@ -41,7 +41,7 @@ export function Hero({
 
         <p
           style={{
-            fontFamily: 'Lora, serif',
+            fontFamily: 'var(--body)',
             fontWeight: 400,
             fontSize: '18px',
             color: 'rgba(255, 255, 255, 0.65)',

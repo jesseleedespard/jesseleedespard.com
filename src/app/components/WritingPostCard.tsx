@@ -44,7 +44,7 @@ export function WritingPostCard({
         <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '16px' }}>
           <span
             style={{
-              fontFamily: 'DM Sans, sans-serif',
+              fontFamily: 'var(--display)',
               fontWeight: 700,
               fontSize: 'var(--font-size-xs)',
               color: badgeColor,
@@ -56,7 +56,7 @@ export function WritingPostCard({
           </span>
           <span
             style={{
-              fontFamily: 'DM Sans, sans-serif',
+              fontFamily: 'var(--display)',
               fontSize: 'var(--font-size-sm)',
               color: 'var(--dark-gray)',
             }}
@@ -68,7 +68,7 @@ export function WritingPostCard({
         {/* Title */}
         <h3
           style={{
-            fontFamily: 'DM Sans, sans-serif',
+            fontFamily: 'var(--display)',
             fontWeight: 700,
             fontSize: 'var(--font-size-xl)',
             color: 'var(--charcoal)',
@@ -81,7 +81,7 @@ export function WritingPostCard({
         {/* Subtitle */}
         <p
           style={{
-            fontFamily: 'DM Sans, sans-serif',
+            fontFamily: 'var(--display)',
             fontSize: 'var(--font-size-base)',
             color: subtitleColor,
             marginBottom: '16px',
@@ -93,7 +93,7 @@ export function WritingPostCard({
         {/* Excerpt */}
         <p
           style={{
-            fontFamily: 'Lora, serif',
+            fontFamily: 'var(--body)',
             fontSize: 'var(--font-size-base)',
             color: 'var(--dark-gray)',
             lineHeight: '1.6',
@@ -107,7 +107,7 @@ export function WritingPostCard({
         <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', alignItems: 'stretch' }}>
           <span
             style={{
-              fontFamily: 'DM Sans, sans-serif',
+              fontFamily: 'var(--display)',
               fontSize: 'var(--font-size-sm)',
               color: 'var(--dark-gray)',
               alignSelf: 'flex-start',
@@ -119,7 +119,7 @@ export function WritingPostCard({
             <Link
               to={linkTo}
               style={{
-                fontFamily: 'DM Sans, sans-serif',
+                fontFamily: 'var(--display)',
                 fontWeight: 700,
                 fontSize: 'var(--font-size-sm)',
                 color: linkColor,

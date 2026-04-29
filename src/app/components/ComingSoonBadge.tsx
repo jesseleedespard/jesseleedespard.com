@@ -24,7 +24,7 @@ export function ComingSoonBadge() {
         />
         <span
           style={{
-            fontFamily: 'DM Sans, sans-serif',
+            fontFamily: 'var(--display)',
             fontWeight: 700,
             fontSize: 'var(--font-size-xs)',
             color: 'var(--charcoal)',

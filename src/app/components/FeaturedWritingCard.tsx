@@ -32,7 +32,7 @@ export function FeaturedWritingCard({
     >
       <h3
         style={{
-          fontFamily: 'DM Sans, sans-serif',
+          fontFamily: 'var(--display)',
           fontWeight: 700,
           fontSize: 'var(--font-size-xl)',
           color: 'var(--charcoal)',
@@ -43,7 +43,7 @@ export function FeaturedWritingCard({
       </h3>
       <p
         style={{
-          fontFamily: 'Lora, serif',
+          fontFamily: 'var(--body)',
           fontSize: 'var(--font-size-base)',
           color: 'var(--dark-gray)',
           lineHeight: '1.6',
@@ -56,7 +56,7 @@ export function FeaturedWritingCard({
         <Link
           to={primaryLinkTo}
           style={{
-            fontFamily: 'DM Sans, sans-serif',
+            fontFamily: 'var(--display)',
             fontWeight: 700,
             fontSize: 'var(--font-size-sm)',
             color: 'var(--teal-dark)',
@@ -70,7 +70,7 @@ export function FeaturedWritingCard({
           <Link
             to={secondaryLinkTo}
             style={{
-              fontFamily: 'DM Sans, sans-serif',
+              fontFamily: 'var(--display)',
               fontWeight: 700,
               fontSize: 'var(--font-size-sm)',
               color: 'var(--teal-dark)',

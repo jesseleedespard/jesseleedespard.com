@@ -42,7 +42,7 @@ export default function DesignSystem() {
       name: 'Heading 1',
       specs: 'DM Sans Bold, 48px, #1E1E1E',
       style: {
-        fontFamily: 'DM Sans, sans-serif',
+        fontFamily: 'var(--display)',
         fontWeight: 700,
         fontSize: 'var(--font-size-3xl)',
         color: '#1E1E1E',
@@ -53,7 +53,7 @@ export default function DesignSystem() {
       name: 'Heading 2',
       specs: 'DM Sans Bold, 32px, #1E1E1E',
       style: {
-        fontFamily: 'DM Sans, sans-serif',
+        fontFamily: 'var(--display)',
         fontWeight: 700,
         fontSize: 'var(--font-size-2xl)',
         color: '#1E1E1E',
@@ -64,7 +64,7 @@ export default function DesignSystem() {
       name: 'Heading 3',
       specs: 'DM Sans Bold, 24px, #1E1E1E',
       style: {
-        fontFamily: 'DM Sans, sans-serif',
+        fontFamily: 'var(--display)',
         fontWeight: 700,
         fontSize: 'var(--font-size-xl)',
         color: '#1E1E1E',
@@ -75,7 +75,7 @@ export default function DesignSystem() {
       name: 'Nav Link',
       specs: 'DM Sans Medium, 14px, #444444',
       style: {
-        fontFamily: 'DM Sans, sans-serif',
+        fontFamily: 'var(--display)',
         fontWeight: 500,
         fontSize: 'var(--font-size-sm)',
         color: '#444444',
@@ -86,7 +86,7 @@ export default function DesignSystem() {
       name: 'Label/Eyebrow',
       specs: 'DM Sans Bold, 12px, #1F5364, letter spacing 2px, uppercase',
       style: {
-        fontFamily: 'DM Sans, sans-serif',
+        fontFamily: 'var(--display)',
         fontWeight: 700,
         fontSize: 'var(--font-size-xs)',
         color: '#1F5364',
@@ -99,7 +99,7 @@ export default function DesignSystem() {
       name: 'Button Text',
       specs: 'DM Sans Bold, 14px, #1E1E1E',
       style: {
-        fontFamily: 'DM Sans, sans-serif',
+        fontFamily: 'var(--display)',
         fontWeight: 700,
         fontSize: 'var(--font-size-sm)',
         color: '#1E1E1E',
@@ -110,7 +110,7 @@ export default function DesignSystem() {
       name: 'Body Large',
       specs: 'Lora Regular, 18px, #444444',
       style: {
-        fontFamily: 'Lora, serif',
+        fontFamily: 'var(--body)',
         fontWeight: 400,
         fontSize: 'var(--font-size-lg)',
         color: '#444444',
@@ -121,7 +121,7 @@ export default function DesignSystem() {
       name: 'Body',
       specs: 'Lora Regular, 16px, #444444',
       style: {
-        fontFamily: 'Lora, serif',
+        fontFamily: 'var(--body)',
         fontWeight: 400,
         fontSize: 'var(--font-size-base)',
         color: '#444444',
@@ -132,7 +132,7 @@ export default function DesignSystem() {
       name: 'Body Italic',
       specs: 'Lora Italic, 16px, #444444',
       style: {
-        fontFamily: 'Lora, serif',
+        fontFamily: 'var(--body)',
         fontWeight: 400,
         fontStyle: 'italic' as const,
         fontSize: 'var(--font-size-base)',
@@ -145,46 +145,46 @@ export default function DesignSystem() {
   return (
     <div className="min-h-screen bg-gray-50 py-12 px-4">
       <div className="max-w-7xl mx-auto space-y-12">
-        <h1 className="text-4xl text-center mb-12" style={{ fontFamily: 'DM Sans, sans-serif', fontWeight: 700 }}>
+        <h1 className="text-4xl text-center mb-12" style={{ fontFamily: 'var(--display)', fontWeight: 700 }}>
           Design System Library
         </h1>
 
         {/* Design System Updates & Changelog */}
         <div className="bg-white rounded-lg shadow-lg p-8">
-          <h2 className="text-2xl mb-6 text-center" style={{ fontFamily: 'DM Sans, sans-serif', fontWeight: 700 }}>
+          <h2 className="text-2xl mb-6 text-center" style={{ fontFamily: 'var(--display)', fontWeight: 700 }}>
             Design System Updates & Standards
           </h2>
           
-          <div className="space-y-6" style={{ fontFamily: 'Lora, serif', fontSize: 'var(--font-size-base)', lineHeight: '1.6', color: '#444444' }}>
+          <div className="space-y-6" style={{ fontFamily: 'var(--body)', fontSize: 'var(--font-size-base)', lineHeight: '1.6', color: '#444444' }}>
             {/* Recent Updates */}
             <div className="border-l-4 border-teal-500 pl-6 py-2" style={{ borderColor: '#1F5364' }}>
-              <h3 className="text-lg mb-3" style={{ fontFamily: 'DM Sans, sans-serif', fontWeight: 700, color: '#1E1E1E' }}>
+              <h3 className="text-lg mb-3" style={{ fontFamily: 'var(--display)', fontWeight: 700, color: '#1E1E1E' }}>
                 March 2026 Updates
               </h3>
               
               <div className="space-y-4">
                 <div>
-                  <strong style={{ fontFamily: 'DM Sans, sans-serif', color: '#1F5364' }}>✓ Spacing System Standardization</strong>
+                  <strong style={{ fontFamily: 'var(--display)', color: '#1F5364' }}>✓ Spacing System Standardization</strong>
                   <p className="mt-1">All spacing now follows the 8px scale throughout the entire website following Figma best practices. Base unit: 8px (8, 16, 24, 32, 40, 48, 56, 64, 72, 80, 88, 96, 100px). Non-8px values converted: 20px→24px, 36px→40px, 28px→32px, 12px→16px, 10px→8px, 14px→16px, 6px→8px.</p>
                 </div>
                 
                 <div>
-                  <strong style={{ fontFamily: 'DM Sans, sans-serif', color: '#1F5364' }}>✓ Responsive Typography Implementation</strong>
+                  <strong style={{ fontFamily: 'var(--display)', color: '#1F5364' }}>✓ Responsive Typography Implementation</strong>
                   <p className="mt-1">Added proper mobile typography scaling at 768px breakpoint. Hero titles: 52px→32px mobile. Section titles: 32px→24px mobile. Card titles: 19px→18px mobile. Subtitle text: 18px→16px mobile. All typography follows even-numbered scale (12, 14, 16, 18, 24, 32, 48px).</p>
                 </div>
                 
                 <div>
-                  <strong style={{ fontFamily: 'DM Sans, sans-serif', color: '#1F5364' }}>✓ Teal Color Standardization & Usage</strong>
+                  <strong style={{ fontFamily: 'var(--display)', color: '#1F5364' }}>✓ Teal Color Standardization & Usage</strong>
                   <p className="mt-1">Added two teal color variants to design system: Teal (#1F5364) as primary dark teal and Teal Light (#2C6E7F) as secondary lighter teal. Teal Light (#2C6E7F) is WCAG AA accessible on light backgrounds (White, Cream, Light Gray) with 5.0:1+ contrast. Used for hover states on article links (Writing page), subscribe button hover states (Podcast page), and secondary interactive elements. Writing page uses primary Teal (#1F5364) for essay categories, links, and accent bars.</p>
                 </div>
                 
                 <div>
-                  <strong style={{ fontFamily: 'DM Sans, sans-serif', color: '#1F5364' }}>✓ Text Link Wrapping Fix</strong>
+                  <strong style={{ fontFamily: 'var(--display)', color: '#1F5364' }}>✓ Text Link Wrapping Fix</strong>
                   <p className="mt-1">Card CTAs use the <code className="text-xs">card-cta-row</code> utility (right-aligned flex row) plus <code className="text-xs">whiteSpace: &apos;nowrap&apos;</code> on arrow links ("Read Article →", "Read Case Study →", "View All Writing →", "See All Work →", etc.) so arrows do not wrap awkwardly.</p>
                 </div>
                 
                 <div>
-                  <strong style={{ fontFamily: 'DM Sans, sans-serif', color: '#1F5364' }}>✓ Mobile Responsive Grid System</strong>
+                  <strong style={{ fontFamily: 'var(--display)', color: '#1F5364' }}>✓ Mobile Responsive Grid System</strong>
                   <p className="mt-1">All main pages now have comprehensive media queries with proper mobile grid stacking at 768px breakpoint. Two-column grids convert to single-column on mobile with adjusted gap spacing (32px→24px).</p>
                 </div>
               </div>
@@ -192,58 +192,58 @@ export default function DesignSystem() {
             
             {/* Spacing Scale Reference */}
             <div className="bg-gray-50 p-6 rounded-lg" style={{ backgroundColor: '#FAF7F2' }}>
-              <h4 className="mb-3" style={{ fontFamily: 'DM Sans, sans-serif', fontWeight: 700, color: '#1E1E1E' }}>
+              <h4 className="mb-3" style={{ fontFamily: 'var(--display)', fontWeight: 700, color: '#1E1E1E' }}>
                 8px Spacing Scale
               </h4>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                 <div className="flex items-center gap-2">
                   <div style={{ width: '8px', height: '8px', backgroundColor: '#1F5364', borderRadius: '2px' }}></div>
-                  <span style={{ fontFamily: 'DM Sans, sans-serif', fontSize: 'var(--font-size-sm)' }}>8px</span>
+                  <span style={{ fontFamily: 'var(--display)', fontSize: 'var(--font-size-sm)' }}>8px</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <div style={{ width: '16px', height: '16px', backgroundColor: '#1F5364', borderRadius: '2px' }}></div>
-                  <span style={{ fontFamily: 'DM Sans, sans-serif', fontSize: 'var(--font-size-sm)' }}>16px</span>
+                  <span style={{ fontFamily: 'var(--display)', fontSize: 'var(--font-size-sm)' }}>16px</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <div style={{ width: '24px', height: '24px', backgroundColor: '#1F5364', borderRadius: '2px' }}></div>
-                  <span style={{ fontFamily: 'DM Sans, sans-serif', fontSize: 'var(--font-size-sm)' }}>24px</span>
+                  <span style={{ fontFamily: 'var(--display)', fontSize: 'var(--font-size-sm)' }}>24px</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <div style={{ width: '32px', height: '32px', backgroundColor: '#1F5364', borderRadius: '2px' }}></div>
-                  <span style={{ fontFamily: 'DM Sans, sans-serif', fontSize: 'var(--font-size-sm)' }}>32px</span>
+                  <span style={{ fontFamily: 'var(--display)', fontSize: 'var(--font-size-sm)' }}>32px</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <div style={{ width: '40px', height: '40px', backgroundColor: '#1F5364', borderRadius: '2px' }}></div>
-                  <span style={{ fontFamily: 'DM Sans, sans-serif', fontSize: 'var(--font-size-sm)' }}>40px</span>
+                  <span style={{ fontFamily: 'var(--display)', fontSize: 'var(--font-size-sm)' }}>40px</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <div style={{ width: '48px', height: '48px', backgroundColor: '#1F5364', borderRadius: '2px' }}></div>
-                  <span style={{ fontFamily: 'DM Sans, sans-serif', fontSize: 'var(--font-size-sm)' }}>48px</span>
+                  <span style={{ fontFamily: 'var(--display)', fontSize: 'var(--font-size-sm)' }}>48px</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <div style={{ width: '56px', height: '56px', backgroundColor: '#1F5364', borderRadius: '2px' }}></div>
-                  <span style={{ fontFamily: 'DM Sans, sans-serif', fontSize: 'var(--font-size-sm)' }}>56px</span>
+                  <span style={{ fontFamily: 'var(--display)', fontSize: 'var(--font-size-sm)' }}>56px</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <div style={{ width: '64px', height: '64px', backgroundColor: '#1F5364', borderRadius: '2px' }}></div>
-                  <span style={{ fontFamily: 'DM Sans, sans-serif', fontSize: 'var(--font-size-sm)' }}>64px</span>
+                  <span style={{ fontFamily: 'var(--display)', fontSize: 'var(--font-size-sm)' }}>64px</span>
                 </div>
               </div>
             </div>
             
             {/* Typography Scale Reference */}
             <div className="bg-gray-50 p-6 rounded-lg" style={{ backgroundColor: '#FAF7F2' }}>
-              <h4 className="mb-3" style={{ fontFamily: 'DM Sans, sans-serif', fontWeight: 700, color: '#1E1E1E' }}>
+              <h4 className="mb-3" style={{ fontFamily: 'var(--display)', fontWeight: 700, color: '#1E1E1E' }}>
                 Responsive Typography Scale
               </h4>
               <div className="space-y-2" style={{ fontSize: 'var(--font-size-sm)' }}>
-                <div style={{ fontFamily: 'DM Sans, sans-serif' }}>
+                <div style={{ fontFamily: 'var(--display)' }}>
                   <strong>Desktop:</strong> 12px, 14px, 16px, 18px, 24px, 32px, 48px, 52px
                 </div>
-                <div style={{ fontFamily: 'DM Sans, sans-serif' }}>
+                <div style={{ fontFamily: 'var(--display)' }}>
                   <strong>Mobile (≤768px):</strong> Titles scale down (52px→32px, 32px→24px, 24px→18px, 19px→18px, 18px→16px)
                 </div>
-                <div style={{ fontFamily: 'DM Sans, sans-serif' }}>
+                <div style={{ fontFamily: 'var(--display)' }}>
                   <strong>Breakpoint:</strong> 768px (tablet and below)
                 </div>
               </div>
@@ -253,7 +253,7 @@ export default function DesignSystem() {
 
         {/* Color Tokens */}
         <div className="bg-white rounded-lg shadow-lg p-8">
-          <h2 className="text-2xl mb-6 text-center" style={{ fontFamily: 'DM Sans, sans-serif', fontWeight: 700 }}>
+          <h2 className="text-2xl mb-6 text-center" style={{ fontFamily: 'var(--display)', fontWeight: 700 }}>
             Color Tokens
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-5 gap-6">
@@ -264,7 +264,7 @@ export default function DesignSystem() {
                   style={{ backgroundColor: token.hex }}
                 />
                 <div className="text-center">
-                  <div className="text-sm" style={{ fontFamily: 'DM Sans, sans-serif', fontWeight: 700 }}>
+                  <div className="text-sm" style={{ fontFamily: 'var(--display)', fontWeight: 700 }}>
                     {token.name}
                   </div>
                   <div className="text-xs text-gray-500">{token.hex}</div>
@@ -276,7 +276,7 @@ export default function DesignSystem() {
 
         {/* Typography */}
         <div className="bg-white rounded-lg shadow-lg p-8">
-          <h2 className="text-2xl mb-6 text-center" style={{ fontFamily: 'DM Sans, sans-serif', fontWeight: 700 }}>
+          <h2 className="text-2xl mb-6 text-center" style={{ fontFamily: 'var(--display)', fontWeight: 700 }}>
             Typography
           </h2>
           <div className="space-y-6">
@@ -291,20 +291,20 @@ export default function DesignSystem() {
 
         {/* Button Components */}
         <div className="bg-white rounded-lg shadow-lg p-8">
-          <h2 className="text-2xl mb-6 text-center" style={{ fontFamily: 'DM Sans, sans-serif', fontWeight: 700 }}>
+          <h2 className="text-2xl mb-6 text-center" style={{ fontFamily: 'var(--display)', fontWeight: 700 }}>
             Button Components
           </h2>
 
           <div className="space-y-8">
             {/* Primary CTA Button */}
             <div>
-              <div className="text-sm mb-4 text-center" style={{ fontFamily: 'DM Sans, sans-serif', fontWeight: 700, color: '#444444' }}>
+              <div className="text-sm mb-4 text-center" style={{ fontFamily: 'var(--display)', fontWeight: 700, color: '#444444' }}>
                 Primary CTA Button (Gold)
               </div>
               <div className="flex gap-6 justify-center items-center flex-wrap">
                 <button
                   style={{
-                    fontFamily: 'DM Sans, sans-serif',
+                    fontFamily: 'var(--display)',
                     fontWeight: 700,
                     fontSize: 'var(--font-size-sm)',
                     color: '#1E1E1E',
@@ -320,7 +320,7 @@ export default function DesignSystem() {
                 <button
                   disabled
                   style={{
-                    fontFamily: 'DM Sans, sans-serif',
+                    fontFamily: 'var(--display)',
                     fontWeight: 700,
                     fontSize: 'var(--font-size-sm)',
                     color: '#1E1E1E',
@@ -339,13 +339,13 @@ export default function DesignSystem() {
 
             {/* Secondary Button */}
             <div>
-              <div className="text-sm mb-4 text-center" style={{ fontFamily: 'DM Sans, sans-serif', fontWeight: 700, color: '#444444' }}>
+              <div className="text-sm mb-4 text-center" style={{ fontFamily: 'var(--display)', fontWeight: 700, color: '#444444' }}>
                 Secondary Button (Charcoal)
               </div>
               <div className="flex gap-6 justify-center items-center flex-wrap">
                 <button
                   style={{
-                    fontFamily: 'DM Sans, sans-serif',
+                    fontFamily: 'var(--display)',
                     fontWeight: 700,
                     fontSize: 'var(--font-size-sm)',
                     color: '#FFFFFF',
@@ -360,7 +360,7 @@ export default function DesignSystem() {
                 </button>
                 <button
                   style={{
-                    fontFamily: 'DM Sans, sans-serif',
+                    fontFamily: 'var(--display)',
                     fontWeight: 700,
                     fontSize: 'var(--font-size-sm)',
                     color: '#FFFFFF',
@@ -378,7 +378,7 @@ export default function DesignSystem() {
                 <button
                   disabled
                   style={{
-                    fontFamily: 'DM Sans, sans-serif',
+                    fontFamily: 'var(--display)',
                     fontWeight: 700,
                     fontSize: 'var(--font-size-sm)',
                     color: '#1E1E1E',
@@ -397,13 +397,13 @@ export default function DesignSystem() {
 
             {/* Ghost/Outline Button */}
             <div>
-              <div className="text-sm mb-4 text-center" style={{ fontFamily: 'DM Sans, sans-serif', fontWeight: 700, color: '#444444' }}>
+              <div className="text-sm mb-4 text-center" style={{ fontFamily: 'var(--display)', fontWeight: 700, color: '#444444' }}>
                 Ghost Button (Teal)
               </div>
               <div className="flex gap-6 justify-center items-center flex-wrap">
                 <button
                   style={{
-                    fontFamily: 'DM Sans, sans-serif',
+                    fontFamily: 'var(--display)',
                     fontWeight: 700,
                     fontSize: 'var(--font-size-sm)',
                     color: '#1F5364',
@@ -418,7 +418,7 @@ export default function DesignSystem() {
                 </button>
                 <button
                   style={{
-                    fontFamily: 'DM Sans, sans-serif',
+                    fontFamily: 'var(--display)',
                     fontWeight: 700,
                     fontSize: 'var(--font-size-sm)',
                     color: '#FFFFFF',
@@ -434,7 +434,7 @@ export default function DesignSystem() {
                 <button
                   disabled
                   style={{
-                    fontFamily: 'DM Sans, sans-serif',
+                    fontFamily: 'var(--display)',
                     fontWeight: 700,
                     fontSize: 'var(--font-size-sm)',
                     color: '#1E1E1E',
@@ -455,14 +455,14 @@ export default function DesignSystem() {
 
         {/* Navigation Component */}
         <div className="bg-white rounded-lg shadow-lg p-8">
-          <h2 className="text-2xl mb-6 text-center" style={{ fontFamily: 'DM Sans, sans-serif', fontWeight: 700 }}>
+          <h2 className="text-2xl mb-6 text-center" style={{ fontFamily: 'var(--display)', fontWeight: 700 }}>
             Navigation Component
           </h2>
 
           <div className="space-y-6">
             {/* Default State */}
             <div>
-              <div className="text-sm mb-4 text-center" style={{ fontFamily: 'DM Sans, sans-serif', fontWeight: 700, color: '#444444' }}>
+              <div className="text-sm mb-4 text-center" style={{ fontFamily: 'var(--display)', fontWeight: 700, color: '#444444' }}>
                 Default State
               </div>
               <div
@@ -476,7 +476,7 @@ export default function DesignSystem() {
                   {/* Wordmark */}
                   <div
                     style={{
-                      fontFamily: 'DM Sans, sans-serif',
+                      fontFamily: 'var(--display)',
                       fontWeight: 700,
                       fontSize: '15px',
                       color: '#1E1E1E',
@@ -491,7 +491,7 @@ export default function DesignSystem() {
                     <a
                       href="#"
                       style={{
-                        fontFamily: 'DM Sans, sans-serif',
+                        fontFamily: 'var(--display)',
                         fontWeight: 500,
                         fontSize: 'var(--font-size-sm)',
                         color: '#444444',
@@ -503,7 +503,7 @@ export default function DesignSystem() {
                     <a
                       href="#"
                       style={{
-                        fontFamily: 'DM Sans, sans-serif',
+                        fontFamily: 'var(--display)',
                         fontWeight: 500,
                         fontSize: 'var(--font-size-sm)',
                         color: '#444444',
@@ -515,7 +515,7 @@ export default function DesignSystem() {
                     <a
                       href="#"
                       style={{
-                        fontFamily: 'DM Sans, sans-serif',
+                        fontFamily: 'var(--display)',
                         fontWeight: 500,
                         fontSize: 'var(--font-size-sm)',
                         color: '#444444',
@@ -527,7 +527,7 @@ export default function DesignSystem() {
                     <a
                       href="#"
                       style={{
-                        fontFamily: 'DM Sans, sans-serif',
+                        fontFamily: 'var(--display)',
                         fontWeight: 500,
                         fontSize: 'var(--font-size-sm)',
                         color: '#444444',
@@ -538,7 +538,7 @@ export default function DesignSystem() {
                     </a>
                     <button
                       style={{
-                        fontFamily: 'DM Sans, sans-serif',
+                        fontFamily: 'var(--display)',
                         fontWeight: 700,
                         fontSize: 'var(--font-size-sm)',
                         color: '#1E1E1E',
@@ -558,7 +558,7 @@ export default function DesignSystem() {
 
             {/* Active State */}
             <div>
-              <div className="text-sm mb-4 text-center" style={{ fontFamily: 'DM Sans, sans-serif', fontWeight: 700, color: '#444444' }}>
+              <div className="text-sm mb-4 text-center" style={{ fontFamily: 'var(--display)', fontWeight: 700, color: '#444444' }}>
                 Active State (with underline)
               </div>
               <div
@@ -571,7 +571,7 @@ export default function DesignSystem() {
                 <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', maxWidth: '1200px', margin: '0 auto' }}>
                   <div
                     style={{
-                      fontFamily: 'DM Sans, sans-serif',
+                      fontFamily: 'var(--display)',
                       fontWeight: 700,
                       fontSize: '15px',
                       color: '#1E1E1E',
@@ -585,7 +585,7 @@ export default function DesignSystem() {
                     <a
                       href="#"
                       style={{
-                        fontFamily: 'DM Sans, sans-serif',
+                        fontFamily: 'var(--display)',
                         fontWeight: 500,
                         fontSize: 'var(--font-size-sm)',
                         color: '#444444',
@@ -599,7 +599,7 @@ export default function DesignSystem() {
                     <a
                       href="#"
                       style={{
-                        fontFamily: 'DM Sans, sans-serif',
+                        fontFamily: 'var(--display)',
                         fontWeight: 500,
                         fontSize: 'var(--font-size-sm)',
                         color: '#444444',
@@ -611,7 +611,7 @@ export default function DesignSystem() {
                     <a
                       href="#"
                       style={{
-                        fontFamily: 'DM Sans, sans-serif',
+                        fontFamily: 'var(--display)',
                         fontWeight: 500,
                         fontSize: 'var(--font-size-sm)',
                         color: '#444444',
@@ -623,7 +623,7 @@ export default function DesignSystem() {
                     <a
                       href="#"
                       style={{
-                        fontFamily: 'DM Sans, sans-serif',
+                        fontFamily: 'var(--display)',
                         fontWeight: 500,
                         fontSize: 'var(--font-size-sm)',
                         color: '#444444',
@@ -634,7 +634,7 @@ export default function DesignSystem() {
                     </a>
                     <button
                       style={{
-                        fontFamily: 'DM Sans, sans-serif',
+                        fontFamily: 'var(--display)',
                         fontWeight: 700,
                         fontSize: 'var(--font-size-sm)',
                         color: '#1E1E1E',
@@ -654,7 +654,7 @@ export default function DesignSystem() {
 
             {/* Focus State */}
             <div>
-              <div className="text-sm mb-4 text-center" style={{ fontFamily: 'DM Sans, sans-serif', fontWeight: 700, color: '#444444' }}>
+              <div className="text-sm mb-4 text-center" style={{ fontFamily: 'var(--display)', fontWeight: 700, color: '#444444' }}>
                 Focus State (button)
               </div>
               <div
@@ -667,7 +667,7 @@ export default function DesignSystem() {
                 <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', maxWidth: '1200px', margin: '0 auto' }}>
                   <div
                     style={{
-                      fontFamily: 'DM Sans, sans-serif',
+                      fontFamily: 'var(--display)',
                       fontWeight: 700,
                       fontSize: '15px',
                       color: '#1E1E1E',
@@ -681,7 +681,7 @@ export default function DesignSystem() {
                     <a
                       href="#"
                       style={{
-                        fontFamily: 'DM Sans, sans-serif',
+                        fontFamily: 'var(--display)',
                         fontWeight: 500,
                         fontSize: 'var(--font-size-sm)',
                         color: '#444444',
@@ -693,7 +693,7 @@ export default function DesignSystem() {
                     <a
                       href="#"
                       style={{
-                        fontFamily: 'DM Sans, sans-serif',
+                        fontFamily: 'var(--display)',
                         fontWeight: 500,
                         fontSize: 'var(--font-size-sm)',
                         color: '#444444',
@@ -705,7 +705,7 @@ export default function DesignSystem() {
                     <a
                       href="#"
                       style={{
-                        fontFamily: 'DM Sans, sans-serif',
+                        fontFamily: 'var(--display)',
                         fontWeight: 500,
                         fontSize: 'var(--font-size-sm)',
                         color: '#444444',
@@ -717,7 +717,7 @@ export default function DesignSystem() {
                     <a
                       href="#"
                       style={{
-                        fontFamily: 'DM Sans, sans-serif',
+                        fontFamily: 'var(--display)',
                         fontWeight: 500,
                         fontSize: 'var(--font-size-sm)',
                         color: '#444444',
@@ -728,7 +728,7 @@ export default function DesignSystem() {
                     </a>
                     <button
                       style={{
-                        fontFamily: 'DM Sans, sans-serif',
+                        fontFamily: 'var(--display)',
                         fontWeight: 700,
                         fontSize: 'var(--font-size-sm)',
                         color: '#1E1E1E',
@@ -752,14 +752,14 @@ export default function DesignSystem() {
 
         {/* Card Components */}
         <div className="bg-white rounded-lg shadow-lg p-8">
-          <h2 className="text-2xl mb-6 text-center" style={{ fontFamily: 'DM Sans, sans-serif', fontWeight: 700 }}>
+          <h2 className="text-2xl mb-6 text-center" style={{ fontFamily: 'var(--display)', fontWeight: 700 }}>
             Card Components
           </h2>
 
           <div className="flex gap-8 justify-center flex-wrap">
             {/* UX Research Card */}
             <div>
-              <div className="text-sm mb-4 text-center" style={{ fontFamily: 'DM Sans, sans-serif', fontWeight: 700, color: '#444444' }}>
+              <div className="text-sm mb-4 text-center" style={{ fontFamily: 'var(--display)', fontWeight: 700, color: '#444444' }}>
                 UX Research Card
               </div>
               <div
@@ -779,7 +779,7 @@ export default function DesignSystem() {
                   {/* Eyebrow */}
                   <div
                     style={{
-                      fontFamily: 'DM Sans, sans-serif',
+                      fontFamily: 'var(--display)',
                       fontWeight: 700,
                       fontSize: 'var(--font-size-xs)',
                       color: '#1F5364',
@@ -794,7 +794,7 @@ export default function DesignSystem() {
                   {/* Title */}
                   <h3
                     style={{
-                      fontFamily: 'DM Sans, sans-serif',
+                      fontFamily: 'var(--display)',
                       fontWeight: 700,
                       fontSize: '19px',
                       color: '#1E1E1E',
@@ -808,7 +808,7 @@ export default function DesignSystem() {
                   {/* Description */}
                   <p
                     style={{
-                      fontFamily: 'Lora, serif',
+                      fontFamily: 'var(--body)',
                       fontWeight: 400,
                       fontSize: 'var(--font-size-base)',
                       color: '#444444',
@@ -826,7 +826,7 @@ export default function DesignSystem() {
                   <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap', marginBottom: '16px' }}>
                     <span
                       style={{
-                        fontFamily: 'DM Sans, sans-serif',
+                        fontFamily: 'var(--display)',
                         fontWeight: 500,
                         fontSize: 'var(--font-size-xs)',
                         color: '#1F5364',
@@ -840,7 +840,7 @@ export default function DesignSystem() {
                     </span>
                     <span
                       style={{
-                        fontFamily: 'DM Sans, sans-serif',
+                        fontFamily: 'var(--display)',
                         fontWeight: 500,
                         fontSize: 'var(--font-size-xs)',
                         color: '#1F5364',
@@ -857,7 +857,7 @@ export default function DesignSystem() {
                     <Link
                       to="/case-studies/healthtech-onboarding"
                       style={{
-                        fontFamily: 'DM Sans, sans-serif',
+                        fontFamily: 'var(--display)',
                         fontWeight: 700,
                         fontSize: 'var(--font-size-sm)',
                         color: '#1F5364',
@@ -874,7 +874,7 @@ export default function DesignSystem() {
 
             {/* Leadership Card */}
             <div>
-              <div className="text-sm mb-4 text-center" style={{ fontFamily: 'DM Sans, sans-serif', fontWeight: 700, color: '#444444' }}>
+              <div className="text-sm mb-4 text-center" style={{ fontFamily: 'var(--display)', fontWeight: 700, color: '#444444' }}>
                 Leadership Card
               </div>
               <div
@@ -894,7 +894,7 @@ export default function DesignSystem() {
                   {/* Eyebrow */}
                   <div
                     style={{
-                      fontFamily: 'DM Sans, sans-serif',
+                      fontFamily: 'var(--display)',
                       fontWeight: 700,
                       fontSize: 'var(--font-size-xs)',
                       color: '#1F5364',
@@ -909,7 +909,7 @@ export default function DesignSystem() {
                   {/* Title */}
                   <h3
                     style={{
-                      fontFamily: 'DM Sans, sans-serif',
+                      fontFamily: 'var(--display)',
                       fontWeight: 700,
                       fontSize: '19px',
                       color: '#1E1E1E',
@@ -923,7 +923,7 @@ export default function DesignSystem() {
                   {/* Description */}
                   <p
                     style={{
-                      fontFamily: 'Lora, serif',
+                      fontFamily: 'var(--body)',
                       fontWeight: 400,
                       fontSize: 'var(--font-size-base)',
                       color: '#444444',
@@ -941,7 +941,7 @@ export default function DesignSystem() {
                   <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap', marginBottom: '16px' }}>
                     <span
                       style={{
-                        fontFamily: 'DM Sans, sans-serif',
+                        fontFamily: 'var(--display)',
                         fontWeight: 500,
                         fontSize: 'var(--font-size-xs)',
                         color: '#1F5364',
@@ -955,7 +955,7 @@ export default function DesignSystem() {
                     </span>
                     <span
                       style={{
-                        fontFamily: 'DM Sans, sans-serif',
+                        fontFamily: 'var(--display)',
                         fontWeight: 500,
                         fontSize: 'var(--font-size-xs)',
                         color: '#1F5364',
@@ -972,7 +972,7 @@ export default function DesignSystem() {
                     <Link
                       to="/leadership/three-disciplines-one-team"
                       style={{
-                        fontFamily: 'DM Sans, sans-serif',
+                        fontFamily: 'var(--display)',
                         fontWeight: 700,
                         fontSize: 'var(--font-size-sm)',
                         color: '#1F5364',
@@ -991,14 +991,14 @@ export default function DesignSystem() {
 
         {/* CTA Strip Component */}
         <div className="bg-white rounded-lg shadow-lg p-8">
-          <h2 className="text-2xl mb-6 text-center" style={{ fontFamily: 'DM Sans, sans-serif', fontWeight: 700 }}>
+          <h2 className="text-2xl mb-6 text-center" style={{ fontFamily: 'var(--display)', fontWeight: 700 }}>
             CTA Strip Component
           </h2>
 
           <div className="space-y-8">
             {/* Standard CTA Strip */}
             <div>
-              <div className="text-sm mb-4 text-center" style={{ fontFamily: 'DM Sans, sans-serif', fontWeight: 700, color: '#444444' }}>
+              <div className="text-sm mb-4 text-center" style={{ fontFamily: 'var(--display)', fontWeight: 700, color: '#444444' }}>
                 Standard CTA Strip
               </div>
               <div
@@ -1016,7 +1016,7 @@ export default function DesignSystem() {
                 <div>
                   <h3
                     style={{
-                      fontFamily: 'DM Sans, sans-serif',
+                      fontFamily: 'var(--display)',
                       fontWeight: 700,
                       fontSize: '20px',
                       color: '#1E1E1E',
@@ -1027,7 +1027,7 @@ export default function DesignSystem() {
                   </h3>
                   <p
                     style={{
-                      fontFamily: 'Lora, serif',
+                      fontFamily: 'var(--body)',
                       fontWeight: 400,
                       fontSize: '15px',
                       color: '#1E1E1E',
@@ -1039,7 +1039,7 @@ export default function DesignSystem() {
                 </div>
                 <button
                   style={{
-                    fontFamily: 'DM Sans, sans-serif',
+                    fontFamily: 'var(--display)',
                     fontWeight: 700,
                     fontSize: '15px',
                     color: '#FFFFFF',
@@ -1058,7 +1058,7 @@ export default function DesignSystem() {
 
             {/* Homepage CTA Strip */}
             <div>
-              <div className="text-sm mb-4 text-center" style={{ fontFamily: 'DM Sans, sans-serif', fontWeight: 700, color: '#444444' }}>
+              <div className="text-sm mb-4 text-center" style={{ fontFamily: 'var(--display)', fontWeight: 700, color: '#444444' }}>
                 Homepage CTA Strip
               </div>
               <div
@@ -1076,7 +1076,7 @@ export default function DesignSystem() {
                 <div style={{ maxWidth: '600px' }}>
                   <h3
                     style={{
-                      fontFamily: 'DM Sans, sans-serif',
+                      fontFamily: 'var(--display)',
                       fontWeight: 700,
                       fontSize: '21px',
                       color: '#1E1E1E',
@@ -1087,7 +1087,7 @@ export default function DesignSystem() {
                   </h3>
                   <p
                     style={{
-                      fontFamily: 'Lora, serif',
+                      fontFamily: 'var(--body)',
                       fontWeight: 400,
                       fontSize: 'var(--font-size-base)',
                       color: '#1E1E1E',
@@ -1100,7 +1100,7 @@ export default function DesignSystem() {
                 </div>
                 <button
                   style={{
-                    fontFamily: 'DM Sans, sans-serif',
+                    fontFamily: 'var(--display)',
                     fontWeight: 700,
                     fontSize: '15px',
                     color: '#FFFFFF',
@@ -1121,14 +1121,14 @@ export default function DesignSystem() {
 
         {/* Hero Component */}
         <div className="bg-white rounded-lg shadow-lg p-8">
-          <h2 className="text-2xl mb-6 text-center" style={{ fontFamily: 'DM Sans, sans-serif', fontWeight: 700 }}>
+          <h2 className="text-2xl mb-6 text-center" style={{ fontFamily: 'var(--display)', fontWeight: 700 }}>
             Hero Component
           </h2>
 
           <div className="space-y-8">
             {/* Variant 1 - Standard Page Hero */}
             <div>
-              <div className="text-sm mb-4 text-center" style={{ fontFamily: 'DM Sans, sans-serif', fontWeight: 700, color: '#444444' }}>
+              <div className="text-sm mb-4 text-center" style={{ fontFamily: 'var(--display)', fontWeight: 700, color: '#444444' }}>
                 Variant 1 — Standard Page Hero
               </div>
               <div
@@ -1143,7 +1143,7 @@ export default function DesignSystem() {
                 <div
                   style={{
                     display: 'inline-block',
-                    fontFamily: 'DM Sans, sans-serif',
+                    fontFamily: 'var(--display)',
                     fontWeight: 700,
                     fontSize: 'var(--font-size-xs)',
                     color: '#D4A843',
@@ -1159,7 +1159,7 @@ export default function DesignSystem() {
                 {/* Heading */}
                 <h1
                   style={{
-                    fontFamily: 'DM Sans, sans-serif',
+                    fontFamily: 'var(--display)',
                     fontWeight: 700,
                     fontSize: '46px',
                     color: '#FFFFFF',
@@ -1174,7 +1174,7 @@ export default function DesignSystem() {
                 {/* Subheading */}
                 <p
                   style={{
-                    fontFamily: 'Lora, serif',
+                    fontFamily: 'var(--body)',
                     fontWeight: 400,
                     fontStyle: 'italic',
                     fontSize: '17px',
@@ -1198,7 +1198,7 @@ export default function DesignSystem() {
                 >
                   <div
                     style={{
-                      fontFamily: 'DM Sans, sans-serif',
+                      fontFamily: 'var(--display)',
                       fontSize: '10px',
                     }}
                   >
@@ -1208,7 +1208,7 @@ export default function DesignSystem() {
                   <div style={{ width: '1px', height: '12px', backgroundColor: 'rgba(255, 255, 255, 0.3)' }} />
                   <div
                     style={{
-                      fontFamily: 'DM Sans, sans-serif',
+                      fontFamily: 'var(--display)',
                       fontSize: '10px',
                     }}
                   >
@@ -1218,7 +1218,7 @@ export default function DesignSystem() {
                   <div style={{ width: '1px', height: '12px', backgroundColor: 'rgba(255, 255, 255, 0.3)' }} />
                   <div
                     style={{
-                      fontFamily: 'DM Sans, sans-serif',
+                      fontFamily: 'var(--display)',
                       fontSize: '10px',
                     }}
                   >
@@ -1228,7 +1228,7 @@ export default function DesignSystem() {
                   <div style={{ width: '1px', height: '12px', backgroundColor: 'rgba(255, 255, 255, 0.3)' }} />
                   <div
                     style={{
-                      fontFamily: 'DM Sans, sans-serif',
+                      fontFamily: 'var(--display)',
                       fontSize: '10px',
                     }}
                   >
@@ -1250,7 +1250,7 @@ export default function DesignSystem() {
 
             {/* Variant 2 - Homepage Hero */}
             <div>
-              <div className="text-sm mb-4 text-center" style={{ fontFamily: 'DM Sans, sans-serif', fontWeight: 700, color: '#444444' }}>
+              <div className="text-sm mb-4 text-center" style={{ fontFamily: 'var(--display)', fontWeight: 700, color: '#444444' }}>
                 Variant 2 — Homepage Hero
               </div>
               <div
@@ -1263,7 +1263,7 @@ export default function DesignSystem() {
                 {/* Eyebrow */}
                 <div
                   style={{
-                    fontFamily: 'DM Sans, sans-serif',
+                    fontFamily: 'var(--display)',
                     fontWeight: 700,
                     fontSize: 'var(--font-size-xs)',
                     color: '#D4A843',
@@ -1277,7 +1277,7 @@ export default function DesignSystem() {
                 {/* Heading */}
                 <h1
                   style={{
-                    fontFamily: 'DM Sans, sans-serif',
+                    fontFamily: 'var(--display)',
                     fontWeight: 700,
                     fontSize: '52px',
                     color: '#FFFFFF',
@@ -1292,7 +1292,7 @@ export default function DesignSystem() {
                 {/* Subheading */}
                 <p
                   style={{
-                    fontFamily: 'Lora, serif',
+                    fontFamily: 'var(--body)',
                     fontWeight: 400,
                     fontSize: 'var(--font-size-lg)',
                     color: 'rgba(255, 255, 255, 0.65)',
@@ -1307,7 +1307,7 @@ export default function DesignSystem() {
                 {/* CTA Button */}
                 <button
                   style={{
-                    fontFamily: 'DM Sans, sans-serif',
+                    fontFamily: 'var(--display)',
                     fontWeight: 700,
                     fontSize: '15px',
                     color: '#1E1E1E',
@@ -1327,14 +1327,14 @@ export default function DesignSystem() {
 
         {/* Reusable Components */}
         <div className="bg-white rounded-lg shadow-lg p-8">
-          <h2 className="text-2xl mb-6 text-center" style={{ fontFamily: 'DM Sans, sans-serif', fontWeight: 700 }}>
+          <h2 className="text-2xl mb-6 text-center" style={{ fontFamily: 'var(--display)', fontWeight: 700 }}>
             Reusable Components
           </h2>
           
           <div className="space-y-12">
             {/* Eyebrow Component */}
             <div>
-              <div className="text-sm mb-4" style={{ fontFamily: 'DM Sans, sans-serif', fontWeight: 700, color: '#444444' }}>
+              <div className="text-sm mb-4" style={{ fontFamily: 'var(--display)', fontWeight: 700, color: '#444444' }}>
                 Eyebrow Component
               </div>
               <div className="space-y-4">
@@ -1346,7 +1346,7 @@ export default function DesignSystem() {
 
             {/* Section Title Component */}
             <div>
-              <div className="text-sm mb-4" style={{ fontFamily: 'DM Sans, sans-serif', fontWeight: 700, color: '#444444' }}>
+              <div className="text-sm mb-4" style={{ fontFamily: 'var(--display)', fontWeight: 700, color: '#444444' }}>
                 Section Title Component
               </div>
               <SectionTitle>Recent Work</SectionTitle>
@@ -1354,7 +1354,7 @@ export default function DesignSystem() {
 
             {/* Button Component */}
             <div>
-              <div className="text-sm mb-4" style={{ fontFamily: 'DM Sans, sans-serif', fontWeight: 700, color: '#444444' }}>
+              <div className="text-sm mb-4" style={{ fontFamily: 'var(--display)', fontWeight: 700, color: '#444444' }}>
                 Button Component (Primary, Secondary, Outline)
               </div>
               <div className="flex gap-4 flex-wrap">
@@ -1366,7 +1366,7 @@ export default function DesignSystem() {
 
             {/* Divider Component */}
             <div>
-              <div className="text-sm mb-4" style={{ fontFamily: 'DM Sans, sans-serif', fontWeight: 700, color: '#444444' }}>
+              <div className="text-sm mb-4" style={{ fontFamily: 'var(--display)', fontWeight: 700, color: '#444444' }}>
                 Divider Component
               </div>
               <Divider />
@@ -1374,7 +1374,7 @@ export default function DesignSystem() {
 
             {/* Legend Item Component */}
             <div>
-              <div className="text-sm mb-4" style={{ fontFamily: 'DM Sans, sans-serif', fontWeight: 700, color: '#444444' }}>
+              <div className="text-sm mb-4" style={{ fontFamily: 'var(--display)', fontWeight: 700, color: '#444444' }}>
                 Legend Item Component
               </div>
               <div className="flex gap-6 flex-wrap">
@@ -1387,7 +1387,7 @@ export default function DesignSystem() {
 
             {/* Coming Soon Badge */}
             <div>
-              <div className="text-sm mb-4" style={{ fontFamily: 'DM Sans, sans-serif', fontWeight: 700, color: '#444444' }}>
+              <div className="text-sm mb-4" style={{ fontFamily: 'var(--display)', fontWeight: 700, color: '#444444' }}>
                 Coming Soon Badge
               </div>
               <ComingSoonBadge />
@@ -1395,7 +1395,7 @@ export default function DesignSystem() {
 
             {/* Case Study Card */}
             <div>
-              <div className="text-sm mb-4" style={{ fontFamily: 'DM Sans, sans-serif', fontWeight: 700, color: '#444444' }}>
+              <div className="text-sm mb-4" style={{ fontFamily: 'var(--display)', fontWeight: 700, color: '#444444' }}>
                 Case Study Card Component
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl">
@@ -1418,7 +1418,7 @@ export default function DesignSystem() {
 
             {/* Work Card */}
             <div>
-              <div className="text-sm mb-4" style={{ fontFamily: 'DM Sans, sans-serif', fontWeight: 700, color: '#444444' }}>
+              <div className="text-sm mb-4" style={{ fontFamily: 'var(--display)', fontWeight: 700, color: '#444444' }}>
                 Work Card Component (with accent bar)
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl">
@@ -1447,7 +1447,7 @@ export default function DesignSystem() {
 
             {/* Writing Post Card */}
             <div>
-              <div className="text-sm mb-4" style={{ fontFamily: 'DM Sans, sans-serif', fontWeight: 700, color: '#444444' }}>
+              <div className="text-sm mb-4" style={{ fontFamily: 'var(--display)', fontWeight: 700, color: '#444444' }}>
                 Writing Post Card Component
               </div>
               <div className="max-w-4xl">
@@ -1469,7 +1469,7 @@ export default function DesignSystem() {
 
             {/* Featured Writing Card */}
             <div>
-              <div className="text-sm mb-4" style={{ fontFamily: 'DM Sans, sans-serif', fontWeight: 700, color: '#444444' }}>
+              <div className="text-sm mb-4" style={{ fontFamily: 'var(--display)', fontWeight: 700, color: '#444444' }}>
                 Featured Writing Card Component
               </div>
               <div className="max-w-4xl">
@@ -1487,12 +1487,12 @@ export default function DesignSystem() {
 
             {/* Content Frame Card */}
             <div>
-              <div className="text-sm mb-4" style={{ fontFamily: 'DM Sans, sans-serif', fontWeight: 700, color: '#444444' }}>
+              <div className="text-sm mb-4" style={{ fontFamily: 'var(--display)', fontWeight: 700, color: '#444444' }}>
                 Content Frame Card Component
               </div>
               <div className="max-w-4xl">
                 <ContentFrameCard borderColor="#1F5364">
-                  <p style={{ fontFamily: 'Lora, serif', fontSize: 'var(--font-size-base)', color: '#444444', lineHeight: '1.6' }}>
+                  <p style={{ fontFamily: 'var(--body)', fontSize: 'var(--font-size-base)', color: '#444444', lineHeight: '1.6' }}>
                     I write about the intersection of ethics, leadership, and product development. Each piece explores real challenges facing research leaders today — from algorithmic bias to building inclusive teams.
                   </p>
                 </ContentFrameCard>
@@ -1501,7 +1501,7 @@ export default function DesignSystem() {
 
             {/* Podcast Preview Card */}
             <div>
-              <div className="text-sm mb-4" style={{ fontFamily: 'DM Sans, sans-serif', fontWeight: 700, color: '#444444' }}>
+              <div className="text-sm mb-4" style={{ fontFamily: 'var(--display)', fontWeight: 700, color: '#444444' }}>
                 Podcast Preview Card Component
               </div>
               <div className="max-w-4xl">
@@ -1515,7 +1515,7 @@ export default function DesignSystem() {
 
             {/* Episode Card */}
             <div>
-              <div className="text-sm mb-4" style={{ fontFamily: 'DM Sans, sans-serif', fontWeight: 700, color: '#444444' }}>
+              <div className="text-sm mb-4" style={{ fontFamily: 'var(--display)', fontWeight: 700, color: '#444444' }}>
                 Episode Card Component
               </div>
               <div className="max-w-4xl">
@@ -1534,7 +1534,7 @@ export default function DesignSystem() {
 
             {/* Platform Card */}
             <div>
-              <div className="text-sm mb-4" style={{ fontFamily: 'DM Sans, sans-serif', fontWeight: 700, color: '#444444' }}>
+              <div className="text-sm mb-4" style={{ fontFamily: 'var(--display)', fontWeight: 700, color: '#444444' }}>
                 Platform Card Component
               </div>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl">
@@ -1561,7 +1561,7 @@ export default function DesignSystem() {
 
             {/* Tab Button */}
             <div>
-              <div className="text-sm mb-4" style={{ fontFamily: 'DM Sans, sans-serif', fontWeight: 700, color: '#444444' }}>
+              <div className="text-sm mb-4" style={{ fontFamily: 'var(--display)', fontWeight: 700, color: '#444444' }}>
                 Tab Button Component
               </div>
               <div style={{ backgroundColor: '#1E1E1E', padding: '20px', borderRadius: '8px' }}>
@@ -1586,7 +1586,7 @@ export default function DesignSystem() {
 
             {/* CTA Strip */}
             <div>
-              <div className="text-sm mb-4" style={{ fontFamily: 'DM Sans, sans-serif', fontWeight: 700, color: '#444444' }}>
+              <div className="text-sm mb-4" style={{ fontFamily: 'var(--display)', fontWeight: 700, color: '#444444' }}>
                 CTA Strip Component
               </div>
               <CTAStrip
@@ -1598,7 +1598,7 @@ export default function DesignSystem() {
 
             {/* Hero Component */}
             <div>
-              <div className="text-sm mb-4" style={{ fontFamily: 'DM Sans, sans-serif', fontWeight: 700, color: '#444444' }}>
+              <div className="text-sm mb-4" style={{ fontFamily: 'var(--display)', fontWeight: 700, color: '#444444' }}>
                 Hero Component
               </div>
               <Hero
@@ -1611,33 +1611,33 @@ export default function DesignSystem() {
 
             {/* Navigation Component */}
             <div>
-              <div className="text-sm mb-4" style={{ fontFamily: 'DM Sans, sans-serif', fontWeight: 700, color: '#444444' }}>
+              <div className="text-sm mb-4" style={{ fontFamily: 'var(--display)', fontWeight: 700, color: '#444444' }}>
                 Navigation Component
               </div>
               <div style={{ backgroundColor: '#FFFFFF', padding: '32px', borderRadius: '8px', border: '1px solid #EEEEEE' }}>
                 <div style={{ marginBottom: '24px' }}>
-                  <p style={{ fontFamily: 'Lora, serif', fontSize: 'var(--font-size-sm)', color: '#444444', marginBottom: '16px', lineHeight: '1.6' }}>
+                  <p style={{ fontFamily: 'var(--body)', fontSize: 'var(--font-size-sm)', color: '#444444', marginBottom: '16px', lineHeight: '1.6' }}>
                     Responsive navigation with hamburger menu for mobile devices. Features active link indicators, keyboard navigation support, and WCAG AA compliant focus states.
                   </p>
                   <div style={{ display: 'flex', flexWrap: 'wrap', gap: '16px', marginBottom: '16px' }}>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
                       <div style={{ width: '12px', height: '12px', borderRadius: '50%', backgroundColor: '#1F5364' }} />
-                      <span style={{ fontFamily: 'DM Sans, sans-serif', fontSize: 'var(--font-size-xs)', color: '#444444' }}>Desktop: Horizontal nav with active underline</span>
+                      <span style={{ fontFamily: 'var(--display)', fontSize: 'var(--font-size-xs)', color: '#444444' }}>Desktop: Horizontal nav with active underline</span>
                     </div>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
                       <div style={{ width: '12px', height: '12px', borderRadius: '50%', backgroundColor: '#1F5364' }} />
-                      <span style={{ fontFamily: 'DM Sans, sans-serif', fontSize: 'var(--font-size-xs)', color: '#444444' }}>Mobile: Hamburger menu (≤768px)</span>
+                      <span style={{ fontFamily: 'var(--display)', fontSize: 'var(--font-size-xs)', color: '#444444' }}>Mobile: Hamburger menu (≤768px)</span>
                     </div>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
                       <div style={{ width: '12px', height: '12px', borderRadius: '50%', backgroundColor: '#1F5364' }} />
-                      <span style={{ fontFamily: 'DM Sans, sans-serif', fontSize: 'var(--font-size-xs)', color: '#444444' }}>Accessible: ARIA labels, keyboard support (ESC to close)</span>
+                      <span style={{ fontFamily: 'var(--display)', fontSize: 'var(--font-size-xs)', color: '#444444' }}>Accessible: ARIA labels, keyboard support (ESC to close)</span>
                     </div>
                   </div>
                 </div>
                 
                 {/* Desktop Preview */}
                 <div style={{ marginBottom: '24px' }}>
-                  <div style={{ fontFamily: 'DM Sans, sans-serif', fontSize: 'var(--font-size-xs)', fontWeight: 700, color: '#1F5364', marginBottom: '8px', letterSpacing: '1px', textTransform: 'uppercase' }}>
+                  <div style={{ fontFamily: 'var(--display)', fontSize: 'var(--font-size-xs)', fontWeight: 700, color: '#1F5364', marginBottom: '8px', letterSpacing: '1px', textTransform: 'uppercase' }}>
                     Desktop View (&gt;768px)
                   </div>
                   <div style={{ border: '1px solid #EEEEEE', borderRadius: '8px', overflow: 'hidden' }}>
@@ -1647,7 +1647,7 @@ export default function DesignSystem() {
 
                 {/* Mobile Preview */}
                 <div>
-                  <div style={{ fontFamily: 'DM Sans, sans-serif', fontSize: 'var(--font-size-xs)', fontWeight: 700, color: '#1F5364', marginBottom: '8px', letterSpacing: '1px', textTransform: 'uppercase' }}>
+                  <div style={{ fontFamily: 'var(--display)', fontSize: 'var(--font-size-xs)', fontWeight: 700, color: '#1F5364', marginBottom: '8px', letterSpacing: '1px', textTransform: 'uppercase' }}>
                     Mobile View (&le;768px)
                   </div>
                   <div style={{ border: '1px solid #EEEEEE', borderRadius: '8px', overflow: 'hidden', backgroundColor: '#FAF7F2' }}>
@@ -1662,10 +1662,10 @@ export default function DesignSystem() {
 
                 {/* Accessibility Features */}
                 <div style={{ marginTop: '24px', padding: '16px', backgroundColor: '#FAF7F2', borderRadius: '6px', border: '1px solid #EEEEEE' }}>
-                  <div style={{ fontFamily: 'DM Sans, sans-serif', fontSize: 'var(--font-size-xs)', fontWeight: 700, color: '#1E1E1E', marginBottom: '12px', letterSpacing: '1px', textTransform: 'uppercase' }}>
+                  <div style={{ fontFamily: 'var(--display)', fontSize: 'var(--font-size-xs)', fontWeight: 700, color: '#1E1E1E', marginBottom: '12px', letterSpacing: '1px', textTransform: 'uppercase' }}>
                     ✅ Accessibility Features
                   </div>
-                  <ul style={{ fontFamily: 'Lora, serif', fontSize: 'var(--font-size-sm)', color: '#444444', lineHeight: '1.8', listStyle: 'disc', marginLeft: '24px' }}>
+                  <ul style={{ fontFamily: 'var(--body)', fontSize: 'var(--font-size-sm)', color: '#444444', lineHeight: '1.8', listStyle: 'disc', marginLeft: '24px' }}>
                     <li>ARIA labels: role="navigation", aria-label, aria-expanded, aria-controls</li>
                     <li>Keyboard navigation: Tab, Enter, Escape key support</li>
                     <li>Focus indicators: 2px solid #1F5364 outline (6.8:1 contrast)</li>

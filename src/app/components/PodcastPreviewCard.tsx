@@ -23,7 +23,7 @@ export function PodcastPreviewCard({
     >
       <h3
         style={{
-          fontFamily: 'DM Sans, sans-serif',
+          fontFamily: 'var(--display)',
           fontWeight: 700,
           fontSize: 'var(--font-size-xl)',
           color: 'var(--white)',
@@ -34,7 +34,7 @@ export function PodcastPreviewCard({
       </h3>
       <p
         style={{
-          fontFamily: 'Lora, serif',
+          fontFamily: 'var(--body)',
           fontSize: 'var(--font-size-base)',
           color: 'var(--hero-subtitle-color-soft)',
           lineHeight: '1.6',

@@ -27,7 +27,7 @@ export function PlatformCard({ name, icon, iconBackgroundColor, iconColor }: Pla
           alignItems: 'center',
           justifyContent: 'center',
           color: iconColor,
-          fontFamily: 'DM Sans, sans-serif',
+          fontFamily: 'var(--display)',
           fontWeight: 700,
           fontSize: 'var(--font-size-2xl)',
         }}
@@ -36,7 +36,7 @@ export function PlatformCard({ name, icon, iconBackgroundColor, iconColor }: Pla
       </div>
       <h3
         style={{
-          fontFamily: 'DM Sans, sans-serif',
+          fontFamily: 'var(--display)',
           fontWeight: 700,
           fontSize: 'var(--font-size-lg)',
           color: 'var(--charcoal)',
@@ -47,7 +47,7 @@ export function PlatformCard({ name, icon, iconBackgroundColor, iconColor }: Pla
       </h3>
       <button
         style={{
-          fontFamily: 'DM Sans, sans-serif',
+          fontFamily: 'var(--display)',
           fontWeight: 700,
           fontSize: 'var(--font-size-sm)',
           color: 'var(--teal-dark)',

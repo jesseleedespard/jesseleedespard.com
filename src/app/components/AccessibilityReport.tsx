@@ -271,7 +271,7 @@ export function AccessibilityReport() {
       <div className="space-y-8">
         {contrastTests.map((category, idx) => (
           <div key={idx}>
-            <h2 className="text-lg mb-4" style={{ fontFamily: 'DM Sans, sans-serif', fontWeight: 700 }}>
+            <h2 className="text-lg mb-4" style={{ fontFamily: 'var(--display)', fontWeight: 700 }}>
               {category.category}
             </h2>
             <div className="space-y-3">
@@ -312,7 +312,7 @@ export function AccessibilityReport() {
       </div>
 
       <div className="mt-8 p-6 bg-blue-50 border border-blue-200 rounded">
-        <h3 className="text-base mb-3" style={{ fontFamily: 'DM Sans, sans-serif', fontWeight: 700 }}>
+        <h3 className="text-base mb-3" style={{ fontFamily: 'var(--display)', fontWeight: 700 }}>
           Applied Fixes Summary
         </h3>
         <ul className="space-y-2 text-sm">

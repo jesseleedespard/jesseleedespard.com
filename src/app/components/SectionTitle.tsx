@@ -7,7 +7,7 @@ export function SectionTitle({ children, marginBottom = 'var(--space-section-mob
   return (
     <h2
       style={{
-        fontFamily: 'DM Sans, sans-serif',
+        fontFamily: 'var(--display)',
         fontWeight: 700,
         fontSize: 'var(--font-size-2xl)',
         color: 'var(--charcoal)',

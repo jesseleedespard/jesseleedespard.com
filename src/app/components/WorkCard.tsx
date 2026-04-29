@@ -40,7 +40,7 @@ export function WorkCard({
         {/* Tag */}
         <div
           style={{
-            fontFamily: 'DM Sans, sans-serif',
+            fontFamily: 'var(--display)',
             fontWeight: 700,
             fontSize: 'var(--font-size-xs)',
             color: tagColor,
@@ -55,7 +55,7 @@ export function WorkCard({
         {/* Title */}
         <h3
           style={{
-            fontFamily: 'DM Sans, sans-serif',
+            fontFamily: 'var(--display)',
             fontWeight: 700,
             fontSize: 'var(--font-size-xl)',
             color: disabled ? 'var(--gray)' : 'var(--charcoal)',
@@ -68,7 +68,7 @@ export function WorkCard({
         {/* Description */}
         <p
           style={{
-            fontFamily: 'Lora, serif',
+            fontFamily: 'var(--body)',
             fontSize: 'var(--font-size-base)',
             color: disabled ? 'var(--gray)' : 'var(--dark-gray)',
             lineHeight: '1.6',
@@ -83,7 +83,7 @@ export function WorkCard({
           {disabled ? (
             <div
               style={{
-                fontFamily: 'DM Sans, sans-serif',
+                fontFamily: 'var(--display)',
                 fontWeight: 700,
                 fontSize: 'var(--font-size-sm)',
                 color: 'var(--mid-gray)',
@@ -96,7 +96,7 @@ export function WorkCard({
             <Link
               to={linkTo}
               style={{
-                fontFamily: 'DM Sans, sans-serif',
+                fontFamily: 'var(--display)',
                 fontWeight: 700,
                 fontSize: 'var(--font-size-sm)',
                 color: linkColor,

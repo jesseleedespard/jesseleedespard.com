@@ -40,7 +40,7 @@ export function EpisodeCard({ episodeNumber, title, description, tags }: Episode
         >
           <span
             style={{
-              fontFamily: 'DM Sans, sans-serif',
+              fontFamily: 'var(--display)',
               fontWeight: 700,
               fontSize: 'var(--font-size-xl)',
               color: 'var(--gold)',
@@ -54,7 +54,7 @@ export function EpisodeCard({ episodeNumber, title, description, tags }: Episode
         <div style={{ flex: 1 }}>
           <h3
             style={{
-              fontFamily: 'DM Sans, sans-serif',
+              fontFamily: 'var(--display)',
               fontWeight: 700,
               fontSize: 'var(--font-size-lg)',
               color: 'var(--charcoal)',
@@ -65,7 +65,7 @@ export function EpisodeCard({ episodeNumber, title, description, tags }: Episode
           </h3>
           <p
             style={{
-              fontFamily: 'Lora, serif',
+              fontFamily: 'var(--body)',
               fontSize: 'var(--font-size-base)',
               color: 'var(--dark-gray)',
               lineHeight: '1.6',
@@ -79,7 +79,7 @@ export function EpisodeCard({ episodeNumber, title, description, tags }: Episode
               <span
                 key={index}
                 style={{
-                  fontFamily: 'DM Sans, sans-serif',
+                  fontFamily: 'var(--display)',
                   fontSize: 'var(--font-size-xs)',
                   color: tag.color,
                   backgroundColor: tag.backgroundColor,

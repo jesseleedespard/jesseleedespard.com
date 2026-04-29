@@ -611,18 +611,18 @@ export function ComponentAccessibilityReport() {
 
   return (
     <div className="bg-white rounded-lg shadow-lg p-8">
-      <h2 className="text-2xl mb-6 text-center" style={{ fontFamily: 'DM Sans, sans-serif', fontWeight: 700 }}>
+      <h2 className="text-2xl mb-6 text-center" style={{ fontFamily: 'var(--display)', fontWeight: 700 }}>
         Component Accessibility Analysis (WCAG 2.0 AA)
       </h2>
 
       {/* Summary */}
       <div className="mb-8 p-6 bg-blue-50 border-l-4 border-blue-400 rounded">
         <div className="mb-4">
-          <strong style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '18px', color: '#1E1E1E' }}>
+          <strong style={{ fontFamily: 'var(--display)', fontSize: '18px', color: '#1E1E1E' }}>
             Summary - Updated with Even Font Sizes
           </strong>
         </div>
-        <div style={{ fontFamily: 'Lora, serif', fontSize: '16px', color: '#444444', lineHeight: '1.6' }}>
+        <div style={{ fontFamily: 'var(--body)', fontSize: '16px', color: '#444444', lineHeight: '1.6' }}>
           <p className="mb-2">
             <strong>Total Tests:</strong> {contrastTests.length}
           </p>
@@ -674,11 +674,11 @@ export function ComponentAccessibilityReport() {
       {/* Failures Table */}
       {failures.length > 0 && (
         <div className="mb-8">
-          <h3 className="text-xl mb-4" style={{ fontFamily: 'DM Sans, sans-serif', fontWeight: 700, color: '#C4622D' }}>
+          <h3 className="text-xl mb-4" style={{ fontFamily: 'var(--display)', fontWeight: 700, color: '#C4622D' }}>
             ⚠️ Components Requiring Fixes ({failures.length})
           </h3>
           <div className="overflow-x-auto">
-            <table className="w-full text-sm" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+            <table className="w-full text-sm" style={{ fontFamily: 'var(--display)' }}>
               <thead>
                 <tr style={{ backgroundColor: '#FAF7F2', borderBottom: '2px solid #EEEEEE' }}>
                   <th className="text-left p-3" style={{ fontWeight: 700 }}>Component</th>
@@ -712,11 +712,11 @@ export function ComponentAccessibilityReport() {
 
       {/* Passes Table */}
       <div className="mb-8">
-        <h3 className="text-xl mb-4" style={{ fontFamily: 'DM Sans, sans-serif', fontWeight: 700, color: '#2C6E7F' }}>
+        <h3 className="text-xl mb-4" style={{ fontFamily: 'var(--display)', fontWeight: 700, color: '#2C6E7F' }}>
           ✅ Components Passing AA Standard ({passes.length})
         </h3>
         <div className="overflow-x-auto">
-          <table className="w-full text-sm" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+          <table className="w-full text-sm" style={{ fontFamily: 'var(--display)' }}>
             <thead>
               <tr style={{ backgroundColor: '#FAF7F2', borderBottom: '2px solid #EEEEEE' }}>
                 <th className="text-left p-3" style={{ fontWeight: 700 }}>Component</th>
@@ -750,11 +750,11 @@ export function ComponentAccessibilityReport() {
       {/* Non-text Elements */}
       {nonText.length > 0 && (
         <div className="mb-8">
-          <h3 className="text-xl mb-4" style={{ fontFamily: 'DM Sans, sans-serif', fontWeight: 700, color: '#888888' }}>
+          <h3 className="text-xl mb-4" style={{ fontFamily: 'var(--display)', fontWeight: 700, color: '#888888' }}>
             Non-text/Decorative Elements ({nonText.length})
           </h3>
           <div className="overflow-x-auto">
-            <table className="w-full text-sm" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+            <table className="w-full text-sm" style={{ fontFamily: 'var(--display)' }}>
               <thead>
                 <tr style={{ backgroundColor: '#FAF7F2', borderBottom: '2px solid #EEEEEE' }}>
                   <th className="text-left p-3" style={{ fontWeight: 700 }}>Component</th>
@@ -778,10 +778,10 @@ export function ComponentAccessibilityReport() {
 
       {/* WCAG Standards Reference */}
       <div className="mt-8 p-6 bg-gray-50 rounded border border-gray-200">
-        <h4 className="mb-3" style={{ fontFamily: 'DM Sans, sans-serif', fontWeight: 700, fontSize: '16px', color: '#1E1E1E' }}>
+        <h4 className="mb-3" style={{ fontFamily: 'var(--display)', fontWeight: 700, fontSize: '16px', color: '#1E1E1E' }}>
           WCAG 2.0 AA Contrast Requirements
         </h4>
-        <div style={{ fontFamily: 'Lora, serif', fontSize: '16px', color: '#444444', lineHeight: '1.6' }}>
+        <div style={{ fontFamily: 'var(--body)', fontSize: '16px', color: '#444444', lineHeight: '1.6' }}>
           <ul style={{ listStyle: 'disc', marginLeft: '24px' }}>
             <li><strong>Normal text</strong> (under 18px, or under 14px bold): Minimum <strong>4.5:1</strong> contrast ratio</li>
             <li><strong>Large text</strong> (18px and larger, or 14px bold and larger): Minimum <strong>3:1</strong> contrast ratio</li>

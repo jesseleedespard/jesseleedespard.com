@@ -16,7 +16,7 @@ export function LegendItem({ color, label }: LegendItemProps) {
       />
       <span
         style={{
-          fontFamily: 'DM Sans, sans-serif',
+          fontFamily: 'var(--display)',
           fontSize: 'var(--font-size-sm)',
           color: 'var(--dark-gray)',
           fontWeight: 500,

@@ -506,13 +506,13 @@ export function AccessibilityAuditReport() {
   const failures = contrastTests.filter((test) => test.notes.includes('⚠️'));
 
   return (
-    <div style={{ fontFamily: 'Lora, serif', maxWidth: '1200px', margin: '0 auto', padding: '40px' }}>
-      <h2 className="text-3xl mb-6" style={{ fontFamily: 'DM Sans, sans-serif', fontWeight: 700, color: '#1E1E1E' }}>
+    <div style={{ fontFamily: 'var(--body)', maxWidth: '1200px', margin: '0 auto', padding: '40px' }}>
+      <h2 className="text-3xl mb-6" style={{ fontFamily: 'var(--display)', fontWeight: 700, color: '#1E1E1E' }}>
         Post-Fix Accessibility Audit Report
       </h2>
 
       <div className="mb-8 p-6" style={{ backgroundColor: '#FAF7F2', borderRadius: '8px', border: '1px solid #EEEEEE' }}>
-        <h3 className="text-xl mb-4" style={{ fontFamily: 'DM Sans, sans-serif', fontWeight: 700, color: '#1E1E1E' }}>
+        <h3 className="text-xl mb-4" style={{ fontFamily: 'var(--display)', fontWeight: 700, color: '#1E1E1E' }}>
           Summary
         </h3>
         <div className="grid grid-cols-3 gap-4">
@@ -570,24 +570,24 @@ export function AccessibilityAuditReport() {
 
       {/* Passes Table */}
       <div className="mb-8">
-        <h3 className="text-xl mb-4" style={{ fontFamily: 'DM Sans, sans-serif', fontWeight: 700, color: '#1F5364' }}>
+        <h3 className="text-xl mb-4" style={{ fontFamily: 'var(--display)', fontWeight: 700, color: '#1F5364' }}>
           ✅ All Passing Tests ({passes.length})
         </h3>
         <div style={{ overflowX: 'auto' }}>
           <table style={{ width: '100%', borderCollapse: 'collapse', backgroundColor: '#FFFFFF' }}>
             <thead>
               <tr style={{ backgroundColor: '#FAF7F2', borderBottom: '2px solid #EEEEEE' }}>
-                <th className="text-left p-3" style={{ fontFamily: 'DM Sans, sans-serif', fontWeight: 700, fontSize: '13px', color: '#1E1E1E' }}>Component</th>
-                <th className="text-left p-3" style={{ fontFamily: 'DM Sans, sans-serif', fontWeight: 700, fontSize: '13px', color: '#1E1E1E' }}>Element</th>
-                <th className="text-left p-3" style={{ fontFamily: 'DM Sans, sans-serif', fontWeight: 700, fontSize: '13px', color: '#1E1E1E' }}>Colors</th>
-                <th className="text-left p-3" style={{ fontFamily: 'DM Sans, sans-serif', fontWeight: 700, fontSize: '13px', color: '#1E1E1E' }}>Ratio</th>
-                <th className="text-left p-3" style={{ fontFamily: 'DM Sans, sans-serif', fontWeight: 700, fontSize: '13px', color: '#1E1E1E' }}>Notes</th>
+                <th className="text-left p-3" style={{ fontFamily: 'var(--display)', fontWeight: 700, fontSize: '13px', color: '#1E1E1E' }}>Component</th>
+                <th className="text-left p-3" style={{ fontFamily: 'var(--display)', fontWeight: 700, fontSize: '13px', color: '#1E1E1E' }}>Element</th>
+                <th className="text-left p-3" style={{ fontFamily: 'var(--display)', fontWeight: 700, fontSize: '13px', color: '#1E1E1E' }}>Colors</th>
+                <th className="text-left p-3" style={{ fontFamily: 'var(--display)', fontWeight: 700, fontSize: '13px', color: '#1E1E1E' }}>Ratio</th>
+                <th className="text-left p-3" style={{ fontFamily: 'var(--display)', fontWeight: 700, fontSize: '13px', color: '#1E1E1E' }}>Notes</th>
               </tr>
             </thead>
             <tbody>
               {passes.map((test, idx) => (
                 <tr key={idx} style={{ borderBottom: '1px solid #EEEEEE' }}>
-                  <td className="p-3" style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '13px', fontWeight: 600, color: '#1E1E1E' }}>
+                  <td className="p-3" style={{ fontFamily: 'var(--display)', fontSize: '13px', fontWeight: 600, color: '#1E1E1E' }}>
                     {test.component}
                   </td>
                   <td className="p-3" style={{ fontSize: '13px', color: '#444444' }}>{test.element}</td>
@@ -628,24 +628,24 @@ export function AccessibilityAuditReport() {
       {/* Minor Issues */}
       {failures.length > 0 && (
         <div className="mb-8">
-          <h3 className="text-xl mb-4" style={{ fontFamily: 'DM Sans, sans-serif', fontWeight: 700, color: '#C4622D' }}>
+          <h3 className="text-xl mb-4" style={{ fontFamily: 'var(--display)', fontWeight: 700, color: '#C4622D' }}>
             ⚠️ Advisory Items ({failures.length})
           </h3>
           <div style={{ overflowX: 'auto' }}>
             <table style={{ width: '100%', borderCollapse: 'collapse', backgroundColor: '#FFFFFF' }}>
               <thead>
                 <tr style={{ backgroundColor: 'var(--terra-tint)', borderBottom: '2px solid #EEEEEE' }}>
-                  <th className="text-left p-3" style={{ fontFamily: 'DM Sans, sans-serif', fontWeight: 700, fontSize: '13px', color: '#1E1E1E' }}>Component</th>
-                  <th className="text-left p-3" style={{ fontFamily: 'DM Sans, sans-serif', fontWeight: 700, fontSize: '13px', color: '#1E1E1E' }}>Element</th>
-                  <th className="text-left p-3" style={{ fontFamily: 'DM Sans, sans-serif', fontWeight: 700, fontSize: '13px', color: '#1E1E1E' }}>Colors</th>
-                  <th className="text-left p-3" style={{ fontFamily: 'DM Sans, sans-serif', fontWeight: 700, fontSize: '13px', color: '#1E1E1E' }}>Ratio</th>
-                  <th className="text-left p-3" style={{ fontFamily: 'DM Sans, sans-serif', fontWeight: 700, fontSize: '13px', color: '#1E1E1E' }}>Notes</th>
+                  <th className="text-left p-3" style={{ fontFamily: 'var(--display)', fontWeight: 700, fontSize: '13px', color: '#1E1E1E' }}>Component</th>
+                  <th className="text-left p-3" style={{ fontFamily: 'var(--display)', fontWeight: 700, fontSize: '13px', color: '#1E1E1E' }}>Element</th>
+                  <th className="text-left p-3" style={{ fontFamily: 'var(--display)', fontWeight: 700, fontSize: '13px', color: '#1E1E1E' }}>Colors</th>
+                  <th className="text-left p-3" style={{ fontFamily: 'var(--display)', fontWeight: 700, fontSize: '13px', color: '#1E1E1E' }}>Ratio</th>
+                  <th className="text-left p-3" style={{ fontFamily: 'var(--display)', fontWeight: 700, fontSize: '13px', color: '#1E1E1E' }}>Notes</th>
                 </tr>
               </thead>
               <tbody>
                 {failures.map((test, idx) => (
                   <tr key={idx} style={{ borderBottom: '1px solid #EEEEEE' }}>
-                    <td className="p-3" style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '13px', fontWeight: 600, color: '#1E1E1E' }}>
+                    <td className="p-3" style={{ fontFamily: 'var(--display)', fontSize: '13px', fontWeight: 600, color: '#1E1E1E' }}>
                       {test.component}
                     </td>
                     <td className="p-3" style={{ fontSize: '13px', color: '#444444' }}>{test.element}</td>
@@ -686,7 +686,7 @@ export function AccessibilityAuditReport() {
 
       {/* Color Reference */}
       <div className="mt-8 p-6" style={{ backgroundColor: '#FAF7F2', borderRadius: '8px', border: '1px solid #EEEEEE' }}>
-        <h3 className="text-xl mb-4" style={{ fontFamily: 'DM Sans, sans-serif', fontWeight: 700, color: '#1E1E1E' }}>
+        <h3 className="text-xl mb-4" style={{ fontFamily: 'var(--display)', fontWeight: 700, color: '#1E1E1E' }}>
           Accessible Color Pairings
         </h3>
         <div className="grid grid-cols-2 gap-4">

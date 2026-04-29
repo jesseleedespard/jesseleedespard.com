@@ -13,7 +13,7 @@ export function TabButton({ label, count, icon, isActive, onClick }: TabButtonPr
     <button
       onClick={onClick}
       style={{
-        fontFamily: 'DM Sans, sans-serif',
+        fontFamily: 'var(--display)',
         fontWeight: isActive ? 700 : 500,
         fontSize: 'var(--font-size-sm)',
         color: isActive ? 'var(--white)' : 'var(--hero-subtitle-color-soft)',
@@ -32,7 +32,7 @@ export function TabButton({ label, count, icon, isActive, onClick }: TabButtonPr
       {/* Count Badge */}
       <span
         style={{
-          fontFamily: 'DM Sans, sans-serif',
+          fontFamily: 'var(--display)',
           fontWeight: 700,
           fontSize: 'var(--font-size-xs)',
           color: isActive ? 'var(--white)' : 'var(--charcoal)',

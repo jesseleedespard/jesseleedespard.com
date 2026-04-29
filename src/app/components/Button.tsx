@@ -15,7 +15,7 @@ export function Button({
 }: ButtonProps) {
   const getStyles = () => {
     const baseStyles = {
-      fontFamily: 'DM Sans, sans-serif',
+      fontFamily: 'var(--display)',
       fontWeight: 700,
       fontSize: 'var(--font-size-sm)',
       padding: size === 'large' ? 'var(--space-sm) var(--space-card)' : 'var(--space-sm) var(--space-card-mobile)',

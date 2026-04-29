@@ -85,7 +85,7 @@ export default function About() {
         }
         
         .about-hero-title {
-          font-family: 'DM Sans', sans-serif;
+          font-family: var(--display);
           font-weight: 700;
           font-size: clamp(var(--font-size-2xl), 4.5vw, var(--font-size-3xl));
           color: var(--white);
@@ -99,7 +99,7 @@ export default function About() {
         }
         
         .about-hero-subtitle {
-          font-family: 'Lora', serif;
+          font-family: var(--body);
           font-weight: 400;
           font-size: var(--font-size-lg);
           color: var(--hero-subtitle-color);
@@ -141,7 +141,7 @@ export default function About() {
         }
 
         .about-testimonial-name {
-          font-family: 'DM Sans', sans-serif;
+          font-family: var(--display);
           font-size: var(--font-size-lg);
           font-weight: 700;
           color: var(--charcoal);
@@ -149,7 +149,7 @@ export default function About() {
         }
 
         .about-testimonial-role {
-          font-family: 'DM Sans', sans-serif;
+          font-family: var(--display);
           font-size: var(--font-size-sm);
           color: var(--gray);
           margin-top: 6px;
@@ -157,7 +157,7 @@ export default function About() {
         }
 
         .about-testimonial-quote {
-          font-family: 'Lora', serif;
+          font-family: var(--body);
           font-size: var(--font-size-base);
           color: var(--dark-gray);
           line-height: 1.65;
@@ -192,7 +192,7 @@ export default function About() {
         .about-testimonial-toggle {
           margin-top: 18px;
           align-self: flex-end;
-          font-family: 'DM Sans', sans-serif;
+          font-family: var(--display);
           font-size: var(--font-size-sm);
           font-weight: 700;
           letter-spacing: 0.03em;
@@ -270,7 +270,7 @@ export default function About() {
             {/* Eyebrow */}
             <div
               style={{
-                fontFamily: 'DM Sans, sans-serif',
+                fontFamily: 'var(--display)',
                 fontWeight: 700,
                 fontSize: 'var(--font-size-xs)',
                 color: 'var(--gold)',
@@ -305,7 +305,7 @@ export default function About() {
           {/* Eyebrow */}
           <div
             style={{
-              fontFamily: 'DM Sans, sans-serif',
+              fontFamily: 'var(--display)',
               fontWeight: 700,
               fontSize: 'var(--font-size-xs)',
               color: 'var(--teal-dark)',
@@ -320,7 +320,7 @@ export default function About() {
           {/* Long Body Text */}
           <div
             style={{
-              fontFamily: 'Lora, serif',
+              fontFamily: 'var(--body)',
               fontSize: 'var(--font-size-base)',
               color: 'var(--dark-gray)',
               lineHeight: '1.7',
@@ -383,7 +383,7 @@ export default function About() {
           {/* Eyebrow */}
           <div
             style={{
-              fontFamily: 'DM Sans, sans-serif',
+              fontFamily: 'var(--display)',
               fontWeight: 700,
               fontSize: 'var(--font-size-xs)',
               color: 'var(--teal-dark)',
@@ -401,7 +401,7 @@ export default function About() {
             <div>
               <div
                 style={{
-                  fontFamily: 'DM Sans, sans-serif',
+                  fontFamily: 'var(--display)',
                   fontWeight: 700,
                   fontSize: 'var(--font-size-3xl)',
                   color: 'var(--gold)',
@@ -412,7 +412,7 @@ export default function About() {
               </div>
               <h3
                 style={{
-                  fontFamily: 'DM Sans, sans-serif',
+                  fontFamily: 'var(--display)',
                   fontWeight: 700,
                   fontSize: 'var(--font-size-lg)',
                   color: 'var(--charcoal)',
@@ -423,7 +423,7 @@ export default function About() {
               </h3>
               <p
                 style={{
-                  fontFamily: 'Lora, serif',
+                  fontFamily: 'var(--body)',
                   fontSize: 'var(--font-size-sm)',
                   color: 'var(--dark-gray)',
                   lineHeight: '1.6',
@@ -437,7 +437,7 @@ export default function About() {
             <div>
               <div
                 style={{
-                  fontFamily: 'DM Sans, sans-serif',
+                  fontFamily: 'var(--display)',
                   fontWeight: 700,
                   fontSize: 'var(--font-size-3xl)',
                   color: 'var(--gold)',
@@ -448,7 +448,7 @@ export default function About() {
               </div>
               <h3
                 style={{
-                  fontFamily: 'DM Sans, sans-serif',
+                  fontFamily: 'var(--display)',
                   fontWeight: 700,
                   fontSize: 'var(--font-size-lg)',
                   color: 'var(--charcoal)',
@@ -459,7 +459,7 @@ export default function About() {
               </h3>
               <p
                 style={{
-                  fontFamily: 'Lora, serif',
+                  fontFamily: 'var(--body)',
                   fontSize: 'var(--font-size-sm)',
                   color: 'var(--dark-gray)',
                   lineHeight: '1.6',
@@ -473,7 +473,7 @@ export default function About() {
             <div>
               <div
                 style={{
-                  fontFamily: 'DM Sans, sans-serif',
+                  fontFamily: 'var(--display)',
                   fontWeight: 700,
                   fontSize: 'var(--font-size-3xl)',
                   color: 'var(--gold)',
@@ -484,7 +484,7 @@ export default function About() {
               </div>
               <h3
                 style={{
-                  fontFamily: 'DM Sans, sans-serif',
+                  fontFamily: 'var(--display)',
                   fontWeight: 700,
                   fontSize: 'var(--font-size-lg)',
                   color: 'var(--charcoal)',
@@ -495,7 +495,7 @@ export default function About() {
               </h3>
               <p
                 style={{
-                  fontFamily: 'Lora, serif',
+                  fontFamily: 'var(--body)',
                   fontSize: 'var(--font-size-sm)',
                   color: 'var(--dark-gray)',
                   lineHeight: '1.6',
@@ -514,7 +514,7 @@ export default function About() {
           {/* Eyebrow */}
           <div
             style={{
-              fontFamily: 'DM Sans, sans-serif',
+              fontFamily: 'var(--display)',
               fontWeight: 700,
               fontSize: 'var(--font-size-xs)',
               color: 'var(--teal-dark)',
@@ -539,7 +539,7 @@ export default function About() {
             >
               <div
                 style={{
-                  fontFamily: 'DM Sans, sans-serif',
+                  fontFamily: 'var(--display)',
                   fontWeight: 700,
                   fontSize: 'var(--font-size-xs)',
                   color: 'var(--terra)',
@@ -552,7 +552,7 @@ export default function About() {
               </div>
               <h3
                 style={{
-                  fontFamily: 'DM Sans, sans-serif',
+                  fontFamily: 'var(--display)',
                   fontWeight: 700,
                   fontSize: 'var(--font-size-lg)',
                   color: 'var(--charcoal)',
@@ -563,7 +563,7 @@ export default function About() {
               </h3>
               <p
                 style={{
-                  fontFamily: 'Lora, serif',
+                  fontFamily: 'var(--body)',
                   fontSize: 'var(--font-size-sm)',
                   color: 'var(--dark-gray)',
                   lineHeight: '1.6',
@@ -574,7 +574,7 @@ export default function About() {
               </p>
               <div
                 style={{
-                  fontFamily: 'DM Sans, sans-serif',
+                  fontFamily: 'var(--display)',
                   fontSize: 'var(--font-size-xs)',
                   color: 'var(--gray)',
                 }}
@@ -594,7 +594,7 @@ export default function About() {
             >
               <div
                 style={{
-                  fontFamily: 'DM Sans, sans-serif',
+                  fontFamily: 'var(--display)',
                   fontWeight: 700,
                   fontSize: 'var(--font-size-xs)',
                   color: 'var(--gold)',
@@ -607,7 +607,7 @@ export default function About() {
               </div>
               <h3
                 style={{
-                  fontFamily: 'DM Sans, sans-serif',
+                  fontFamily: 'var(--display)',
                   fontWeight: 700,
                   fontSize: 'var(--font-size-lg)',
                   color: 'var(--charcoal)',
@@ -618,7 +618,7 @@ export default function About() {
               </h3>
               <p
                 style={{
-                  fontFamily: 'Lora, serif',
+                  fontFamily: 'var(--body)',
                   fontSize: 'var(--font-size-sm)',
                   color: 'var(--dark-gray)',
                   lineHeight: '1.6',
@@ -629,7 +629,7 @@ export default function About() {
               </p>
               <div
                 style={{
-                  fontFamily: 'DM Sans, sans-serif',
+                  fontFamily: 'var(--display)',
                   fontSize: 'var(--font-size-xs)',
                   color: 'var(--gray)',
                 }}
@@ -649,7 +649,7 @@ export default function About() {
             >
               <div
                 style={{
-                  fontFamily: 'DM Sans, sans-serif',
+                  fontFamily: 'var(--display)',
                   fontWeight: 700,
                   fontSize: 'var(--font-size-xs)',
                   color: 'var(--teal-dark)',
@@ -662,7 +662,7 @@ export default function About() {
               </div>
               <h3
                 style={{
-                  fontFamily: 'DM Sans, sans-serif',
+                  fontFamily: 'var(--display)',
                   fontWeight: 700,
                   fontSize: 'var(--font-size-lg)',
                   color: 'var(--charcoal)',
@@ -673,7 +673,7 @@ export default function About() {
               </h3>
               <p
                 style={{
-                  fontFamily: 'Lora, serif',
+                  fontFamily: 'var(--body)',
                   fontSize: 'var(--font-size-sm)',
                   color: 'var(--dark-gray)',
                   lineHeight: '1.6',
@@ -684,7 +684,7 @@ export default function About() {
               </p>
               <div
                 style={{
-                  fontFamily: 'DM Sans, sans-serif',
+                  fontFamily: 'var(--display)',
                   fontSize: 'var(--font-size-xs)',
                   color: 'var(--gray)',
                 }}
@@ -702,7 +702,7 @@ export default function About() {
           {/* Eyebrow */}
           <div
             style={{
-              fontFamily: 'DM Sans, sans-serif',
+              fontFamily: 'var(--display)',
               fontWeight: 700,
               fontSize: 'var(--font-size-xs)',
               color: 'var(--teal-dark)',
