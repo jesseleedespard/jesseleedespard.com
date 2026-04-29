@@ -36,7 +36,7 @@ html { scroll-behavior: smooth; }
 .meta-label { font-family: var(--display); font-size: var(--font-size-xs); letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); font-weight: 700; margin-bottom: 3px; }
 .meta-value { font-family: var(--display); font-size: var(--font-size-sm); color: rgba(255,255,255,0.82); font-weight: 500; }
 .img-caption { font-family: var(--display); font-size: var(--font-size-xs); color: var(--dark-gray); font-style: italic; margin-top: 8px; text-align: center; }
-.redesign-label { font-family: var(--display); font-size: var(--font-size-xs); font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--teal); margin-bottom: 16px; margin-top: 32px; }
+.redesign-label { font-family: var(--display); font-size: var(--font-size-xs); font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--teal-dark); margin-bottom: 16px; margin-top: 32px; }
 
 /* LAYOUT */
 .page-wrap { max-width: calc(var(--max) + (var(--space-page-side) * 2)); margin: 0 auto; padding: 0 var(--space-page-side); }
@@ -50,7 +50,7 @@ html { scroll-behavior: smooth; }
 /* THEME / NUMBERED CARDS */
 .theme-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-top: 24px; }
 .theme-card { background: var(--white); border: 1px solid var(--light-gray); border-radius: var(--radius-sm); padding: 16px 18px; display: flex; gap: 12px; align-items: flex-start; }
-.theme-num { font-family: var(--display); font-size: var(--font-size-lg); font-weight: 700; color: var(--teal); min-width: 32px; }
+.theme-num { font-family: var(--display); font-size: var(--font-size-lg); font-weight: 700; color: var(--teal-dark); min-width: 32px; }
 .theme-content h3 { font-family: var(--display); font-size: var(--font-size-sm); font-weight: 700; color: var(--charcoal); margin-bottom: 4px; }
 .theme-content p { font-size: var(--font-size-sm); line-height: 1.7; color: var(--dark-gray); margin: 0; }
 
@@ -76,7 +76,7 @@ html { scroll-behavior: smooth; }
   font-family: var(--display);
   font-weight: 700;
   font-size: var(--font-size-xl);
-  color: var(--teal);
+  color: var(--teal-dark);
   min-width: 40px;
   flex-shrink: 0;
   line-height: 1.3;

@@ -188,7 +188,7 @@ html { scroll-behavior: smooth; }
 .stats-row.three { grid-template-columns: repeat(3, 1fr); }
 .stats-row.two { grid-template-columns: repeat(2, 1fr); }
 .stat-card { background: var(--white); border: 1px solid var(--light-gray); border-radius: var(--radius-md); padding: 24px; text-align: center; }
-.stat-number { font-family: var(--display); font-size: var(--font-size-2xl); font-weight: 700; color: var(--teal); margin-bottom: 8px; line-height: 1.1; }
+.stat-number { font-family: var(--display); font-size: var(--font-size-2xl); font-weight: 700; color: var(--teal-dark); margin-bottom: 8px; line-height: 1.1; }
 .stat-label { font-family: var(--display); font-size: var(--font-size-sm); font-weight: 700; color: var(--charcoal); margin-bottom: 8px; }
 .stat-desc { font-size: var(--font-size-sm); line-height: 1.6; color: var(--dark-gray); margin: 0; text-align: left; }
 .section-subheading { margin-top: 32px; }

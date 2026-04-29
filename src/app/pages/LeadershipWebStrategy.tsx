@@ -86,7 +86,7 @@ html { scroll-behavior: smooth; }
   width: 100%;
   min-width: 0;
 }
-.theme-num { font-family: var(--display); font-size: var(--font-size-lg); font-weight: 700; color: var(--teal); min-width: 28px; flex-shrink: 0; line-height: 1.2; }
+.theme-num { font-family: var(--display); font-size: var(--font-size-lg); font-weight: 700; color: var(--teal-dark); min-width: 28px; flex-shrink: 0; line-height: 1.2; }
 .theme-card-head h3 {
   margin: 0;
   flex: 1;
@@ -177,7 +177,7 @@ html { scroll-behavior: smooth; }
 .outcomes-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 20px; }
 .leadership-web-strategy-page .outcomes-grid + h2 { margin-top: 36px; }
 .outcome-card { background: var(--white); border: 1px solid var(--light-gray); border-top: 3px solid var(--teal); border-radius: 0 0 var(--radius-sm) var(--radius-sm); padding: 24px; text-align: center; }
-.outcome-number { font-family: var(--display); font-size: var(--font-size-2xl); font-weight: 700; color: var(--teal); margin-bottom: 8px; line-height: 1.1; }
+.outcome-number { font-family: var(--display); font-size: var(--font-size-2xl); font-weight: 700; color: var(--teal-dark); margin-bottom: 8px; line-height: 1.1; }
 .outcome-label { font-family: var(--display); font-size: var(--font-size-sm); font-weight: 700; color: var(--charcoal); margin-bottom: 8px; }
 .outcome-desc { font-size: var(--font-size-sm); color: var(--dark-gray); margin: 0; line-height: 1.65; text-align: left; }
 

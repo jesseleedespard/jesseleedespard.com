@@ -268,7 +268,7 @@ html { scroll-behavior: smooth; }
 /* NUMBERED CARDS */
 .theme-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-top: 24px; }
 .theme-card { background: var(--white); border: 1px solid var(--light-gray); border-radius: var(--radius-sm); padding: 16px 18px; display: flex; gap: 12px; align-items: flex-start; }
-.theme-num { font-family: var(--display); font-size: var(--font-size-lg); font-weight: 700; color: var(--teal); min-width: 32px; }
+.theme-num { font-family: var(--display); font-size: var(--font-size-lg); font-weight: 700; color: var(--teal-dark); min-width: 32px; }
 .theme-content h3 { font-family: var(--display); font-size: var(--font-size-sm); font-weight: 700; color: var(--charcoal); margin-top: 0; margin-bottom: 4px; }
 .theme-content p { font-size: var(--font-size-sm); line-height: 1.7; color: var(--dark-gray); margin: 0; }
 

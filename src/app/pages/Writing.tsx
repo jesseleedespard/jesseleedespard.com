@@ -136,7 +136,7 @@ function ethicsBadgePillStyle(badge: string): CSSProperties {
   if (badge === 'Essay') {
     return {
       ...base,
-      color: 'var(--teal)',
+      color: 'var(--teal-dark)',
       backgroundColor: 'color-mix(in srgb, var(--teal) 12%, var(--white))',
     };
   }
@@ -201,6 +201,11 @@ export default function Writing() {
           padding: 0 48px;
         }
 
+        .writing-tab-section button:focus-visible {
+          outline: var(--focus-ring-width) solid var(--focus-ring-color-on-dark);
+          outline-offset: var(--focus-ring-offset);
+        }
+
         .writing-section-padding {
           padding: var(--space-section) var(--space-page-side);
         }
@@ -211,7 +216,7 @@ export default function Writing() {
           font-size: var(--font-size-xs);
           letter-spacing: 1.5px;
           text-transform: uppercase;
-          color: var(--teal);
+          color: var(--teal-dark);
           margin-bottom: 20px;
         }
 
@@ -369,7 +374,7 @@ export default function Writing() {
           font-family: var(--display);
           font-weight: 700;
           font-size: var(--font-size-sm);
-          color: var(--teal);
+          color: var(--teal-dark);
           text-decoration: underline;
           text-underline-offset: 0.2em;
           white-space: nowrap;

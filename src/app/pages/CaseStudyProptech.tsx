@@ -76,7 +76,7 @@ html { scroll-behavior: smooth; }
 .track-label { font-family: var(--display); font-size: var(--font-size-xs); font-weight: 700; color: var(--gold); letter-spacing: 1px; text-transform: uppercase; margin-bottom: 3px; }
 .track-title { font-family: var(--display); font-size: var(--font-size-sm); font-weight: 700; color: var(--white); }
 .track-body { padding: 18px; }
-.track-why { font-family: var(--display); font-size: var(--font-size-xs); font-weight: 700; color: var(--teal); margin-bottom: 5px; text-transform: uppercase; letter-spacing: 0.5px; }
+.track-why { font-family: var(--display); font-size: var(--font-size-xs); font-weight: 700; color: var(--teal-dark); margin-bottom: 5px; text-transform: uppercase; letter-spacing: 0.5px; }
 .track-text { font-size: var(--font-size-sm); line-height: 1.7; color: var(--dark-gray); margin-bottom: 12px; }
 .track-list-item { font-size: var(--font-size-sm); line-height: 1.65; color: var(--dark-gray); padding: 6px 0 6px 14px; border-bottom: 1px solid var(--light-gray); position: relative; }
 .track-list-item::before { content: '•'; position: absolute; left: 0; color: var(--teal); }
@@ -89,8 +89,8 @@ html { scroll-behavior: smooth; }
 .segment-count { font-family: var(--display); font-size: var(--font-size-sm); color: var(--white) !important; margin-top: 2px; }
 .segment-breakdown { font-family: var(--display); font-size: var(--font-size-sm); color: var(--white) !important; margin-top: 8px; line-height: 1.5; }
 .segment-body { padding: 16px 18px; }
-.segment-quote { font-family: var(--body); font-size: var(--font-size-sm); line-height: 1.65; color: var(--teal); font-style: italic; margin-bottom: 14px; border-left: 2px solid var(--teal); padding-left: 12px; }
-.segment-insight { font-family: var(--display); font-size: var(--font-size-xs); font-weight: 700; color: var(--teal); margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.5px; }
+.segment-quote { font-family: var(--body); font-size: var(--font-size-sm); line-height: 1.65; color: var(--teal-dark); font-style: italic; margin-bottom: 14px; border-left: 2px solid var(--teal); padding-left: 12px; }
+.segment-insight { font-family: var(--display); font-size: var(--font-size-xs); font-weight: 700; color: var(--teal-dark); margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.5px; }
 .insight-item { font-size: var(--font-size-sm); line-height: 1.65; color: var(--dark-gray); margin-bottom: 7px; padding: 6px 0 6px 20px; position: relative; }
 .insight-item::before { content: '•'; position: absolute; left: 6px; color: var(--teal); font-weight: 700; }
 
@@ -98,7 +98,7 @@ html { scroll-behavior: smooth; }
 .theme-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 20px; }
 @media (max-width: 680px) { .proptech-case-study-page .theme-grid { grid-template-columns: 1fr; } }
 .theme-card { background: var(--white); border: 1px solid var(--light-gray); border-radius: var(--radius-sm); padding: 20px; display: flex; gap: 14px; }
-.theme-num { font-family: var(--display); font-size: var(--font-size-lg); font-weight: 700; color: var(--teal); min-width: 28px; }
+.theme-num { font-family: var(--display); font-size: var(--font-size-lg); font-weight: 700; color: var(--teal-dark); min-width: 28px; }
 .theme-content h3 { font-family: var(--display); font-size: var(--font-size-sm); font-weight: 700; color: var(--charcoal); margin-bottom: 7px; }
 .theme-content p { font-size: var(--font-size-sm); line-height: 1.7; color: var(--dark-gray); margin: 0; }
 
@@ -113,7 +113,7 @@ html { scroll-behavior: smooth; }
 .stat-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-top: 20px; }
 @media (max-width: 680px) { .proptech-case-study-page .stat-row { grid-template-columns: 1fr 1fr; } }
 .stat-card { background: var(--white); border: 1px solid var(--light-gray); border-top: 3px solid var(--teal); border-radius: 0 0 var(--radius-sm) var(--radius-sm); padding: 20px; text-align: center; }
-.stat-num { font-family: var(--display); font-size: var(--font-size-2xl); font-weight: 700; color: var(--teal); margin-bottom: 5px; }
+.stat-num { font-family: var(--display); font-size: var(--font-size-2xl); font-weight: 700; color: var(--teal-dark); margin-bottom: 5px; }
 .stat-num-gold { color: var(--gold); }
 .stat-label { font-family: var(--display); font-size: var(--font-size-xs); color: var(--dark-gray); line-height: 1.4; }
 
@@ -121,19 +121,19 @@ html { scroll-behavior: smooth; }
 .impl-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 20px; }
 @media (max-width: 680px) { .proptech-case-study-page .impl-grid { grid-template-columns: 1fr; } }
 .impl-card { background: var(--white); border: 1px solid var(--light-gray); border-radius: var(--radius-sm); padding: 18px 20px; display: flex; gap: 14px; align-items: flex-start; }
-.impl-title { font-family: var(--display); font-size: var(--font-size-sm); font-weight: 700; color: var(--teal); margin-bottom: 7px; }
+.impl-title { font-family: var(--display); font-size: var(--font-size-sm); font-weight: 700; color: var(--teal-dark); margin-bottom: 7px; }
 .impl-card-content { flex: 1; min-width: 0; }
 .impl-body { font-size: var(--font-size-sm); line-height: 1.7; color: var(--dark-gray); }
 
 /* LESSONS */
 .lessons { display: flex; flex-direction: column; gap: 10px; margin-top: 20px; }
 .lesson { background: var(--white); border: 1px solid var(--light-gray); border-radius: var(--radius-sm); padding: 18px 20px; display: flex; gap: 16px; }
-.lesson-num { font-family: var(--display); font-size: var(--font-size-2xl); font-weight: 700; color: var(--teal); min-width: 36px; line-height: 1.1; padding-top: 0; }
+.lesson-num { font-family: var(--display); font-size: var(--font-size-2xl); font-weight: 700; color: var(--teal-dark); min-width: 36px; line-height: 1.1; padding-top: 0; }
 .lesson-body { font-size: var(--font-size-sm); line-height: 1.75; color: var(--dark-gray); }
 .lesson-body strong { color: var(--charcoal); }
 
 /* PDF LINK */
-.pdf-link { display: inline-flex; align-items: center; gap: 8px; font-family: var(--display); font-size: var(--font-size-sm); font-weight: 700; color: var(--teal); text-decoration: none; border: 1px solid var(--teal); padding: 10px 20px; border-radius: var(--radius-sm); margin-top: 28px; transition: background 0.2s; }
+.pdf-link { display: inline-flex; align-items: center; gap: 8px; font-family: var(--display); font-size: var(--font-size-sm); font-weight: 700; color: var(--teal-dark); text-decoration: none; border: 1px solid var(--teal); padding: 10px 20px; border-radius: var(--radius-sm); margin-top: 28px; transition: background 0.2s; }
 .pdf-link:hover { background: var(--teal); color: var(--white); }
 
 @media (max-width: 768px) {

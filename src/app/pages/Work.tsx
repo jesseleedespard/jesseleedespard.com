@@ -37,6 +37,11 @@ export default function Work() {
           border-bottom: 1px solid var(--dark-gray);
           padding: 0 48px;
         }
+
+        .work-tab-section button:focus-visible {
+          outline: var(--focus-ring-width) solid var(--focus-ring-color-on-dark);
+          outline-offset: var(--focus-ring-offset);
+        }
         
         .work-card-grid {
           display: grid;
@@ -294,7 +299,7 @@ export default function Work() {
                       fontFamily: 'var(--display)',
                       fontWeight: 700,
                       fontSize: 'var(--font-size-xs)',
-                      color: 'var(--teal)',
+                      color: 'var(--teal-dark)',
                       letterSpacing: '1.5px',
                       textTransform: 'uppercase',
                       marginBottom: 'var(--space-sm)',
@@ -335,7 +340,7 @@ export default function Work() {
                       to="/case-studies/proptech"
                       className="brand-link--cta"
                       style={{
-                        color: 'var(--teal)',
+                        color: 'var(--teal-dark)',
                         whiteSpace: 'nowrap',
                       }}
                     >
@@ -364,7 +369,7 @@ export default function Work() {
                       fontFamily: 'var(--display)',
                       fontWeight: 700,
                       fontSize: 'var(--font-size-xs)',
-                      color: 'var(--teal)',
+                      color: 'var(--teal-dark)',
                       letterSpacing: '1.5px',
                       textTransform: 'uppercase',
                       marginBottom: 'var(--space-sm)',
@@ -405,7 +410,7 @@ export default function Work() {
                       to="/case-studies/healthtech-onboarding"
                       className="brand-link--cta"
                       style={{
-                        color: 'var(--teal)',
+                        color: 'var(--teal-dark)',
                         whiteSpace: 'nowrap',
                       }}
                     >
