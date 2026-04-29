@@ -36,7 +36,7 @@ export function PodcastPreviewCard({
         style={{
           fontFamily: 'Lora, serif',
           fontSize: 'var(--font-size-base)',
-          color: 'rgba(255, 255, 255, 0.7)',
+          color: 'var(--hero-subtitle-color-soft)',
           lineHeight: '1.6',
           marginBottom: '32px',
           maxWidth: '700px',

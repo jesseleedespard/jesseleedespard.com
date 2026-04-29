@@ -17,9 +17,9 @@ export function Button({
     const baseStyles = {
       fontFamily: 'DM Sans, sans-serif',
       fontWeight: 700,
-      fontSize: size === 'large' ? '15px' : '14px',
-      padding: size === 'large' ? '14px 32px' : '12px 28px',
-      borderRadius: '6px',
+      fontSize: 'var(--font-size-sm)',
+      padding: size === 'large' ? 'var(--space-sm) var(--space-card)' : 'var(--space-sm) var(--space-card-mobile)',
+      borderRadius: 'var(--radius-sm)',
       border: 'none',
       cursor: 'pointer',
       whiteSpace: 'nowrap' as const,
@@ -29,21 +29,21 @@ export function Button({
       case 'primary':
         return {
           ...baseStyles,
-          color: '#1E1E1E',
-          backgroundColor: '#D4A843',
+          color: 'var(--charcoal)',
+          backgroundColor: 'var(--gold)',
         };
       case 'secondary':
         return {
           ...baseStyles,
-          color: '#FFFFFF',
-          backgroundColor: '#1E1E1E',
+          color: 'var(--white)',
+          backgroundColor: 'var(--charcoal)',
         };
       case 'outline':
         return {
           ...baseStyles,
-          color: '#FFFFFF',
+          color: 'var(--white)',
           backgroundColor: 'transparent',
-          border: '2px solid #FFFFFF',
+          border: '2px solid var(--white)',
         };
       default:
         return baseStyles;

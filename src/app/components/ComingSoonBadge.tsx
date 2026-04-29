@@ -5,10 +5,10 @@ export function ComingSoonBadge() {
         style={{
           display: 'inline-flex',
           alignItems: 'center',
-          gap: '8px',
-          backgroundColor: '#D4A843',
-          border: '1px solid #D4A843',
-          borderRadius: '20px',
+          gap: 'var(--space-xs)',
+          backgroundColor: 'var(--gold)',
+          border: '1px solid var(--gold)',
+          borderRadius: 'var(--radius-pill)',
           padding: '8px 16px',
         }}
       >
@@ -18,7 +18,7 @@ export function ComingSoonBadge() {
             width: '8px',
             height: '8px',
             borderRadius: '50%',
-            backgroundColor: '#1E1E1E',
+            backgroundColor: 'var(--charcoal)',
             animation: 'pulse 2s infinite',
           }}
         />
@@ -26,8 +26,8 @@ export function ComingSoonBadge() {
           style={{
             fontFamily: 'DM Sans, sans-serif',
             fontWeight: 700,
-            fontSize: '12px',
-            color: '#1E1E1E',
+            fontSize: 'var(--font-size-xs)',
+            color: 'var(--charcoal)',
             letterSpacing: '0.5px',
           }}
         >

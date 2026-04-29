@@ -8,12 +8,12 @@ interface SectionProps {
 
 export function Section({ 
   children, 
-  backgroundColor = '#FAF7F2', 
-  padding = '80px 48px' 
+  backgroundColor = 'var(--cream)', 
+  padding = 'var(--space-section) var(--space-page-side)' 
 }: SectionProps) {
   return (
     <section style={{ padding, backgroundColor }}>
-      <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
+      <div style={{ maxWidth: 'var(--max-width-layout)', margin: '0 auto' }}>
         {children}
       </div>
     </section>

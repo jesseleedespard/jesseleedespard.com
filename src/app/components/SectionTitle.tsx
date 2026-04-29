@@ -3,14 +3,14 @@ interface SectionTitleProps {
   marginBottom?: string;
 }
 
-export function SectionTitle({ children, marginBottom = '48px' }: SectionTitleProps) {
+export function SectionTitle({ children, marginBottom = 'var(--space-section-mobile)' }: SectionTitleProps) {
   return (
     <h2
       style={{
         fontFamily: 'DM Sans, sans-serif',
         fontWeight: 700,
-        fontSize: '32px',
-        color: '#1E1E1E',
+        fontSize: 'var(--font-size-2xl)',
+        color: 'var(--charcoal)',
         marginBottom,
       }}
     >

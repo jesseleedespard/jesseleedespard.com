@@ -3,8 +3,8 @@ export function Divider() {
     <div 
       style={{ 
         height: '1px', 
-        backgroundColor: '#EEEEEE', 
-        maxWidth: '1200px', 
+        backgroundColor: 'var(--light-gray)', 
+        maxWidth: 'var(--max-width-layout)', 
         margin: '0 auto' 
       }} 
     />

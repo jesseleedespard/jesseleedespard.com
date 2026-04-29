@@ -6,15 +6,15 @@ interface EyebrowProps {
 
 export function Eyebrow({ 
   children, 
-  color = '#D4A843', 
-  marginBottom = '20px' 
+  color = 'var(--gold)', 
+  marginBottom = 'var(--space-sm)' 
 }: EyebrowProps) {
   return (
     <div
       style={{
         fontFamily: 'DM Sans, sans-serif',
         fontWeight: 700,
-        fontSize: '12px',
+        fontSize: 'var(--font-size-xs)',
         color,
         marginBottom,
         letterSpacing: '1.5px',

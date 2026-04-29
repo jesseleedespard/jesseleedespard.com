@@ -5,7 +5,7 @@ interface LegendItemProps {
 
 export function LegendItem({ color, label }: LegendItemProps) {
   return (
-    <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+    <div style={{ display: 'flex', alignItems: 'center', gap: 'var(--space-xs)' }}>
       <div 
         style={{ 
           width: '12px', 
@@ -17,8 +17,8 @@ export function LegendItem({ color, label }: LegendItemProps) {
       <span
         style={{
           fontFamily: 'DM Sans, sans-serif',
-          fontSize: '13px',
-          color: '#444444',
+          fontSize: 'var(--font-size-sm)',
+          color: 'var(--dark-gray)',
           fontWeight: 500,
         }}
       >
