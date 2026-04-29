@@ -51,7 +51,7 @@ export function Button({
   };
 
   return (
-    <button onClick={onClick} style={getStyles()}>
+    <button className="ui-button" onClick={onClick} style={getStyles()}>
       {children}
     </button>
   );
