@@ -198,7 +198,6 @@ export function Navigation() {
           }}
           className="mobile-menu"
           id="mobile-menu"
-          role="menu"
         >
           <Link
             to="/work"
@@ -213,7 +212,6 @@ export function Navigation() {
               borderLeft: isActive('/work') ? '3px solid var(--teal-dark)' : '3px solid transparent',
               paddingLeft: '16px',
             }}
-            role="menuitem"
           >
             Work
           </Link>
@@ -230,7 +228,6 @@ export function Navigation() {
               borderLeft: isActive('/writing') ? '3px solid var(--teal-dark)' : '3px solid transparent',
               paddingLeft: '16px',
             }}
-            role="menuitem"
           >
             Writing
           </Link>
@@ -247,7 +244,6 @@ export function Navigation() {
               borderLeft: isActive('/podcast') ? '3px solid var(--teal-dark)' : '3px solid transparent',
               paddingLeft: '16px',
             }}
-            role="menuitem"
           >
             Podcast
           </Link>
@@ -264,7 +260,6 @@ export function Navigation() {
               borderLeft: isActive('/about') ? '3px solid var(--teal-dark)' : '3px solid transparent',
               paddingLeft: '16px',
             }}
-            role="menuitem"
           >
             About Me
           </Link>
@@ -284,7 +279,6 @@ export function Navigation() {
               textAlign: 'center',
               display: 'block',
             }}
-            role="menuitem"
           >
             Hiring?
           </Link>
