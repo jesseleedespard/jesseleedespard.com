@@ -15,7 +15,7 @@ export function CaseStudyCard({
   title,
   description,
   linkTo,
-  tagColor = '#1F5364',
+  tagColor = 'var(--teal-dark)',
   linkColor,
   linkText = 'Read Case Study →',
 }: CaseStudyCardProps) {
@@ -24,9 +24,9 @@ export function CaseStudyCard({
   return (
     <div
       style={{
-        backgroundColor: '#FFFFFF',
-        border: '1px solid #EEEEEE',
-        borderRadius: '8px',
+        backgroundColor: 'var(--white)',
+        border: '1px solid var(--light-gray)',
+        borderRadius: 'var(--radius-md)',
         overflow: 'hidden',
       }}
     >
@@ -35,25 +35,25 @@ export function CaseStudyCard({
         style={{
           width: '100%',
           height: '240px',
-          backgroundColor: '#CCCCCC',
+          backgroundColor: 'var(--mid-gray)',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
-          color: '#888888',
+          color: 'var(--gray)',
           fontFamily: 'DM Sans, sans-serif',
-          fontSize: '14px',
+          fontSize: 'var(--font-size-sm)',
         }}
       >
         [Image Placeholder]
       </div>
 
       {/* Card Content */}
-      <div style={{ padding: '28px' }}>
+      <div style={{ padding: 'var(--space-card)' }}>
         <div
           style={{
             fontFamily: 'DM Sans, sans-serif',
             fontWeight: 700,
-            fontSize: '12px',
+            fontSize: 'var(--font-size-xs)',
             color: tagColor,
             letterSpacing: '1.5px',
             textTransform: 'uppercase',
@@ -66,8 +66,8 @@ export function CaseStudyCard({
           style={{
             fontFamily: 'DM Sans, sans-serif',
             fontWeight: 700,
-            fontSize: '19px',
-            color: '#1E1E1E',
+            fontSize: 'var(--font-size-lg)',
+            color: 'var(--charcoal)',
             marginBottom: '12px',
           }}
         >
@@ -76,8 +76,8 @@ export function CaseStudyCard({
         <p
           style={{
             fontFamily: 'Lora, serif',
-            fontSize: '16px',
-            color: '#444444',
+            fontSize: 'var(--font-size-base)',
+            color: 'var(--dark-gray)',
             lineHeight: '1.6',
             marginBottom: '24px',
           }}
@@ -90,7 +90,7 @@ export function CaseStudyCard({
             style={{
               fontFamily: 'DM Sans, sans-serif',
               fontWeight: 700,
-              fontSize: '14px',
+              fontSize: 'var(--font-size-sm)',
               color: ctaColor,
               textDecoration: 'none',
               whiteSpace: 'nowrap',

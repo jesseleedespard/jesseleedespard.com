@@ -30,23 +30,23 @@ export function WritingPostCard({
   return (
     <div
       style={{
-        backgroundColor: '#FFFFFF',
-        border: '1px solid #EEEEEE',
-        borderRadius: '8px',
+        backgroundColor: 'var(--white)',
+        border: '1px solid var(--light-gray)',
+        borderRadius: 'var(--radius-md)',
         overflow: 'hidden',
       }}
     >
       {/* Top accent bar */}
       <div style={{ height: '4px', backgroundColor: accentColor }} />
 
-      <div style={{ padding: '32px' }}>
+      <div style={{ padding: 'var(--space-card)' }}>
         {/* Badge + Date */}
         <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '16px' }}>
           <span
             style={{
               fontFamily: 'DM Sans, sans-serif',
               fontWeight: 700,
-              fontSize: '12px',
+              fontSize: 'var(--font-size-xs)',
               color: badgeColor,
               letterSpacing: '1.5px',
               textTransform: 'uppercase',
@@ -57,8 +57,8 @@ export function WritingPostCard({
           <span
             style={{
               fontFamily: 'DM Sans, sans-serif',
-              fontSize: '14px',
-              color: '#444444',
+              fontSize: 'var(--font-size-sm)',
+              color: 'var(--dark-gray)',
             }}
           >
             {date}
@@ -70,8 +70,8 @@ export function WritingPostCard({
           style={{
             fontFamily: 'DM Sans, sans-serif',
             fontWeight: 700,
-            fontSize: '24px',
-            color: '#1E1E1E',
+            fontSize: 'var(--font-size-xl)',
+            color: 'var(--charcoal)',
             marginBottom: '8px',
           }}
         >
@@ -82,7 +82,7 @@ export function WritingPostCard({
         <p
           style={{
             fontFamily: 'DM Sans, sans-serif',
-            fontSize: '16px',
+            fontSize: 'var(--font-size-base)',
             color: subtitleColor,
             marginBottom: '16px',
           }}
@@ -94,8 +94,8 @@ export function WritingPostCard({
         <p
           style={{
             fontFamily: 'Lora, serif',
-            fontSize: '16px',
-            color: '#444444',
+            fontSize: 'var(--font-size-base)',
+            color: 'var(--dark-gray)',
             lineHeight: '1.6',
             marginBottom: '24px',
           }}
@@ -108,8 +108,8 @@ export function WritingPostCard({
           <span
             style={{
               fontFamily: 'DM Sans, sans-serif',
-              fontSize: '14px',
-              color: '#444444',
+              fontSize: 'var(--font-size-sm)',
+              color: 'var(--dark-gray)',
               alignSelf: 'flex-start',
             }}
           >
@@ -121,7 +121,7 @@ export function WritingPostCard({
               style={{
                 fontFamily: 'DM Sans, sans-serif',
                 fontWeight: 700,
-                fontSize: '14px',
+                fontSize: 'var(--font-size-sm)',
                 color: linkColor,
                 textDecoration: 'none',
                 whiteSpace: 'nowrap',

@@ -18,15 +18,15 @@ export function FeaturedWritingCard({
   primaryLinkTo,
   secondaryLinkText,
   secondaryLinkTo,
-  borderColor = '#D4A843',
+  borderColor = 'var(--gold)',
 }: FeaturedWritingCardProps) {
   return (
     <div
       style={{
-        backgroundColor: '#FFFFFF',
-        border: '1px solid #EEEEEE',
+        backgroundColor: 'var(--white)',
+        border: '1px solid var(--light-gray)',
         borderLeft: `4px solid ${borderColor}`,
-        borderRadius: '8px',
+        borderRadius: 'var(--radius-md)',
         padding: '40px',
       }}
     >
@@ -34,8 +34,8 @@ export function FeaturedWritingCard({
         style={{
           fontFamily: 'DM Sans, sans-serif',
           fontWeight: 700,
-          fontSize: '24px',
-          color: '#1E1E1E',
+          fontSize: 'var(--font-size-xl)',
+          color: 'var(--charcoal)',
           marginBottom: '16px',
         }}
       >
@@ -44,8 +44,8 @@ export function FeaturedWritingCard({
       <p
         style={{
           fontFamily: 'Lora, serif',
-          fontSize: '16px',
-          color: '#444444',
+          fontSize: 'var(--font-size-base)',
+          color: 'var(--dark-gray)',
           lineHeight: '1.6',
           marginBottom: '24px',
         }}
@@ -58,8 +58,8 @@ export function FeaturedWritingCard({
           style={{
             fontFamily: 'DM Sans, sans-serif',
             fontWeight: 700,
-            fontSize: '14px',
-            color: '#1F5364',
+            fontSize: 'var(--font-size-sm)',
+            color: 'var(--teal-dark)',
             textDecoration: 'none',
             whiteSpace: 'nowrap',
           }}
@@ -72,8 +72,8 @@ export function FeaturedWritingCard({
             style={{
               fontFamily: 'DM Sans, sans-serif',
               fontWeight: 700,
-              fontSize: '14px',
-              color: '#1F5364',
+              fontSize: 'var(--font-size-sm)',
+              color: 'var(--teal-dark)',
               textDecoration: 'none',
               whiteSpace: 'nowrap',
             }}

@@ -16,8 +16,8 @@ export function PodcastPreviewCard({
   return (
     <div
       style={{
-        backgroundColor: '#1E1E1E',
-        borderRadius: '8px',
+        backgroundColor: 'var(--charcoal)',
+        borderRadius: 'var(--radius-md)',
         padding: '48px',
       }}
     >
@@ -25,8 +25,8 @@ export function PodcastPreviewCard({
         style={{
           fontFamily: 'DM Sans, sans-serif',
           fontWeight: 700,
-          fontSize: '24px',
-          color: '#FFFFFF',
+          fontSize: 'var(--font-size-xl)',
+          color: 'var(--white)',
           marginBottom: '16px',
         }}
       >
@@ -35,7 +35,7 @@ export function PodcastPreviewCard({
       <p
         style={{
           fontFamily: 'Lora, serif',
-          fontSize: '17px',
+          fontSize: 'var(--font-size-base)',
           color: 'rgba(255, 255, 255, 0.7)',
           lineHeight: '1.6',
           marginBottom: '32px',

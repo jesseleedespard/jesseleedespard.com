@@ -26,9 +26,9 @@ export function WorkCard({
   return (
     <div
       style={{
-        backgroundColor: '#FFFFFF',
-        border: '1px solid #EEEEEE',
-        borderRadius: '8px',
+        backgroundColor: 'var(--white)',
+        border: '1px solid var(--light-gray)',
+        borderRadius: 'var(--radius-md)',
         overflow: 'hidden',
         opacity: disabled ? 0.5 : 1,
       }}
@@ -36,13 +36,13 @@ export function WorkCard({
       {/* Accent Bar */}
       <div style={{ height: '4px', backgroundColor: accentColor }} />
 
-      <div style={{ padding: '32px' }}>
+      <div style={{ padding: 'var(--space-card)' }}>
         {/* Tag */}
         <div
           style={{
             fontFamily: 'DM Sans, sans-serif',
             fontWeight: 700,
-            fontSize: '12px',
+            fontSize: 'var(--font-size-xs)',
             color: tagColor,
             letterSpacing: '1.5px',
             textTransform: 'uppercase',
@@ -57,8 +57,8 @@ export function WorkCard({
           style={{
             fontFamily: 'DM Sans, sans-serif',
             fontWeight: 700,
-            fontSize: '24px',
-            color: disabled ? '#888888' : '#1E1E1E',
+            fontSize: 'var(--font-size-xl)',
+            color: disabled ? 'var(--gray)' : 'var(--charcoal)',
             marginBottom: '12px',
           }}
         >
@@ -69,8 +69,8 @@ export function WorkCard({
         <p
           style={{
             fontFamily: 'Lora, serif',
-            fontSize: '16px',
-            color: disabled ? '#888888' : '#444444',
+            fontSize: 'var(--font-size-base)',
+            color: disabled ? 'var(--gray)' : 'var(--dark-gray)',
             lineHeight: '1.6',
             marginBottom: '24px',
           }}
@@ -85,8 +85,8 @@ export function WorkCard({
               style={{
                 fontFamily: 'DM Sans, sans-serif',
                 fontWeight: 700,
-                fontSize: '14px',
-                color: '#CCCCCC',
+                fontSize: 'var(--font-size-sm)',
+                color: 'var(--mid-gray)',
                 whiteSpace: 'nowrap',
               }}
             >
@@ -98,7 +98,7 @@ export function WorkCard({
               style={{
                 fontFamily: 'DM Sans, sans-serif',
                 fontWeight: 700,
-                fontSize: '14px',
+                fontSize: 'var(--font-size-sm)',
                 color: linkColor,
                 textDecoration: 'none',
                 whiteSpace: 'nowrap',

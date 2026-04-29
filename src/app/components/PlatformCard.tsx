@@ -9,10 +9,10 @@ export function PlatformCard({ name, icon, iconBackgroundColor, iconColor }: Pla
   return (
     <div
       style={{
-        backgroundColor: '#FAF7F2',
-        border: '1px solid #EEEEEE',
-        borderRadius: '8px',
-        padding: '32px',
+        backgroundColor: 'var(--cream)',
+        border: '1px solid var(--light-gray)',
+        borderRadius: 'var(--radius-md)',
+        padding: 'var(--space-card)',
         textAlign: 'center',
       }}
     >
@@ -22,14 +22,14 @@ export function PlatformCard({ name, icon, iconBackgroundColor, iconColor }: Pla
           height: '80px',
           backgroundColor: iconBackgroundColor,
           borderRadius: '16px',
-          margin: '0 auto 20px',
+          margin: '0 auto var(--space-sm)',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
           color: iconColor,
           fontFamily: 'DM Sans, sans-serif',
           fontWeight: 700,
-          fontSize: '32px',
+          fontSize: 'var(--font-size-2xl)',
         }}
       >
         {icon}
@@ -38,8 +38,8 @@ export function PlatformCard({ name, icon, iconBackgroundColor, iconColor }: Pla
         style={{
           fontFamily: 'DM Sans, sans-serif',
           fontWeight: 700,
-          fontSize: '19px',
-          color: '#1E1E1E',
+          fontSize: 'var(--font-size-lg)',
+          color: 'var(--charcoal)',
           marginBottom: '12px',
         }}
       >
@@ -49,12 +49,12 @@ export function PlatformCard({ name, icon, iconBackgroundColor, iconColor }: Pla
         style={{
           fontFamily: 'DM Sans, sans-serif',
           fontWeight: 700,
-          fontSize: '14px',
-          color: '#1F5364',
+          fontSize: 'var(--font-size-sm)',
+          color: 'var(--teal-dark)',
           backgroundColor: 'transparent',
-          padding: '10px 24px',
-          borderRadius: '6px',
-          border: '2px solid #1F5364',
+          padding: 'var(--space-sm) var(--space-card)',
+          borderRadius: 'var(--radius-sm)',
+          border: '2px solid var(--teal-dark)',
           cursor: 'pointer',
         }}
       >

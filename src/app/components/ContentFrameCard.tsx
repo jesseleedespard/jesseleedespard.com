@@ -5,14 +5,14 @@ interface ContentFrameCardProps {
   borderColor?: string;
 }
 
-export function ContentFrameCard({ children, borderColor = '#1F5364' }: ContentFrameCardProps) {
+export function ContentFrameCard({ children, borderColor = 'var(--teal-dark)' }: ContentFrameCardProps) {
   return (
     <div
       style={{
-        backgroundColor: '#FFFFFF',
-        border: '1px solid #EEEEEE',
+        backgroundColor: 'var(--white)',
+        border: '1px solid var(--light-gray)',
         borderLeft: `4px solid ${borderColor}`,
-        borderRadius: '8px',
+        borderRadius: 'var(--radius-md)',
         padding: '40px',
       }}
     >

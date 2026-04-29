@@ -17,33 +17,33 @@ export function EpisodeCard({ episodeNumber, title, description, tags }: Episode
   return (
     <div
       style={{
-        backgroundColor: '#FFFFFF',
-        border: '1px solid #EEEEEE',
-        borderRadius: '8px',
-        padding: '32px',
+        backgroundColor: 'var(--white)',
+        border: '1px solid var(--light-gray)',
+        borderRadius: 'var(--radius-md)',
+        padding: 'var(--space-card)',
       }}
     >
-      <div style={{ display: 'flex', gap: '24px', alignItems: 'flex-start' }}>
+      <div style={{ display: 'flex', gap: 'var(--space-card-mobile)', alignItems: 'flex-start' }}>
         {/* Episode Number */}
         <div
           style={{
             width: '64px',
             height: '64px',
             flexShrink: 0,
-            backgroundColor: '#FAF7F2',
-            borderRadius: '8px',
+            backgroundColor: 'var(--cream)',
+            borderRadius: 'var(--radius-md)',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
-            border: '1px solid #EEEEEE',
+            border: '1px solid var(--light-gray)',
           }}
         >
           <span
             style={{
               fontFamily: 'DM Sans, sans-serif',
               fontWeight: 700,
-              fontSize: '24px',
-              color: '#D4A843',
+              fontSize: 'var(--font-size-xl)',
+              color: 'var(--gold)',
             }}
           >
             {episodeNumber}
@@ -56,8 +56,8 @@ export function EpisodeCard({ episodeNumber, title, description, tags }: Episode
             style={{
               fontFamily: 'DM Sans, sans-serif',
               fontWeight: 700,
-              fontSize: '20px',
-              color: '#1E1E1E',
+              fontSize: 'var(--font-size-lg)',
+              color: 'var(--charcoal)',
               marginBottom: '12px',
             }}
           >
@@ -66,25 +66,25 @@ export function EpisodeCard({ episodeNumber, title, description, tags }: Episode
           <p
             style={{
               fontFamily: 'Lora, serif',
-              fontSize: '16px',
-              color: '#444444',
+              fontSize: 'var(--font-size-base)',
+              color: 'var(--dark-gray)',
               lineHeight: '1.6',
               marginBottom: '16px',
             }}
           >
             {description}
           </p>
-          <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
+          <div style={{ display: 'flex', gap: 'var(--space-xs)', flexWrap: 'wrap' }}>
             {tags.map((tag, index) => (
               <span
                 key={index}
                 style={{
                   fontFamily: 'DM Sans, sans-serif',
-                  fontSize: '12px',
+                  fontSize: 'var(--font-size-xs)',
                   color: tag.color,
                   backgroundColor: tag.backgroundColor,
-                  border: '1px solid #EEEEEE',
-                  borderRadius: '20px',
+                  border: '1px solid var(--light-gray)',
+                  borderRadius: 'var(--radius-pill)',
                   padding: '4px 12px',
                 }}
               >
