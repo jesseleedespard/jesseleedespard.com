@@ -79,7 +79,7 @@ export function CaseStudyCard({
             fontSize: 'var(--font-size-base)',
             color: 'var(--dark-gray)',
             lineHeight: '1.6',
-            marginBottom: '24px',
+            marginBottom: 'var(--space-card-mobile)',
           }}
         >
           {description}

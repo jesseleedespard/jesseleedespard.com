@@ -41,7 +41,7 @@ export function WritingPostCard({
 
       <div style={{ padding: 'var(--space-card)' }}>
         {/* Badge + Date */}
-        <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '16px' }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: 'var(--space-sm)' }}>
           <span
             style={{
               fontFamily: 'var(--display)',
@@ -72,7 +72,7 @@ export function WritingPostCard({
             fontWeight: 700,
             fontSize: 'var(--font-size-xl)',
             color: 'var(--charcoal)',
-            marginBottom: '8px',
+            marginBottom: 'var(--space-xs)',
           }}
         >
           {title}
@@ -84,7 +84,7 @@ export function WritingPostCard({
             fontFamily: 'var(--display)',
             fontSize: 'var(--font-size-base)',
             color: subtitleColor,
-            marginBottom: '16px',
+            marginBottom: 'var(--space-sm)',
           }}
         >
           {subtitle}
@@ -97,7 +97,7 @@ export function WritingPostCard({
             fontSize: 'var(--font-size-base)',
             color: 'var(--dark-gray)',
             lineHeight: '1.6',
-            marginBottom: '24px',
+            marginBottom: 'var(--space-card-mobile)',
           }}
         >
           {excerpt}

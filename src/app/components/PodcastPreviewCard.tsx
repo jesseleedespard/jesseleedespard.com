@@ -18,7 +18,7 @@ export function PodcastPreviewCard({
       style={{
         backgroundColor: 'var(--charcoal)',
         borderRadius: 'var(--radius-md)',
-        padding: '48px',
+        padding: 'var(--space-section-sm)',
       }}
     >
       <h3
@@ -27,7 +27,7 @@ export function PodcastPreviewCard({
           fontWeight: 700,
           fontSize: 'var(--font-size-xl)',
           color: 'var(--white)',
-          marginBottom: '16px',
+          marginBottom: 'var(--space-sm)',
         }}
       >
         {title}
@@ -38,7 +38,7 @@ export function PodcastPreviewCard({
           fontSize: 'var(--font-size-base)',
           color: 'var(--hero-subtitle-color-soft)',
           lineHeight: '1.6',
-          marginBottom: '32px',
+          marginBottom: 'var(--space-card)',
           maxWidth: '700px',
         }}
       >

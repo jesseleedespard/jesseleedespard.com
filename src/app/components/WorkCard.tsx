@@ -46,7 +46,7 @@ export function WorkCard({
             color: tagColor,
             letterSpacing: '1.5px',
             textTransform: 'uppercase',
-            marginBottom: '16px',
+            marginBottom: 'var(--space-sm)',
           }}
         >
           {tag}
@@ -72,7 +72,7 @@ export function WorkCard({
             fontSize: 'var(--font-size-base)',
             color: disabled ? 'var(--gray)' : 'var(--dark-gray)',
             lineHeight: '1.6',
-            marginBottom: '24px',
+            marginBottom: 'var(--space-card-mobile)',
           }}
         >
           {description}

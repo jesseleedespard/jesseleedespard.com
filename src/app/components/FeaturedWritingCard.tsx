@@ -36,7 +36,7 @@ export function FeaturedWritingCard({
           fontWeight: 700,
           fontSize: 'var(--font-size-xl)',
           color: 'var(--charcoal)',
-          marginBottom: '16px',
+          marginBottom: 'var(--space-sm)',
         }}
       >
         {title}
@@ -47,7 +47,7 @@ export function FeaturedWritingCard({
           fontSize: 'var(--font-size-base)',
           color: 'var(--dark-gray)',
           lineHeight: '1.6',
-          marginBottom: '24px',
+          marginBottom: 'var(--space-card-mobile)',
         }}
       >
         {description}

@@ -9,7 +9,7 @@ export function ComingSoonBadge() {
           backgroundColor: 'var(--gold)',
           border: '1px solid var(--gold)',
           borderRadius: 'var(--radius-pill)',
-          padding: '8px 16px',
+          padding: 'var(--space-xs) var(--space-sm)',
         }}
       >
         {/* Pulsing Dot */}

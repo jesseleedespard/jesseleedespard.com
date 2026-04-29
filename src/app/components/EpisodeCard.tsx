@@ -69,7 +69,7 @@ export function EpisodeCard({ episodeNumber, title, description, tags }: Episode
               fontSize: 'var(--font-size-base)',
               color: 'var(--dark-gray)',
               lineHeight: '1.6',
-              marginBottom: '16px',
+              marginBottom: 'var(--space-sm)',
             }}
           >
             {description}
