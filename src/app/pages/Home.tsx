@@ -18,7 +18,7 @@ export default function Home() {
           font-size: clamp(var(--font-size-2xl), 4.5vw, var(--font-size-3xl));
           color: var(--white);
           line-height: 1.15;
-          margin-bottom: 24px;
+          margin-bottom: var(--space-card-mobile);
           max-width: 900px;
         }
         
@@ -35,8 +35,8 @@ export default function Home() {
         .home-case-studies-grid {
           display: grid;
           grid-template-columns: 1fr 1fr;
-          gap: 32px;
-          margin-bottom: 32px;
+          gap: var(--space-gap);
+          margin-bottom: var(--space-card);
         }
         
         .home-hero-inner {
@@ -48,7 +48,7 @@ export default function Home() {
         }
         
         .home-section-padding {
-          padding: 80px 48px;
+          padding: var(--space-section) var(--space-page-side);
         }
         
         .home-section-title {
@@ -115,11 +115,11 @@ export default function Home() {
           
           .home-case-studies-grid {
             grid-template-columns: 1fr;
-            gap: 24px;
+            gap: var(--space-gap-mobile);
           }
           
           .home-section-padding {
-            padding: 48px 24px;
+            padding: var(--space-section-sm) var(--space-page-side-mobile);
           }
           
           .home-section-title {

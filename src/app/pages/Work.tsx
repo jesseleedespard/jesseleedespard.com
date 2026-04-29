@@ -21,7 +21,7 @@ export default function Work() {
           font-size: clamp(var(--font-size-2xl), 4.5vw, var(--font-size-3xl));
           color: var(--white);
           line-height: 1.15;
-          margin-bottom: 24px;
+          margin-bottom: var(--space-card-mobile);
         }
         
         .work-hero-subtitle {
@@ -41,11 +41,11 @@ export default function Work() {
         .work-card-grid {
           display: grid;
           grid-template-columns: 1fr 1fr;
-          gap: 32px;
+          gap: var(--space-gap);
         }
         
         .work-section-padding {
-          padding: 80px 48px;
+          padding: var(--space-section) var(--space-page-side);
         }
         
         @media (max-width: 768px) {
@@ -63,11 +63,11 @@ export default function Work() {
           
           .work-card-grid {
             grid-template-columns: 1fr;
-            gap: 24px;
+            gap: var(--space-gap-mobile);
           }
           
           .work-section-padding {
-            padding: 48px 24px;
+            padding: var(--space-section-sm) var(--space-page-side-mobile);
           }
           
         }

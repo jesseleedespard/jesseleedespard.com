@@ -182,7 +182,7 @@ export default function Writing() {
           font-size: clamp(var(--font-size-2xl), 4.5vw, var(--font-size-3xl));
           color: var(--white);
           line-height: 1.15;
-          margin-bottom: 24px;
+          margin-bottom: var(--space-card-mobile);
         }
 
         .writing-hero-subtitle {
@@ -202,7 +202,7 @@ export default function Writing() {
         }
 
         .writing-section-padding {
-          padding: 80px 48px;
+          padding: var(--space-section) var(--space-page-side);
         }
 
         .writing-section-label-teal {
@@ -220,7 +220,7 @@ export default function Writing() {
           border: 1px solid var(--light-gray);
           border-radius: 8px;
           border-left: 4px solid var(--teal);
-          padding: 32px;
+          padding: var(--space-card);
           display: flex;
           flex-direction: column;
           min-height: 100%;
@@ -265,7 +265,7 @@ export default function Writing() {
           font-size: var(--font-size-sm);
           color: var(--gray);
           line-height: 1.5;
-          margin-bottom: 24px;
+          margin-bottom: var(--space-card-mobile);
         }
 
         .writing-contrib-note {
@@ -407,7 +407,7 @@ export default function Writing() {
         .writing-pub-grid {
           display: grid;
           grid-template-columns: 1fr;
-          gap: 24px;
+          gap: var(--space-gap-mobile);
         }
 
         @media (min-width: 900px) {
@@ -419,7 +419,7 @@ export default function Writing() {
         .writing-articles-stack {
           display: flex;
           flex-direction: column;
-          gap: 32px;
+          gap: var(--space-gap);
         }
 
         @media (max-width: 768px) {
@@ -437,7 +437,7 @@ export default function Writing() {
           }
 
           .writing-section-padding {
-            padding: 48px 24px;
+            padding: var(--space-section-sm) var(--space-page-side-mobile);
           }
         }
       `}</style>

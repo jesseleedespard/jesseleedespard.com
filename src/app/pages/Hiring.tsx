@@ -64,7 +64,7 @@ export default function Hiring() {
           font-size: clamp(var(--font-size-2xl), 4.5vw, var(--font-size-3xl));
           color: var(--white);
           line-height: 1.15;
-          margin-bottom: 24px;
+          margin-bottom: var(--space-card-mobile);
         }
         
         .hiring-hero-subtitle {
@@ -72,7 +72,7 @@ export default function Hiring() {
           font-weight: 400;
           font-size: var(--font-size-lg);
           color: var(--hero-subtitle-color);
-          margin-bottom: 24px;
+          margin-bottom: var(--space-card-mobile);
           line-height: 1.6;
           font-style: italic;
         }
@@ -84,7 +84,7 @@ export default function Hiring() {
         }
         
         .hiring-section-padding {
-          padding: 80px 48px;
+          padding: var(--space-section) var(--space-page-side);
         }
         
         .hiring-pull-quote-inner {
@@ -95,7 +95,7 @@ export default function Hiring() {
         .hiring-bottom-grid {
           display: grid;
           grid-template-columns: 1fr 1fr;
-          gap: 32px;
+          gap: var(--space-gap);
           max-width: var(--max-width-layout);
           margin: 0 auto;
         }
@@ -107,7 +107,7 @@ export default function Hiring() {
         .hiring-who-grid {
           display: grid;
           grid-template-columns: 1fr 1fr;
-          gap: 24px;
+          gap: var(--space-gap-mobile);
         }
 
         .hiring-contact-email {
@@ -133,7 +133,7 @@ export default function Hiring() {
         .about-testimonials-grid {
           display: grid;
           grid-template-columns: 1fr 1fr 1fr;
-          gap: 32px;
+          gap: var(--space-gap);
           align-items: start;
         }
 
@@ -163,11 +163,11 @@ export default function Hiring() {
           
           .hiring-steps-grid {
             grid-template-columns: 1fr;
-            gap: 32px;
+            gap: var(--space-gap);
           }
           
           .hiring-section-padding {
-            padding: 48px 24px;
+            padding: var(--space-section-sm) var(--space-page-side-mobile);
           }
 
           .hiring-bottom-grid {
@@ -194,7 +194,7 @@ export default function Hiring() {
           border: 1px solid var(--light-gray);
           border-left: 4px solid var(--teal-dark);
           border-radius: var(--radius-md);
-          padding: 32px;
+          padding: var(--space-card);
           display: flex;
           flex-direction: column;
           min-width: 0;

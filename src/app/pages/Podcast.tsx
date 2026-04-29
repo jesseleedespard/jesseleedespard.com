@@ -26,17 +26,17 @@ export default function Podcast() {
           font-size: clamp(var(--font-size-2xl), 4.5vw, var(--font-size-3xl));
           color: var(--white);
           line-height: 1.15;
-          margin-bottom: 16px;
+          margin-bottom: var(--space-sm);
         }
         
         .podcast-platform-grid {
           display: grid;
           grid-template-columns: 1fr 1fr 1fr;
-          gap: 32px;
+          gap: var(--space-gap);
         }
         
         .podcast-section-padding {
-          padding: 80px 48px;
+          padding: var(--space-section) var(--space-page-side);
         }
         
         .podcast-subscribe-btn {
@@ -75,16 +75,16 @@ export default function Podcast() {
           
           .podcast-hero-grid {
             grid-template-columns: 1fr;
-            gap: 32px;
+            gap: var(--space-gap);
           }
           
           .podcast-platform-grid {
             grid-template-columns: 1fr;
-            gap: 24px;
+            gap: var(--space-gap-mobile);
           }
           
           .podcast-section-padding {
-            padding: 48px 24px;
+            padding: var(--space-section-sm) var(--space-page-side-mobile);
           }
         }
       `}</style>

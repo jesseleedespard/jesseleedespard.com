@@ -90,7 +90,7 @@ export default function About() {
           font-size: clamp(var(--font-size-2xl), 4.5vw, var(--font-size-3xl));
           color: var(--white);
           line-height: 1.15;
-          margin-bottom: 24px;
+          margin-bottom: var(--space-card-mobile);
           max-width: 720px;
         }
 
@@ -111,17 +111,17 @@ export default function About() {
         .about-values-grid {
           display: grid;
           grid-template-columns: 1fr 1fr 1fr;
-          gap: 32px;
+          gap: var(--space-gap);
         }
         
         .about-section-padding {
-          padding: 80px 48px;
+          padding: var(--space-section) var(--space-page-side);
         }
         
         .about-testimonials-grid {
           display: grid;
           grid-template-columns: 1fr 1fr 1fr;
-          gap: 32px;
+          gap: var(--space-gap);
           align-items: start;
         }
 
@@ -130,7 +130,7 @@ export default function About() {
           border: 1px solid var(--light-gray);
           border-left: 4px solid var(--teal-dark);
           border-radius: var(--radius-md);
-          padding: 32px;
+          padding: var(--space-card);
           display: flex;
           flex-direction: column;
           min-width: 0;
@@ -217,7 +217,7 @@ export default function About() {
         .about-experience-grid {
           display: grid;
           grid-template-columns: 1fr 1fr 1fr;
-          gap: 32px;
+          gap: var(--space-gap);
         }
         
         @media (max-width: 768px) {
@@ -227,7 +227,7 @@ export default function About() {
 
           .about-hero-inner {
             grid-template-columns: 1fr;
-            gap: 32px;
+            gap: var(--space-gap);
           }
 
           .about-hero-media {
@@ -246,7 +246,7 @@ export default function About() {
           
           .about-values-grid {
             grid-template-columns: 1fr;
-            gap: 24px;
+            gap: var(--space-gap-mobile);
           }
 
           .about-testimonials-grid {
@@ -254,7 +254,7 @@ export default function About() {
           }
           
           .about-section-padding {
-            padding: 48px 24px;
+            padding: var(--space-section-sm) var(--space-page-side-mobile);
           }
 
           .about-experience-grid {
