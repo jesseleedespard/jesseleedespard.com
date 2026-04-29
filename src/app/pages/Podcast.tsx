@@ -347,7 +347,7 @@ export default function Podcast() {
                         color: 'var(--teal-dark)',
                         backgroundColor: 'var(--cream)',
                         border: '1px solid var(--light-gray)',
-                        borderRadius: '20px',
+                        borderRadius: 'var(--radius-pill)',
                         padding: '4px 12px',
                       }}
                     >
@@ -360,7 +360,7 @@ export default function Podcast() {
                         color: 'var(--teal-dark)',
                         backgroundColor: 'var(--cream)',
                         border: '1px solid var(--light-gray)',
-                        borderRadius: '20px',
+                        borderRadius: 'var(--radius-pill)',
                         padding: '4px 12px',
                       }}
                     >
@@ -373,7 +373,7 @@ export default function Podcast() {
                         color: 'var(--teal-dark)',
                         backgroundColor: 'var(--cream)',
                         border: '1px solid var(--light-gray)',
-                        borderRadius: '20px',
+                        borderRadius: 'var(--radius-pill)',
                         padding: '4px 12px',
                       }}
                     >
@@ -452,7 +452,7 @@ export default function Podcast() {
                         color: 'var(--terra)',
                         backgroundColor: 'var(--terra-tint)',
                         border: '1px solid var(--light-gray)',
-                        borderRadius: '20px',
+                        borderRadius: 'var(--radius-pill)',
                         padding: '4px 12px',
                       }}
                     >
@@ -465,7 +465,7 @@ export default function Podcast() {
                         color: 'var(--terra)',
                         backgroundColor: 'var(--terra-tint)',
                         border: '1px solid var(--light-gray)',
-                        borderRadius: '20px',
+                        borderRadius: 'var(--radius-pill)',
                         padding: '4px 12px',
                       }}
                     >
@@ -478,7 +478,7 @@ export default function Podcast() {
                         color: 'var(--terra)',
                         backgroundColor: 'var(--terra-tint)',
                         border: '1px solid var(--light-gray)',
-                        borderRadius: '20px',
+                        borderRadius: 'var(--radius-pill)',
                         padding: '4px 12px',
                       }}
                     >
@@ -557,7 +557,7 @@ export default function Podcast() {
                         color: 'var(--teal-dark)',
                         backgroundColor: 'var(--cream)',
                         border: '1px solid var(--light-gray)',
-                        borderRadius: '20px',
+                        borderRadius: 'var(--radius-pill)',
                         padding: '4px 12px',
                       }}
                     >
@@ -570,7 +570,7 @@ export default function Podcast() {
                         color: 'var(--teal-dark)',
                         backgroundColor: 'var(--cream)',
                         border: '1px solid var(--light-gray)',
-                        borderRadius: '20px',
+                        borderRadius: 'var(--radius-pill)',
                         padding: '4px 12px',
                       }}
                     >
@@ -583,7 +583,7 @@ export default function Podcast() {
                         color: 'var(--teal-dark)',
                         backgroundColor: 'var(--cream)',
                         border: '1px solid var(--light-gray)',
-                        borderRadius: '20px',
+                        borderRadius: 'var(--radius-pill)',
                         padding: '4px 12px',
                       }}
                     >
