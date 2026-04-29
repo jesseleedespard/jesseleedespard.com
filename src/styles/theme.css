@@ -320,7 +320,7 @@
    * Canonical pull quote — boxed, gold left accent, italic Lora body
    */
   .pull-quote {
-    margin: 28px 0;
+    margin: var(--space-card) 0;
     padding: var(--space-card) var(--space-page-side);
     background: var(--white);
     border: 1px solid var(--light-gray);
@@ -413,8 +413,8 @@
     background: var(--cream);
     border-left: 3px solid var(--gold);
     border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
-    padding: 13px 18px;
-    margin-top: 18px;
+    padding: var(--space-sm) var(--space-sm);
+    margin-top: var(--space-sm);
     font-family: var(--display);
     font-size: var(--font-size-sm);
     color: var(--dark-gray);

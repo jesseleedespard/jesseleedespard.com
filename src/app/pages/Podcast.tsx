@@ -50,8 +50,8 @@ export default function Podcast() {
         }
         
         .podcast-subscribe-btn:focus {
-          outline: none;
-          box-shadow: 0 0 0 3px var(--teal);
+          outline: 3px solid var(--teal);
+          outline-offset: 2px;
         }
         
         .primary-cta-gold {
