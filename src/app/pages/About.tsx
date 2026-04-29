@@ -210,8 +210,8 @@ export default function About() {
         }
 
         .about-testimonial-toggle:focus-visible {
-          outline: 2px solid var(--brand-link-focus-ring);
-          outline-offset: 2px;
+          outline: var(--focus-ring-width) solid var(--focus-ring-color);
+          outline-offset: var(--focus-ring-offset);
         }
 
         .about-experience-grid {

@@ -50,8 +50,8 @@ export default function Podcast() {
         }
         
         .podcast-subscribe-btn:focus {
-          outline: 3px solid var(--teal);
-          outline-offset: 2px;
+          outline: var(--focus-ring-width) solid var(--focus-ring-color);
+          outline-offset: var(--focus-ring-offset);
         }
         
         .primary-cta-gold {
@@ -64,8 +64,8 @@ export default function Podcast() {
         }
 
         .primary-cta-gold:focus {
-          outline: 3px solid var(--teal);
-          outline-offset: 2px;
+          outline: var(--focus-ring-width) solid var(--focus-ring-color-on-dark);
+          outline-offset: var(--focus-ring-offset);
         }
         
         @media (max-width: 768px) {

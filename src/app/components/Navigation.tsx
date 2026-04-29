@@ -331,8 +331,8 @@ export function Navigation() {
             text-underline-offset: 3px;
           }
           .desktop-nav a:focus {
-            outline: 2px solid var(--teal-dark);
-            outline-offset: 4px;
+            outline: var(--focus-ring-width) solid var(--focus-ring-color);
+            outline-offset: var(--focus-ring-offset);
             border-radius: 4px;
           }
         }
@@ -343,15 +343,15 @@ export function Navigation() {
             background-color: color-mix(in srgb, var(--teal-dark) 5%, transparent);
           }
           .mobile-menu a:focus {
-            outline: 2px solid var(--teal-dark);
-            outline-offset: 2px;
+            outline: var(--focus-ring-width) solid var(--focus-ring-color);
+            outline-offset: var(--focus-ring-offset);
           }
         }
 
         /* Hamburger button focus state */
         .mobile-menu-button:focus {
-          outline: 2px solid var(--teal-dark);
-          outline-offset: 4px;
+          outline: var(--focus-ring-width) solid var(--focus-ring-color);
+          outline-offset: var(--focus-ring-offset);
           border-radius: 4px;
         }
 
@@ -366,8 +366,8 @@ export function Navigation() {
         }
 
         .nav-cta-gold:focus {
-          outline: 3px solid var(--teal);
-          outline-offset: 2px;
+          outline: var(--focus-ring-width) solid var(--focus-ring-color);
+          outline-offset: var(--focus-ring-offset);
         }
       `}</style>
     </nav>

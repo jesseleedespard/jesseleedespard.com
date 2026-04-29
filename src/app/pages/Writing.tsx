@@ -256,8 +256,8 @@ export default function Writing() {
         }
 
         .writing-pdf-btn:focus-visible {
-          outline: 2px solid var(--teal-dark);
-          outline-offset: 2px;
+          outline: var(--focus-ring-width) solid var(--focus-ring-color);
+          outline-offset: var(--focus-ring-offset);
         }
 
         .writing-intro-muted {
@@ -380,8 +380,8 @@ export default function Writing() {
         }
 
         .writing-medium-follow:focus-visible {
-          outline: 2px solid var(--teal-dark);
-          outline-offset: 2px;
+          outline: var(--focus-ring-width) solid var(--focus-ring-color);
+          outline-offset: var(--focus-ring-offset);
         }
 
         .writing-card-link {
@@ -399,8 +399,8 @@ export default function Writing() {
         }
 
         .writing-card-link:focus-visible {
-          outline: 2px solid var(--teal-dark);
-          outline-offset: 2px;
+          outline: var(--focus-ring-width) solid var(--focus-ring-color);
+          outline-offset: var(--focus-ring-offset);
           border-radius: 2px;
         }
 

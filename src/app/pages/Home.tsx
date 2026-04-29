@@ -77,8 +77,8 @@ export default function Home() {
         }
         
         .primary-cta-gold:focus {
-          outline: 3px solid var(--teal);
-          outline-offset: 2px;
+          outline: var(--focus-ring-width) solid var(--focus-ring-color-on-dark);
+          outline-offset: var(--focus-ring-offset);
         }
 
         .podcast-listen-btn {
@@ -91,8 +91,8 @@ export default function Home() {
         }
 
         .podcast-listen-btn:focus {
-          outline: 3px solid var(--teal);
-          outline-offset: 2px;
+          outline: var(--focus-ring-width) solid var(--focus-ring-color-on-dark);
+          outline-offset: var(--focus-ring-offset);
         }
         
         @media (max-width: 768px) {

@@ -126,8 +126,8 @@ export default function Hiring() {
         }
 
         .hiring-contact-email:focus-visible {
-          outline: 2px solid var(--cream);
-          outline-offset: 2px;
+          outline: var(--focus-ring-width) solid var(--focus-ring-color-on-dark);
+          outline-offset: var(--focus-ring-offset);
         }
 
         .about-testimonials-grid {
@@ -147,8 +147,8 @@ export default function Hiring() {
         }
 
         .hiring-book-call-btn:focus {
-          outline: 3px solid var(--teal);
-          outline-offset: 2px;
+          outline: var(--focus-ring-width) solid var(--focus-ring-color-on-dark);
+          outline-offset: var(--focus-ring-offset);
         }
 
         @media (max-width: 768px) {
@@ -274,8 +274,8 @@ export default function Hiring() {
         }
 
         .about-testimonial-toggle:focus-visible {
-          outline: 2px solid var(--brand-link-focus-ring);
-          outline-offset: 2px;
+          outline: var(--focus-ring-width) solid var(--focus-ring-color);
+          outline-offset: var(--focus-ring-offset);
         }
       `}</style>
       {/* Hero Section */}

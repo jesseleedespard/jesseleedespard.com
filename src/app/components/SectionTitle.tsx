@@ -3,7 +3,7 @@ interface SectionTitleProps {
   marginBottom?: string;
 }
 
-export function SectionTitle({ children, marginBottom = 'var(--space-section-mobile)' }: SectionTitleProps) {
+export function SectionTitle({ children, marginBottom = 'var(--space-section-sm)' }: SectionTitleProps) {
   return (
     <h2
       style={{

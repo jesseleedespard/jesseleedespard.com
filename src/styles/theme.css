@@ -33,7 +33,7 @@
   --space-hero: 96px;
   --space-hero-mobile: 56px;
   --space-section: 80px;
-  --space-section-mobile: 48px;
+  --space-section-sm: 48px;
   --space-page-side: 48px;
   --space-page-side-mobile: 24px;
   --space-card: 32px;
@@ -59,6 +59,10 @@
   --brand-link-on-dark-active: var(--gold);
   --brand-link-focus-ring: var(--teal-dark);
   --brand-link-focus-ring-on-dark: var(--white);
+  --focus-ring-color: var(--teal-dark);
+  --focus-ring-color-on-dark: var(--white);
+  --focus-ring-width: 3px;
+  --focus-ring-offset: 2px;
   --background: #ffffff;
   --foreground: oklch(0.145 0 0);
   --card: #ffffff;
@@ -262,8 +266,8 @@
   }
 
   .brand-link:focus-visible {
-    outline: 3px solid var(--brand-link-focus-ring);
-    outline-offset: 2px;
+    outline: var(--focus-ring-width) solid var(--focus-ring-color);
+    outline-offset: var(--focus-ring-offset);
   }
 
   /** Links on charcoal or other dark panels (e.g. hero, dark cards). */
@@ -280,8 +284,8 @@
   }
 
   .brand-link--on-dark:focus-visible {
-    outline: 3px solid var(--brand-link-focus-ring-on-dark);
-    outline-offset: 2px;
+    outline: var(--focus-ring-width) solid var(--focus-ring-color-on-dark);
+    outline-offset: var(--focus-ring-offset);
   }
 
   /**
@@ -344,7 +348,7 @@
     width: 100%;
     box-sizing: border-box;
     background-color: var(--cream);
-    padding: var(--space-section-mobile) var(--space-page-side);
+    padding: var(--space-section-sm) var(--space-page-side);
     border-top: 1px solid var(--light-gray);
   }
 
@@ -426,7 +430,7 @@
    */
   .home-cta-strip {
     background-color: var(--terra);
-    padding: var(--space-section-mobile) var(--space-page-side);
+    padding: var(--space-section-sm) var(--space-page-side);
     box-sizing: border-box;
   }
 
@@ -489,8 +493,8 @@
   }
 
   .primary-cta-dark:focus {
-    outline: 3px solid var(--teal);
-    outline-offset: 2px;
+    outline: var(--focus-ring-width) solid var(--focus-ring-color);
+    outline-offset: var(--focus-ring-offset);
   }
 
   @media (max-width: 768px) {
@@ -513,7 +517,7 @@
     }
 
     .site-footer {
-      padding: var(--space-section-mobile) var(--space-page-side-mobile);
+      padding: var(--space-section-sm) var(--space-page-side-mobile);
     }
 
     .site-footer__disclaimer {
